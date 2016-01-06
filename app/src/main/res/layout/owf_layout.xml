@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_alignParentTop="true">
+
+            <android.support.v7.widget.CardView
+                card_view:cardCornerRadius="4dp"
+                style="@style/cards">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/seventy"
+                            android:text="Calculator Version:" />
+
+                        <Spinner
+                            style="@style/thirty"
+                            android:id="@+id/owf_version_spinner" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvAGSize"
+                            style="@style/seventy"
+                            android:text="@string/tvAGSize" />
+
+                        <EditText
+                            android:id="@+id/AGSize"
+                            style="@style/thirty"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvGrossEarnedIncome"
+                            style="@style/seventy"
+                            android:text="@string/tvGrossEarnedIncome" />
+
+                        <EditText
+                            android:id="@+id/grossEarnedIncome"
+                            style="@style/thirty"
+                            android:inputType="numberDecimal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvDependentCare"
+                            style="@style/seventy"
+                            android:text="@string/tvDependentCare" />
+
+                        <EditText
+                            android:id="@+id/dependentCare"
+                            style="@style/thirty"
+                            android:inputType="numberDecimal" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvDeemedIncome"
+                            style="@style/seventy"
+                            android:text="@string/tvDeemedIncome" />
+
+                        <EditText
+                            android:id="@+id/deemedIncome"
+                            style="@style/thirty"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvUnearnedIncome"
+                            style="@style/seventy"
+                            android:text="@string/tvUnearnedIncome" />
+
+                        <EditText
+                            android:id="@+id/unearnedIncome"
+                            style="@style/thirty"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </ScrollView>
+
+    <include layout="@layout/clear_calculate_layout"/>
+
+
+</LinearLayout>

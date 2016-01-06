@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Ohio Legal Services Assistant</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- home layout !-->
+    <string name="annual_income">Annual Income</string>
+
+    <!-- buttons !-->
+    <string name="calculate">Calculate</string>
+    <string name="clear">Clear</string>
+
+    <!-- poverty level layout !-->
+    <string name="tvAGSize">Assistance Group Size:</string>
+    <string name="tvGrossEarnedIncome">Gross Earned Income:</string>
+    <string name="year">Year:</string>
+
+    <!-- calculator buttons layout !-->
+    <string name="fpl">Federal Poverty Level</string>
+    <string name="owf">OWF</string>
+    <string name="food_stamps">Food Stamps</string>
+    <string name="apr">APR</string>
+
+    <!-- Navigation Drawer strings !-->
+    <string name="calculators">Calculators</string>
+    <string name="forms">Forms</string>
+    <string name="rules">Court Rules</string>
+    <string name="resources">Local Resources</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+
+    <!-- owf layout and java !-->
+    <string name="tvDeemedIncome">Deemed/Allocable Income per Month:</string>
+    <string name="tvUnearnedIncome">Unearned Income per Month:</string>
+    <string name="tvDependentCare">Monthly dependent care costs:</string>
+
+    <!-- food stamps layout and controller !-->
+    <string name="household_information_heading">HOUSEHOLD INFORMATION</string>
+    <string name="tvAGDisabled">Are there disabled members in AG?</string>
+    <string name="results">RESULTS</string>
+    <string name="tvAGSSI">Are all AG members SSI, DFA, or PRC recipients(categorical eligibility)? </string>
+    <string name="income_information_heading">INCOME INFORMATION</string>
+    <string name="tvEarnedIncome">Gross earned income of AG</string>
+    <string name="earnedIncome">Earned income</string>
+    <string name="headingMonthlyExpenses">MONTHLY EXPENSES</string>
+    <string name="tvRent">Rent or mortgage</string>
+    <string name="Rent">Rent/mortgage</string>
+    <string name="tvPropertyTaxes">Property Taxes</string>
+    <string name="tvPropertyInsurance">Property insurance</string>
+    <string name="tvChildSupportNonAG">Child support for non-AG member</string>
+    <string name="etChildSupport">Child support</string>
+    <string name="tvMedicalExpenses">Medical expenses</string>
+    <string name="headingUtilities">MONTHLY UTILITIES (check all that apply)</string>
+    <string name="clHomeless">Client is homeless</string>
+    <string name="heatingCooling">Heating and cooling costs</string>
+    <string name="electricGasOil">Electric/gas/oil (non-heating)</string>
+    <string name="waterSewer">Water or sewer</string>
+    <string name="garbageTrash">Garbage or trash</string>
+    <string name="phone">Telephone</string>
+    <string name="tvAGaged">Are there any AG members over 60, blind, or disabled?</string>
+
+    <!-- arrays !-->
+    <string-array name="frequency">
+        <item>per hour</item>
+        <item>per week</item>
+        <item>every other week</item>
+        <item>twice per month</item>
+        <item>monthly</item>
+        <item>annually</item>
+    </string-array>
+
+    <string-array name="Rules">
+        <item>Federal Rules of Evidence</item>
+        <item>Federal Rules of Civil Procedure</item>
+        <item>Ohio Rules of Appellate Procedure</item>
+        <item>Ohio Rules of Civil Procedure</item>
+        <item>Ohio Rules of Evidence</item>
+        <item>Ohio Rules of Juvenile Procedure</item>
+    </string-array>
+
+    <string-array name="owf_versions">
+        <item>Current (1/1/15)</item>
+        <item>7/1/14 to 1/1/15</item>
+    </string-array>
+
+</resources>
