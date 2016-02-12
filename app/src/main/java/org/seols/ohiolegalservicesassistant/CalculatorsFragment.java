@@ -48,7 +48,7 @@ public class CalculatorsFragment extends Fragment {
                     ((MainActivity)getActivity()).setFragment(new FoodStampsCalculatorController(), "FOODSTAMPS", "Food Stamps");
                     break;
                 case R.id.apr_button:
-                    ((MainActivity)getActivity()).setFragment(new APRCalculator(), "APR", "APR");
+                    ((MainActivity)getActivity()).setFragment(new APRFragment(), "APR", "APR");
                     break;
                 default:
                     break;

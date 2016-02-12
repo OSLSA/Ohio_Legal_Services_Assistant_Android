@@ -69,11 +69,12 @@ public class HomeFragment extends Fragment {
             double annualIncome = income.getText().toString().equals("") ? 0.0 :
                     Double.parseDouble(income.getText().toString());
 
-            FederalPovertyLevel calc = new FederalPovertyLevel();
-
-            calc.setSize(Integer.parseInt(agSize.getText().toString()));
-            calc.setAnnualIncome(annualIncome);
-            calc.setYear("2015");
+            FederalPovertyLevel calc = new FederalPovertyLevel(
+                    Integer.parseInt(agSize.getText().toString()),
+                    "2015",
+                    annualIncome,
+                    getContext()
+            );
 
             showFPLResults(calc.getResults());
         }

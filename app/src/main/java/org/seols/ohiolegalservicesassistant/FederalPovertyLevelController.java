@@ -20,194 +20,183 @@ import android.widget.Toast;
  */
 public class FederalPovertyLevelController extends Fragment implements IncomeDialogFragment.OnUpdateIncomeListener {
 
+    private Bundle savedInstanceState;
 
-        public final String[] VERSION_ARRAY = {"2015", "2014"};
+    private EditText etAGSize, etGrossEarnedIncome;
 
-        private Bundle savedInstanceState;
+    private Spinner versionSpinner;
 
-        private EditText etAGSize;
-        private EditText etGrossEarnedIncome;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle instanceState) {
 
-        private Spinner versionSpinner;
+        savedInstanceState = instanceState;
+        // get view
+        View rootView = inflater.inflate(R.layout.fpl_layout, container, false);
 
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle instanceState) {
+        // populate the version spinner
+        populateFrequencySpinner(rootView);
 
-            savedInstanceState = instanceState;
-            // get view
-            View rootView = inflater.inflate(R.layout.fpl_layout, container, false);
+        // set up the edittexts
+        initializeViews(rootView);
 
-            // populate the version spinner
-            populateFrequencySpinner(rootView);
+        // set up the clear button
+        clearButton(rootView);
 
-            // set up the edittexts
-            initializeViews(rootView);
+        // set up the submit button
+        submitButton(rootView);
 
-            // set up the clear button
-            clearButton(rootView);
-
-            // set up the submit button
-            submitButton(rootView);
-
-            //return view
-            return rootView;
-        }
+        //return view
+        return rootView;
+    }
 
 
-        private void populateFrequencySpinner(View v) {
-            versionSpinner = (Spinner) v.findViewById(R.id.version_spinner);
+    private void populateFrequencySpinner(View v) {
+        versionSpinner = (Spinner) v.findViewById(R.id.version_spinner);
 
-            // create array adapter
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, VERSION_ARRAY);
+        // create array adapter
+       ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.fpl_version));
 
-            // set layout for when dropdown shown
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // set layout for when dropdown shown
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-            // apply adapter to spinner
-            versionSpinner.setAdapter(adapter);
+        // apply adapter to spinner
+        versionSpinner.setAdapter(adapter);
 
-            // set spinner default to current year
-            versionSpinner.setSelection(0);
-        }
+        // set spinner default to current year
+        versionSpinner.setSelection(0);
+    }
 
-        private void initializeViews(View rootView) {
-            etAGSize = (EditText) rootView.findViewById(R.id.etAGSize);
-            etGrossEarnedIncome = (EditText) rootView.findViewById(R.id.etGrossEarnedIncome);
-            etGrossEarnedIncome.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+    private void initializeViews(View rootView) {
+        etAGSize = (EditText) rootView.findViewById(R.id.etAGSize);
+        etGrossEarnedIncome = (EditText) rootView.findViewById(R.id.etGrossEarnedIncome);
+        etGrossEarnedIncome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showIncomeDialog("Gross Earned Income");
+            }
+        });
+        etGrossEarnedIncome.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
                     showIncomeDialog("Gross Earned Income");
                 }
-            });
-            etGrossEarnedIncome.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                @Override
-                public void onFocusChange(View v, boolean hasFocus) {
-                    if (hasFocus) {
-                        showIncomeDialog("Gross Earned Income");
-                    }
-                }
-            });
-        }
-
-        public void onActivityResult(int requestCode, int resultCode, Intent data) {
-            // Make sure fragment codes match up
-            if (requestCode == 0) {
-                String etGrossEarnedIncome = data.getStringExtra(
-                        "result");
             }
+        });
+    }
+
+    // TODO is this needed?
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Make sure fragment codes match up
+        if (requestCode == 0) {
+            String etGrossEarnedIncome = data.getStringExtra(
+                    "result");
         }
+    }
 
-        private void clearButton(View rootView) {
+    private void clearButton(View rootView) {
 
-            Button button = (Button) rootView.findViewById(R.id.clear);
+        Button button = (Button) rootView.findViewById(R.id.clear);
 
-            // set button's onClickListener
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    resetAll();
-                }
-            });
-        }
-
-        private void resetAll() {
-
-            // reset the spinner and edit texts
-            etAGSize.setText("");
-            etGrossEarnedIncome.setText("");
-
-        }
-
-        private void submitButton(View rootView) {
-
-            Button button = (Button) rootView.findViewById(R.id.submit);
-            button.setOnClickListener(new View.OnClickListener() {
-
-                public void onClick(View v) {
-
-                    // check to see if AGSize is filled in
-                    if (AGSizeMissing()) return;
-
-                    // calculate percentage of poverty
-                    double annualIncome = etGrossEarnedIncome.getText().toString().equals("") ? 0.0 :
-                            Double.parseDouble(etGrossEarnedIncome.getText().toString());
-
-                    FederalPovertyLevel calc = new FederalPovertyLevel();
-
-                    calc.setSize(getAGSize());
-                    calc.setAnnualIncome(annualIncome);
-                    calc.setYear(versionSpinner.getSelectedItem().toString());
-
-                    showResults(calc.getResults());
-
-                }
-
-            });
-        }
-
-        private boolean AGSizeMissing() {
-
-            // see if AGSize is greater than 0.
-            // if it is, return false
-            // if it is less than 1, show toast and return true
-
-            String test = etAGSize.getText().toString();
-
-            if (test.equals("") || test.equals("0")) {
-                String text = "The assistance group size must be 1 or larger";
-                errorToast(text);
-                return true;
-            } else {
-                return false;
+        // set button's onClickListener
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resetAll();
             }
+        });
+    }
 
-        }
+    private void resetAll() {
 
-        private void errorToast(String text) {
+        // reset the EditTexts
+        etAGSize.setText("");
+        etGrossEarnedIncome.setText("");
 
-            Toast toast = Toast.makeText(getActivity(), text, Toast.LENGTH_LONG);
+    }
+
+    private void submitButton(View rootView) {
+        Button button = (Button) rootView.findViewById(R.id.submit);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                calculateFPL();
+            }
+        });
+    }
+
+    private void calculateFPL() {
+
+        // check to see if AGSize is filled in
+        if (AGSizeMissing()) return;
+
+        // calculate percentage of poverty
+        double annualIncome = etGrossEarnedIncome.getText().toString().equals("") ? 0.0 :
+                Double.parseDouble(etGrossEarnedIncome.getText().toString());
+
+        FederalPovertyLevel calculator = new FederalPovertyLevel(
+                getAGSize(), // int size
+                versionSpinner.getSelectedItem().toString(), // String year
+                annualIncome, // double annualIncome
+                getContext()  // context
+        );
+
+        showResults(calculator.getResults());
+    }
+
+    private boolean AGSizeMissing() {
+
+        // see if AGSize is greater than 0.
+        // if it is, return false
+        // if it is less than 1, show toast and return true
+
+        String test = etAGSize.getText().toString();
+
+        if (test.equals("") || test.equals("0")) {
+            Toast toast = Toast.makeText(getActivity(), getString(R.string.error_ag_size), Toast.LENGTH_LONG);
             toast.show();
-
-        }
-
-        private int getAGSize() {
-
-            return Integer.parseInt(etAGSize.getText().toString());
-
-        }
-
-        private void showResults(Double results) {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage("This household is at " + results + "% of the Federal Poverty Level")
-                    .setPositiveButton("OK", null)
-                    .setTitle("Percentage of Poverty");
-            builder.create().show();
-
-        }
-
-        @Override
-        public void onSaveInstanceState(Bundle outState) {
-
-            super.onSaveInstanceState(outState);
-            outState.putString("AGSize", etAGSize.getText().toString());
-            outState.putString("etGrossEarnedIncome", etGrossEarnedIncome.getText().toString());
-        }
-
-        private void showIncomeDialog(String title) {
-            FragmentManager fm = getActivity().getSupportFragmentManager();
-            Bundle args = new Bundle();
-            args.putString("title", title);
-            IncomeDialogFragment dialog = new IncomeDialogFragment();
-            dialog.setTargetFragment(this, 0);
-            dialog.setArguments(args);
-            dialog.show(fm, "IncomeDialog");
-        }
-
-        @Override
-        public void onIncomeSubmit(String annualIncome) {
-            // Do stuff
-            etGrossEarnedIncome.setText(annualIncome);
+            return true;
+        } else {
+            return false;
         }
 
     }
 
+    private int getAGSize() {
+
+        return Integer.parseInt(etAGSize.getText().toString());
+    }
+
+    private void showResults(Double results) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        // This should be coming from the string xml file with variables in it
+        builder.setMessage("This household is at " + results + "% of the Federal Poverty Level")
+                .setPositiveButton("OK", null)
+                .setTitle("Percentage of Poverty");
+        builder.create().show();
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        super.onSaveInstanceState(outState);
+        outState.putString("AGSize", etAGSize.getText().toString());
+        outState.putString("etGrossEarnedIncome", etGrossEarnedIncome.getText().toString());
+    }
+
+    private void showIncomeDialog(String title) {
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        Bundle args = new Bundle();
+        args.putString("title", title);
+        IncomeDialogFragment dialog = new IncomeDialogFragment();
+        dialog.setTargetFragment(this, 0);
+        dialog.setArguments(args);
+        dialog.show(fm, "IncomeDialog");
+    }
+
+    @Override
+    public void onIncomeSubmit(String annualIncome) {
+        etGrossEarnedIncome.setText(annualIncome);
+    }
+
+}

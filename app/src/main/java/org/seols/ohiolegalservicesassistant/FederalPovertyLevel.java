@@ -1,70 +1,50 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.content.Context;
+
 /**
  * Created by joshuagoodwin on 10/1/15.
  */
 public class FederalPovertyLevel {
 
-        private static final int[] fpl2015 = {11770, 4160};
-        private static final int[] fpl2014 = {11670, 4060};
+    double annualIncome, results;
+    int size;
+    String year;
+    String[] constants;
+    Context context;
 
-        double annualIncome, results;
-
-        int size;
-
-        String year;
-
-        private int getValues(String year, int pos) {
-
-            switch (year) {
-                case "2015":
-                    return fpl2015[pos];
-                case "2014":
-                    return fpl2014[pos];
-                default:
-                    return fpl2015[pos];
-            }
-        }
 
     /**
      * Calculates the federal poverty level and returns the result.
-     * @return Federal poverty level
+     * @return Federal Poverty Level
      */
-        public double getResults() {
+    public double getResults() {
 
-            int povertyStart = getValues(year, 0);
-            int povertyIncrement = getValues(year, 1);
+        constants = context.getResources().getStringArray(context.getResources().getIdentifier("fpl" + year, "array", "org.seols.ohiolegalservicesassistant"));
+        int povertyStart = Integer.parseInt(constants[0]);
+        int povertyIncrement = Integer.parseInt(constants[1]);
 
-            double fpl = ((size - 1) * povertyIncrement) + povertyStart;
+        double fpl = ((size - 1) * povertyIncrement) + povertyStart;
 
-            results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+        results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
 
-            return results;
+        return results;
 
-        }
+    }
 
     /**
-     * Sets the assistance group size for calculating the poverty level
-     * @param size Assistance Group Size
+     * Class constructor that sets all essential variables. NOTE: data validation
+     * must happen in the view controller
+     * @param size Size of the assistance group
+     * @param year Year for which to calculate FPL
+     * @param annualIncome Annual income
+     * @param context Activity context
      */
-        public void setSize(int size) {
-            this.size = size;
-        }
-
-    /**
-     * Sets the year for calucating poverty level. This allows for historic calculations.
-     * @param year
-     */
-        public void setYear(String year) {
-            this.year = year;
-        }
-
-    /**
-     * Sets the annual income for calculating the poverty level.
-     * @param income
-     */
-        public void setAnnualIncome(double income) {
-            annualIncome = income;
-        }
+    public FederalPovertyLevel(int size, String year, double annualIncome, Context context) {
+        this.size = size;
+        this.year = year;
+        this.annualIncome = annualIncome;
+        this.context = context;
+    }
 
 }
