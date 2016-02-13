@@ -14,7 +14,6 @@ import android.view.LayoutInflater;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class APRFragment extends Fragment {
@@ -27,6 +26,7 @@ public class APRFragment extends Fragment {
     {
         View rootView = inflater.inflate(R.layout.apr_layout, container, false);
         initializeViews(rootView);
+        initializeButtons();
         return rootView;
     }
 

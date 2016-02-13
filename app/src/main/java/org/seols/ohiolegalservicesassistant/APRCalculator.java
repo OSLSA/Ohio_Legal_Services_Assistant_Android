@@ -32,7 +32,10 @@ public class APRCalculator {
     }
 
 
-    // TODO add javadoc
+    /**
+     * Retuurns the APR
+     * @return APR
+     */
     public double getAPR() {
         return APR;
     }
@@ -58,19 +61,28 @@ public class APRCalculator {
 
     }
 
-    // TODO add javadoc comment
+    /**returns the monthly payment
+     *
+     * @return monthly payment
+     */
     public double getMonthlyPayment() {
         // calculate monthly payment and return as double
         double monthlyPayment = ((amountBorrowed + costs) * monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments)-1);
         return (double)Math.round(monthlyPayment * 100) / 100;
     }
 
-    // TODO add javadoc comment
+    /**
+     * returns the total payments made (interest + costs + principal)
+     * @return total payment
+     */
     public double getTotalPayments() {
         return (double)Math.round((getMonthlyPayment() * numberOfPayments) * 100) / 100;
     }
 
-    // TODO add javadoc comment
+    /**
+     * returns the total interest paid
+     * @return total interest paid
+     */
     public double getTotalInterest() {
         return (double)Math.round((getTotalPayments() - amountBorrowed) * 100) /100;
     }
