@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_resources) {
 
         } else if (id == R.id.nav_rules) {
-
+            setFragment(new RulesAllTitlesFragment(), "RULES", "Rules");
         } else if (id == R.id.nav_settings) {
 
         }

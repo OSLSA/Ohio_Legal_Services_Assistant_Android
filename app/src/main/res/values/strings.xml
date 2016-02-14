@@ -82,6 +82,15 @@
         <item>Ohio Rules of Juvenile Procedure</item>
     </string-array>
 
+    <string-array name="rules_tags">
+        <item>federal_evidence</item>
+        <item>federal_civil_procedure</item>
+        <item>ohio_appellate</item>
+        <item>ohio_civil_procedure</item>
+        <item>ohio_evidence</item>
+        <item>ohio_juvenile</item>
+    </string-array>
+
     <string-array name="owf_versions">
         <item>Current (1/1/15)</item>
         <item>7/1/14 to 1/1/15</item>
