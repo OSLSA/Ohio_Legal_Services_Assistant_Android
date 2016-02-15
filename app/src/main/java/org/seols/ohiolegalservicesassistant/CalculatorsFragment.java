@@ -39,16 +39,16 @@ public class CalculatorsFragment extends Fragment {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.fpl_button:
-                    ((MainActivity)getActivity()).setFragment(new FederalPovertyLevelController(), "FPL", "Federal Poverty Level");
+                    ((MainActivity)getActivity()).setFragment(new FederalPovertyLevelController(), "FPL", "Federal Poverty Level", null);
                     break;
                 case R.id.owf_button:
-                    ((MainActivity)getActivity()).setFragment(new OwfCalculatorController(), "OWF", "OWF");
+                    ((MainActivity)getActivity()).setFragment(new OwfCalculatorController(), "OWF", "OWF", null);
                     break;
                 case R.id.food_stamps_button:
-                    ((MainActivity)getActivity()).setFragment(new FoodStampsCalculatorController(), "FOODSTAMPS", "Food Stamps");
+                    ((MainActivity)getActivity()).setFragment(new FoodStampsCalculatorController(), "FOODSTAMPS", "Food Stamps", null);
                     break;
                 case R.id.apr_button:
-                    ((MainActivity)getActivity()).setFragment(new APRFragment(), "APR", "APR");
+                    ((MainActivity)getActivity()).setFragment(new APRFragment(), "APR", "APR", null);
                     break;
                 default:
                     break;

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name));
+        setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name), null);
     }
 
     @Override
@@ -78,13 +78,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_forms) {
             // Handle the forms
         } else if (id == R.id.nav_calculators) {
-            setFragment(new CalculatorsFragment(), "CALCULATORS", "Calculators");
+            setFragment(new CalculatorsFragment(), "CALCULATORS", "Calculators", null);
         } else if (id == R.id.nav_about) {
 
         } else if (id == R.id.nav_resources) {
 
         } else if (id == R.id.nav_rules) {
-            setFragment(new RulesAllTitlesFragment(), "RULES", "Rules");
+            setFragment(new RulesAllTitlesFragment(), "RULES", "Rules", null);
         } else if (id == R.id.nav_settings) {
 
         }
@@ -99,11 +99,15 @@ public class MainActivity extends AppCompatActivity
      * @param name name of the fragment
      * @param tag log tag
      * @param title Title to set the activity bar to
+     * @param args Arguments to be passed to new fragment, can be null
      */
-    public void setFragment(Fragment name, String tag, String title) {
+    public void setFragment(Fragment name, String tag, String title, Bundle args) {
         getSupportActionBar().setTitle(title);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
+        if (args != null) {
+            name.setArguments(args);
+        }
         ft.replace(R.id.nav_content_frame, name, tag);
         ft.commit();
     }
