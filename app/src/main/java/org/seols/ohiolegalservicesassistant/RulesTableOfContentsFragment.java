@@ -39,7 +39,6 @@ public class RulesTableOfContentsFragment extends Fragment {
                 Double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
                 // if this is an int, should convert then to string otherwise string will end in .0
                 tag = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
-                tag = Double.toString(((Number) NumberFormat.getInstance().parse(titles[i])).doubleValue());
                 tr.setTag(tag);
             } catch (ParseException e) {
                 e.printStackTrace();
