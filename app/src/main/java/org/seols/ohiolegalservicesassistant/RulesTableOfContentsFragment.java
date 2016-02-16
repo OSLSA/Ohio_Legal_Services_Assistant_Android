@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.util.Arrays;
 
 /**
  * Created by joshuagoodwin on 2/15/16.
@@ -19,19 +20,19 @@ import java.text.ParseException;
 public class RulesTableOfContentsFragment extends Fragment {
 
     TableLayout tl;
+    String bookName;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.rules_all_books_layout, container, false);
         tl = (TableLayout) rootView.findViewById(R.id.rules_titles);
+        bookName = getArguments().getString("data");
         setTitles(inflater);
         return rootView;
     }
 
     private void setTitles(LayoutInflater inflater) {
-        String book = getArguments().getString("data");
 
-        Log.d("tag", book);
-        String[] titles = getResources().getStringArray(getResources().getIdentifier(book + "_toc", "array", "org.seols.ohiolegalservicesassistant"));
+        String[] titles = getResources().getStringArray(getResources().getIdentifier(bookName + "_toc", "array", "org.seols.ohiolegalservicesassistant"));
         for (int i = 0; i < titles.length; i++){
             View tr = inflater.inflate(R.layout.rules_row, null);
             String tag = null;
@@ -56,6 +57,12 @@ public class RulesTableOfContentsFragment extends Fragment {
         public void onClick(View v) {
             Toast toast = Toast.makeText(getContext(), v.getTag().toString(), Toast.LENGTH_LONG);
             toast.show();
+            String ruleNumber = v.getTag().toString();
+            Bundle args = new Bundle();
+            args.putString("ruleNumber", ruleNumber);
+            args.putString("bookName", bookName);
+            Fragment newFragment = new RulesDetailFragment();
+            ((MainActivity)getActivity()).setFragment(newFragment, ruleNumber, "Rule " + ruleNumber, args);
         }
     };
 
