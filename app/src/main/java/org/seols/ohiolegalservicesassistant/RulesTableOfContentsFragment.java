@@ -10,6 +10,9 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+
 /**
  * Created by joshuagoodwin on 2/15/16.
  */
@@ -17,7 +20,7 @@ public class RulesTableOfContentsFragment extends Fragment {
 
     TableLayout tl;
 
-    public View onViewCreated(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.rules_all_books_layout, container, false);
         tl = (TableLayout) rootView.findViewById(R.id.rules_titles);
         setTitles(inflater);
@@ -31,7 +34,17 @@ public class RulesTableOfContentsFragment extends Fragment {
         String[] titles = getResources().getStringArray(getResources().getIdentifier(book + "_toc", "array", "org.seols.ohiolegalservicesassistant"));
         for (int i = 0; i < titles.length; i++){
             View tr = inflater.inflate(R.layout.rules_row, null);
-            tr.setTag(Integer.parseInt(titles[i]));
+            String tag = null;
+            try {
+                Double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
+                // if this is an int, should convert then to string otherwise string will end in .0
+                tag = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
+                tag = Double.toString(((Number) NumberFormat.getInstance().parse(titles[i])).doubleValue());
+                tr.setTag(tag);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            tr.setTag(tag);
             ((TextView)tr.findViewById(R.id.row_text)).setText(titles[i]);
             tr.setOnClickListener(myClickListener);
             tl.addView(tr);

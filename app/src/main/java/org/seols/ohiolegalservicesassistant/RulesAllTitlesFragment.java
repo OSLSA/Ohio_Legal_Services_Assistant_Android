@@ -50,7 +50,7 @@ public class RulesAllTitlesFragment extends Fragment {
             Bundle args = new Bundle();
             args.putString("data", tag);
             Fragment newFragment = new RulesTableOfContentsFragment();
-            ((MainActivity)getActivity()).setFragment(newFragment, v.getTag().toString(), titles[pos], null);
+            ((MainActivity)getActivity()).setFragment(newFragment, v.getTag().toString(), titles[pos], args);
         }
     };
 
