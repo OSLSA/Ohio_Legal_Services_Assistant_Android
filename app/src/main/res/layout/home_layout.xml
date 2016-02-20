@@ -79,24 +79,17 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/rules_spinner" />
 
-            <LinearLayout
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rule Number:"/>
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rule_number"
-                    android:layout_weight="1"
-                    android:inputType="numberDecimal"/>
-
-            </LinearLayout>
+                android:id="@+id/rule_number"
+                android:layout_weight="1"
+                android:hint="@string/rule_number"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:inputType="numberDecimal"/>
 
             <Button
                 android:layout_width="match_parent"

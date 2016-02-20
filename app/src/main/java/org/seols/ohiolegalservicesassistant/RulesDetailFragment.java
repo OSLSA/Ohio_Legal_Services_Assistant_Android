@@ -74,7 +74,7 @@ public class RulesDetailFragment extends Fragment {
         // first character is level of indent and should be removed
         // then format in html
         for (int i = 0; i < titles.length; i++){
-            View tr = inflater.inflate(R.layout.rules_row, null);
+            View tr = inflater.inflate(R.layout.rules_detail_row, null);
             TextView tv = (TextView) tr.findViewById(R.id.row_text);
 
             // get indent amount and set it

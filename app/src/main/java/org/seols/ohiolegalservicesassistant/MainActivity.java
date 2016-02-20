@@ -1,22 +1,21 @@
 package org.seols.ohiolegalservicesassistant;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,9 +33,25 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        setLogoClick(navigationView);
         navigationView.setNavigationItemSelectedListener(this);
         setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name), null);
     }
+
+    private void setLogoClick(NavigationView navigationView) {
+        View header = navigationView.getHeaderView(0);
+        ImageView logo = (ImageView) header.findViewById(R.id.nav_logo);
+        header.setOnClickListener(headerListener);
+    }
+
+    private View.OnClickListener headerListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name), null);
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+        }
+    };
 
     @Override
     public void onBackPressed() {
@@ -88,8 +103,6 @@ public class MainActivity extends AppCompatActivity
             setFragment(new RulesAllTitlesFragment(), "RULES", "Rules", null);
         } else if (id == R.id.nav_settings) {
 
-        } else if (id == R.id.nav_logo) {
-            setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name), null);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
