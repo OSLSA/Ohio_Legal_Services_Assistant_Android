@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/OhioLegalServicesAssistant.iml" filepath="$PROJECT_DIR$/OhioLegalServicesAssistant.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/ohio_legal_services_assistant_android.iml" filepath="$PROJECT_DIR$/ohio_legal_services_assistant_android.iml" />
     </modules>

@@ -12,6 +12,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+
 /**
  * Created by joshuagoodwin on 10/2/15.
  */
@@ -21,7 +24,7 @@ public class HomeFragment extends Fragment {
 
     private Button viewRules;
 
-    private EditText income, agSize;
+    private EditText income, agSize, rule_number;
 
     private Spinner rulesSpinner;
 
@@ -37,8 +40,11 @@ public class HomeFragment extends Fragment {
     private void getViews(View rootView) {
         income = (EditText) rootView.findViewById(R.id.annual_income);
         agSize = (EditText) rootView.findViewById(R.id.ag_size);
+        rule_number = (EditText) rootView.findViewById(R.id.rule_number);
         Button calculateFPL = (Button) rootView.findViewById(R.id.calculateFPL);
         calculateFPL.setOnClickListener(calculateFPLListener);
+        Button ruleSelected = (Button) rootView.findViewById(R.id.view_rules);
+        ruleSelected.setOnClickListener(ruleSelectedListener);
         viewRules = (Button) rootView.findViewById(R.id.view_rules);
         rulesSpinner = (Spinner) rootView.findViewById(R.id.rules_spinner);
     }
@@ -53,9 +59,6 @@ public class HomeFragment extends Fragment {
 
         // apply adapter to spinner
         rulesSpinner.setAdapter(adapter);
-
-        // set spinner default to current year
-        rulesSpinner.setSelection(0);
 
     }
 
@@ -114,5 +117,47 @@ public class HomeFragment extends Fragment {
         toast.show();
 
     }
+
+    private View.OnClickListener ruleSelectedListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            // figure out which book to go to
+            int ruleBook = rulesSpinner.getSelectedItemPosition();
+            String[] books = getResources().getStringArray(R.array.rules_tags);
+            String bookName = books[ruleBook];
+
+            // get that books TOC
+            String[] toc = getResources().getStringArray(getResources().getIdentifier(bookName + "_toc", "array", "org.seols.ohiolegalservicesassistant"));
+
+            // see if rule typed in exists
+            // get rule
+            String rule = rule_number.getText().toString();
+            int rulePosition = -1;
+            // check all rules
+            for (int i = 0; i < toc.length; i++) {
+                if (toc[i].startsWith(rule)) {
+                    rulePosition = i;
+                    break;
+                }
+            }
+            // display error if rule doesn't exist
+            if (rulePosition < 0) {
+                String text = "Sorry, that rule does not exist";
+                errorToast(text);
+                return;
+            }
+
+            // create bundle to push
+            Bundle args = new Bundle();
+            args.putString("ruleNumber", rule);
+            args.putString("bookName", bookName);
+            args.putInt("rulePosition", rulePosition);
+
+            // change framents
+            Fragment newFragment = new RulesDetailFragment();
+            ((MainActivity)getActivity()).setFragment(newFragment, rule, "Rule " + rule, args);
+
+        }
+    };
 
 }
