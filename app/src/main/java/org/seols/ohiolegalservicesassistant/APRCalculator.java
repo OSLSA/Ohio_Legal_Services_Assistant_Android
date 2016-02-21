@@ -1,13 +1,5 @@
 package org.seols.ohiolegalservicesassistant;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-
 /**
  * Created by joshuagoodwin on 1/12/2016.
  */
@@ -16,8 +8,13 @@ public class APRCalculator {
     private double APR, baseRate, amountBorrowed, costs, monthlyRate;
     private int numberOfPayments;
 
-    // TODO javadoc
-    // this should be the class initializer
+    /**
+     * APR Class initializer.
+     * @param amountBorrowed
+     * @param baseRate
+     * @param costs
+     * @param numberOfPayments
+     */
     public APRCalculator (double amountBorrowed, double baseRate, double costs, int numberOfPayments) {
         setBaseRate(baseRate);
         this.amountBorrowed = amountBorrowed;

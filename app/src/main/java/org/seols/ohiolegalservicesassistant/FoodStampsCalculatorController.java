@@ -350,7 +350,7 @@ public class FoodStampsCalculatorController extends Fragment implements IncomeDi
         isDisabled = cbAGSSI.isChecked() || isAged ? true : false;
 
 
-        // get incomes as doubles or processing later
+        // get incomes as doubles for processing later
         unearnedIncome = etUnearnedIncome.getText().toString().equals("") ? 0 : Double.parseDouble(etUnearnedIncome.getText().toString());
         earnedIncome = etEarnedIncome.getText().toString().equals("") ? 0 : Double.parseDouble(etEarnedIncome.getText().toString());
 
