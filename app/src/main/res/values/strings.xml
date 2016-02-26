@@ -4,6 +4,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="error_ag_size">The assistance group size must be 1 or larger</string>
+    <string name="rule_number">Rule Number:</string>
+    <string name="FEDERAL_HOURLY_MINNIMUM_WAGE">7.25</string>
 
     <string name="action_settings">Settings</string>
 
@@ -24,6 +26,7 @@
     <string name="owf">OWF</string>
     <string name="food_stamps">Food Stamps</string>
     <string name="apr">APR</string>
+    <string name="garnishment">Garnishability</string>
 
     <!-- Navigation Drawer strings !-->
     <string name="calculators">Calculators</string>
