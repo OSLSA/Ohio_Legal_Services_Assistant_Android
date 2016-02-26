@@ -3,6 +3,7 @@ package org.seols.ohiolegalservicesassistant;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +78,8 @@ public class GarnishmentFragment extends Fragment {
     }
 
     private void calculateGarnishability() {
+        GarnishmentCalculator calculator = new GarnishmentCalculator(etNetIncome.getText().toString(), frequency.getSelectedItemPosition(), etHours.getText().toString());
+        displayResults(calculator.getGarnishability());
 
     }
 
@@ -95,4 +98,12 @@ public class GarnishmentFragment extends Fragment {
             }
         }
     };
+
+    private void displayResults(String results) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage(results)
+                .setPositiveButton("OK", null)
+                .setTitle("Garnishability");
+        builder.create().show();
+    }
 }

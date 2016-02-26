@@ -1,5 +1,6 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 
 public class FoodStampCalculator {
@@ -10,11 +11,11 @@ public class FoodStampCalculator {
 	
 	private double totalGrossIncome;
 	
-	private int[] FA_ALLOTMENT, STANDARD_DEDUCTION, NET_STANDARD, GROSS_INCOME_LIMIT, GROSS_INCOME_165, GROSS_INCOME_200;
+	private String[] FA_ALLOTMENT, STANDARD_DEDUCTION, NET_STANDARD, GROSS_INCOME_LIMIT, GROSS_INCOME_165, GROSS_INCOME_200;
 	
-	private int STANDARD_SHELTER_HOMELESS, EXCESS_INCOME_DEDUCTION, EXCESS_MEDICAL_DEDUCTION, DEPENDENT_CARE_DEDUCTION, MINNIMUM_MONTHLY_ALLOTMENT, STANDARD_UTILITY_ALLOWANCE, LIMITED_UTILITY_ALLOWANCE, SINGLE_UTILITY_ALLOWANCE, STANDARD_TELEPHONE_ALLOWANCE, LIMIT_ON_SHELTER_DEDUCTION;
+	private String STANDARD_SHELTER_HOMELESS, EXCESS_INCOME_DEDUCTION, EXCESS_MEDICAL_DEDUCTION, DEPENDENT_CARE_DEDUCTION, MINNIMUM_MONTHLY_ALLOTMENT, STANDARD_UTILITY_ALLOWANCE, LIMITED_UTILITY_ALLOWANCE, SINGLE_UTILITY_ALLOWANCE, STANDARD_TELEPHONE_ALLOWANCE, LIMIT_ON_SHELTER_DEDUCTION;
 	
-	private int AGSize, earnedIncome, unearnedIncome, medicalExpenses,finalNetIncome, dependentCare, childSupport;
+	private int AGSize, earnedIncome, unearnedIncome, medicalExpenses,finalNetIncome, dependentCare, childSupport, utilityAllowance, rent, propertyInsurance, propertyTaxes;
 	
 	private String dialogTitle, dialogResults;
 	
@@ -26,7 +27,7 @@ public class FoodStampCalculator {
 		this.bundle = bundle;
 		String version = this.bundle.getString("version");
 		setConstants(version);
-		setVariables();
+		setVariables(bundle);
 	}
 	
 	/**
@@ -35,30 +36,32 @@ public class FoodStampCalculator {
 	 **/
 	private void setConstants(String version) {
 		// arrays
-		FA_ALLOTMENT = getResources.getStringArray(getResources().getIdentifier("fa_allotment_" + version, "array", getResources.getPackage()));
-		STANDARD_DEDUCTION = getResources.getStringArray(getResources().getIdentifier("standard_deduction_" + version, "array", getResources.getPackage()));
-		NET_STANDARD = getResources.getStringArray(getResources().getIdentifier("net_standard_" + version, "array", getResources.getPackage()));
-		GROSS_INCOME_LIMIT = getResources.getStringArray(getResources().getIdentifier("gross_income_limit_" + version, "array", getResources.getPackage()));
-		GROSS_INCOME_165 = getResources.getStringArray(getResources().getIdentifier("gross_income_165_" + version, "array", getResources.getPackage()));
-		GROSS_INCOME_200 = getResources.getStringArray(getResources().getIdentifier("gross_income_200_" + version, "array", getResources.getPackage()));
+		String packageName = "org.seols.ohiolegalservicesassistant";
+		FA_ALLOTMENT = Resources.getSystem().getStringArray(Resources.getSystem().getIdentifier("fa_allotment_2015", "array", MainActivity.PACKAGE_NAME));
+		STANDARD_DEDUCTION = Resources.getSystem().getStringArray(Resources.getSystem().getIdentifier("standard_deduction_" + version, "array", packageName));
+		NET_STANDARD = Resources.getSystem().getStringArray(Resources.getSystem().getIdentifier("net_standard_" + version, "array", packageName));
+		GROSS_INCOME_LIMIT = Resources.getSystem().getStringArray(Resources.getSystem().getIdentifier("gross_income_limit_" + version, "array", packageName));
+		GROSS_INCOME_165 = Resources.getSystem().getStringArray(Resources.getSystem().getIdentifier("gross_income_165_" + version, "array", packageName));
+		GROSS_INCOME_200 = Resources.getSystem().getStringArray(Resources.getSystem().getIdentifier("gross_income_200_" + version, "array", packageName));
 		
 		// strings
-		STANDARD_SHELTER_HOMELESS = getResources.getString(getResources().getIdentifier("standard_homeless_" + version, "string", getResources.getPackage()));
-		EXCESS_INCOME_DEDUCTION = getResources.getString(getResources().getIdentifier("excess_income_deduction_" + version, "string", getResources.getPackage()));
-		EXCESS_MEDICAL_DEDUCTION = getResources.getString(getResources().getIdentifier("excess_medical_" + version, "string", getResources.getPackage()));
-		DEPENDENT_CARE_DEDUCTION = getResources.getString(getResources().getIdentifier("dependent_care_" + version, "string", getResources.getPackage()));
-		MINNIMUM_MONTHLY_ALLOTMENT = getResources.getString(getResources().getIdentifier("minnimum_allotment_" + version, "string", getResources.getPackage()));
-		STANDARD_UTILITY_ALLOWANCE = getResources.getString(getResources().getIdentifier("standard_utility_" + version, "string", getResources.getPackage()));
-		LIMITED_UTILITY_ALLOWANCE = getResources.getString(getResources().getIdentifier("limited_utility_" + version, "string", getResources.getPackage()));
-		SINGLE_UTILITY_ALLOWANCE = getResources.getString(getResources().getIdentifier("single_utility_" + version, "string", getResources.getPackage()));
-		STANDARD_TELEPHONE_ALLOWANCE = getResources.getString(getResources().getIdentifier("telephone_" + version, "string", getResources.getPackage()));
-		LIMIT_ON_SHELTER_DEDUCTION = getResources.getString(getResources().getIdentifier("shelter_limit_" + version, "string", getResources.getPackage()));
+		STANDARD_SHELTER_HOMELESS = Resources.getSystem().getString(Resources.getSystem().getIdentifier("standard_homeless_" + version, "string", packageName));
+		EXCESS_INCOME_DEDUCTION = Resources.getSystem().getString(Resources.getSystem().getIdentifier("excess_income_deduction_" + version, "string", packageName
+        ));
+		EXCESS_MEDICAL_DEDUCTION = Resources.getSystem().getString(Resources.getSystem().getIdentifier("excess_medical_" + version, "string", packageName));
+		DEPENDENT_CARE_DEDUCTION = Resources.getSystem().getString(Resources.getSystem().getIdentifier("dependent_care_" + version, "string", packageName));
+		MINNIMUM_MONTHLY_ALLOTMENT = Resources.getSystem().getString(Resources.getSystem().getIdentifier("minnimum_allotment_" + version, "string", packageName));
+		STANDARD_UTILITY_ALLOWANCE = Resources.getSystem().getString(Resources.getSystem().getIdentifier("standard_utility_" + version, "string", packageName));
+		LIMITED_UTILITY_ALLOWANCE = Resources.getSystem().getString(Resources.getSystem().getIdentifier("limited_utility_" + version, "string", packageName));
+		SINGLE_UTILITY_ALLOWANCE = Resources.getSystem().getString(Resources.getSystem().getIdentifier("single_utility_" + version, "string", packageName));
+		STANDARD_TELEPHONE_ALLOWANCE = Resources.getSystem().getString(Resources.getSystem().getIdentifier("telephone_" + version, "string", packageName));
+		LIMIT_ON_SHELTER_DEDUCTION = Resources.getSystem().getString(Resources.getSystem().getIdentifier("shelter_limit_" + version, "string", packageName));
 	}
 
 	private void setVariables(Bundle bundle) {
 		AGSize = bundle.getInt("AGSize");
-		earnedIncome = bundle.getDouble("earnedIncome");
-		unearnedIncome = bundle.getDouble("unearnedIncome");
+		earnedIncome = (int)bundle.getDouble("earnedIncome");
+		unearnedIncome = (int)bundle.getDouble("unearnedIncome");
 		isAged = bundle.getBoolean("isAged");
 		isDisabled = bundle.getBoolean("isDisabled");
 		medicalExpenses = bundle.getInt("medicalExpenses");
@@ -66,33 +69,87 @@ public class FoodStampCalculator {
 		childSupport = bundle.getInt("childSupport");
 		isHomeless = bundle.getBoolean("isHomeless");
 		AGSSI = bundle.getBoolean("AGSSI");
+        utilityAllowance = bundle.getInt("utilityAllowance");
+        rent = bundle.getInt("rent");
+        propertyInsurance = bundle.getInt("propertyInsurance");
+        propertyTaxes = bundle.getInt("propertyTaxes");
 	}
+
+    private int calculateUtilityAllowance() {
+        switch (utilityAllowance) {
+
+            case 0:
+                return 0;
+            /* case 1:
+                utilityAllowance = STANDARD_SHELTER_HOMELESS;
+                break; */
+            case 2:
+                return Integer.parseInt(STANDARD_TELEPHONE_ALLOWANCE);
+            case 4:
+            case 6:
+            case 12:
+            case 14:
+            case 20:
+            case 22:
+            case 28:
+            case 30:
+                return Integer.parseInt(STANDARD_UTILITY_ALLOWANCE);
+            case 8:
+                return Integer.parseInt(SINGLE_UTILITY_ALLOWANCE);
+            default:
+                return Integer.parseInt(LIMITED_UTILITY_ALLOWANCE);
+        }
+    }
 	
 	private void calculateFoodStamps() {
 		
-		int grossIncomeLimit = GROSS_INCOME_LIMIT[AGSize - 1];
-		
 		// check to see if the gross income test is needed (ag not aged or disabled) and then see if it is passed
 		if (!isAged || !isDisabled) {
+            // if gross income test fails, kick out
 			if (!checkTotalGrossIncome()) return;
 		}
 		
 		// those eligible for Benefits bank and also aged or disabled don't do net income test
-		boolean noNeedToCheckNetIncome = (totalGrossIncome <= GROSS_INCOME_200[AGSize - 1] && (isAged || isDisabled))
+		boolean noNeedToCheckNetIncome = (totalGrossIncome <= Integer.parseInt(GROSS_INCOME_200[AGSize - 1]) && (isAged || isDisabled));
 		if (!noNeedToCheckNetIncome) {
-			if (!checkNetIncome) return;
+			if (!checkNetIncome()) return;
 		}
+
+        /* 	OAC 5101:4-4-27
+		*	(c) If the assistance group is subject to the net income standard, compare
+		*	the assistance group's net monthly income to the maximum net monthly income
+		*	standard. If the assistance group's net income is greater than the net
+		*	monthly income standard, the assistance group is ineligible. If the
+		*	assistance group's net income is equal to or less than the net monthly income
+		*	standard, the assistance group is eligible. Multiply the net monthly income by
+		*	thirty per cent.
+		*	(d) Round the product up to the next whole dollar if it ends in one cent
+		*	through ninety-nine cents
+		*/
+
+        finalNetIncome = Math.max(0, finalNetIncome);
+
+        int benefitAmount = Integer.parseInt(FA_ALLOTMENT[AGSize - 1]) - (int)Math.ceil(finalNetIncome * 0.3);
+
+		/* 	OAC 5101:4-4-27
+		*	(f) If the benefit is for a one or two person assistance group and the
+		*	computation results in a benefit of less than the minimum benefit
+		*	allotment, round up to the minimum benefit amount. */
+
+        if (isDisabled || isAged || AGSize <= 3) benefitAmount = Math.max(benefitAmount, Integer.parseInt(MINNIMUM_MONTHLY_ALLOTMENT));
+        dialogResults = "Eligible for food stamps in the amount of $" + benefitAmount + " per month";
+        dialogTitle = "Eligible";
 	}
-	
-	/**
-	 * Checks whether the income given passes the gross income test is passed
-	 * @return boolean True if the test is passed, false if it fails
-	 **/
-	private boolean checkTotalGrossIncomeAmount() {
+
+    /**
+     * Checks whether the income given passes the gross income test is passed
+     * @return boolean True if the test is passed, false if it fails
+     **/
+	private boolean checkTotalGrossIncome() {
         /* OAC 5101:4-4-31
 		(R) Method of calculating gross monthly income
 		Except for AGs containing at least one member who is elderly or disabled as defined in rule 5101:4-1-03 of the Administrative Code, or considered categorically eligible, all AGs shall be subject to the gross income eligibility standard for the appropriate AG size. To determine the AG's total gross income, add the gross monthly income earned by all AG members and the total monthly unearned income of all AG members, minus income exclusions. If an AG has income from a farming operation (with gross proceeds of more than one thousand dollars per year) which operates at a loss, see rule 5101:4-6-11 of the Administrative Code. The total gross income is compared to the gross income eligibility standard for the appropriate AG size. If the total gross income is less than the standard, proceed with calculating the adjusted net income as described in paragraph (S) of this rule. If the total gross income is more than the standard, the AG is ineligible for program benefits and the case is either denied or terminated at this point. */
-        int grossIncomeLimit = GROSS_INCOME_LIMIT[AGSize - 1];
+        int grossIncomeLimit = Integer.parseInt(GROSS_INCOME_LIMIT[AGSize - 1]);
 		totalGrossIncome = earnedIncome + unearnedIncome;
         boolean results = (int)Math.floor(totalGrossIncome) <= grossIncomeLimit;
         
@@ -119,17 +176,17 @@ public class FoodStampCalculator {
 		*	monthly earned income by twenty per cent and subtract that amount
 		*	from the total gross income. */
 
-        finalNetIncome = totalGrossIncome - (int)Math.floor(earnedIncome * 0.2);
+        finalNetIncome = (int)totalGrossIncome - (int)Math.floor(earnedIncome * 0.2);
 
 		/* (3) Standard deduction: Subtract the standard deduction. */
 
-        finalNetIncome -= STANDARD_DEDUCTION[AGSize - 1];
+        finalNetIncome -= Integer.parseInt(STANDARD_DEDUCTION[AGSize - 1]);
 
 		/* 	(4) Excess medical deduction: If the AG is entitled to an excess
 		*	medical deduction, determine if total medical expenses exceed
 		*	thirty-five dollars. If so, subtract that portion which exceeds
 		*	thirty-five dollars. */
-        medicalExpenses = Math.max(0, medicalExpenses - EXCESS_MEDICAL_DEDUCTION);
+        medicalExpenses = Math.max(0, medicalExpenses - Integer.parseInt(EXCESS_MEDICAL_DEDUCTION));
         finalNetIncome -= medicalExpenses;
 
 		/* (5) Dependent care deduction: Subtract monthly dependent care expenses, if any. */
@@ -146,7 +203,7 @@ public class FoodStampCalculator {
 		*	shelter deduction amount if any, up to the maximum of one hundred
 		*	forty-three dollars if the AG is homeless and it incurs shelter costs during the month. */
 
-        if (isHomeless) finalNetIncome -= STANDARD_SHELTER_HOMELESS;
+        if (isHomeless) finalNetIncome -= Integer.parseInt(STANDARD_SHELTER_HOMELESS);
 
 		/*	(8) Determining any excess shelter cost: Total the allowable shelter
 		*	expenses to determine shelter costs, unless a deduction has been
@@ -163,12 +220,12 @@ public class FoodStampCalculator {
 
         finalNetIncome -= calculateShelterDeduction();
 
-        boolean result = finalNetIncome <= NET_STANDARD[AGSize - 1];
+        boolean result = finalNetIncome <= Integer.parseInt(NET_STANDARD[AGSize - 1]);
 
         result = AGSSI || result;
 
 		if (!result) {
-			dialogResults = "The total net income of $" + finalNetIncome + " exceeds the net income limit of $" + NET_STANDARD[AGSize - 1] + " by $" + (finalNetIncome - NET_STANDARD[AGSize -1]);
+			dialogResults = "The total net income of $" + finalNetIncome + " exceeds the net income limit of $" + NET_STANDARD[AGSize - 1] + " by $" + (finalNetIncome - Integer.parseInt(NET_STANDARD[AGSize -1]));
             dialogTitle = "Ineligible";
 		}
 			
@@ -176,8 +233,8 @@ public class FoodStampCalculator {
 
     }
 	
-	// TODO this needs fixed up and the variables imported
-	private void calculateShelterDeduction() {
+
+	private int calculateShelterDeduction() {
 		/*	OAC 5101:4-4-23 Food assistance: deductions from income.
 		*	(E) Shelter costs: monthly shelter costs over fifty per cent of the assistance group's income
 		*	after all other deductions contained in this rule have been allowed. If the assistance group
@@ -187,24 +244,29 @@ public class FoodStampCalculator {
 		*	that exceeds fifty per cent of the assistance group income after all other deductions
 		*	contained in this rule have been allowed. */
 
-        int shelterExpenses = utilityAllowance + rent + propertyInsurance + propertyTaxes;
+        int shelterExpenses = calculateUtilityAllowance() + rent + propertyInsurance + propertyTaxes;
+
+
         shelterExpenses -= (finalNetIncome / 2);
         shelterExpenses = Math.max(0, shelterExpenses);
 
         if (!isAged) {
-            shelterExpenses = Math.min(shelterExpenses, LIMIT_ON_SHELTER_DEDUCTION);
+            shelterExpenses = Math.min(shelterExpenses, Integer.parseInt(LIMIT_ON_SHELTER_DEDUCTION));
         }
 
         return shelterExpenses;
 	}
 	
 	/**
-	 * Returns a string containing the results of the calculation. 
+	 * Returns a string containing the results of the calculation.
 	 * @return [String] [title, results]
 	 **/
-	public [String] getResults() {
+	public Bundle getResults() {
 		calculateFoodStamps();
-		return [dialogTitle, dialogResults];
+		Bundle resultsBundle = new Bundle();
+        resultsBundle.putString("results", dialogResults);
+        resultsBundle.putString("title", dialogTitle);
+        return resultsBundle;
 	}
 	
 }

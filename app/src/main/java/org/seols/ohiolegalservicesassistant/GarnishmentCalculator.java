@@ -41,6 +41,16 @@ public class GarnishmentCalculator {
         return getResults(exempt, garnishable);
     }
 
+    private String getResults(double exempt, double garnishable) {
+        if (garnishable <= 0) {
+            // client is not garnishable
+            return "None of the income is garnishable.";
+        } else {
+            // client is garnishable
+            return "$" + exempt + " of the income is exempt, and $" + garnishable + " of the income is garnishable.";
+        }
+    }
+
     private double getIncomeMultiplier() {
         switch (frequency) {
             case 0:

@@ -1,24 +1,26 @@
 package org.seols.ohiolegalservicesassistant;
 
-/**
- * Created by joshuagoodwin on 10/2/15.
- */
+import android.app.AlertDialog;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.os.Bundle;
-import android.app.AlertDialog;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.CheckBox;
 
-public class FoodStampsCalculatorControllerNew extends Fragment implements IncomeDialogFragment.OnUpdateIncomeListener {
+/**
+ * Created by Joshua Goodwin on 2/26/16.
+ * <p/>
+ * License information
+ */
+public class FoodStampController extends Fragment implements IncomeDialogFragment.OnUpdateIncomeListener{
 
-	// TODO these should all come from the String .xml file and in the mod
-	
+    // TODO these should all come from the String .xml file and in the mod
+
     private boolean isAged, isDisabled;
 
     private CheckBox cbElectricGasOil, cbGarbageTrash, cbHeatingCooling, cbHomeless, cbPhone, cbWaterSewer, cbAGSSI, cbAGAged;
@@ -27,8 +29,8 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
 
     private EditText etAGsize, etChildSupport, etDependentCare, etEarnedIncome, etMedicalExpenses, etPropertyInsurance, etPropertyTaxes, etRent, etUnearnedIncome, requestingET;
 
-	private String version;
-	
+    private String version;
+
     private int AGSize, childSupport, dependentCare, finalEarnedIncome, finalNetIncome, finalUnearnedIncome, grossIncomeAmount, medicalExpenses, propertyInsurance, propertyTaxes, rent, totalGrossIncome, utilityAllowance;
 
     @Override
@@ -145,7 +147,7 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
 
     private void submitPressed() {
 
-		// validate AG size
+        // validate AG size
         if (!isValidAGSize()) {
             Toast toast = Toast.makeText(getActivity(), "AG Size must be 1 or larger", Toast.LENGTH_LONG);
             toast.show();
@@ -155,78 +157,17 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
         // fill all other variables
         getVariables();
 
-        // figure utility allowance
-        calculateUtilityAllowance();
-
-		// create the food stamp calculator
-		FoodStampCalculator calculator = new FoodStampCalculator(createVariableBundle());
-
-		resultsDialog(calculator.getResults());
-		
-		// TODO from here on should be in the model
-
-        if (!checkNetIncome()) {
-            String results = "The total net income of $" + finalNetIncome + " exceeds the net income limit of $" + NET_STANDARD[AGSize - 1] + " by $" + (finalNetIncome - NET_STANDARD[AGSize -1]);
-            ineligibleDialog("Ineligible", results);
-            return;
-        }
-
-		/* 	OAC 5101:4-4-27
-		*	(c) If the assistance group is subject to the net income standard, compare
-		*	the assistance group's net monthly income to the maximum net monthly income
-		*	standard. If the assistance group's net income is greater than the net
-		*	monthly income standard, the assistance group is ineligible. If the
-		*	assistance group's net income is equal to or less than the net monthly income
-		*	standard, the assistance group is eligible. Multiply the net monthly income by
-		*	thirty per cent.
-		*	(d) Round the product up to the next whole dollar if it ends in one cent
-		*	through ninety-nine cents */
-
-        finalNetIncome = Math.max(0, finalNetIncome);
-
-        int benefitAmount = FA_ALLOTMENT[AGSize - 1] - (int)Math.ceil(finalNetIncome * 0.3);
-
-		/* 	OAC 5101:4-4-27
-		*	(f) If the benefit is for a one or two person assistance group and the
-		*	computation results in a benefit of less than the minimum benefit
-		*	allotment, round up to the minimum benefit amount. */
-
-        if (isDisabled || isAged || AGSize <= 3) benefitAmount = Math.max(benefitAmount,MINNIMUM_MONTHLY_ALLOTMENT);
-        String results = "Eligible for food stamps in the amount of $" + benefitAmount + " per month";
-        ineligibleDialog("Eligible", results);
+        // create the food stamp calculator
+        FoodStampCalculator calculator = new FoodStampCalculator(createVariableBundle());
+        resultsDialog(calculator.getResults());
 
     }
 
-    
-
-    private int calculateShelterDeduction() {
-
-		/*	OAC 5101:4-4-23 Food assistance: deductions from income.
-		*	(E) Shelter costs: monthly shelter costs over fifty per cent of the assistance group's income
-		*	after all other deductions contained in this rule have been allowed. If the assistance group
-		*	does not contain an elderly or disabled member, as defined in rule 5101:4-1-03 of the
-		*	Administrative Code, the shelter deduction cannot exceed the maximum shelter deduction provided.
-		*	These assistance groups shall receive an excess shelter deduction for the entire monthly cost
-		*	that exceeds fifty per cent of the assistance group income after all other deductions
-		*	contained in this rule have been allowed. */
-
-        int shelterExpenses = utilityAllowance + rent + propertyInsurance + propertyTaxes;
-        shelterExpenses -= (finalNetIncome / 2);
-        shelterExpenses = Math.max(0, shelterExpenses);
-
-        if (!isAged) {
-            shelterExpenses = Math.min(shelterExpenses, LIMIT_ON_SHELTER_DEDUCTION);
-        }
-
-        return shelterExpenses;
-
-    }
-
-    private void resultsDialog([String] results){
+    private void resultsDialog(Bundle results){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage(results[1])
+        builder.setMessage(results.getString("results"))
                 .setPositiveButton("OK", null)
-                .setTitle(results[0]);
+                .setTitle(results.getString("title"));
         // Create the AlertDialog object and return it
         builder.create().show();
     }
@@ -248,8 +189,8 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
         propertyInsurance = etPropertyInsurance.getText().toString().equals("") ? 0 : (int)Math.floor(Double.parseDouble(etPropertyInsurance.getText().toString()));
         propertyTaxes = etPropertyTaxes.getText().toString().equals("") ? 0 : (int)Math.floor(Double.parseDouble(etPropertyTaxes.getText().toString()));
         rent = etRent.getText().toString().equals("") ? 0 : (int)Math.floor(Double.parseDouble(etRent.getText().toString()));
-        isAged = cbAGAged.isChecked() ? true : false;
-        isDisabled = cbAGSSI.isChecked() || isAged ? true : false;
+        isAged = cbAGAged.isChecked();
+        isDisabled = (cbAGSSI.isChecked() || isAged);
 
 
         // get incomes as doubles or processing later
@@ -257,37 +198,33 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
         earnedIncome = etEarnedIncome.getText().toString().equals("") ? 0 : Double.parseDouble(etEarnedIncome.getText().toString());
 
     }
-	
-	/**
-	 * Method creates a bundle properly formatted to construct the FoodStampCalculator
-	 **/
-	private Bundle createVariableBundle() {
-		
-		private Bundle bundle;
-		bundle.putInt("AGSize", AGSize)
-		bundle.putDouble("earnedIncome", earnedIncome);
-		bundle.putDouble("unearnedIncome", unearnedIncome);
-		bundle.putBoolean("isAged", isAged);
-		bundle.putBoolean("isDisabled", isDisabled);
-		bundle.putInt("medicalExpenses", medicalExpenses);
-		bundle.putInt("dependentCare", dependentCare);
-		bundle.putInt("childSupport", childSupport);
-		bundle.putBoolean("isHomeless", cbHomeless.isChecked());
-		bundle.putBoolean("AGSSI", cbAGSSI.isChecked());
-		return bundle;
-		
-	}
 
-    private boolean checkTotalGrossIncome() {
+    /**
+     * Method creates a bundle properly formatted to construct the FoodStampCalculator
+     **/
+    private Bundle createVariableBundle() {
 
-		/* OAC 5101:4-4-31
-		(R) Method of calculating gross monthly income
-		Except for AGs containing at least one member who is elderly or disabled as defined in rule 5101:4-1-03 of the Administrative Code, or considered categorically eligible, all AGs shall be subject to the gross income eligibility standard for the appropriate AG size. To determine the AG's total gross income, add the gross monthly income earned by all AG members and the total monthly unearned income of all AG members, minus income exclusions. If an AG has income from a farming operation (with gross proceeds of more than one thousand dollars per year) which operates at a loss, see rule 5101:4-6-11 of the Administrative Code. The total gross income is compared to the gross income eligibility standard for the appropriate AG size. If the total gross income is less than the standard, proceed with calculating the adjusted net income as described in paragraph (S) of this rule. If the total gross income is more than the standard, the AG is ineligible for program benefits and the case is either denied or terminated at this point. */
-        totalGrossIncome = finalEarnedIncome + finalUnearnedIncome;
-        boolean results = totalGrossIncome <= grossIncomeAmount;
-        if (isAged || isDisabled) results = true;
-        return results;
+        Bundle bundle = new Bundle();
+        bundle.putInt("AGSize", AGSize);
+        bundle.putDouble("earnedIncome", earnedIncome);
+        bundle.putDouble("unearnedIncome", unearnedIncome);
+        bundle.putBoolean("isAged", isAged);
+        bundle.putBoolean("isDisabled", isDisabled);
+        bundle.putInt("medicalExpenses", medicalExpenses);
+        bundle.putInt("dependentCare", dependentCare);
+        bundle.putInt("childSupport", childSupport);
+        bundle.putBoolean("isHomeless", cbHomeless.isChecked());
+        bundle.putBoolean("AGSSI", cbAGSSI.isChecked());
+        bundle.putInt("utilityAllowance", calculateUtilityAllowance());
+        bundle.putInt("rent", rent);
+        bundle.putInt("propertyInsurance", propertyInsurance);
+        bundle.putInt("propertyTaxes", propertyTaxes);
+        // TODO have ability to change version
+        bundle.putString("version", "2015");
+        return bundle;
+
     }
+
     private void initializeHomelessCheck() {
         cbHomeless.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -312,7 +249,7 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
                     etRent.setText("0");
                     etRent.setEnabled(false);
                     // Toast explaining changes made
-					// TODO this toast message should be in the strings file
+                    // TODO this toast message should be in the strings file
                     Toast toast = Toast.makeText(getActivity(), "Rent, taxes, and property insurance set to 0 as they aren't allowed for homeless applicants", Toast.LENGTH_LONG);
                     toast.show();
                 } else {
@@ -328,46 +265,14 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
             }
         });
     }
-    private void calculateUtilityAllowance() {
+    private int calculateUtilityAllowance() {
         /* int homeless = cbHomeless.isChecked() ? 1 : 0; */
         int phone = cbPhone.isChecked() ? 2 : 0;
         int heating = cbHeatingCooling.isChecked() ? 4 : 0;
         int electric = cbElectricGasOil.isChecked() ? 8 : 0;
         int water = cbWaterSewer.isChecked() ? 8 : 0;
         int garbage = cbGarbageTrash.isChecked() ? 8 : 0;
-
-        int test = phone + heating + electric + water + garbage;
-
-        switch (test) {
-
-            case 0:
-                utilityAllowance = 0;
-                break;
-            /* case 1:
-                utilityAllowance = STANDARD_SHELTER_HOMELESS;
-                break; */
-            case 2:
-                utilityAllowance = STANDARD_TELEPHONE_ALLOWANCE;
-                break;
-            case 4:
-            case 6:
-            case 12:
-            case 14:
-            case 20:
-            case 22:
-            case 28:
-            case 30:
-                utilityAllowance = STANDARD_UTILITY_ALLOWANCE;
-                break;
-            case 8:
-                utilityAllowance = SINGLE_UTILITY_ALLOWANCE;
-                break;
-            default:
-                utilityAllowance = LIMITED_UTILITY_ALLOWANCE;
-                break;
-
-        }
-
+        return phone + heating + electric + water + garbage;
 
     }
 
@@ -433,4 +338,5 @@ public class FoodStampsCalculatorControllerNew extends Fragment implements Incom
         monthlyIncome = (double)Math.round((monthlyIncome / 12.0) * 1000 / 1000);
         requestingET.setText("" + monthlyIncome);
     }
+
 }
