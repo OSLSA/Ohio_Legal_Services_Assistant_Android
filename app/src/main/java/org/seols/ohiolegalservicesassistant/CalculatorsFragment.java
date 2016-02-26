@@ -2,7 +2,6 @@ package org.seols.ohiolegalservicesassistant;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +44,7 @@ public class CalculatorsFragment extends Fragment {
                     ((MainActivity)getActivity()).setFragment(new OwfCalculatorController(), "OWF", "OWF", null);
                     break;
                 case R.id.food_stamps_button:
-                    ((MainActivity)getActivity()).setFragment(new FoodStampsCalculatorController(), "FOODSTAMPS", "Food Stamps", null);
+                    ((MainActivity)getActivity()).setFragment(new HomeFragment.FoodStampsCalculatorController(), "FOODSTAMPS", "Food Stamps", null);
                     break;
                 case R.id.apr_button:
                     ((MainActivity)getActivity()).setFragment(new APRFragment(), "APR", "APR", null);
