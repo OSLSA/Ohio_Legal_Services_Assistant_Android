@@ -66,6 +66,10 @@
     <string name="phone">Telephone</string>
     <string name="tvAGaged">Are there any AG members over 60, blind, or disabled?</string>
 
+    <!-- garnishiment calculator -->
+    <string name="income">Net Income</string>
+    <string name="frequency">Frequency</string>
+
     <!-- arrays !-->
     <string-array name="frequency">
         <item>per hour</item>

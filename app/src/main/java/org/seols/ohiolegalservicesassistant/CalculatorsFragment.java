@@ -2,6 +2,7 @@ package org.seols.ohiolegalservicesassistant;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,8 @@ public class CalculatorsFragment extends Fragment {
         owf.setOnClickListener(myListener);
         Button apr = (Button) rootView.findViewById(R.id.apr_button);
         apr.setOnClickListener(myListener);
+        Button garn = (Button) rootView.findViewById(R.id.garnishment_button);
+        garn.setOnClickListener(myListener);
     }
 
     private View.OnClickListener myListener = new View.OnClickListener() {

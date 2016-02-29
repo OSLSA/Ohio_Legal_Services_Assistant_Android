@@ -20,7 +20,6 @@ import android.widget.Spinner;
 public class GarnishmentFragment extends Fragment {
 
     EditText etNetIncome, etHours;
-    LinearLayout hoursLayout;
     Spinner frequency;
 
     @Override
@@ -34,7 +33,6 @@ public class GarnishmentFragment extends Fragment {
     private void getViews(View rootView) {
         etNetIncome = (EditText) rootView.findViewById(R.id.net_income);
         etHours = (EditText) rootView.findViewById(R.id.hours);
-        hoursLayout = (LinearLayout) rootView.findViewById(R.id.hours_layout);
         frequency = (Spinner) rootView.findViewById(R.id.frequency_spinner);
 
         Button submit = (Button) rootView.findViewById(R.id.submit);
@@ -59,9 +57,9 @@ public class GarnishmentFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (frequency.getSelectedItemPosition() == 0) {
-                    hoursLayout.setVisibility(View.VISIBLE);
+                    etHours.setVisibility(View.VISIBLE);
                 } else {
-                    hoursLayout.setVisibility(View.GONE);
+                    etHours.setVisibility(View.GONE);
                 }
             }
 
@@ -78,7 +76,7 @@ public class GarnishmentFragment extends Fragment {
     }
 
     private void calculateGarnishability() {
-        GarnishmentCalculator calculator = new GarnishmentCalculator(etNetIncome.getText().toString(), frequency.getSelectedItemPosition(), etHours.getText().toString());
+        GarnishmentCalculator calculator = new GarnishmentCalculator(etNetIncome.getText().toString(), frequency.getSelectedItemPosition(), etHours.getText().toString(), getContext());
         displayResults(calculator.getGarnishability());
 
     }

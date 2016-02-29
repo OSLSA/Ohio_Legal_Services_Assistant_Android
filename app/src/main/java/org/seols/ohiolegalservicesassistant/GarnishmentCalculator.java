@@ -1,5 +1,6 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.content.Context;
 import android.content.res.Resources;
 
 /**
@@ -8,13 +9,15 @@ import android.content.res.Resources;
 
 public class GarnishmentCalculator {
 
+    Context context;
     String hours, netIncome;
     int frequency;
 
-    public GarnishmentCalculator(String income, int frequency, String hours) {
+    public GarnishmentCalculator(String income, int frequency, String hours, Context context) {
         this.hours = hours;
         this.netIncome = income;
         this.frequency = frequency;
+        this.context = context;
     }
 
     public String getGarnishability() {
@@ -26,7 +29,7 @@ public class GarnishmentCalculator {
         double minWageFrequency = ((double)getMultiplier());
 
         // federal hourly minnimum wage
-        double minWage = Double.parseDouble(Resources.getSystem().getString(R.string.FEDERAL_HOURLY_MINNIMUM_WAGE));
+        double minWage = Double.parseDouble(context.getResources().getString(R.string.FEDERAL_HOURLY_MINNIMUM_WAGE));
 
         // garnishable amount based upon minnimum wage
         // R.C. 2923.66(A)(13)
