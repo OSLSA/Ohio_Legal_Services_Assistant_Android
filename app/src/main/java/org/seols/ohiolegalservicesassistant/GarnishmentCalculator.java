@@ -10,7 +10,7 @@ import android.content.res.Resources;
 public class GarnishmentCalculator {
 
     Context context;
-    String hours, netIncome;
+    String hours, netIncome, frequencyResult;
     int frequency;
 
     public GarnishmentCalculator(String income, int frequency, String hours, Context context) {
@@ -35,7 +35,7 @@ public class GarnishmentCalculator {
         // R.C. 2923.66(A)(13)
         double minWageAmount = minWage * minWageFrequency;
 
-        double countableIncome = income * getIncomeMultiplier();
+        double countableIncome = getIncomeMultiplier();
 
         double exemptPercent = income * 0.75;
 
@@ -50,7 +50,7 @@ public class GarnishmentCalculator {
             return "None of the income is garnishable.";
         } else {
             // client is garnishable
-            return "$" + exempt + " of the income is exempt, and $" + garnishable + " of the income is garnishable.";
+            return "$" + exempt + " of the income is exempt, and $" + garnishable + " of the income " + frequencyResult + " is garnishable.";
         }
     }
 
@@ -58,6 +58,8 @@ public class GarnishmentCalculator {
         switch (frequency) {
             case 0:
                 return (Double.parseDouble(netIncome) * Double.parseDouble(hours));
+            case 5:
+                return (Double.parseDouble(netIncome) / 12);
             default:
                 return Double.parseDouble(netIncome);
         }
@@ -68,12 +70,22 @@ public class GarnishmentCalculator {
         switch (frequency) {
             // multiplier based on RC 2923.66(A)(13)
             case 0:
-                return 30;
             case 1:
-                return 60;
+                // hourly and weekly
+                frequencyResult = "per week";
+                return 30;
             case 2:
-                return 65;
+                // every other week
+                frequencyResult = "every other week";
+                return 60;
             case 3:
+                // 2x per month
+                frequencyResult = "twice per month";
+                return 65;
+            case 4:
+            case 5:
+                //monthly and yearly
+                frequencyResult = "per month";
                 return 130;
             default:
                 return 60;
