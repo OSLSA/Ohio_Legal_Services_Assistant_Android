@@ -41,7 +41,6 @@ public class FormsListFragment extends Fragment {
     private String[] getFormNames() {
         FormsDAO formsDao = new FormsDAO(getContext());
         List<String> forms = formsDao.formNamesList();
-        forms.add(getResources().getString(R.string.exemption_list));
         forms.add(getResources().getString(R.string.medicaid_help_sheet));
         forms.add(getResources().getString(R.string.benefits_standards));
         forms.add(getResources().getString(R.string.add_forms));
@@ -185,7 +184,7 @@ public class FormsListFragment extends Fragment {
             } else if (v.getTag().toString().equals(getResources().getString(R.string.benefits_standards))) {
                 CopyAssets("standards_help_sheet.pdf");
             } else if (v.getTag().toString().equals(getResources().getString(R.string.add_forms))) {
-                // TODO implement adding forms here
+                ((MainActivity)getActivity()).setFragment(new EditFormsList(), "EDIT", "Add/Edit Forms", null);
             } else {
                 // user added form
                 openUserForm(v.getTag().toString());

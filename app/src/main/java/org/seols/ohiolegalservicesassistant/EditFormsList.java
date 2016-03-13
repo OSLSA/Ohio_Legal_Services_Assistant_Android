@@ -3,56 +3,87 @@ package org.seols.ohiolegalservicesassistant;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 /**
  * Created by joshuagoodwin on 3/6/16.
  */
-public class EditFormsList extends ListFragment {
+public class EditFormsList extends Fragment {
 
+    Button editButton, deleteButton;
     ListView lv;
-    int positionSelected;
-    String address;
-    FormsDAO dao;
+    List<String> formNames;
+    int positionSelected = AdapterView.INVALID_POSITION;
+    View previouslySelectedItem = null;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle onSavedInstanceState) {
         View rootView = inflater.inflate(R.layout.add_forms_list_layout, container, false);
         getViews(rootView);
+        lv = (ListView) rootView.findViewById(R.id.forms_list);
         fillList(inflater);
         return rootView;
     }
 
     private void getViews(View v) {
-        lv = (ListView)v.findViewById(R.id.lv);
         Button addButton = (Button) v.findViewById(R.id.add);
         addButton.setOnClickListener(myButtonListener);
-        Button editButton = (Button) v.findViewById(R.id.edit_form);
+        editButton = (Button) v.findViewById(R.id.edit_form);
         editButton.setOnClickListener(myButtonListener);
-        Button deleteButton = (Button) v.findViewById(R.id.delete_form);
+        deleteButton = (Button) v.findViewById(R.id.delete_form);
         deleteButton.setOnClickListener(myButtonListener);
     }
 
     private void fillList(LayoutInflater inflater) {
-        List<String> formNames = getFormNames();
+        formNames = getFormNames();
 
         // check to see if there are user forms
         if (formNames.size() == 0) {
             // means there are no existing user forms, so display that message
             formNames.add(getResources().getString(R.string.no_user_forms));
+            // disable edit and delete buttons
+            editButton.setEnabled(false);
+            deleteButton.setEnabled(false);
+            // disabled list selection
+            lv.setEnabled(false);
         }
 
         // populate list
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, formNames);
+        lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // see if user clicked already selected position
+                if (positionSelected == position) {
+                    positionSelected = AdapterView.INVALID_POSITION;
+                    previouslySelectedItem = null;
+                    view.setBackgroundColor(0);
 
+                } else {
+                    // new position selected
+                    positionSelected = position;
+                    // set background color of selected item
+                    view.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.accent_highlight));
+                    // change prior selected item back
+                    if (previouslySelectedItem != null) {
+                        previouslySelectedItem.setBackgroundColor(0);
+                    }
+                    previouslySelectedItem = view;
+                }
+            }
+        });
 
     }
 
@@ -66,64 +97,31 @@ public class EditFormsList extends ListFragment {
         return forms;
     }
 
+
+    /**
+     * custom click listener for the add, edit, delete buttons
+     */
     private View.OnClickListener myButtonListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.add:
+                    ((MainActivity)getActivity()).setFragment(new AddFormFragment(), "ADD FORM", "Add Form", null);
                     break;
                 case R.id.edit_form:
+                    // ensure item is actaully selected
+                    if (positionSelected == AdapterView.INVALID_POSITION) {
+                        Toast toast = Toast.makeText(getContext(), "You must select a form before choosing edit", Toast.LENGTH_LONG);
+                        toast.show();
+                        break;
+                    }
+                    Bundle args = new Bundle();
+                    args.putString("formName", formNames.get(positionSelected));
+                    ((MainActivity)getActivity()).setFragment(new AddFormFragment(), "ADD FORM", "Edit Form", args);
                     break;
                 case R.id.delete_form:
                     break;
             }
         }
     };
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-
-        super.onActivityCreated(savedInstanceState);
-
-        dao = new FormsDAO(getActivity());
-
-        setListAdapter(new FormListAdapter(getActivity(), dao.getFormsForEdit()));
-
-    }
-
-    @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-
-        v.setSelected(true);
-        positionSelected = position;
-
-    }
-
-    public class FormListAdapter extends ArrayAdapter<Forms> {
-
-        // List context
-        private final Context context;
-        // List values
-        private final List<Forms> formsList;
-
-        public FormListAdapter(Context context, List<Forms> formsList) {
-            super(context, R.layout.rules_row, formsList);
-            this.context = context;
-            this.formsList = formsList;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-            View rowView = inflater.inflate(R.layout.rules_row, parent, false);
-
-            TextView formName = (TextView) rowView.findViewById(R.id.row_text);
-            formName.setText(formsList.get(position).getFormName());
-
-
-            return rowView;
-        }
-    }
-
 }

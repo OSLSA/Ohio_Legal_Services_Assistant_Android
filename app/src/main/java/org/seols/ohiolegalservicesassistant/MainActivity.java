@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // TODO set back button navigation tool
+
     /**
      * Sets the main content area to the chosen fragment
      * @param name name of the fragment
