@@ -1,20 +1,16 @@
 package org.seols.ohiolegalservicesassistant;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.List;
 
 /**
@@ -22,17 +18,21 @@ import java.util.List;
  */
 public class EditFormsList extends Fragment {
 
+    ArrayAdapter<String> adapter;
     Button editButton, deleteButton;
     ListView lv;
     List<String> formNames;
     int positionSelected = AdapterView.INVALID_POSITION;
     View previouslySelectedItem = null;
+    FormsDAO dao;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle onSavedInstanceState) {
         View rootView = inflater.inflate(R.layout.add_forms_list_layout, container, false);
+        dao = new FormsDAO(getContext());
         getViews(rootView);
         lv = (ListView) rootView.findViewById(R.id.forms_list);
-        fillList(inflater);
+        fillList();
+
         return rootView;
     }
 
@@ -45,7 +45,7 @@ public class EditFormsList extends Fragment {
         deleteButton.setOnClickListener(myButtonListener);
     }
 
-    private void fillList(LayoutInflater inflater) {
+    private void fillList() {
         formNames = getFormNames();
 
         // check to see if there are user forms
@@ -60,7 +60,7 @@ public class EditFormsList extends Fragment {
         }
 
         // populate list
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, formNames);
+        adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, formNames);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -87,13 +87,22 @@ public class EditFormsList extends Fragment {
 
     }
 
+    private boolean isNoSelection(String buttonName) {
+        if (positionSelected == AdapterView.INVALID_POSITION) {
+            Toast toast = Toast.makeText(getContext(), "You must select a form before choosing " + buttonName, Toast.LENGTH_LONG);
+            toast.show();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * Gets the list of all of the user forms the user has added
      * @return list containing the name of the forms the user's added
      */
     private List<String> getFormNames() {
-        FormsDAO formsDao = new FormsDAO(getContext());
-        List<String> forms = formsDao.formNamesList();
+        List<String> forms = dao.formNamesList();
         return forms;
     }
 
@@ -109,17 +118,20 @@ public class EditFormsList extends Fragment {
                     ((MainActivity)getActivity()).setFragment(new AddFormFragment(), "ADD FORM", "Add Form", null);
                     break;
                 case R.id.edit_form:
-                    // ensure item is actaully selected
-                    if (positionSelected == AdapterView.INVALID_POSITION) {
-                        Toast toast = Toast.makeText(getContext(), "You must select a form before choosing edit", Toast.LENGTH_LONG);
-                        toast.show();
-                        break;
-                    }
+                    // ensure item is actually selected
+                    if (isNoSelection(getString(R.string.edit))) break;
                     Bundle args = new Bundle();
                     args.putString("formName", formNames.get(positionSelected));
                     ((MainActivity)getActivity()).setFragment(new AddFormFragment(), "ADD FORM", "Edit Form", args);
                     break;
                 case R.id.delete_form:
+                    // ensure an item is actually selected
+                    if (isNoSelection(getString(R.string.delete))) break;
+                    String id = dao.IDFromName(formNames.get(positionSelected));
+                    dao.deleteForm(id);
+                    Toast toast = Toast.makeText(getActivity(), "Form deleted", Toast.LENGTH_SHORT);
+                    toast.show();
+                    fillList();
                     break;
             }
         }

@@ -52,7 +52,7 @@ public class FormsDAO {
     }
 
     // method for removing form
-    public void deleteForm(int id) {
+    public void deleteForm(String id) {
         database.delete("forms", "_id = " + id, null);
     }
 
@@ -147,9 +147,27 @@ public class FormsDAO {
         return result;
     }
 
+    public String IDFromName(String name) {
+        String[] tableColumns = new String[] {"_id", "form_name"};
+        Cursor cursor = database.query("forms", tableColumns, "form_name = ?", new String[] {name}, null, null, null);
+        cursor.moveToFirst();
+        String result = cursor.getString(0);
+        cursor.close();
+        return result;
+    }
+
     public String extensionFromName(String name) {
         String[] tableColumns = new String[] {"form_name", "extension"};
         Cursor cursor = database.query("forms", tableColumns, "form_name = ?", new String[] {name}, null, null, null);
+        cursor.moveToFirst();
+        String result = cursor.getString(1);
+        cursor.close();
+        return result;
+    }
+
+    public String fileNameFromFormName(String form) {
+        String[] tableColumns = new String[] {"form_name", "file_name"};
+        Cursor cursor = database.query("forms", tableColumns, "form_name = ?", new String[] {form}, null, null, null);
         cursor.moveToFirst();
         String result = cursor.getString(1);
         cursor.close();

@@ -82,6 +82,8 @@
     <string name="form_name">Name of the form to display</string>
     <string name="name_hint">Form Name</string>
     <string name="pick_form">Pick Your Form</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="no_form">No Form Selected</string>
 
     <!-- arrays !-->
     <string-array name="frequency">
