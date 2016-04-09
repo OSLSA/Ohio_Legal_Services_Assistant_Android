@@ -14,49 +14,58 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
-                style="@style/seventy"
-                android:text="Net Income" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/garnishment"
+                style="@style/TextAppearance.AppCompat.Title"
+                />
 
             <EditText
-                style="@style/thirty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:hint="@string/income"
+                android:inputType="numberDecimal"
                 android:id="@+id/net_income" />
 
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Frequency"/>
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/frequency"
+                android:gravity="center_vertical" />
+
             <Spinner
                 android:id="@+id/frequency_spinner"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                />
+                android:layout_weight="1" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/hours_layout"
-            android:visibility="gone">
-
-            <TextView
-                android:text="Hour per week:"
-                style="@style/seventy"/>
 
             <EditText
                 android:id="@+id/hours"
-                style="@style/thirty"
                 android:hint="Hours per week"
-                android:inputType="numberDecimal" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:inputType="numberDecimal"
+                android:visibility="gone"/>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

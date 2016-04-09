@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/form_name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:gravity="center"
+            android:id="@+id/title" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:id="@+id/form_name"
+            android:hint="@string/name_hint" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:text="@string/pick_form"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:id="@+id/pick_form_button" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_file_selected"
+            android:gravity="center"
+            android:text="@string/no_form"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_form"
+        android:text="Add Form"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+
+</LinearLayout>

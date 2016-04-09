@@ -15,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_forms) {
-            // Handle the forms
+            setFragment(new FormsListFragment(), "FORMS", "Forms", null);
         } else if (id == R.id.nav_calculators) {
             setFragment(new CalculatorsFragment(), "CALCULATORS", "Calculators", null);
         } else if (id == R.id.nav_about) {
@@ -112,6 +111,8 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    // TODO set back button navigation tool
 
     /**
      * Sets the main content area to the chosen fragment

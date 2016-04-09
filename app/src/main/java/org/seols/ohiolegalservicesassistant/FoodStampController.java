@@ -158,7 +158,7 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         getVariables();
 
         // create the food stamp calculator
-        FoodStampCalculator calculator = new FoodStampCalculator(createVariableBundle());
+        FoodStampCalculator calculator = new FoodStampCalculator(createVariableBundle(), getContext());
         resultsDialog(calculator.getResults());
 
     }

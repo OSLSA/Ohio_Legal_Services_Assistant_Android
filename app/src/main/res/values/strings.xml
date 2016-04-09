@@ -66,6 +66,25 @@
     <string name="phone">Telephone</string>
     <string name="tvAGaged">Are there any AG members over 60, blind, or disabled?</string>
 
+    <!-- garnishiment calculator -->
+    <string name="income">Net Income</string>
+    <string name="frequency">Frequency</string>
+
+    <!-- forms -->
+    <string name="exemption_list">Exemption List</string>
+    <string name="medicaid_help_sheet">Medicaid Help Sheet</string>
+    <string name="benefits_standards">Public Benefits Standards Help Sheet</string>
+    <string name="add_forms">Edit/Add Forms</string>
+    <string name="new_form">New</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="no_user_forms">You have not added any forms at this time. To add new forms, press the "Add" button below.</string>
+    <string name="form_name">Name of the form to display</string>
+    <string name="name_hint">Form Name</string>
+    <string name="pick_form">Pick Your Form</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="no_form">No Form Selected</string>
+
     <!-- arrays !-->
     <string-array name="frequency">
         <item>per hour</item>
