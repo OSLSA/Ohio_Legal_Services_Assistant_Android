@@ -25,7 +25,7 @@ public class RulesTableOfContentsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.rules_all_books_layout, container, false);
         tl = (TableLayout) rootView.findViewById(R.id.rules_titles);
-        bookName = getArguments().getString("data");
+        bookName = getArguments().getString("bookName");
         setTitles(inflater);
         return rootView;
     }
@@ -33,17 +33,17 @@ public class RulesTableOfContentsFragment extends Fragment {
     private void setTitles(LayoutInflater inflater) {
 
         String[] titles = getResources().getStringArray(getResources().getIdentifier(bookName + "_toc", "array", "org.seols.ohiolegalservicesassistant"));
-        for (int i = 0; i < titles.length; i++){
-            View tr = inflater.inflate(R.layout.rules_row, null);
-            try {
-                Double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
-                // if this is an int, should convert then to string otherwise string will end in .0
-                String ruleNumber = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
-                Book tag = new Book(ruleNumber, i);
-                tr.setTag(tag);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
+            for (int i = 0; i < titles.length; i++){
+                View tr = inflater.inflate(R.layout.rules_row, null);
+                try {
+                    Double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
+                    // if this is an int, should convert then to string otherwise string will end in .0
+                    String ruleNumber = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
+                    Book tag = new Book(ruleNumber, i);
+                    tr.setTag(tag);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
             //tr.setTag(tag);
             ((TextView)tr.findViewById(R.id.row_text)).setText(titles[i]);
             tr.setOnClickListener(myClickListener);
@@ -70,7 +70,7 @@ public class RulesTableOfContentsFragment extends Fragment {
 
             // change framents
             Fragment newFragment = new RulesDetailFragment();
-            ((MainActivity)getActivity()).setFragment(newFragment, ruleNumber, "Rule " + ruleNumber, args);
+            ((MainActivity)getActivity()).setFragment(newFragment, "RULE DETAIL", "Rule " + ruleNumber, args);
         }
     };
 

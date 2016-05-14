@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public static String PACKAGE_NAME;
+    private MenuItem search;
+    private String currentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity
         setLogoClick(navigationView);
         navigationView.setNavigationItemSelectedListener(this);
         setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name), null);
+
     }
 
     private void setLogoClick(NavigationView navigationView) {
@@ -69,6 +72,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        search = menu.findItem(R.id.search);
+        search.setVisible(false);
         return true;
     }
 
@@ -79,6 +84,15 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        if (id == R.id.search) {
+            // search rule book for term
+            Bundle args = new Bundle();
+            // TODO these all have to be dynamic, in for just debugging at the moment
+            String searchTerm = "Hearsay";
+            args.putString("bookName", "ohio_rules_evidence");
+            args.putString("searchTerm", searchTerm);
+            setFragment(new RulesSearchFragment(), "SEARCH", "Search: " + searchTerm, args);
+        };
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
@@ -123,12 +137,21 @@ public class MainActivity extends AppCompatActivity
      */
     public void setFragment(Fragment name, String tag, String title, Bundle args) {
         getSupportActionBar().setTitle(title);
+        Log.d("Tag: ", tag);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        Log.d("args: ", "args = " + args);
         if (args != null) {
             name.setArguments(args);
         }
+        if (search != null) {
+            if (tag.equals("RULE TOC") || tag.equals("RULE DETAIL")) {
+                search.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+                search.setVisible(true);
+            } else {
+                search.setVisible(false);
+            }
+        }
+        currentFragment = tag;
         ft.replace(R.id.nav_content_frame, name, tag);
         ft.commit();
     }

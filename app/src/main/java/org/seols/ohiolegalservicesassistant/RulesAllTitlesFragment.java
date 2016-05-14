@@ -48,9 +48,9 @@ public class RulesAllTitlesFragment extends Fragment {
             String tag = v.getTag().toString();
             int pos = Arrays.asList(tags).indexOf(tag);
             Bundle args = new Bundle();
-            args.putString("data", tag);
+            args.putString("bookName", tag);
             Fragment newFragment = new RulesTableOfContentsFragment();
-            ((MainActivity)getActivity()).setFragment(newFragment, v.getTag().toString(), titles[pos], args);
+            ((MainActivity)getActivity()).setFragment(newFragment, "RULE TOC", titles[pos], args);
         }
     };
 
