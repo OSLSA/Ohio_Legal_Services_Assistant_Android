@@ -84,6 +84,7 @@
     <string name="pick_form">Pick Your Form</string>
     <string name="save_changes">Save Changes</string>
     <string name="no_form">No Form Selected</string>
+    <string name="search_instructions">This simple search is NOT case sensitive. Do not use special characters like " or *</string>
 
     <!-- arrays !-->
     <string-array name="frequency">

@@ -17,11 +17,11 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, SearchDialogFragment.OnUpdateSearchListener {
 
     public static String PACKAGE_NAME;
     private MenuItem search;
-    private String currentFragment;
+    private String bookName, bookTitle, searchTerm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,13 +85,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.search) {
-            // search rule book for term
-            Bundle args = new Bundle();
-            // TODO these all have to be dynamic, in for just debugging at the moment
-            String searchTerm = "Hearsay";
-            args.putString("bookName", "ohio_rules_evidence");
-            args.putString("searchTerm", searchTerm);
-            setFragment(new RulesSearchFragment(), "SEARCH", "Search: " + searchTerm, args);
+            bookTitle = getBookTitle();
+            showSearchDialog(bookTitle);
         };
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
@@ -99,6 +94,38 @@ public class MainActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private String getBookTitle() {
+        String[] tags = getResources().getStringArray(R.array.rules_tags);
+        int position = -1;
+        for (int i = 0; i < tags.length; i++) {
+            if (tags[i].equals(bookName)) position = i;
+        }
+        String[] titles = getResources().getStringArray(R.array.Rules);
+        return titles[position];
+    }
+
+    private void showSearchDialog(String title) {
+        FragmentManager fm = getSupportFragmentManager();
+        Bundle args = new Bundle();
+        args.putString("title", title);
+        SearchDialogFragment dialog = new SearchDialogFragment();
+        dialog.setArguments(args);
+        dialog.show(fm, "SearchDialog");
+    }
+
+    @Override
+    public void onSearchSubmit(String dialogSearch) {
+        searchTerm = dialogSearch;
+        // handle cancel pushed on dialog
+        if (searchTerm.equals("-1")) return;
+        // search rule book for term
+        Bundle args = new Bundle();
+        // TODO these all have to be dynamic, in for just debugging at the moment
+        args.putString("bookName", bookName);
+        args.putString("searchTerm", searchTerm);
+        setFragment(new RulesSearchFragment(), "SEARCH", "Search: " + searchTerm, args);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -142,16 +169,19 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction ft = fragmentManager.beginTransaction();
         if (args != null) {
             name.setArguments(args);
+            if (!args.getString("bookName", "none").equals("none")) bookName = args.getString("bookName");
         }
+
+
         if (search != null) {
-            if (tag.equals("RULE TOC") || tag.equals("RULE DETAIL")) {
+            if (tag.equals("RULE TOC") || tag.equals("RULE DETAIL") || tag.equals("SEARCH")) {
                 search.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
                 search.setVisible(true);
             } else {
                 search.setVisible(false);
             }
         }
-        currentFragment = tag;
+
         ft.replace(R.id.nav_content_frame, name, tag);
         ft.commit();
     }
