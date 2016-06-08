@@ -17,9 +17,11 @@ public class FormsDAO {
 
     private SQLiteDatabase database;
     private FormsSQLHelper databaseHelper;
+    private Context context;
 
     public FormsDAO(Context context) {
 
+        this.context = context;
         databaseHelper = new FormsSQLHelper(context);
         database = databaseHelper.getWritableDatabase();
 
@@ -102,28 +104,31 @@ public class FormsDAO {
         return list;
     }
 
-    public List<Forms> getFormsForEdit() {
+    public List<String> getFormsForEdit() {
 
-        List<Forms> list = new ArrayList<Forms>();
+//        List<Forms> list = new ArrayList<Forms>();
+
+        List<String> list = null;
 
         String[] tableColumns = new String[] {"_id", "form_name"};
         Forms forms = new Forms();
-        forms.setFormName("Add New Form...");
-        forms.setId(-1);
-        list.add(forms);
 
         // query db
         Cursor cursor = database.query("forms", tableColumns, null, null, null, null, tableColumns[1] + " COLLATE NOCASE");
         cursor.moveToFirst();
 
         while (!cursor.isAfterLast()) {
-            forms = new Forms();
-            forms.setId(cursor.getInt(0));
-            forms.setFormName(cursor.getString(1));
-            list.add(forms);
+            //forms = new Forms();
+            //forms.setId(cursor.getInt(0));
+            //forms.setFormName(cursor.getString(1));
+            list.add(cursor.getString(1));
             cursor.moveToNext();
         }
         cursor.close();
+        if (list.size() < 1) {
+            // means there are no custom user forms
+            list.add(context.getResources().getString(R.string.no_user_forms));
+        }
         return list;
     }
 
