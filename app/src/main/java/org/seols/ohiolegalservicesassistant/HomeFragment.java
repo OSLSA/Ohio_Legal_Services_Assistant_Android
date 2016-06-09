@@ -1,5 +1,7 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -26,6 +28,8 @@ public class HomeFragment extends Fragment {
 
     private EditText income, agSize, rule_number;
 
+    SharedPreferences prefs;
+
     private Spinner rulesSpinner;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle instanceState) {
@@ -34,6 +38,7 @@ public class HomeFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.home_layout, container, false);
         getViews(rootView);
         setRulesSpinner();
+        checkPushStatus();
         return rootView;
     }
 
@@ -159,5 +164,89 @@ public class HomeFragment extends Fragment {
 
         }
     };
+
+    /**
+     * See if this is the first time run. If so, ask users if they
+     * want to enable push notifications.
+     */
+    private void checkPushStatus() {
+        if (prefs.getBoolean("firstRun", true)) {
+            // this is the first run, ask user
+            editSharedPref("firstRun", false);
+            pushPrompt();
+        } else {
+            // not first run, see whether push enabled and set accordingly
+            boolean pushStatus = prefs.getBoolean("boolPushStatus", false);
+            SettingsFragment sa = new SettingsFragment();
+            sa.enablePush(pushStatus, getContext());
+        }
+    }
+
+    /**
+     * Method to edit the shared preferences
+     * @param prefName name of the preference to edit
+     * @param bool status to give the preference
+     */
+    private void editSharedPref(String prefName, boolean bool) {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean(prefName, bool);
+        editor.commit();
+    }
+
+
+
+    /**
+     * asks the user whether to enable push notifications
+     */
+    private void pushPrompt() {
+        final SettingsFragment sa = new SettingsFragment();
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        // Add the buttons
+        builder.setPositiveButton("Enable", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked Enable button
+                // enable message receiver
+                sa.enablePush(true, getContext());
+                editSharedPref("boolPushStatus", true);
+                dialog.dismiss();
+                // TODO show county settings so user can subscribe to user tier
+
+            }
+        });
+        builder.setNegativeButton("Don't Enable", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked Don't Enable button
+                sa.enablePush(false, getContext());
+                editSharedPref("boolPushStatus", false);
+                dialog.dismiss();
+                canChangeChoiceDialog("enable");
+            }
+        });
+        builder.setTitle("Push Notifications");
+        builder.setMessage("This app would like to occasionally provide you with notifications about important changes in the law and other news. Would you like to enable these notifications?");
+        // Create the AlertDialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    /**
+     * Method that shows an alertDialog reminding the user that they can either enable
+     * or disable push notifications in the future through the settings options.
+     *
+     * @param decision either "enable" or "disable", the opposite of the user's current
+     *                 push notification preference
+     */
+    private void canChangeChoiceDialog(String decision) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setMessage("You can change your mind and " + decision + " push notifications at any time through the settings menu.")
+                .setTitle("Changing Notification Settings")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 
 }

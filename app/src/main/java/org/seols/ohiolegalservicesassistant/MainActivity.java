@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_rules) {
             setFragment(new RulesAllTitlesFragment(), "RULES", "Rules", null);
         } else if (id == R.id.nav_settings) {
-
+            setFragment(new SettingsFragment(), "SETTING", "Settings", null);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
