@@ -4,6 +4,7 @@ package org.seols.ohiolegalservicesassistant;
         import android.app.AlertDialog;
         import android.os.Bundle;
         import android.support.v4.app.FragmentManager;
+        import android.support.v7.app.AppCompatActivity;
         import android.view.Gravity;
         import android.widget.EditText;
         import android.widget.Spinner;
@@ -343,5 +344,12 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
         monthlyIncome = (double)Math.round((monthlyIncome / 12.0) * 1000 / 1000);
         requestingET.setText("" + monthlyIncome);
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title");
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(title);
+    }
 }

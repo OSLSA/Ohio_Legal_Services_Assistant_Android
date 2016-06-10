@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -118,4 +119,12 @@ public class SettingsFragment extends Fragment {
             }
         }
     };
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title");
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(title);
+    }
 }

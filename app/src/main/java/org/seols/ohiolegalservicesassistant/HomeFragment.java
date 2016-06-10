@@ -3,8 +3,10 @@ package org.seols.ohiolegalservicesassistant;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +16,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
 
 /**
  * Created by joshuagoodwin on 10/2/15.
@@ -36,6 +36,7 @@ public class HomeFragment extends Fragment {
 
         savedInstanceState = instanceState;
         View rootView = inflater.inflate(R.layout.home_layout, container, false);
+        prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         getViews(rootView);
         setRulesSpinner();
         checkPushStatus();
@@ -249,4 +250,14 @@ public class HomeFragment extends Fragment {
         dialog.show();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title", "Default");
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(title);
+
+
+    }
 }

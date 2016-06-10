@@ -4,6 +4,7 @@ package org.seols.ohiolegalservicesassistant;
  * Created by joshuagoodwin on 10/2/15.
  */
 
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +42,14 @@ public class APRFragment extends Fragment {
         btnClear = (Button) rootView.findViewById(R.id.clear);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title");
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(title);
+    }
     // Set onClick listeners for submit and clear buttons
     private void initializeButtons() {
 

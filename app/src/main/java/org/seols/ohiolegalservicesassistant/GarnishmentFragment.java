@@ -104,4 +104,12 @@ public class GarnishmentFragment extends Fragment {
                 .setTitle("Garnishability");
         builder.create().show();
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title");
+        getActivity().getActionBar()
+                .setTitle(title);
+    }
 }

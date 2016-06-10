@@ -2,6 +2,7 @@ package org.seols.ohiolegalservicesassistant;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -135,5 +136,12 @@ public class RulesSearchFragment extends Fragment {
             this.rulePosition = rulePosition;
         }
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title");
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(title);
+    }
 }

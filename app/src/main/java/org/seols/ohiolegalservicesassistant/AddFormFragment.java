@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,15 @@ public class AddFormFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.add_forms_detail_layout, container, false);
         populateViews(rootView);
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title");
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(title);
     }
 
     private void populateViews(View v) {

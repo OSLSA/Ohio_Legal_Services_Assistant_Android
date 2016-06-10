@@ -2,6 +2,7 @@ package org.seols.ohiolegalservicesassistant;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,5 +54,12 @@ public class RulesAllTitlesFragment extends Fragment {
             ((MainActivity)getActivity()).setFragment(newFragment, "RULE TOC", titles[pos], args);
         }
     };
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Set title
+        String title = getArguments().getString("title");
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(title);
+    }
 }

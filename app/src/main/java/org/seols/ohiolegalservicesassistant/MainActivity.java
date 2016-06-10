@@ -167,10 +167,14 @@ public class MainActivity extends AppCompatActivity
         Log.d("Tag: ", tag);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = fragmentManager.beginTransaction();
+        Bundle argsFinal = new Bundle();
         if (args != null) {
-            name.setArguments(args);
             if (!args.getString("bookName", "none").equals("none")) bookName = args.getString("bookName");
+            argsFinal = args;
         }
+
+        argsFinal.putString("title", title);
+        name.setArguments(argsFinal);
 
 
         if (search != null) {
@@ -183,6 +187,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         ft.replace(R.id.nav_content_frame, name, tag);
+        ft.addToBackStack(tag);
         ft.commit();
     }
 }
