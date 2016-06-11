@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +48,7 @@ public class SettingsFragment extends Fragment {
 
         swAttorney.setOnCheckedChangeListener(myTopicsCheckedChangeListener);
         swLegalAid.setOnCheckedChangeListener(myTopicsCheckedChangeListener);
-        swServiceProvider.setOnCheckedChangeListener(myCheckedChangeListener);
+        swServiceProvider.setOnCheckedChangeListener(myTopicsCheckedChangeListener);
     }
 
     /**
@@ -104,15 +105,18 @@ public class SettingsFragment extends Fragment {
             switch (buttonView.getId()) {
                 case R.id.switch_legal_aid:
                     editSharedPref("pushLegalAid", isChecked);
-                    changeSubscription("Legal Aid Advocate", isChecked);
+                    changeSubscription("Legal_Aid_Advocate", isChecked);
+                    Log.d("PUSH NOTIFICATIONS: ", "legal aid");
                     break;
                 case R.id.switch_attorney:
                     editSharedPref("pushAttorney", isChecked);
                     changeSubscription("Attorney", isChecked);
+                    Log.d("PUSH NOTIFICATIONS: ", "attorney");
                     break;
                 case R.id.switch_service_provider:
                     editSharedPref("pushServiceProvider", isChecked);
-                    changeSubscription("Service Provider", isChecked);
+                    changeSubscription("Service_Provider", isChecked);
+                    Log.d("PUSH NOTIFICATIONS: ", "service provider");
                     break;
                 default:
                     break;
