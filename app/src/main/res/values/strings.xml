@@ -103,15 +103,17 @@
         <item>Ohio Rules of Civil Procedure</item>
         <item>Ohio Rules of Evidence</item>
         <item>Ohio Rules of Juvenile Procedure</item>
+        <item>Ohio Rules of Professional Responsibility</item>
     </string-array>
 
     <string-array name="rules_tags">
         <item>federal_evidence</item>
         <item>federal_civil_procedure</item>
         <item>ohio_appellate</item>
-        <item>ohio_civil_procedure</item>
+        <item>ohio_rules_cp</item>
         <item>ohio_rules_evidence</item>
         <item>ohio_juvenile</item>
+        <item>ohio_prof_resp</item>
     </string-array>
 
     <string-array name="owf_versions">

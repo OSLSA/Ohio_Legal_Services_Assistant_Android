@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="ohio_prof_resp_toc">
+		<item>1.0 Terminology</item>
+		<item>1.1 Competence</item>
+		<item>1.2 Scope of Representation and Allocation of Authority Between Client and Lawyer</item>
+		<item>1.3 Diligence</item>
+		<item>1.4 Communication</item>
+		<item>1.5 Fees and Expenses</item>
+		<item>1.6 Confidentiality of Information</item>
+		<item>1.7 Conflict of Interest: Current Clients</item>
+		<item>1.8 Conflict of Interest: Current Clients: Specific Rules</item>
+		<item>1.9 Duties to Former Clients</item>
+		<item>1.10 Imputation of Conflicts of Interest: General Rule</item>
+		<item>1.11 Special Conflicts of Interest for Former and Current Government Officers and Employees</item>
+		<item>1.12 Former Judge, Arbitrator, Mediator, or Other Third-Party Neutral</item>
+		<item>1.13 Organization as Client</item>
+		<item>1.14 Client with Diminished Capacity</item>
+		<item>1.15 Safekeeping Funds and Property</item>
+		<item>1.16 Declining or Terminating Representation</item>
+		<item>1.17 Sale of Law Practice</item>
+		<item>1.18 Duties to Prospective Client</item>
+		<item>2.1 Advisor</item>
+		<item>2.3 Evaluation for Use by Third Persons</item>
+		<item>2.4 Lawyer Serving as Arbitrator, Mediator, or Third-Party Neutral</item>
+		<item>3.1 Meritorious Claims and Contentions</item>
+		<item>3.3 Candor toward the Tribunal</item>
+		<item>3.4 Fairness to Opposing Party and Counsel</item>
+		<item>3.5 Impartiality and Decorum of the Tribunal</item>
+		<item>3.6 Trial Publicity</item>
+		<item>3.7 Lawyer as Witness</item>
+		<item>3.8 Special Responsibilities of a Prosecutor</item>
+		<item>3.9 Advocate in Nonadjudicative Proceedings</item>
+		<item>4.1 Truthfulness in Statements to Others</item>
+		<item>4.2 Communication with Person Represented by Counsel</item>
+		<item>4.3 Dealing with Unrepresented Person</item>
+		<item>4.4 Respect for Rights of Third Persons</item>
+		<item>5.1 Responsibilities of Partners, Managers, and Supervisory Lawyers</item>
+		<item>5.2 Responsibilities of a Subordinate Lawyer</item>
+		<item>5.3 Responsibilities Regarding Nonlawyer Assistants</item>
+		<item>5.4 Professional Independence of a Lawyer</item>
+		<item>5.5 Unauthorized Practice of Law; Multijurisdictional Practice of Law</item>
+		<item>5.6 Restrictions on Right to Practice</item>
+		<item>5.7 Responsibilities Regarding Law-Related Services</item>
+		<item>6.2 Accepting Appointments</item>
+		<item>6.5 Nonprofit and Court-Annexed Limited Legal Services Programs</item>
+		<item>7.1 Communications Concerning a Lawyer’s Services</item>
+		<item>7.2 Advertising and Recommendation of Professional Employment</item>
+		<item>7.3 Solicitation of Clients</item>
+		<item>7.4 Communication of Fields of Practice and Specialization</item>
+		<item>7.5 Firm Names and Letterheads</item>
+		<item>8.1 Bar Admission and Disciplinary Matters</item>
+		<item>8.2 Judicial Officials</item>
+		<item>8.3 Reporting Professional Misconduct</item>
+		<item>8.4 Misconduct</item>
+		<item>8.5 Disciplinary Authority; Choice of Law</item>
+	</string-array>
+	<string-array name="ohio_prof_resp_1_0">
+		<item>1<b>RULE 1.0: TERMINOLOGY</b></item>
+		<item>1As used in these rules:</item>
+		<item>1(a) “Belief” or “believes” denotes that the person involved actually supposed the fact in question to be true. A person’s belief may be inferred from circumstances.</item>
+		<item>1(b) “Confirmed in writing,” when used in reference to the informed consent of a person, denotes informed consent that is given in writing by the person or a writing that a lawyer promptly transmits to the person confirming an oral informed consent. See division (f) for the definition of “informed consent.” If it is not feasible to obtain or transmit the writing at the time the person gives informed consent, then the lawyer must obtain or transmit it within a reasonable time thereafter.</item>
+		<item>1(c) “Firm” or “law firm” denotes a lawyer or lawyers in a law partnership, professional corporation, sole proprietorship, or other association authorized to practice law; or lawyers employed in a private or public legal aid or public defender organization, a legal services organization, or the legal department of a corporation or other organization.</item>
+		<item>1(d) “Fraud” or “fraudulent” denotes conduct that has an intent to deceive and is either of the following:</item>
+			<item>2(1) an actual or implied misrepresentation of a material fact that is made either with knowledge of its falsity or with such utter disregard and recklessness about its falsity that knowledge may be inferred;</item>
+			<item>2(2) a knowing concealment of a material fact where there is a duty to disclose the material fact.</item>
+		<item>1(e) “Illegal” denotes criminal conduct or a violation of an applicable statute or administrative regulation.</item>
+		<item>1(f) “Informed consent” denotes the agreement by a person to a proposed course of conduct after the lawyer has communicated adequate information and explanation about the material risks of and reasonably available alternatives to the proposed course of conduct.</item>
+		<item>1(g) “Knowingly,” “known,” or “knows” denotes actual knowledge of the fact in question. A person’s knowledge may be inferred from circumstances.</item>
+		<item>1(h) “Partner” denotes a member of a partnership, a shareholder in a law firm organized as a professional corporation, or a member of an association authorized to practice law.</item>
+		<item>1(i) “Reasonable” or “reasonably” when used in relation to conduct by a lawyer denotes the conduct of a reasonably prudent and competent lawyer.</item>
+		<item>1(j) “Reasonable belief” or “reasonably believes” when used in reference to a lawyer denotes that the lawyer believes the matter in question and that the circumstances are such that the belief is reasonable.</item>
+		<item>1(k) “Reasonably should know” when used in reference to a lawyer denotes that a lawyer of reasonable prudence and competence would ascertain the matter in question.</item>
+		<item>1(l) “Screened” denotes the isolation of a lawyer from any participation in a matter through the timely imposition of procedures within a firm that are reasonably adequate under the circumstances to protect information that the isolated lawyer is obligated to protect under these rules or other law.</item>
+		<item>1(m) “Substantial” when used in reference to degree or extent denotes a matter of real importance or great consequence.</item>
+		<item>1(n) “Substantially related matter” denotes one that involves the same transaction or legal dispute or one in which there is a substantial risk that confidential factual information that would normally have been obtained in the prior representation of a client would materially advance the position of another client in a subsequent matter.</item>
+		<item>1(o) “Tribunal” denotes a court, an arbitrator in a binding arbitration proceeding, or a legislative body, administrative agency, or other body acting in an adjudicative capacity. A legislative body, administrative agency, or other body acts in an adjudicative capacity when a neutral official, after the presentation of evidence or legal argument by a party or parties, will render a binding legal judgment directly affecting a party’s interests in a particular matter.</item>
+		<item>1(p) “Writing” or “written” denotes a tangible or electronic record of a communication or representation, including handwriting, typewriting, printing, photostating, photography, audio or videorecording, and electronic communications. A “signed” writing includes an electronic sound, symbol, or process attached to or logically associated with a writing and executed or adopted by a person with the intent to sign the writing.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_1">
+		<item>1<b>RULE 1.1: COMPE-TENCE</b></item>
+		<item>1A lawyer shall provide competent representation to a client. Competent representation requires the legal knowledge, skill, thoroughness, and preparation <i>reasonably</i> necessary for the representation.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_2">
+		<item>1<b>RULE 1.2: SCOPE OF REPRESENTATION AND ALLOCATION OF AUTHORITY BETWEEN CLIENT AND LAWYER</b></item>
+		<item>1(a) Subject to divisions (c), (d), and (e) of this rule, a lawyer shall abide by a client’s decisions concerning the objectives of representation and, as required by Rule 1.4, shall consult with the client as to the means by which they are to be pursued. A lawyer may take action on behalf of the client as is impliedly authorized to carry out the representation. A lawyer does not violate this rule by acceding to requests of opposing counsel that do not prejudice the rights of the client, being punctual in fulfilling all professional commitments, avoiding offensive tactics, and treating with courtesy and consideration all persons involved in the legal process. A lawyer shall abide by a client’s decision whether to settle a matter. In a criminal case, the lawyer shall abide by the client’s decision as to a plea to be entered, whether to waive a jury trial, and whether the client will testify.</item>
+		<item>1(b) [RESERVED]</item>
+		<item>1(c) A lawyer may limit the scope of a new or existing representation if the limitation is reasonable under the circumstances and communicated to the client, preferably in <i>writing</i>.</item>
+		<item>1(d) A lawyer shall not counsel a client to engage, or assist a client, in conduct that the lawyer <i>knows</i> is <i>illegal</i> or <i>fraudulent</i>. A lawyer may discuss the legal consequences of any proposed course of conduct with a client and may counsel or assist a client in making a good faith effort to determine the validity, scope, meaning, or application of the law.</item>
+		<item>1(e) Unless otherwise required by law, a lawyer shall not present, participate in presenting, or threaten to present criminal charges or professional misconduct allegations solely to obtain an advantage in a civil matter.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_3">
+		<item>1<b>RULE 1.3: DILIGENCE</b></item>
+		<item>1A lawyer shall act with reasonable diligence and promptness in representing a client.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_4">
+		<item>1<b>RULE 1.4: COMMUNICATION</b></item>
+		<item>1(a) A lawyer shall do all of the following:</item>
+		<item>2(1) promptly inform the client of any decision or circumstance with respect to which the client’s <i>informed consent</i> is required by these rules;</item>
+		<item>2(2) <i>reasonably</i> consult with the client about the means by which the client’s objectives are to be accomplished;</item>
+		<item>2(3) keep the client <i>reasonably</i> informed about the status of the matter;</item>
+		<item>2(4) comply as soon as practicable with <i>reasonable</i> requests for information from the client;</item>
+		<item>2(5) consult with the client about any relevant limitation on the lawyer’s conduct when the lawyer <i>knows</i> that the client expects assistance not permitted by the Ohio Rules of Professional Conduct or other law.</item>
+		<item>1(b) A lawyer shall explain a matter to the extent <i>reasonably</i> necessary to permit the client to make informed decisions regarding the representation.</item>
+		<item>1(c) A lawyer shall inform a client at the time of the client’s engagement of the lawyer or at any time subsequent to the engagement if the lawyer does not maintain professional liability insurance in the amounts of at least one hundred thousand dollars per occurrence and three hundred thousand dollars in the aggregate or if the lawyer’s professional liability insurance is terminated. The notice shall be provided to the client on a separate form set forth following this rule and shall be signed by the client.</item>
+		<item>2(1) A lawyer shall maintain a copy of the notice signed by the client for five years after termination of representation of the client.</item>
+		<item>2(2) A lawyer who is involved in the division of fees pursuant to Rule 1.5(e) shall inform the client as required by division (c) of this rule before the client is asked to agree to the division of fees.</item>
+		<item>2(3) The notice required by division (c) of this rule shall not apply to either of the following:</item>
+		<item>3(i) A lawyer who is employed by a governmental entity and renders services pursuant to that employment;</item>
+		<item>3(ii) A lawyer who renders legal services to an entity that employs the lawyer as in-house counsel.</item>
+		<item>6NOTICE TO CLIENT</item>
+		<item>6Pursuant to Rule 1.4 of the Ohio Rules of Professional Conduct, I am required to notify you that I do not maintain professional liability (malpractice) insurance of at least $100,000 per occurrence and $300,000 in the aggregate.</item>
+		<item>6_____________________</item>
+		<item>6Attorney’s Signature</item>
+		<item>6CLIENT ACKNOWLEDGEMENT</item>
+		<item>6I acknowledge receipt of the notice required by Rule 1.4 of the Ohio Rules of Professional Conduct that [insert attorney’s name] does not maintain professional liability (malpractice) insurance of at least $100,000 per occurrence and $300,000 in the aggregate.</item>
+		<item>6_____________________</item>
+		<item>6Client’s Signature</item>
+		<item>6_____________________</item>
+		<item>6Date</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_5">
+		<item>1<b>RULE 1.5: FEES AND EXPENSES</b></item>
+		<item>1(a) A lawyer shall not make an agreement for, charge, or collect an <i>illegal</i> or clearly excessive fee. A fee is clearly excessive when, after a review of the facts, a lawyer of ordinary prudence would be left with a definite and firm conviction that the fee is in excess of a <i>reasonable</i> fee. The factors to be considered in determining the reasonableness of a fee include the following:</item>
+		<item>2(1) the time and labor required, the novelty and difficulty of the questions involved, and the skill requisite to perform the legal service properly;</item>
+		<item>2(2) the likelihood, if apparent to the client, that the acceptance of the particular employment will preclude other employment by the lawyer;</item>
+		<item>2(3) the fee customarily charged in the locality for similar legal services;</item>
+		<item>2(4) the amount involved and the results obtained;</item>
+		<item>2(5) the time limitations imposed by the client or by the circumstances;</item>
+		<item>2(6) the nature and length of the professional relationship with the client;</item>
+		<item>2(7) the experience, reputation, and ability of the lawyer or lawyers performing the services;</item>
+		<item>2(8) whether the fee is fixed or contingent.</item>
+		<item>1(b) The nature and scope of the representation and the basis or rate of the fee and expenses for which the client will be responsible shall be communicated to the client, preferably in <i>writing</i>, before or within a <i>reasonable</i> time after commencing the representation, unless the lawyer will charge a client whom the lawyer has regularly represented on the same basis as previously charged. Any change in the basis or rate of the fee or expenses is subject to division (a) of this rule and shall promptly be communicated to the client, preferably in <i>writing</i>.</item>
+		<item>1(c) A fee may be contingent on the outcome of the matter for which the service is rendered, except in a matter in which a contingent fee is prohibited by division (d) of this rule or other law.</item>
+		<item>2(1) Each contingent fee agreement shall be in a <i>writing</i> signed by the client and the lawyer and shall state the method by which the fee is to be determined, including the percentage or percentages that shall accrue to the lawyer in the event of settlement, trial, or appeal; litigation and other expenses to be deducted from the recovery; and whether such expenses are to be deducted before or after the contingent fee is calculated. The agreement shall clearly notify the client of any expenses for which the client will be liable whether or not the client is the prevailing party.</item>
+		<item>2(2) If the lawyer becomes entitled to compensation under the contingent fee agreement and the lawyer will be disbursing funds, the lawyer shall prepare a closing statement and shall provide the client with that statement at the time of or prior to the receipt of compensation under the agreement. The closing statement shall specify the manner in which the compensation was determined under the agreement, any costs and expenses deducted by the lawyer from the judgment or settlement involved, and, if applicable, the actual division of the lawyer’s fees with a lawyer not in the same <i>firm</i>, as required in division (e)(3) of this rule. The closing statement shall be signed by the client and lawyer.</item>
+		<item>1(d) A lawyer shall not enter into an arrangement for, charge, or collect any of the following:</item>
+		<item>2(1) any fee in a domestic relations matter, the payment or amount of which is contingent upon the securing of a divorce or upon the amount of spousal or child support, or property settlement in lieu thereof;</item>
+		<item>2(2) a contingent fee for representing a defendant in a criminal case;</item>
+		<item>2(3) a fee denominated as “earned upon receipt,” “nonrefundable,” or in any similar terms, unless the client is simultaneously advised in <i>writing</i> that if the lawyer does not complete the representation for any reason, the client may be entitled to a refund of all or part of the fee based upon the value of the representation pursuant to division (a) of this rule.</item>
+		<item>1(e) Lawyers who are not in the same <i>firm</i> may divide fees only if all of the following apply:</item>
+		<item>2(1) the division of fees is in proportion to the services performed by each lawyer or each lawyer assumes joint responsibility for the representation and agrees to be available for consultation with the client;</item>
+		<item>2(2) the client has given <i>written</i> consent after full disclosure of the identity of each lawyer, that the fees will be divided, and that the division of fees will be in proportion to the services to be performed by each lawyer or that each lawyer will assume joint responsibility for the representation;</item>
+		<item>2(3) except where court approval of the fee division is obtained, the <i>written</i> closing statement in a case involving a contingent fee shall be signed by the client and each lawyer and shall comply with the terms of division (c)(2) of this rule;</item>
+		<item>2(4) the total fee is <i>reasonable</i>.</item>
+		<item>1(f) In cases of a dispute between lawyers arising under this rule, fees shall be divided in accordance with the mediation or arbitration provided by a local bar association. When a local bar association is not available or does not have procedures to resolve fee disputes between lawyers, the dispute shall be referred to the Ohio State Bar Association for mediation or arbitration.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_6">
+		<item>1<b>RULE 1.6: CONFIDENTIALITY OF INFORMATION</b></item>
+		<item>1(a) A lawyer shall not reveal information relating to the representation of a client, including information protected by the attorney-client privilege under applicable law, unless the client gives <i>informed consent</i>, the disclosure is impliedly authorized in order to carry out the representation, or the disclosure is permitted by division (b) or required by division (d) of this rule.</item>
+		<item>1(b) A lawyer may reveal information relating to the representation of a client, including information protected by the attorney-client privilege under applicable law, to the extent the lawyer <i>reasonably believes</i> necessary for any of the following purposes:</item>
+		<item>2(1) to prevent reasonably certain death or substantial bodily harm;</item>
+		<item>2(2) to prevent the commission of a crime by the client or other person;</item>
+		<item>2(3) to mitigate <i>substantial</i> injury to the financial interests or property of another that has resulted from the client’s commission of an <i>illegal</i> or <i>fraudulent</i> act, in furtherance of which the client has used the lawyer’s services;</item>
+		<item>2(4) to secure legal advice about the lawyer’s compliance with these rules;</item>
+		<item>2(5) to establish a claim or defense on behalf of the lawyer in a controversy between the lawyer and the client, to establish a defense to a criminal charge or civil claim against the lawyer based upon conduct in which the client was involved, or to respond to allegations in any proceeding, including any disciplinary matter, concerning the lawyer’s representation of the client;</item>
+		<item>2(6) to comply with other law or a court order;</item>
+		<item>2(7) to detect and resolve conflicts of interest arising from the lawyer’s change of employment or from changes in the composition or ownership of a <i>firm</i>, but only if the revealed information would not compromise the attorney-client privilege or otherwise prejudice the client.</item>
+		<item>1(c) A lawyer shall make <i>reasonable</i> efforts to prevent the inadvertent or unauthorized disclosure of or unauthorized access to information related to the representation of a client.</item>
+		<item>1(d) A lawyer shall reveal information relating to the representation of a client, including information protected by the attorney-client privilege under applicable law, to the extent the lawyer <i>reasonably believes</i> necessary to comply with Rule 3.3 or 4.1.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_7">
+		<item>1<b>RULE 1.7: CONFLICT OF INTEREST: CURRENT CLIENTS</b></item>
+		<item>1(a) A lawyer’s acceptance or continuation of representation of a client creates a conflict of interest if either of the following applies:</item>
+		<item>2(1) the representation of that client will be directly adverse to another current client;</item>
+		<item>2(2) there is a <i>substantial</i> risk that the lawyer’s ability to consider, recommend, or carry out an appropriate course of action for that client will be materially limited by the lawyer’s responsibilities to another client, a former client, or a third person or by the lawyer’s own personal interests.</item>
+		<item>1(b) A lawyer shall not accept or continue the representation of a client if a conflict of interest would be created pursuant to division (a) of this rule, unless all of the following apply:</item>
+		<item>2(1) the lawyer will be able to provide competent and diligent representation to each affected client;</item>
+		<item>2(2) each affected client gives <i>informed consent</i>, <i>confirmed in writing</i>;</item>
+		<item>2(3) the representation is not precluded by division (c) of this rule.</item>
+		<item>1(c) Even if each affected client consents, the lawyer shall not accept or continue the representation if either of the following applies:</item>
+		<item>2(1) the representation is prohibited by law;</item>
+		<item>2(2) the representation would involve the assertion of a claim by one client against another client represented by the lawyer in the same proceeding.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_8">
+		<item>1<b>RULE 1.8: CONFLICT OF INTEREST: CURRENT CLIENTS: SPECIFIC RULES</b></item>
+		<item>1(a) A lawyer shall not enter into a business transaction with a client or <i>knowingly</i> acquire an ownership, possessory, security, or other pecuniary interest adverse to a client unless all of the following apply:</item>
+		<item>2(1) the transaction and terms on which the lawyer acquires the interest are fair and <i>reasonable</i> to the client and are fully disclosed to the client in writing in a manner that can be <i>reasonably</i> understood by the client;</item>
+		<item>2(2) the client is advised in <i>writing</i> of the desirability of seeking and is given a <i>reasonable</i> opportunity to seek the advice of independent legal counsel on the transaction;</item>
+		<item>2(3) the client gives <i>informed consent</i>, in a <i>writing</i> signed by the client, to the essential terms of the transaction and the lawyer’s role in the transaction, including whether the lawyer is representing the client in the transaction.</item>
+		<item>1(b) Except as permitted or required by these rules, a lawyer shall not use information relating to representation of a client to the disadvantage of the client unless the client gives informed consent.</item>
+		<item>1(c) A lawyer shall not solicit any <i>substantial</i> gift from a client. A lawyer shall not prepare on behalf of a client an instrument giving the lawyer, the lawyer’s <i>partner</i>, associate, paralegal, law clerk, or other employee of the lawyer’s <i>firm</i>, a lawyer acting “of counsel” in the lawyer’s <i>firm</i>, or a person related to the lawyer any gift unless the lawyer or other recipient of the gift is related to the client. For purposes of division (c) of this rule:</item>
+		<item>2(1) “person related to the lawyer” includes a spouse, child, grandchild, parent, grandparent, sibling, or other relative or individual with whom the lawyer or the client maintains a close, familial relationship;</item>
+		<item>2(2) “gift” includes a testamentary gift.</item>
+		<item>1(d) Prior to the conclusion of representation of a client, a lawyer shall not make or negotiate an agreement giving the lawyer literary or media rights to a portrayal or account based in <i>substantial</i> part on information relating to the representation.</item>
+		<item>1(e) A lawyer shall not provide financial assistance to a client in connection with pending or contemplated litigation, except that a lawyer may do either of the following:</item>
+		<item>2(1) a lawyer may advance court costs and expenses of litigation, the repayment of which may be contingent on the outcome of the matter;</item>
+		<item>2(2) a lawyer representing an indigent client may pay court costs and expenses of litigation on behalf of the client.</item>
+		<item>1(f) A lawyer shall not accept compensation for representing a client from someone other than the client unless divisions (f)(1) to (3) and, if applicable, division (f)(4) apply:</item>
+		<item>2(1) the client gives <i>informed consent</i>;</item>
+		<item>2(2) there is no interference with the lawyer’s independence of professional judgment or with the client-lawyer relationship;</item>
+		<item>2(3) information relating to representation of a client is protected as required by Rule 1.6;</item>
+		<item>2(4) if the lawyer is compensated by an insurer to represent an insured, the lawyer delivers a copy of the following Statement of Insured Client’s Rights to the client in person at the first meeting or by mail within ten days after the lawyer receives notice of retention by the insurer:</item>
+		<item>4STATEMENT OF INSURED CLIENT’S RIGHTS</item>
+		<item>3An insurance company has retained a lawyer to defend a lawsuit or claim against you. This Statement of Insured Client’s Rights is being given to you to assure that you are aware of your rights regarding your legal representation.</item>
+		<item>31. Your Lawyer: Your lawyer has been retained by the insurance company under the terms of your policy. If you have questions about the selection of the lawyer, you should discuss the matter with the insurance company or the lawyer.</item>
+		<item>32. Directing the Lawyer: Your policy may provide that the insurance company can reasonably control the defense of the lawsuit. In addition, your insurance company may establish guidelines governing how lawyers are to proceed in defending you—guidelines that you are entitled to know. However, the lawyer cannot act on the insurance company’s instructions when they are contrary to your interest.</item>
+		<item>33. Communications: Your lawyer should keep you informed about your case and respond to your reasonable requests for information.</item>
+		<item>34. Confidentiality: Lawyers have a duty to keep secret the confidential information a client provides, subject to limited exceptions. However, the lawyer chosen to represent you also may have duty to share with the insurance company information relating to the defense or settlement of the claim. Whenever a waiver of lawyer-client confidentiality is needed, your lawyer has a duty to consult with you and obtain your informed consent.</item>
+		<item>35. Release of Information for Audits: Some insurance companies retain auditing companies to review the billing and files of the lawyers they hire to represent policyholders. If the lawyer believes an audit, bill review, or other action initiated by the insurance company may release confidential information in a manner that may be contrary to your interest, the lawyer must advise you regarding the matter and provide an explanation of the purpose of the audit and the procedure involved. Your written consent must be given in order for an audit to be conducted. If you withhold your consent, the audit shall not be conducted.</item>
+		<item>36. Conflicts of Interest: The lawyer is responsible for identifying conflicts of interest and advising you of them. If at any time you have a concern about a conflict of interest in your case, you should discuss your concern with the lawyer. If a conflict of interest exists that cannot be resolved, the insurance company may be required to provide you with another lawyer.</item>
+		<item>37. Settlement: Many insurance policies state that the insurance company alone may make a decision regarding settlement of a claim. Some policies, however, require your consent. You should discuss with your lawyer your rights under the policy regarding settlement. No settlement requiring you to pay money in excess of your policy limits can be reached without your agreement.</item>
+		<item>38. Fees and Costs: As provided in your insurance policy, the insurance company usually pays all of the fees and costs of defending the claim. If you are responsible for paying the lawyer any fees and costs, your lawyer must promptly inform you of that.</item>
+		<item>39. Hiring your own Lawyer: The lawyer hired by the insurance company is only representing you in defending the claim brought against you. If you desire to pursue a claim against someone, you will need to hire your own lawyer. You may also wish to hire your own lawyer if there is a risk that there might be a judgment entered against you for more than the amount of your insurance. Your lawyer has a duty to inform you of this risk and other reasonably foreseeable adverse results.</item>
+		<item>1(g) A lawyer who represents two or more clients shall not participate in making an aggregate settlement of the claims of or against the clients, or in a criminal case an aggregated agreement as to guilty or nolo contendere pleas, unless the settlement or agreement is subject to court approval or each client gives <i>informed consent</i>, in a <i>writing</i> signed by the client. The lawyer’s disclosure shall include the existence and nature of all the claims or pleas involved and of the participation of each person in the settlement or agreement.</item>
+		<item>1(h) A lawyer shall not do any of the following:</item>
+		<item>2(1) make an agreement prospectively limiting the lawyer’s liability to a client for malpractice or requiring arbitration of a claim against the lawyer unless the client is independently represented in making the agreement;</item>
+		<item>2(2) settle a claim or potential claim for such liability unless all of the following apply:</item>
+		<item>3(i) the settlement is not unconscionable, inequitable, or unfair;</item>
+		<item>3(ii) the client or former client is advised in <i>writing</i> of the desirability of seeking and is given a <i>reasonable</i> opportunity to seek the advice of independent legal counsel in connection therewith;</item>
+		<item>3(iii) the client or former client gives <i>informed consent</i>.</item>
+		<item>1(i) A lawyer shall not acquire a proprietary interest in the cause of action or subject matter of litigation the lawyer is conducting for a client, except that the lawyer may do either of the following:</item>
+		<item>2(1) acquire a lien authorized by law to secure the lawyer’s fee or expenses;</item>
+		<item>2(2) contract with a client for a <i>reasonable</i> contingent fee in a civil case.</item>
+		<item>1(j) A lawyer shall not solicit or engage in sexual activity with a client unless a consensual sexual relationship existed between them when the client-lawyer relationship commenced.</item>
+		<item>1(k) While lawyers are associated in a <i>firm</i>, a prohibition in divisions (a) to (i) of this rule that applies to any one of them shall apply to all of them.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_9">
+		<item>1<b>RULE 1.9: DUTIES TO FORMER CLIENTS</b></item>
+		<item>1(a) Unless the former client gives <i>informed consent, confirmed in writing</i>, a lawyer who has formerly represented a client in a matter shall not thereafter represent another person in the same or a <i>substantially related matter</i> in which that person’s interests are materially adverse to the interests of the former client.</item>
+		<item>1(b) Unless the former client gives <i>informed consent, confirmed in writing</i>, a lawyer shall not <i>knowingly</i> represent a person in the same or a <i>substantially related matter</i> in which a <i>firm</i> with which the lawyer formerly was associated had previously represented a client where both of the following apply:</item>
+		<item>2(1) the interests of the client are materially adverse to that person;</item>
+		<item>2(2) the lawyer had acquired information about the client that is protected by Rules 1.6 and 1.9(c) and material to the matter.</item>
+		<item>1(c) A lawyer who has formerly represented a client in a matter or whose present or former <i>firm</i> has formerly represented a client in a matter shall not thereafter do either of the following:</item>
+		<item>2(1) use information relating to the representation to the disadvantage of the former client except as these rules would permit or require with respect to a client or when the information has become generally <i>known</i>;</item>
+		<item>2(2) reveal information relating to the representation except as these rules would permit or require with respect to a client.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_10">
+		<item>1<b>RULE 1.10: IMPUTATION OF CONFLICTS OF INTEREST: GENERAL RULE</b></item>
+		<item>1(a) While lawyers are associated in a <i>firm</i>, none of them shall represent a client when the lawyer <i>knows</i> or <i>reasonably should know</i> that any one of them practicing alone would be prohibited from doing so by Rule 1.7 or 1.9, unless the prohibition is based on a personal interest of the prohibited lawyer and does not present a significant risk of materially limiting the representation of the client by the remaining lawyers in the <i>firm</i>.</item>
+		<item>1(b) When a lawyer is no longer associated with a <i>firm</i>, no lawyer in that <i>firm</i> shall thereafter represent a person with interests materially adverse to those of a client represented by the formerly associated lawyer and not currently represented by the <i>firm</i>, if the lawyer <i>knows</i> or <i>reasonably should know</i> that either of the following applies:</item>
+		<item>2(1) the formerly associated lawyer represented the client in the same or a <i>substantially related matter</i>;</item>
+		<item>2(2) any lawyer remaining in the <i>firm</i> has information protected by Rules 1.6 and 1.9(c) that is material to the matter.</item>
+		<item>1(c) When a lawyer has had <i>substantial</i> responsibility in a matter for a former client and becomes associated with a new <i>firm</i>, no lawyer in the new <i>firm</i> shall <i>knowingly</i> represent, in the same matter, a person whose interests are materially adverse to the interests of the former client.</item>
+		<item>1(d) In circumstances other than those covered by Rule 1.10(c), when a lawyer becomes associated with a new <i>firm</i>, no lawyer in the new <i>firm</i> shall <i>knowingly</i> represent a person in a matter in which the lawyer is personally disqualified under Rule 1.9 unless both of the following apply:</item>
+		<item>2(1) the new <i>firm</i> timely <i>screens</i> the personally disqualified lawyer from any participation in the matter and that lawyer is apportioned no part of the fee from that matter;</item>
+		<item>2(2) written notice is given as soon as practicable to any affected former client.</item>
+		<item>1(e) A disqualification required by this rule may be waived by the affected client under the conditions stated in Rule 1.7.</item>
+		<item>1(f) The disqualification of lawyers associated in a <i>firm</i> with former or current government lawyers is governed by Rule 1.11.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_11">
+		<item>1<b>RULE 1.11: SPECIAL CONFLICTS OF INTEREST FOR FORMER AND CURRENT GOVERNMENT OFFICERS AND EMPLOYEES</b></item>
+		<item>1(a) A lawyer who has formerly served as a public officer or employee of the government shall comply with both of the following:</item>
+		<item>2(1) all applicable laws and Rule 1.9(c) regarding conflicts of interest;</item>
+		<item>2(2) not otherwise represent a client in connection with a matter in which the lawyer participated personally and <i>substantially</i> as a public officer or employee, unless the appropriate government agency gives its <i>informed consent, confirmed in writing</i>, to the representation.</item>
+		<item>1(b) When a lawyer is disqualified from representation under division (a), no lawyer in a <i>firm</i> with which that lawyer is associated may <i>knowingly</i> undertake or continue representation in such a matter unless both of the following apply:</item>
+		<item>2(1) the disqualified lawyer is timely <i>screened</i> from any participation in the matter and is apportioned no part of the fee therefrom;</item>
+		<item>2(2) <i>written</i> notice is given as soon as practicable to the appropriate government agency to enable it to ascertain compliance with the provisions of this rule.</item>
+		<item>1(c) Except as law may otherwise expressly permit, a lawyer having information that the lawyer <i>knows</i> is confidential government information about a person acquired when the lawyer was a public officer or employee, may not represent a private client whose interests are adverse to that person in a matter in which the information could be used to the material disadvantage of that person. As used in this rule, the term “confidential government information” means information that has been obtained under governmental authority and that, at the time this rule is applied, the government is prohibited by law from disclosing to the public or has a legal privilege not to disclose and that is not otherwise available to the public. A <i>firm</i> with which that lawyer is associated may undertake or continue representation in the matter only if the disqualified lawyer is timely <i>screened</i> from any participation in the matter and is apportioned no part of the fee therefrom.</item>
+		<item>1(d) Except as law may otherwise expressly permit, a lawyer currently serving as a public officer or employee shall comply with both of the following:</item>
+		<item>2(1) Rules 1.7 and 1.9;</item>
+		<item>2(2) shall not do either of the following:</item>
+		<item>3(i) participate in a matter in which the lawyer participated personally and <i>substantially</i> while in private practice or nongovernmental employment, unless the appropriate government agency gives its <i>informed consent, confirmed in writing</i>;</item>
+		<item>3(ii) negotiate for private employment with any person who is involved as a party or as lawyer for a party in a matter in which the lawyer is participating personally and <i>substantially</i>, except that a lawyer serving as a law clerk to a judge, other adjudicative officer or arbitrator may negotiate for private employment as permitted by Rule 1.12(b) and subject to the conditions stated in Rule 1.12(b).</item>
+		<item>1(e) As used in this rule, the term “matter” includes both of the following:</item>
+		<item>2(1) any judicial or other proceeding, application, request for a ruling or other determination, contract, claim, controversy, investigation, charge, accusation, arrest, or other particular matter involving a specific party or parties;</item>
+		<item>2(2) any other matter covered by the conflict of interest rules of the appropriate government agency.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_12">
+		<item>1<b>RULE 1.12: FORMER JUDGE, ARBITRATOR, MEDIATOR, OR OTHER THIRD-PARTY NEUTRAL</b></item>
+		<item>1(a) Except as stated in division (d), a lawyer shall not represent anyone in connection with a matter in which the lawyer participated personally and <i>substantially</i> as a judge or other adjudicative officer or law clerk to such a person or as an arbitrator, mediator, or other third-party neutral, unless all parties to the proceeding give informed consent, <i>confirmed in writing.</i></item>
+		<item>1(b) A lawyer shall not negotiate for employment with any person who is involved as a party or as lawyer for a party in a matter in which the lawyer is participating personally and <i>substantially</i> as a judge or other adjudicative officer or as an arbitrator, mediator, or other third-party neutral. A lawyer serving as a law clerk to a judge or other adjudicative officer may negotiate for employment with a party or lawyer involved in a matter in which the clerk is participating personally and <i>substantially</i>, but only after the lawyer has notified the judge or other adjudicative officer.</item>
+		<item>1(c) If a lawyer is disqualified by division (a), no lawyer in a <i>firm</i> with which that lawyer is associated may <i>knowingly</i> undertake or continue representation in the matter unless both of the following apply:</item>
+		<item>2(1) the disqualified lawyer is timely <i>screened</i> from any participation in the matter and is apportioned no part of the fee therefrom;</item>
+		<item>2(2) <i>written</i> notice is promptly given to the parties and any appropriate <i>tribunal</i> to enable them to ascertain compliance with the provisions of this rule.</item>
+		<item>1(d) An arbitrator selected as a partisan of a party in a multimember arbitration panel is not prohibited from subsequently representing that party.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_13">
+		<item>1<b>RULE 1.13: ORGANIZATION AS CLIENT</b></item>
+		<item>1(a) A lawyer employed or retained by an organization represents the organization acting through its constituents. A lawyer employed or retained by an organization owes allegiance to the organization and not to any constituent or other person connected with the organization. The constituents of an organization include its owners and its duly authorized officers, directors, trustees, and employees.</item>
+		<item>1(b) If a lawyer for an organization <i>knows</i> or <i>reasonably should know</i> that its constituent’s action, intended action, or refusal to act (1) violates a legal obligation to the organization, or (2) is a violation of law that reasonably might be imputed to the organization and that is likely to result in <i>substantial</i> injury to the organization, then the lawyer shall proceed as is necessary in the best interest of the organization. When it is necessary to enable the organization to address the matter in a timely and appropriate manner, the lawyer shall refer the matter to higher authority, including, if warranted by the circumstances, the highest authority that can act on behalf of the organization under applicable law.</item>
+		<item>1(c) The discretion or duty of a lawyer for an organization to reveal information relating to the representation outside the organization is governed by Rule 1.6(b) and (c).</item>
+		<item>1(d) In dealing with an organization’s directors, officers, employees, members, shareholders, or other constituents, a lawyer shall explain the identity of the client when the lawyer <i>knows</i> or <i>reasonably should know</i> that the organization’s interests are adverse to those of the constituents with whom the lawyer is dealing.</item>
+		<item>1(e) A lawyer representing an organization may also represent any of its directors, officers, employees, members, shareholders, or other constituents, subject to the provisions of Rule 1.7. If the organization’s <i>written</i> consent to the dual representation is required by Rule 1.7, the consent shall be given by an appropriate official of the organization, other than the individual who is to be represented, or by the shareholders.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_14">
+		<item>1<b>RULE 1.14: CLIENT WITH DIMINISHED CAPACITY</b></item>
+		<item>1(a) When a client’s capacity to make adequately considered decisions in connection with a representation is diminished, whether because of minority, mental impairment or for some other reason, the lawyer shall, as far as <i>reasonably</i> possible, maintain a normal client-lawyer relationship with the client.</item>
+		<item>1(b) When the lawyer <i>reasonably believes</i> that the client has diminished capacity, is at risk of <i>substantial</i> physical, financial, or other harm unless action is taken, and cannot adequately act in the client’s own interest, the lawyer may take <i>reasonably</i> necessary protective action, including consulting with individuals or entities that have the ability to take action to protect the client and, in appropriate cases, seeking the appointment of a guardian <i>ad litem</i>, conservator, or guardian.</item>
+		<item>1(c) Information relating to the representation of a client with diminished capacity is protected by Rule 1.6. When taking protective action pursuant to division (b), the lawyer is impliedly authorized under Rule 1.6(a) to reveal information about the client, but only to the extent <i>reasonably</i> necessary to protect the client’s interests.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_15">
+		<item>1<b>RULE 1.15: SAFEKEEPING FUNDS AND PROPERTY</b></item>
+		<item>1(a) A lawyer shall hold property of clients or third persons that is in a lawyer’s possession in connection with a representation separate from the lawyer’s own property. Funds shall be kept in a separate interest-bearing account in a financial institution authorized to do business in Ohio and maintained in the state where the lawyer’s office is situated. The account shall be designated as a “client trust account,” “IOLTA account,” or with a clearly identifiable fiduciary title. Other property shall be identified as such and appropriately safeguarded. Records of such account funds and other property shall be kept by the lawyer and shall be preserved for a period of seven years after termination of the representation or the appropriate disbursement of such funds or property, whichever comes first. For other property, the lawyer shall maintain a record that identifies the property, the date received, the person on whose behalf the property was held, and the date of distribution. For funds, the lawyer shall do all of the following:</item>
+		<item>2(1) maintain a copy of any fee agreement with each client;</item>
+		<item>2(2) maintain a record for each client on whose behalf funds are held that sets forth all of the following:</item>
+		<item>3(i) the name of the client;</item>
+		<item>3(ii) the date, amount, and source of all funds received on behalf of such client;</item>
+		<item>3(iii) the date, amount, payee, and purpose of each disbursement made on behalf of such client;</item>
+		<item>3(iv) the current balance for such client.</item>
+		<item>2(3) maintain a record for each bank account that sets forth all of the following:</item>
+		<item>3(i) the name of such account;</item>
+		<item>3(ii) the date, amount, and client affected by each credit and debit;</item>
+		<item>3(iii) the balance in the account.</item>
+		<item>2(4) maintain all bank statements, deposit slips, and cancelled checks, if provided by the bank, for each bank account;</item>
+		<item>2(5) perform and retain a monthly reconciliation of the items contained in divisions (a)(2), (3), and (4) of this rule.</item>
+		<item>1(b) A lawyer may deposit the lawyer’s own funds in a client trust account for the sole purpose of paying or obtaining a waiver of bank service charges on that account, but only in an amount necessary for that purpose.</item>
+		<item>1(c) A lawyer shall deposit into a client trust account legal fees and expenses that have been paid in advance, to be withdrawn by the lawyer only as fees are earned or expenses incurred.</item>
+		<item>1(d) Upon receiving funds or other property in which a client or third person has a lawful interest, a lawyer shall promptly notify the client or third person. For purposes of this rule, the third person’s interest shall be one of which the lawyer has actual knowledge and shall be limited to a statutory lien, a final judgment addressing disposition of the funds or property, or a written agreement by the client or the lawyer on behalf of the client guaranteeing payment from the specific funds or property. Except as stated in this rule or otherwise permitted by law or by agreement with the client or a third person, <i>confirmed in writing</i>, a lawyer shall promptly deliver to the client or third person any funds or other property that the client or third person is entitled to receive. Upon request by the client or third person, the lawyer shall promptly render a full accounting regarding such funds or other property.</item>
+		<item>1(e) When in the course of representation a lawyer is in possession of funds or other property in which two or more persons, one of whom may be the lawyer, claim interests, the lawyer shall hold the funds or other property pursuant to division (a) of this rule until the dispute is resolved. The lawyer shall promptly distribute all portions of the funds or other property as to which the interests are not in dispute.</item>
+		<item>1(f) Upon dissolution of any <i>law firm</i>, the former <i>partners</i>, managing <i>partners</i>, or supervisory lawyers shall promptly account for all client funds and shall make appropriate arrangements for one of them to maintain all records generated under division (a) of this rule.</item>
+		<item>1(g) A lawyer, <i>law firm</i>, or estate of a deceased lawyer who sells a law practice shall account for and transfer all funds held pursuant to this rule to the lawyer or <i>law firm</i> purchasing the law practice at the time client files are transferred.</item>
+		<item>1(h) A lawyer, a lawyer in the lawyer’s <i>firm</i>, or a <i>firm</i> that owns an interest in a business that provides a law-related service shall:</item>
+		<item>2(1) maintain funds of clients or third persons that cannot earn any net income for the clients or third persons in an interest-bearing trust account that is established in an eligible depository institution as required by sections 3953.231, 4705.09, and 4705.10 of the Revised Code or any rules adopted by the Ohio Legal Assistance Foundation pursuant to section 120.52 of the Revised Code.</item>
+		<item>2(2) notify the Ohio Legal Assistance Foundation, in a manner required by rules adopted by the Ohio Legal Assistance Foundation pursuant to section 120.52 of the Revised Code, of the existence of an interest-bearing trust account;</item>
+		<item>2(3) comply with the reporting requirement contained in Gov. Bar R. VI, Section 1(F).</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_16">
+		<item>1<b>RULE 1.16: DECLINING OR TERMINATING REPRESENTATION</b></item>
+		<item>1(a) Subject to divisions (c), (d), and (e) of this rule, a lawyer shall not represent a client or, where representation has commenced, shall withdraw from the representation of a client if any of the following applies:</item>
+		<item>2(1) the representation will result in violation of the Ohio Rules of Professional Conduct or other law;</item>
+		<item>2(2) the lawyer’s physical or mental condition materially impairs the lawyer’s ability to represent the client;</item>
+		<item>2(3) the lawyer is discharged.</item>
+		<item>1(b) Subject to divisions (c), (d), and (e) of this rule, a lawyer may withdraw from the representation of a client if any of the following applies:</item>
+		<item>2(1) withdrawal can be accomplished without material adverse effect on the interests of the client;</item>
+		<item>2(2) the client persists in a course of action involving the lawyer’s services that the lawyer <i>reasonably believes</i> is <i>illegal</i> or <i>fraudulent</i>;</item>
+		<item>2(3) the client has used the lawyer’s services to perpetrate a crime or <i>fraud</i>;</item>
+		<item>2(4) the client insists upon taking action that the lawyer considers repugnant or with which the lawyer has a fundamental disagreement;</item>
+		<item>2(5) the client fails substantially to fulfill an obligation, financial or otherwise, to the lawyer regarding the lawyer’s services and has been given <i>reasonable</i> warning that the lawyer will withdraw unless the obligation is fulfilled;</item>
+		<item>2(6) the representation will result in an unreasonable financial burden on the lawyer or has been rendered unreasonably difficult by the client;</item>
+		<item>2(7) the client gives <i>informed consent</i> to termination of the representation;</item>
+		<item>2(8) the lawyer sells the law practice in accordance with Rule 1.17;</item>
+		<item>2(9) other good cause for withdrawal exists.</item>
+		<item>1(c) If permission for withdrawal from employment is required by the rules of a <i>tribunal</i>, a lawyer shall not withdraw from employment in a proceeding before that <i>tribunal</i> without its permission.</item>
+		<item>1(d) As part of the termination of representation, a lawyer shall take steps, to the extent <i>reasonably</i> practicable, to protect a client’s interest. The steps include giving due notice to the client, allowing <i>reasonable</i> time for employment of other counsel, delivering to the client all papers and property to which the client is entitled, and complying with applicable laws and rules. Client papers and property shall be promptly delivered to the client. “Client papers and property” may include correspondence, pleadings, deposition transcripts, exhibits, physical evidence, expert reports, and other items <i>reasonably</i> necessary to the client’s representation.</item>
+		<item>1(e) A lawyer who withdraws from employment shall refund promptly any part of a fee paid in advance that has not been earned, except when withdrawal is pursuant to Rule 1.17.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_17">
+		<item>1<b>RULE 1.17: SALE OF LAW PRACTICE</b></item>
+		<item>1(a) Subject to the provisions of this rule, a lawyer or <i>law firm</i> may sell or purchase a law practice, including the good will of the practice. The law practice shall be sold in its entirety, except where a conflict of interest is present that prevents the transfer of representation of a client or class of clients. This rule shall not permit the sale or purchase of a law practice where the purchasing lawyer is buying the practice for the sole or primary purpose of reselling the practice to another lawyer or <i>law firm</i>.</item>
+		<item>1(b) As used in this rule:</item>
+		<item>2(1) “Purchasing lawyer” means either an individual lawyer or a <i>law firm</i>;</item>
+		<item>2(2) “Selling lawyer” means an individual lawyer, a <i>law firm</i>, the estate of a deceased lawyer, or the representatives of a disabled or disappeared lawyer.</item>
+		<item>1(c) The selling lawyer and the prospective purchasing lawyer may engage in general discussions regarding the possible sale of a law practice. Before the selling lawyer may provide the prospective purchasing lawyer with information relative to client representation or confidential material contained in client files, the selling lawyer shall require the prospective purchasing lawyer to execute a confidentiality agreement. The confidentiality agreement shall bind the prospective purchasing lawyer to preserve information relating to the representation of the clients of the selling lawyer, consistent with Rule 1.6, as if those clients were clients of the prospective purchasing lawyer.</item>
+		<item>1(d) The selling lawyer and the purchasing lawyer may negotiate the terms of the sale of a law practice, subject to all of the following:</item>
+		<item>2(1) The sale agreement shall include a statement by selling lawyer and purchasing lawyer that the purchasing lawyer is purchasing the law practice in good faith and with the intention of delivering legal services to clients of the selling lawyer and others in need of legal services.</item>
+		<item>2(2) The sale agreement shall provide that the purchasing lawyer will honor any fee agreements between the selling lawyer and the clients of the selling lawyer relative to legal representation that is ongoing at the time of the sale. The purchasing lawyer may negotiate fees with clients of the selling lawyer for legal representation that is commenced after the date of the sale.</item>
+		<item>2(3) The sale agreement may include terms that <i>reasonably</i> limit the ability of the selling lawyer to reenter the practice of law, including, but not limited to, the ability of the selling lawyer to reenter the practice of law for a specific period of time or to practice in a specific geographic area. The sale agreement shall not include terms limiting the ability of the selling lawyer to practice law or reenter the practice of law if the selling lawyer is selling his or her law practice to enter academic, government, or public service or to serve as in-house counsel to a business.</item>
+		<item>1(e) Prior to completing the sale, the selling lawyer and purchasing lawyer shall provide <i>written</i> notice of the sale to the clients of the selling lawyer. For purposes of this rule, clients of the selling lawyer include all current clients of the selling lawyer and any closed files that the selling lawyer and purchasing lawyer agree to make subject of the sale. The <i>written</i> notice shall include all of the following:</item>
+		<item>2(1) The anticipated effective date of the proposed sale;</item>
+		<item>2(2) A statement that the purchasing lawyer will honor all existing fee agreements for legal representation that is ongoing at the time of sale and that fees for legal representation commenced after the date of sale will be negotiated by the purchasing lawyer and client;</item>
+		<item>2(3) The client’s right to retain other counsel or take possession of case files;</item>
+		<item>2(4) The fact that the client’s consent to the sale will be presumed if the client does not take action or otherwise object within ninety days of the receipt of the notice;</item>
+		<item>2(5) Biographical information relative to the professional qualifications of the purchasing lawyer, including but not limited to applicable information consistent with Rule 7.2, information regarding any disciplinary action taken against the purchasing lawyer, and information regarding the existence, nature, and status of any pending disciplinary complaint certified by a probable cause panel pursuant to Gov. Bar R. V, Section 11.</item>
+		<item>1(f) If the seller is the estate of a deceased lawyer or the representative of a disabled or disappeared lawyer, the purchasing lawyer shall provide the <i>written</i> notice required by division (e) of this rule, and the purchasing lawyer shall obtain <i>written</i> consent from each client to act on the client’s behalf. The client’s consent shall be presumed if no response is received from the client within ninety days of the date the notice was sent to the client at the client’s last <i>known</i> address as shown on the records of the seller or the client’s rights would be prejudiced by a failure to act during the ninety day period.</item>
+		<item>1(g) If a client cannot be given the notice required by division (e) of this rule, the representation of that client may be transferred to the purchaser only after the selling lawyer and purchasing lawyer have caused notice of the sale to be made by at least one publication in a newspaper of general circulation in the county in which the sale will occur or in an adjoining county if no newspaper is published in the county in which the sale will occur. Upon completion of the publication, the client’s consent to the sale is presumed.</item>
+		<item>1(h) The <i>written</i> notice to clients required by division (e) and (f) of this rule shall be provided by regular mail with a certificate of mailing or other comparable proof of mailing. In lieu of providing notice by mail, either the selling lawyer or purchasing lawyer, or both, may personally deliver the notice to a client. In the case of personal delivery, the lawyer providing the notice shall obtain <i>written</i> acknowledgement of the delivery from the client.</item>
+		<item>1(i) Neither the selling lawyer nor the purchasing lawyer shall attempt to exonerate the lawyer or <i>law firm</i> from or limit liability to the former or prospective client for any malpractice or other professional negligence. The provisions of Rule 1.8(h) shall be incorporated in all agreements for the sale or purchase of a law practice. The selling lawyer or the purchasing lawyer, or both, may agree to provide for the indemnification or other contribution arising from any claim or action in malpractice or other professional negligence.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_1_18">
+		<item>1<b>RULE 1.18: DUTIES TO PROSPECTIVE CLIENT</b></item>
+		<item>1(a) A person who consults with a lawyer about the possibility of forming a client-lawyer relationship with respect to a matter is a prospective client.</item>
+		<item>1(b) Even when no client-lawyer relationship ensues, a lawyer who has learned information from a prospective client shall not use or reveal that information, except as Rule 1.9 would permit with respect to information of a former client.</item>
+		<item>1(c) A lawyer subject to division (b) shall not represent a client with interests materially adverse to those of a prospective client in the same or a <i>substantially related matter</i> if the lawyer received information from the prospective client that could be significantly harmful to that person in the matter, except as provided in division (d). If a lawyer is disqualified from representation under this paragraph, no lawyer in a <i>firm</i> with which that lawyer is associated may <i>knowingly</i> undertake or continue representation in such a matter, except as provided in division (d).</item>
+		<item>1(d) When the lawyer has received disqualifying information as defined in division (c), representation is permissible if either of the following applies:</item>
+		<item>2(1) both the affected client and the prospective client have given <i>informed consent, confirmed in writing</i>;</item>
+		<item>2(2) the lawyer who received the information took <i>reasonable</i> measures to avoid exposure to more disqualifying information than was <i>reasonably</i> necessary to determine whether to represent the prospective client, and both of the following apply:</item>
+		<item>3(i) the disqualified lawyer is timely <i>screened</i> from any participation in the matter and is apportioned no part of the fee therefrom;</item>
+		<item>3(ii) <i>written</i> notice is promptly given to the prospective client.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_2_1">
+		<item>1<b>RULE 2.1: ADVISOR</b></item>
+		<item>1In representing a client, a lawyer shall exercise independent professional judgment and render candid advice. In rendering advice, a lawyer may refer not only to law but to other considerations, such as moral, economic, social, and political factors, that may be relevant to the client’s situation.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_2_3">
+		<item>1<b>RULE 2.3: EVALUATION FOR USE BY THIRD PERSONS</b></item>
+		<item>1(a) A lawyer may agree to provide an evaluation of a matter affecting a client for the use of someone other than the client if the lawyer <i>reasonably believes</i> that making the evaluation is compatible with other aspects of the lawyer’s relationship with the client.</item>
+		<item>1(b) When the lawyer <i>knows</i> or <i>reasonably should know</i> that the evaluation is likely to affect the client’s interests materially and adversely, the lawyer shall not provide the evaluation unless the client gives <i>informed consent</i>.</item>
+		<item>1(c) Except as disclosure is authorized in connection with a report of an evaluation, information relating to the evaluation is otherwise protected by Rule 1.6.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_2_4">
+		<item>1<b>RULE 2.4: LAWYER SERVING AS ARBITRATOR, MEDIATOR, OR THIRD-PARTY NEUTRAL</b></item>
+		<item>1(a) A lawyer serves as a third-party neutral when the lawyer assists two or more persons who are not clients of the lawyer to reach a resolution of a dispute or other matter that has arisen between them. Service as a third-party neutral may include service as an arbitrator, a mediator, or in such other capacity as will enable the lawyer to assist the parties to resolve the matter.</item>
+		<item>1(b) A lawyer serving as a third-party neutral shall inform unrepresented parties that the lawyer is not representing them. When the lawyer <i>knows</i> or <i>reasonably should know</i> that a party does not understand the lawyer’s role in the matter, the lawyer shall explain the difference between the lawyer’s role as a third-party neutral and a lawyer’s role as one who represents a client.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_1">
+		<item>1<b>RULE 3.1: MERITORIOUS CLAIMS AND CONTENTIONS</b></item>
+		<item>1A lawyer shall not bring or defend a proceeding, or assert or controvert an issue in a proceeding, unless there is a basis in law and fact for doing so that is not frivolous, which includes a good faith argument for an extension, modification, or reversal of existing law. A lawyer for the defendant in a criminal proceeding, or the respondent in a proceeding that could result in incarceration, may nevertheless so defend the proceeding as to require that every element of the case be established.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_3">
+		<item>1<b>RULE 3.3: CANDOR TOWARD THE <i>tribunal</i></b></item>
+		<item>1(a) A lawyer shall not <i>knowingly</i> do any of the following:</item>
+		<item>1(1) make a false statement of fact or law to a <i>tribunal</i> or fail to correct a false statement of material fact or law previously made to the <i>tribunal</i> by the lawyer;</item>
+		<item>1(2) fail to disclose to the <i>tribunal</i> legal authority in the controlling jurisdiction <i>known</i> to the lawyer to be directly adverse to the position of the client and not disclosed by opposing counsel;</item>
+		<item>1(3) offer evidence that the lawyer <i>knows</i> to be false. If a lawyer, the lawyer’s client, or a witness called by the lawyer has offered material evidence and the lawyer comes to <i>know</i> of its falsity, the lawyer shall take <i>reasonable</i> measures to remedy the situation, including, if necessary, disclosure to the <i>tribunal</i>. A lawyer may refuse to offer evidence, other than the testimony of a defendant in a criminal matter, that the lawyer <i>reasonably believes</i> is false.</item>
+		<item>1(b) A lawyer who represents a client in an adjudicative proceeding and who <i>knows</i> that a person, including the client, intends to engage, is engaging, or has engaged in criminal or <i>fraudulent</i> conduct related to the proceeding shall take <i>reasonable</i> measures to remedy the situation, including, if necessary, disclosure to the <i>tribunal</i>.</item>
+		<item>1(c) The duties stated in divisions (a) and (b) of this rule continue until the issue to which the duty relates is determined by the highest <i>tribunal</i> that may consider the issue, or the time has expired for such determination, and apply even if compliance requires disclosure of information otherwise protected by Rule 1.6.</item>
+		<item>1(d) In an <i>ex parte</i> proceeding, a lawyer shall inform the <i>tribunal</i> of all material facts <i>known</i> to the lawyer that will enable the <i>tribunal</i> to make an informed decision, whether or not the facts are adverse.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_4">
+		<item>1<b>RULE 3.4: FAIRNESS TO OPPOSING PARTY AND COUNSEL</b></item>
+		<item>1A lawyer shall not do any of the following:</item>
+		<item>1(a) unlawfully obstruct another party’s access to evidence; unlawfully alter, destroy, or conceal a document or other material having potential evidentiary value; or counsel or assist another person to do any such act;</item>
+		<item>1(b) falsify evidence, counsel or assist a witness to testify falsely, or offer an inducement to a witness that is prohibited by law;</item>
+		<item>1(c) <i>knowingly</i> disobey an obligation under the rules of a <i>tribunal</i>, except for an open refusal based on a good faith assertion that no valid obligation exists;</item>
+		<item>1(d) in pretrial procedure, intentionally or habitually make a frivolous motion or discovery request or fail to make <i>reasonably</i> diligent effort to comply with a legally proper discovery request by an opposing party;</item>
+		<item>1(e) in trial, allude to any matter that the lawyer does not <i>reasonably believe</i> is relevant or that will not be supported by admissible evidence or by a good-faith belief that such evidence may exist, assert personal <i>knowledge</i> of facts in issue except when testifying as a witness, or state a personal opinion as to the justness of a cause, the credibility of a witness, the culpability of a civil litigant, or the guilt or innocence of an accused;</item>
+		<item>1(f) [RESERVED]</item>
+		<item>1(g) advise or cause a person to hide or to leave the jurisdiction of a <i>tribunal</i> for the purpose of becoming unavailable as a witness.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_5">
+		<item>1<b>RULE 3.5: IMPARTIALITY AND DECORUM OF THE TRIBUNAL</b></item>
+		<item>1(a) A lawyer shall not do any of the following:</item>
+		<item>2(1) seek to influence a judicial officer, juror, prospective juror, or other official by means prohibited by law;</item>
+		<item>2(2) lend anything of value or give anything of more than <i>de minimis</i> value to a judicial officer, official, or employee of a <i>tribunal</i>;</item>
+		<item>2(3) communicate <i>ex parte</i> with either of the following:</item>
+		<item>3(i) a judicial officer or other official as to the merits of the case during the proceeding unless authorized to do so by law or court order;</item>
+		<item>3(ii) a juror or prospective juror during the proceeding unless otherwise authorized to do so by law or court order.</item>
+		<item>2(4) communicate with a juror or prospective juror after discharge of the jury if any of the following applies:</item>
+		<item>3(i) the communication is prohibited by law or court order;</item>
+		<item>3(ii) the juror has made <i>known</i> to the lawyer a desire not to communicate;</item>
+		<item>3(iii) the communication involves misrepresentation, coercion, duress, or harassment;</item>
+		<item>2(5) engage in conduct intended to disrupt a tribunal;</item>
+		<item>2(6) engage in undignified or discourteous conduct that is degrading to a <i>tribunal</i>.</item>
+		<item>1(b) A lawyer shall reveal promptly to the <i>tribunal</i> improper conduct by a juror or prospective juror, or by another toward a juror, prospective juror, or family member of a juror or prospective juror, of which the lawyer has <i>knowledge</i>.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_6">
+		<item>1<b>RULE 3.6: TRIAL PUBLICITY</b></item>
+		<item>1(a) A lawyer who is participating or has participated in the investigation or litigation of a matter shall not make an extrajudicial statement that the lawyer <i>knows</i> or <i>reasonably should know</i> will be disseminated by means of public communication and will have a <i>substantial</i> likelihood of materially prejudicing an adjudicative proceeding in the matter.</item>
+		<item>1(b) Notwithstanding division (a) of this rule and if permitted by Rule 1.6, a lawyer may state any of the following:</item>
+		<item>2(1) the claim, offense, or defense involved and, except when prohibited by law, the identity of the persons involved;</item>
+		<item>2(2) information contained in a public record;</item>
+		<item>2(3) that an investigation of a matter is in progress;</item>
+		<item>2(4) the scheduling or result of any step in litigation;</item>
+		<item>2(5) a request for assistance in obtaining evidence and information necessary thereto;</item>
+		<item>2(6) a warning of danger concerning the behavior of a person involved when there is reason to <i>believe</i> that there exists the likelihood of <i>substantial</i> harm to an individual or to the public interest;</item>
+		<item>2(7) in a criminal case, in addition to divisions (b)(1) to (6) of this rule, any of the following:</item>
+		<item>3(i) the identity, residence, occupation, and family status of the accused;</item>
+		<item>3(ii) if the accused has not been apprehended, information necessary to aid in apprehension of that person;</item>
+		<item>3(iii) the fact, time, and place of arrest;</item>
+		<item>3(iv) the identity of investigating and arresting officers or agencies and the length of the investigation.</item>
+		<item>1(c) Notwithstanding division (a) of this rule, a lawyer may make a statement that a <i>reasonable</i> lawyer would <i>believe</i> is required to protect a client from the <i>substantial</i> undue prejudicial effect of recent publicity not initiated by the lawyer or the lawyer’s client. A statement made pursuant to this division shall be limited to information necessary to mitigate the recent adverse publicity.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_7">
+		<item>1<b>RULE 3.7: LAWYER AS WITNESS</b></item>
+		<item>1(a) A lawyer shall not act as an advocate at a trial in which the lawyer is likely to be a necessary witness unless one or more of the following applies:</item>
+		<item>2(1) the testimony relates to an uncontested issue;</item>
+		<item>2(2) the testimony relates to the nature and value of legal services rendered in the case;</item>
+		<item>2(3) the disqualification of the lawyer would work <i>substantial</i> hardship on the client.</item>
+		<item>1(b) A lawyer may act as an advocate in a trial in which another lawyer in the lawyer’s <i>firm</i> is likely to be called as a witness unless precluded from doing so by Rule 1.7 or 1.9.</item>
+		<item>1(c) A government lawyer participating in a case shall not testify or offer the testimony of another lawyer in the same government agency, except where division (a) applies or where permitted by law.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_8">
+		<item>1<b>RULE 3.8: SPECIAL RESPONSIBILITIES OF A PROSECUTOR</b></item>
+		<item>1The prosecutor in a criminal case shall not do any of the following:</item>
+		<item>1(a) pursue or prosecute a charge that the prosecutor <i>knows</i> is not supported by probable cause;</item>
+		<item>1(b) [RESERVED]</item>
+		<item>1(c) [RESERVED]</item>
+		<item>1(d) fail to make timely disclosure to the defense of all evidence or information <i>known</i> to the prosecutor that tends to negate the guilt of the accused or mitigates the offense, and, in connection with sentencing, fail to disclose to the defense all unprivileged mitigating information <i>known</i> to the prosecutor, except when the prosecutor is relieved of this responsibility by an order of the <i>tribunal</i>;</item>
+		<item>1(e) subpoena a lawyer in a grand jury or other criminal proceeding to present evidence about a past or present client unless the prosecutor <i>reasonably believes</i> all of the following apply:</item>
+		<item>2(1) the information sought is not protected from disclosure by any applicable privilege;</item>
+		<item>2(2) the evidence sought is essential to the successful completion of an ongoing investigation or prosecution;</item>
+		<item>2(3) there is no other feasible alternative to obtain the information.</item>
+		<item>1(f) [RESERVED]</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_3_9">
+		<item>1<b>RULE 3.9: ADVOCATE IN NONADJUDICATIVE PROCEEDINGS</b></item>
+		<item>1A lawyer representing a client before a legislative body or administrative agency in a nonadjudicative proceeding shall disclose that the appearance is in a representative capacity and shall conform to the provisions of Rules 3.3(a) to (c), 3.4(a) to (c), and 3.5.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_4_1">
+		<item>1<b>RULE 4.1: TRUTHFULNESS IN STATEMENTS TO OTHERS</b></item>
+		<item>1In the course of representing a client a lawyer shall not <i>knowingly</i> do either of the following:</item>
+		<item>1(a) make a false statement of material fact or law to a third person;</item>
+		<item>1(b) fail to disclose a material fact when disclosure is necessary to avoid assisting an <i>illegal</i> or <i>fraudulent</i> act by a client.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_4_2">
+		<item>1<b>RULE 4.2: COMMUNICATION WITH PERSON REPRESENTED BY COUNSEL</b></item>
+		<item>1In representing a client, a lawyer shall not communicate about the subject of the representation with a person the lawyer <i>knows</i> to be represented by another lawyer in the matter, unless the lawyer has the consent of the other lawyer or is authorized to do so by law or a court order.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_4_3">
+		<item>1<b>RULE 4.3: DEALING WITH UNREPRESENTED PERSON</b></item>
+		<item>1In dealing on behalf of a client with a person who is not represented by counsel, a lawyer shall not state or imply that the lawyer is disinterested. When the lawyer <i>knows</i> or <i>reasonably should know</i> that the unrepresented person misunderstands the lawyer’s role in the matter, the lawyer shall make <i>reasonable</i> efforts to correct the misunderstanding. The lawyer shall not give legal advice to an unrepresented person, other than the advice to secure counsel, if the lawyer <i>knows</i> or <i>reasonably should know</i> that the interests of such a person are or have a <i>reasonable</i> possibility of being in conflict with the interests of the client.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_4_4">
+		<item>1<i>RULE 4.4: RESPECT FOR RIGHTS OF THIRD PERSONS</i></item>
+		<item>1(a) In representing a client, a lawyer shall not use means that have no substantial purpose other than to embarrass, harass, delay, or burden a third person, or use methods of obtaining evidence that violate the legal rights of such a person.</item>
+		<item>1(b) A lawyer who receives a document or electronically stored information relating to the representation of the lawyer’s client and <i>knows</i> or <i>reasonably should know</i> that the document or electronically stored information was inadvertently sent shall promptly notify the sender.</item>
+	</string-array>
+		
+	<string-array name="ohio_prof_resp_5_1">
+		<item>1<b>RULE 5.1: RESPONSIBILITIES OF PARTNERS, MANAGERS, AND SUPERVISORY LAWYERS</b></item>
+		<item>1(a) [RESERVED]</item>
+		<item>1(b) [RESERVED]</item>
+		<item>1(c) A lawyer shall be responsible for another lawyer’s violation of the Ohio Rules of Professional Conduct if either of the following applies:</item>
+		<item>2(1) the lawyer orders or, with <i>knowledge</i> of the specific conduct, ratifies the conduct involved;</item>
+		<item>2(2) the lawyer is a <i>partner</i> or has comparable managerial authority in the <i>law firm</i> or government agency in which the other lawyer practices, or has direct supervisory authority over the other lawyer, and <i>knows</i> of the conduct at a time when its consequences can be avoided or mitigated but fails to take <i>reasonable</i> remedial action.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_5_2">
+		<item>1<b>RULE 5.2: RESPONSIBILITIES OF A SUBORDINATE LAWYER</b></item>
+		<item>1(a) A lawyer is bound by the Ohio Rules of Professional Conduct notwithstanding that the lawyer acted at the direction of another person.</item>
+		<item>1(b) A subordinate lawyer does not violate the Ohio Rules of Professional Conduct if that lawyer acts in accordance with a supervisory lawyer’s <i>reasonable</i> resolution of a question of professional duty.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_5_3">
+		<item>1<b>RULE 5.3: RESPONSIBILITIES REGARDING NONLAWYER ASSISTANTS</b></item>
+		<item>1With respect to a nonlawyer employed by, retained by, or associated with a lawyer, all of the following apply:</item>
+		<item>1(a) a lawyer who individually or together with other lawyers possesses managerial authority in a <i>law firm</i> or government agency shall make <i>reasonable</i> efforts to ensure that the <i>firm</i> or government agency has in effect measures giving <i>reasonable</i> assurance that the person’s conduct is compatible with the professional obligations of the lawyer;</item>
+		<item>1(b) a lawyer having direct supervisory authority over the nonlawyer shall make <i>reasonable</i> efforts to ensure that the person’s conduct is compatible with the professional obligations of the lawyer;</item>
+		<item>1(c) a lawyer shall be responsible for conduct of such a person that would be a violation of the Ohio Rules of Professional Conduct if engaged in by a lawyer if either of the following applies:</item>
+		<item>2(1) the lawyer orders or, with the <i>knowledge</i> of the specific conduct, ratifies the conduct involved;</item>
+		<item>2(2) the lawyer has managerial authority in the <i>law firm</i> or government agency in which the person is employed, or has direct supervisory authority over the person, and <i>knows</i> of the conduct at a time when its consequences can be avoided or mitigated but fails to take <i>reasonable</i> remedial action.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_5_4">
+		<item>1<b>RULE 5.4: PROFESSIONAL INDEPENDENCE OF A LAWYER</b></item>
+		<item>1(a) A lawyer or <i>law firm</i> shall not share legal fees with a nonlawyer, except in any of the following circumstances:</item>
+		<item>2(1) an agreement by a lawyer with the lawyer’s <i>firm</i>, <i>partner</i>, or associate may provide for the payment of money, over a reasonable period of time after the lawyer’s death, to the lawyer’s estate or to one or more specified persons;</item>
+		<item>2(2) a lawyer who purchases the practice of a deceased, disabled, or disappeared lawyer may, pursuant to the provisions of Rule 1.17, pay to the estate or other representative of that lawyer the agreed-upon purchase price;</item>
+		<item>2(3) a lawyer or <i>law firm</i> may include nonlawyer employees in a compensation or retirement plan, even though the plan is based in whole or in part on a profit-sharing arrangement;</item>
+		<item>2(4) a lawyer may share court-awarded legal fees with a nonprofit organization that employed or retained the lawyer in the matter;</item>
+		<item>2(5) a lawyer may share legal fees with a nonprofit organization that recommended employment of the lawyer in the matter, if the nonprofit organization complies with Rule XVI of the Supreme Court Rules for the Government of the Bar of Ohio.</item>
+		<item>1(b) A lawyer shall not form a partnership with a nonlawyer if any of the activities of the partnership consist of the practice of law.</item>
+		<item>1(c) A lawyer shall not permit a person who recommends, employs, or pays the lawyer to render legal services for another to direct or regulate the lawyer’s professional judgment in rendering such legal services.</item>
+		<item>1(d) A lawyer shall not practice with or in the form of a professional corporation or association authorized to practice law for a profit, if any of the following applies:</item>
+		<item>2(1) a nonlawyer owns any interest therein, except that a fiduciary representative of the estate of a lawyer may hold the stock or interest of the lawyer for a <i>reasonable</i> time during administration;</item>
+		<item>2(2) a nonlawyer is a corporate director or officer thereof or occupies the position of similar responsibility in any form of association other than a corporation;</item>
+		<item>2(3) a nonlawyer has the right to direct or control the professional judgment of a lawyer.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_5_5">
+		<item>1<b>RULE 5.5: UNAUTHORIZED PRACTICE OF LAW; MULTIJURISDICTIONAL PRACTICE OF LAW</b></item>
+		<item>1(a) A lawyer shall not practice law in a jurisdiction in violation of the regulation of the legal profession in that jurisdiction, or assist another in doing so.</item>
+		<item>1(b) A lawyer who is not admitted to practice in this jurisdiction shall not do either of the following:</item>
+		<item>2(1) except as authorized by these rules or other law, establish an office or other systematic and continuous presence in this jurisdiction for the practice of law;</item>
+		<item>2(2) hold out to the public or otherwise represent that the lawyer is admitted to practice law in this jurisdiction.</item>
+		<item>1(c) A lawyer who is admitted in another United States jurisdiction, is in good standing in the jurisdiction in which the lawyer is admitted, and regularly practices law may provide legal services on a temporary basis in this jurisdiction if one or more of the following apply:</item>
+		<item>2(1) the services are undertaken in association with a lawyer who is admitted to practice in this jurisdiction and who actively participates in the matter;</item>
+		<item>2(2) the services are <i>reasonably</i> related to a pending or potential proceeding before a <i>tribunal</i> in this or another jurisdiction, if the lawyer, or a person the lawyer is assisting, is authorized by law or order to appear in such proceeding or <i>reasonably</i> expects to be so authorized;</item>
+		<item>2(3) the services are <i>reasonably</i> related to a pending or potential arbitration, mediation, or other alternative dispute resolution proceeding in this or another jurisdiction, if the services arise out of or are <i>reasonably</i> related to the lawyer’s practice in a jurisdiction in which the lawyer is admitted to practice and are not services for which the forum requires <i>pro hac vice</i> admission;</item>
+		<item>2(4) the lawyer engages in negotiations, investigations, or other nonlitigation activities that arise out of or are <i>reasonably</i> related to the lawyer’s practice in a jurisdiction in which the lawyer is admitted to practice.</item>
+		<item>1(d) A lawyer admitted and in good standing in another United States jurisdiction may provide legal services in this jurisdiction through an office or other systematic and continuous presence in any of the following circumstances:</item>
+		<item>2(1) the lawyer is registered in compliance with Gov. Bar R. VI, Section 6 and is providing services to the employer or its organizational affiliates for which the permission of a <i>tribunal</i> to appear <i>pro hac vice</i> is not required;</item>
+		<item>2(2) the lawyer is providing services that the lawyer is authorized to provide by federal or Ohio law;</item>
+		<item>2(3) the lawyer is registered in compliance with and is providing pro bono legal services as permitted by Gov. Bar R. VI, Section 6.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_5_6">
+		<item>1<b>RULE 5.6: RESTRICTIONS ON RIGHT TO PRACTICE</b></item>
+		<item>1A lawyer shall not participate in offering or making either of the following:</item>
+		<item>1(a) a partnership, shareholders, operating, employment, or other similar type of agreement that restricts the right of a lawyer to practice after termination of the relationship, except an agreement concerning benefits upon retirement;</item>
+		<item>1(b) an agreement in which a restriction on the lawyer’s right to practice is part of the settlement of a claim or controversy.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_5_7">
+		<item>1<b>RULE 5.7: RESPONSIBILITIES REGARDING LAW-RELATED SERVICES</b></item>
+		<item>1(a) A lawyer shall be subject to the Ohio Rules of Professional Conduct with respect to the provision of law-related services, as defined in division (e) of this rule, if the law-related services are provided in either of the following circumstances:</item>
+		<item>2(1) by the lawyer in circumstances that are not distinct from the lawyer’s provision of legal services to clients;</item>
+		<item>2(2) in other circumstances by an entity controlled or owned by the lawyer individually or with others, unless the lawyer takes <i>reasonable</i> measures to ensure that a person obtaining the law-related services <i>knows</i> that the services are not legal services and that the protections of the client-lawyer relationship do not exist.</item>
+		<item>1(b) A lawyer who controls or owns an interest in a business that provides a law-related service shall not require any customer of that business to agree to legal representation by the lawyer as a condition of the engagement of that business. A lawyer who controls or owns an interest in a business that provides law-related services shall disclose the interest to a customer of that business, and the fact that the customer may obtain legal services elsewhere, before performing legal services for the customer.</item>
+		<item>1(c) A lawyer who controls or owns an interest in a business that provides a law-related service shall not require the lawyer’s client to agree to use that business as a condition of the engagement for legal services. A lawyer who controls or owns an interest in a business that provides a law-related service shall disclose the interest to the client, and the fact that the client may obtain the law-related services elsewhere, before providing the law-related services to the client.</item>
+		<item>1(d) Limitations or obligations imposed by this rule on a lawyer shall apply to both of the following:</item>
+		<item>2(1) every lawyer in a <i>firm</i> who <i>knows</i> that another lawyer in his or her firm controls or owns an interest in a business that provides a law-related service;</item>
+		<item>2(2) every lawyer in a <i>firm</i> that controls or owns an interest in a business that provides a law-related service.</item>
+		<item>1(e) The term “law-related services” denotes services that might <i>reasonably</i> be performed in conjunction with the provision of legal services and that are not prohibited as unauthorized practice of law when provided by a nonlawyer.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_6_2">
+		<item>1<b>RULE 6.2: ACCEPTING APPOINTMENTS</b></item>
+		<item>1A lawyer shall not seek to avoid appointment by a court to represent a person except for good cause, such as either of the following:</item>
+		<item>1(a) representing the client is likely to result in violation of the Ohio Rules of Professional Conduct or other law;</item>
+		<item>1(b) representing the client is likely to result in an unreasonable financial burden on the lawyer.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_6_5">
+		<item>1<b>RULE 6.5: NONPROFIT AND COURT-ANNEXED LIMITED LEGAL SERVICES PROGRAMS</b></item>
+		<item>1(a) A lawyer who, under the auspices of a program sponsored by a nonprofit organization or court, provides short-term limited legal services to a client without expectation by either the lawyer or the client that the lawyer will provide continuing representation in the matter is subject to both of the following:</item>
+		<item>2(1) Rules 1.7 and 1.9(a) only if the lawyer <i>knows</i> that the representation of the client involves a conflict of interest;</item>
+		<item>2(2) Rule 1.10 only if the lawyer <i>knows</i> that another lawyer associated with the lawyer in a <i>law firm</i> is disqualified by Rule 1.7 or 1.9(a) with respect to the matter.</item>
+		<item>1(b) Except as provided in division (a)(2) of this rule, Rule 1.10 is inapplicable to a representation governed by this rule.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_7_1">
+		<item>1<b>RULE 7.1: COMMUNICATIONS CONCERNING A LAWYER’S SERVICES</b></item>
+		<item>1A lawyer shall not make or use a false, misleading, or nonverifiable communication about the lawyer or the lawyer’s services. A communication is false or misleading if it contains a material misrepresentation of fact or law or omits a fact necessary to make the statement considered as a whole not materially misleading.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_7_2">
+		<item>1<b>RULE 7.2: ADVERTISING AND RECOMMENDATION OF PROFESSIONAL EMPLOYMENT</b></item>
+		<item>1(a) Subject to the requirements of Rules 7.1 and 7.3, a lawyer may advertise services through <i>written</i>, recorded, or electronic communication, including public media.</item>
+		<item>1(b) A lawyer shall not give anything of value to a person for recommending the lawyer’s services except that a lawyer may pay any of the following:</item>
+		<item>2(1) the <i>reasonable</i> costs of advertisements or communications permitted by this rule;</item>
+		<item>2(2) the usual charges of a legal service plan;</item>
+		<item>2(3) the usual charges for a nonprofit or lawyer referral service that complies with Rule XVI of the Supreme Court Rules for the Government of the Bar of Ohio;</item>
+		<item>2(4) for a law practice in accordance with Rule 1.17.</item>
+		<item>1(c) Any communication made pursuant to this rule shall include the name and office address of at least one lawyer or <i>law firm</i> responsible for its content.</item>
+		<item>1(d) A lawyer shall not seek employment in connection with a matter in which the lawyer or <i>law firm</i> does not intend to participate actively in the representation, but that the lawyer or <i>law firm</i> intends to refer to other counsel. This provision shall not apply to organizations listed in Rules 7.2(b)(2) or (3) or if the advertisement is in furtherance of a transaction permitted by Rule 1.17.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_7_3">
+		<item>1<b>RULE 7.3: SOLICITATION OF CLIENTS</b></item>
+		<item>1(a) A lawyer shall not by in-person, live telephone, or real-time electronic contact solicit professional employment when a significant motive for the lawyer’s doing so is the lawyer’s pecuniary gain, unless either of the following applies:</item>
+		<item>2(1) the person contacted is a lawyer;</item>
+		<item>2(2) the person contacted has a family, close personal, or prior professional relationship with the lawyer.</item>
+		<item>1(b) A lawyer shall not solicit professional employment by <i>written</i>, recorded, or electronic communication or by in-person, telephone, or real-time electronic contact even when not otherwise prohibited by division (a), if any of the following applies:</item>
+		<item>2(1) the person being solicited has made <i>known</i> to the lawyer a desire not to be solicited by the lawyer;</item>
+		<item>2(2) the solicitation involves coercion, duress, or harassment;</item>
+		<item>2(3) the lawyer <i>knows</i> or <i>reasonably should know</i> that the person to whom the communication is addressed is a minor or an incompetent or that the person’s physical, emotional, or mental state makes it unlikely that the person could exercise reasonable judgment in employing a lawyer.</item>
+		<item>1(c) Unless the recipient of the communication is a person specified in division (a)(1) or (2) of this rule, every <i>written</i>, recorded, or electronic communication from a lawyer soliciting professional employment from anyone whom the lawyer <i>reasonably believes</i> to be in need of legal services in a particular matter shall comply with all of the following:</item>
+		<item>2(1) Disclose accurately and fully the manner in which the lawyer or <i>law firm</i> became aware of the identity and specific legal need of the addressee;</item>
+		<item>2(2) Disclaim or refrain from expressing any predetermined evaluation of the merits of the addressee’s case;</item>
+		<item>2(3) Conspicuously include in its text and on the outside envelope, if any, and at the beginning and ending of any recorded or electronic communication the recital - “ADVERTISING MATERIAL” or “ADVERTISEMENT ONLY.”</item>
+		<item>1(d) Prior to making a communication soliciting professional employment pursuant to division (c) of this rule to a party who has been named as a defendant in a civil action, a lawyer or <i>law firm</i> shall verify that the party has been served with notice of the action filed against that party. Service shall be verified by consulting the docket of</item>
+		<item>1service has been perfected or whether service by publication has been completed. Division (d) of this rule shall not apply to the solicitation of a debtor regarding representation of the debtor in a potential or actual bankruptcy action.</item>
+		<item>1(e) If a communication soliciting professional employment from anyone is sent within thirty days of an accident or disaster that gives rise to a potential claim for personal injury or wrongful death, the following “Understanding Your Rights” shall be included with the communication.</item>
+		<item>2<b>UNDERSTANDING YOUR RIGHTS*</b></item>
+		<item>2If you have been in an accident, or a family member has been injured or killed in a crash or some other incident, you have many important decisions to make. It is important for you to consider the following:</item>
+		<item>21. Make and keep records - If your situation involves a motor vehicle crash, regardless of who may be at fault, it is helpful to obtain a copy of the police report, learn the identity of any witnesses, and obtain photographs of the scene, vehicles, and any visible injuries. Keep copies of receipts of all your expenses and medical care related to the incident.</item>
+		<item>22. You do not have to sign anything - You may not want to give an interview or recorded statement without first consulting with an attorney, because the statement can be used against you. If you may be at fault or have been charged with a traffic or other offense, it may be advisable to consult an attorney right away. However, if you have insurance, your insurance policy probably requires you to cooperate with your insurance company and to provide a statement to the company. If you fail to cooperate with your insurance company, it may void your coverage.</item>
+		<item>23. Your interests versus interests of insurance company - Your interests and those of the other person’s insurance company are in conflict. Your interests may also be in conflict with your own insurance company. Even if you are not sure who is at fault, you should contact your own insurance company and advise the company of the incident to protect your insurance coverage.</item>
+		<item>24. There is a time limit to file an insurance claim - Legal rights, including filing a lawsuit, are subject to time limits. You should ask what time limits apply to your claim. You may need to act immediately to protect your rights.</item>
+		<item>25. Get it in <i>writing</i> - You may want to request that any offer of settlement from anyone be put in <i>writing</i>, including a <i>written</i> explanation of the type of damages which they are willing to cover.</item>
+		<item>26. Legal assistance may be appropriate - You may consult with an attorney before you sign any document or release of claims. A release may cut off all future rights against others, obligate you to repay past medical bills or disability benefits, or jeopardize future benefits. If your interests conflict with your own insurance company, you always have the right to discuss the matter with an attorney of your choice, which may be at your own expense.</item>
+		<item>27. How to find an attorney - If you need professional advice about a legal problem but do not know an attorney, you may wish to check with relatives, friends, neighbors, your employer, or co-workers who may be able to recommend an attorney. Your local bar association may have a lawyer referral service that can be found in the Yellow Pages or on the Internet.</item>
+		<item>28. Check a lawyer’s qualifications - Before hiring any lawyer, you have the right to know the lawyer’s background, training, and experience in dealing with cases similar to yours.</item>
+		<item>29. How much will it cost? - In deciding whether to hire a particular lawyer, you should discuss, and the lawyer’s written fee agreement should reflect:</item>
+		<item>2a. How is the lawyer to be paid? If you already have a settlement offer, how will that affect a contingent fee arrangement?</item>
+		<item>2b. How are the expenses involved in your case, such as telephone calls, deposition costs, and fees for expert witnesses, to be paid? Will these costs be advanced by the lawyer or charged to you as they are incurred? Since you are obligated to pay all expenses even if you lose your case, how will payment be arranged?</item>
+		<item>2c. Who will handle your case? If the case goes to trial, who will be the trial attorney?</item>
+		<item>2This information is not intended as a complete description of your legal rights, but as a checklist of some of the important issues you should consider.</item>
+		<item>2<b>*THE SUPREME COURT OF OHIO, WHICH GOVERNS THE CONDUCT OF LAWYERS IN THE STATE OF OHIO, NEITHER PROMOTES NOR PROHIBITS THE DIRECT SOLICITATION OF PERSONAL INJURY VICTIMS. THE COURT DOES REQUIRE THAT, IF SUCH A SOLICITATION IS MADE, IT MUST INCLUDE THE ABOVE DISCLOSURE.</b></item>
+		<item>1(f) Notwithstanding the prohibitions in division (a) of this rule, a lawyer may participate with a prepaid or group legal service plan operated by an organization not owned or directed by the lawyer that uses in-person or telephone contact to solicit memberships or subscriptions for the plan from persons who are not <i>known</i> to need legal services in a particular matter covered by the plan.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_7_4">
+		<item>1<b>RULE 7.4: COMMUNICATION OF FIELDS OF PRACTICE AND SPECIALIZATION</b></item>
+		<item>1(a) A lawyer may communicate the fact that the lawyer does or does not practice in particular fields of law or limits his or her practice to or concentrates in particular fields of law.</item>
+		<item>1(b) A lawyer admitted to engage in patent practice before the United States Patent and Trademark Office may use the designation “Patent Attorney” or a <i>substantially</i> similar designation.</item>
+		<item>1(c) A lawyer engaged in trademark practice may use the designation “Trademarks,” “Trademark Attorney,” or a <i>substantially</i> similar designation.</item>
+		<item>1(d) A lawyer engaged in Admiralty practice may use the designation “Admiralty,” “Proctor in Admiralty,” or a <i>substantially</i> similar designation.</item>
+		<item>1(e) A lawyer shall not state or imply that a lawyer is a specialist in a particular field of law, unless both of the following apply:</item>
+		<item>2(1) the lawyer has been certified as a specialist by an organization approved by the Supreme Court Commission on Certification of Attorneys as Specialists;</item>
+		<item>2(2) the name of the certifying organization is clearly identified in the communication.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_7_5">
+		<item>1<b>RULE 7.5: FIRM NAMES AND LETTERHEADS</b></item>
+		<item>1(a) A lawyer shall not use a <i>firm</i> name, letterhead or other professional designation that violates Rule 7.1. A lawyer in private practice shall not practice under a trade name, a name that is misleading as to the identity of the lawyer or lawyers practicing under the name, or a <i>firm</i> name containing names other than those of one or more of the lawyers in the <i>firm</i>, except that the name of a professional corporation or association, legal clinic, limited liability company, or limited liability partnership shall contain symbols indicating the nature of the organization as required by Gov. Bar R. III. If otherwise lawful, a <i>firm</i> may use as, or continue to include in, its name the name or names of one or more deceased or retired members of the <i>firm</i> or of a predecessor <i>firm</i> in a continuing line of succession.</item>
+		<item>1(b) A <i>law firm</i> with offices in more than one jurisdiction that lists attorneys associated with the <i>firm</i> shall indicate the jurisdictional limitations on those not licensed to practice in Ohio.</item>
+		<item>1(c) The name of a lawyer holding a public office shall not be used in the name of a <i>law firm</i>, or in communications on its behalf, during any <i>substantial</i> period in which the lawyer is not actively and regularly practicing with the <i>firm</i>.</item>
+		<item>1(d) Lawyers may state or imply that they practice in a partnership or other organization only when that is the fact.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_8_1">
+		<item>1<b>RULE 8.1: BAR ADMISSION AND DISCIPLINARY MATTERS</b></item>
+		<item>1In connection with a bar admission application or in connection with a disciplinary matter, a lawyer shall not do any of the following:</item>
+		<item>1(a) <i>knowingly</i> make a false statement of material fact;</item>
+		<item>1(b) in response to a demand for information from an admissions or disciplinary authority, fail to disclose a material fact or <i>knowingly</i> fail to respond, except that this rule does not require disclosure of information otherwise protected by Rule 1.6.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_8_2">
+		<item>1<b>RULE 8.2: JUDICIAL OFFICIALS</b></item>
+		<item>1(a) A lawyer shall not make a statement that the lawyer <i>knows</i> to be false or with reckless disregard as to its truth or falsity concerning the qualifications or integrity of a judicial officer, or candidate for election or appointment to judicial office.</item>
+		<item>1(b) A lawyer who is a candidate for judicial office shall not violate the provisions of the Ohio Code of Judicial Conduct applicable to judicial candidates.</item>
+		<item>1(c) A lawyer who is a retired or former judge or magistrate may use a title such as “justice,” “judge,” “magistrate,” “Honorable” or “Hon.” when the title is preceded or followed by the word “retired,” if the lawyer retired in good standing with the Supreme Court, or “former,” if the lawyer, due to the loss of an election, left judicial office in good standing with the Supreme Court.</item>
+		<item>1(d) A lawyer who is a retired or former judge shall not state or imply that the lawyer’s former service as a judge enables the lawyer to improperly influence any person or entity, including a government agency or official, or to achieve results by means that violate the Ohio Rules of Professional Conduct or other law.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_8_3">
+		<item>1<b>RULE 8.3: REPORTING PROFESSIONAL MISCONDUCT</b></item>
+		<item>1(a) A lawyer who possesses unprivileged knowledge of a violation of the Ohio Rules of Professional Conduct that raises a question as to any lawyer’s honesty, trustworthiness, or fitness as a lawyer in other respects, shall inform a disciplinary authority empowered to investigate or act upon such a violation.</item>
+		<item>1(b) A lawyer who possesses unprivileged knowledge that a judge has committed a violation of the Ohio Rules of Professional Conduct or applicable rules of judicial conduct shall inform the appropriate authority.</item>
+		<item>1(c) Any information obtained by a member of a committee or subcommittee of a bar association, or by a member, employee, or agent of a nonprofit corporation established by a bar association, designed to assist lawyers with substance abuse or mental health problems, provided the information was obtained while the member, employee, or agent was performing duties as a member, employee, or agent of the committee, subcommittee, or nonprofit corporation, shall be privileged for all purposes under this rule.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_8_4">
+		<item>1<b>RULE 8.4: MISCONDUCT</b></item>
+		<item>1It is professional misconduct for a lawyer to do any of the following:</item>
+		<item>1(a) violate or attempt to violate the Ohio Rules of Professional Conduct, knowingly assist or induce another to do so, or do so through the acts of another;</item>
+		<item>1(b) commit an <i>illegal</i> act that reflects adversely on the lawyer’s honesty or trustworthiness;</item>
+		<item>1(c) engage in conduct involving dishonesty, <i>fraud</i>, deceit, or misrepresentation;</item>
+		<item>1(d) engage in conduct that is prejudicial to the administration of justice;</item>
+		<item>1(e) state or imply an ability to influence improperly a government agency or official or to achieve results by means that violate the Ohio Rules of Professional Conduct or other law;</item>
+		<item>1(f) <i>knowingly</i> assist a judge or judicial officer in conduct that is a violation of the Ohio Rules of Professional Conduct, the applicable rules of judicial conduct, or other law;</item>
+		<item>1(g) engage, in a professional capacity, in conduct involving discrimination prohibited by law because of race, color, religion, age, gender, sexual orientation, national origin, marital status, or disability;</item>
+		<item>1(h) engage in any other conduct that adversely reflects on the lawyer’s fitness to practice law.</item>
+	</string-array>
+
+	<string-array name="ohio_prof_resp_8_5">
+		<item>1<b>RULE 8.5 DISCIPLINARY AUTHORITY; CHOICE OF LAW</b></item>
+		<item>1(a) Disciplinary Authority. A lawyer admitted to practice in Ohio is subject to the disciplinary authority of Ohio, regardless of where the lawyer’s conduct occurs. A lawyer not admitted in Ohio is also subject to the disciplinary authority of Ohio if the lawyer provides or offers to provide any legal services in Ohio. A lawyer may be subject to the disciplinary authority of both Ohio and another jurisdiction for the same conduct.</item>
+		<item>1(b) Choice of Law. In any exercise of the disciplinary authority of Ohio, the rules of professional conduct to be applied shall be as follows:</item>
+		<item>2(1) for conduct in connection with a matter pending before a <i>tribunal</i>, the rules of the jurisdiction in which the <i>tribunal</i> sits, unless the rules of the <i>tribunal</i> provide otherwise;</item>
+		<item>2(2) for any other conduct, the rules of the jurisdiction in which the lawyer’s conduct occurred, or, if the predominant effect of the conduct is in a different jurisdiction, the rules of that jurisdiction shall be applied to the conduct. A lawyer shall not be subject to discipline if the lawyer’s conduct conforms to the rules of a jurisdiction in which the lawyer <i>reasonably believes</i> the predominant effect of the lawyer’s conduct will occur.</item>
+	</string-array>
+</resources>
