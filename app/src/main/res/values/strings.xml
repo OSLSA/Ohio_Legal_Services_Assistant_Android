@@ -107,7 +107,7 @@
     </string-array>
 
     <string-array name="rules_tags">
-        <item>federal_evidence</item>
+        <item>fed_evidence</item>
         <item>federal_civil_procedure</item>
         <item>ohio_appellate</item>
         <item>ohio_rules_cp</item>
