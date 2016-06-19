@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity
             showSearchDialog(bookTitle);
         };
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -139,9 +139,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_calculators) {
             setFragment(new CalculatorsFragment(), "CALCULATORS", "Calculators", null);
         } else if (id == R.id.nav_about) {
-
+            setFragment(new AboutFragment(), "ABOUT", "About", null);
         } else if (id == R.id.nav_resources) {
-
+            setFragment(new LocalResourcesFragment(), "RESOURCES", "Local Resources", null);
         } else if (id == R.id.nav_rules) {
             setFragment(new RulesAllTitlesFragment(), "RULES", "Rules", null);
         } else if (id == R.id.nav_settings) {

@@ -1,18 +1,22 @@
 package org.seols.ohiolegalservicesassistant;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -53,6 +57,10 @@ public class HomeFragment extends Fragment {
         ruleSelected.setOnClickListener(ruleSelectedListener);
         viewRules = (Button) rootView.findViewById(R.id.view_rules);
         rulesSpinner = (Spinner) rootView.findViewById(R.id.rules_spinner);
+        ImageView lscLogo = (ImageView) rootView.findViewById(R.id.lsc_logo);
+        ImageView oslsaLogo = (ImageView) rootView.findViewById(R.id.oslsa_logo);
+        lscLogo.setOnClickListener(logoClickListener);
+        oslsaLogo.setOnClickListener(logoClickListener);
     }
 
     private void setRulesSpinner() {
@@ -260,4 +268,27 @@ public class HomeFragment extends Fragment {
 
 
     }
+
+    private View.OnClickListener logoClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String url;
+            switch (v.getId()) {
+                case R.id.lsc_logo:
+                    url = "http://www.lsc.gov/grants-grantee-resources/our-grant-programs/tig";
+                    break;
+                case R.id.oslsa_logo:
+                    url = "http://www.seols.org";
+                    break;
+                default:
+                    url = "http://www.seols.org";
+                    break;
+            }
+            Uri uri = Uri.parse(url);
+            Intent intent = new Intent();
+            intent.setData(uri);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getContext().startActivity(intent);
+        }
+    };
 }
