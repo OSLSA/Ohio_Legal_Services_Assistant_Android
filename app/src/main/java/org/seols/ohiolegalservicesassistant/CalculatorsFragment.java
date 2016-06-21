@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 /**
  * Created by joshuagoodwin on 10/1/15.
  */
@@ -42,18 +44,23 @@ public class CalculatorsFragment extends Fragment {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.fpl_button:
+                    logAnalystics("Poverty Calculator");
                     ((MainActivity)getActivity()).setFragment(new FederalPovertyLevelController(), "FPL", "Federal Poverty Level", null);
                     break;
                 case R.id.owf_button:
+                    logAnalystics("OWF Calculator");
                     ((MainActivity)getActivity()).setFragment(new OwfCalculatorController(), "OWF", "OWF", null);
                     break;
                 case R.id.food_stamps_button:
+                    logAnalystics("Food Stamps Calculator");
                     ((MainActivity)getActivity()).setFragment(new FoodStampController(), "FOODSTAMPS", "Food Stamps", null);
                     break;
                 case R.id.apr_button:
+                    logAnalystics("APR Calculator");
                     ((MainActivity)getActivity()).setFragment(new APRFragment(), "APR", "APR", null);
                     break;
                 case R.id.garnishment_button:
+                    logAnalystics("Garnishment Calculator");
                     ((MainActivity)getActivity()).setFragment(new GarnishmentFragment(), "garnishment", "Garnishability", null);
                     break;
                 default:
@@ -61,6 +68,12 @@ public class CalculatorsFragment extends Fragment {
             }
         }
     };
+
+    private void logAnalystics(String buttonClicked) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, buttonClicked);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
 
     @Override
     public void onResume() {
