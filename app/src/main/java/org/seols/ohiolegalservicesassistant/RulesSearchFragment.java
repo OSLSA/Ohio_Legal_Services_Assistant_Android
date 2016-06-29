@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -31,6 +33,7 @@ public class RulesSearchFragment extends Fragment {
         searchTerm = getArguments().getString("searchTerm");
         getViews(rootView);
         showResults(inflater);
+        logSearch();
         return rootView;
     }
 
@@ -144,4 +147,11 @@ public class RulesSearchFragment extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar()
                 .setTitle(title);
     }
+
+    private void logSearch() {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.SEARCH_TERM, searchTerm);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
 }

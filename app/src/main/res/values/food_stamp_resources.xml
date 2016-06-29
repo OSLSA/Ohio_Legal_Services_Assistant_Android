@@ -32,7 +32,7 @@
 
     <string-array name="net_standard_2015">
         <item>981</item>
-        <item>1328</item>
+        <item>1338</item>
         <item>1675</item>
         <item>2021</item>
         <item>2368</item>
@@ -61,18 +61,18 @@
     </string-array>
 
     <string-array name="gross_income_165_2015">
-        <item>1605</item>
-        <item>2163</item>
-        <item>2722</item>
-        <item>3280</item>
-        <item>3838</item>
-        <item>4396</item>
-        <item>4955</item>
-        <item>5513</item>
-        <item>6072</item>
-        <item>6631</item>
-        <item>7190</item>
-        <item>7749</item>
+        <item>1619</item>
+        <item>2191</item>
+        <item>2763</item>
+        <item>3335</item>
+        <item>3907</item>
+        <item>4479</item>
+        <item>5051</item>
+        <item>5623</item>
+        <item>6195</item>
+        <item>6767</item>
+        <item>7339</item>
+        <item>7911</item>
     </string-array>
 
     <string-array name="gross_income_200_2015">

@@ -16,12 +16,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SearchDialogFragment.OnUpdateSearchListener {
 
     public static String PACKAGE_NAME;
     private MenuItem search;
     private String bookName, bookTitle, searchTerm;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         setLogoClick(navigationView);
         navigationView.setNavigationItemSelectedListener(this);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name), null);
 
     }
@@ -47,6 +51,10 @@ public class MainActivity extends AppCompatActivity
         View header = navigationView.getHeaderView(0);
         ImageView logo = (ImageView) header.findViewById(R.id.nav_logo);
         header.setOnClickListener(headerListener);
+    }
+
+    public void recordAnalytics(Bundle bundle) {
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
     }
 
     private View.OnClickListener headerListener = new View.OnClickListener() {
@@ -89,9 +97,9 @@ public class MainActivity extends AppCompatActivity
             showSearchDialog(bookTitle);
         };
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -139,9 +147,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_calculators) {
             setFragment(new CalculatorsFragment(), "CALCULATORS", "Calculators", null);
         } else if (id == R.id.nav_about) {
-
+            setFragment(new AboutFragment(), "ABOUT", "About", null);
         } else if (id == R.id.nav_resources) {
-
+            setFragment(new LocalResourcesFragment(), "RESOURCES", "Local Resources", null);
         } else if (id == R.id.nav_rules) {
             setFragment(new RulesAllTitlesFragment(), "RULES", "Rules", null);
         } else if (id == R.id.nav_settings) {

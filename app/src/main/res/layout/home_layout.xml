@@ -5,101 +5,157 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
-        style="@style/cards"
-        card_view:cardCornerRadius="4dp">
+    <ScrollView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
 
         <LinearLayout
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/fpl"
-                style="@style/TextAppearance.AppCompat.Title"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp" />
+            <android.support.v7.widget.CardView
+                style="@style/cards"
+                card_view:cardCornerRadius="4dp">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/annual_income"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginLeft="8dp"
-                android:id="@+id/annual_income"
-                android:inputType="numberDecimal"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginLeft="8dp"
-                android:hint="@string/tvAGSize"
-                android:id="@+id/ag_size"
-                android:inputType="number"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/fpl"
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:text="@string/calculate"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:id="@+id/calculateFPL"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/annual_income"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/annual_income"
+                        android:inputType="numberDecimal" />
 
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:hint="@string/tvAGSize"
+                        android:id="@+id/ag_size"
+                        android:inputType="number" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp"
+                        android:text="@string/calculate"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:id="@+id/calculateFPL" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/cards"
+                card_view:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/rules"
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rules_spinner" />
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rule_number"
+                        android:layout_weight="1"
+                        android:hint="@string/rule_number"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:inputType="numberDecimal" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:id="@+id/view_rules" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+    </ScrollView>
 
-    <android.support.v7.widget.CardView
-        style="@style/cards"
-        card_view:cardCornerRadius="4dp"
-        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:src="@drawable/lsc_logo"
+            android:scaleType="fitEnd"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/lsc_logo"/>
+
+        <ImageView
+            android:layout_height="36dp"
+            android:src="@drawable/oslsa_logo_color"
+            android:scaleType="fitStart"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/oslsa_logo"
+            android:layout_width="120dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="Funding From:"
+            android:layout_above="@id/lsc_logo"
+            android:layout_alignParentRight="true"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/rules"
-                style="@style/TextAppearance.AppCompat.Title"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="2dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developed By:"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView" />
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/rules_spinner" />
-
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/rule_number"
-                android:layout_weight="1"
-                android:hint="@string/rule_number"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginLeft="8dp"
-                android:inputType="numberDecimal"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="View"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:id="@+id/view_rules"/>
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+    </RelativeLayout>
 
 </LinearLayout>
