@@ -3,6 +3,7 @@ package org.seols.ohiolegalservicesassistant;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 
 public class FoodStampCalculator {
 	
@@ -110,15 +111,18 @@ public class FoodStampCalculator {
 	private void calculateFoodStamps() {
 		
 		// check to see if the gross income test is needed (ag not aged or disabled) and then see if it is passed
+		boolean passedGrossIncomeTest = checkTotalGrossIncome();
 		if (!isAged || !isDisabled) {
             // if gross income test fails, kick out
-			if (!checkTotalGrossIncome()) return;
+			if (!passedGrossIncomeTest) return;
 		}
 		
 		// those eligible for Benefits bank and also aged or disabled don't do net income test
 		boolean noNeedToCheckNetIncome = (totalGrossIncome <= Integer.parseInt(GROSS_INCOME_200[AGSize - 1]) && (isAged || isDisabled));
+		boolean passedNetIncome = checkNetIncome();
+
 		if (!noNeedToCheckNetIncome) {
-			if (!checkNetIncome()) return;
+			if (!passedNetIncome) return;
 		}
 
         /* 	OAC 5101:4-4-27
@@ -182,6 +186,7 @@ public class FoodStampCalculator {
 		*	monthly earned income by twenty per cent and subtract that amount
 		*	from the total gross income. */
 
+
         finalNetIncome = (int)totalGrossIncome - (int)Math.floor(earnedIncome * 0.2);
 
 		/* (3) Standard deduction: Subtract the standard deduction. */
@@ -223,7 +228,7 @@ public class FoodStampCalculator {
 		*	after all other applicable deductions. AGs not subject to the shelter
 		*	limitation shall have the full amount exceeding fifty per cent of their
 		*	adjusted income subtracted. The AG's net monthly income has been determined. */
-
+		Log.d("Final Net: ", Integer.toString(finalNetIncome));
         finalNetIncome -= calculateShelterDeduction();
 
         boolean result = finalNetIncome <= Integer.parseInt(NET_STANDARD[AGSize - 1]);
@@ -250,7 +255,8 @@ public class FoodStampCalculator {
 		*	that exceeds fifty per cent of the assistance group income after all other deductions
 		*	contained in this rule have been allowed. */
 
-        int shelterExpenses = calculateUtilityAllowance() + rent + propertyInsurance + propertyTaxes;
+		int utility = calculateUtilityAllowance();
+        int shelterExpenses = utility + rent + propertyInsurance + propertyTaxes;
 
 
         shelterExpenses -= (finalNetIncome / 2);
@@ -259,6 +265,7 @@ public class FoodStampCalculator {
         if (!isAged) {
             shelterExpenses = Math.min(shelterExpenses, Integer.parseInt(LIMIT_ON_SHELTER_DEDUCTION));
         }
+		Log.d("Shelter Expense: ", Integer.toString(shelterExpenses));
 
         return shelterExpenses;
 	}

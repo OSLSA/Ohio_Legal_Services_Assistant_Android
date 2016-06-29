@@ -19,45 +19,45 @@
         <item>155</item>
         <item>155</item>
         <item>155</item>
-        <item>165</item>
-        <item>193</item>
-        <item>221</item>
-        <item>221</item>
-        <item>221</item>
-        <item>221</item>
-        <item>221</item>
-        <item>221</item>
-        <item>221</item>
+        <item>168</item>
+        <item>197</item>
+        <item>226</item>
+        <item>226</item>
+        <item>226</item>
+        <item>226</item>
+        <item>226</item>
+        <item>226</item>
+        <item>226</item>
     </string-array>
 
     <string-array name="net_standard_2015">
-        <item>973</item>
-        <item>1311</item>
-        <item>1650</item>
-        <item>1988</item>
-        <item>2326</item>
-        <item>2665</item>
-        <item>3003</item>
-        <item>3341</item>
-        <item>3680</item>
-        <item>4019</item>
-        <item>4358</item>
-        <item>4697</item>
+        <item>981</item>
+        <item>1328</item>
+        <item>1675</item>
+        <item>2021</item>
+        <item>2368</item>
+        <item>2715</item>
+        <item>3061</item>
+        <item>3408</item>
+        <item>3755</item>
+        <item>4102</item>
+        <item>4449</item>
+        <item>4796</item>
     </string-array>
 
     <string-array name="gross_income_limit_2015">
-        <item>1265</item>
-        <item>1705</item>
-        <item>2144</item>
-        <item>2584</item>
-        <item>3024</item>
-        <item>3464</item>
-        <item>3904</item>
-        <item>4344</item>
-        <item>4784</item>
-        <item>5224</item>
-        <item>5664</item>
-        <item>6104</item>
+        <item>1276</item>
+        <item>1726</item>
+        <item>2177</item>
+        <item>2628</item>
+        <item>3078</item>
+        <item>3529</item>
+        <item>3980</item>
+        <item>4430</item>
+        <item>4881</item>
+        <item>5332</item>
+        <item>5783</item>
+        <item>6234</item>
     </string-array>
 
     <string-array name="gross_income_165_2015">
@@ -76,18 +76,18 @@
     </string-array>
 
     <string-array name="gross_income_200_2015">
-        <item>1945</item>
-        <item>2622</item>
-        <item>3299</item>
-        <item>3975</item>
-        <item>4652</item>
-        <item>5329</item>
-        <item>6005</item>
-        <item>6682</item>
-        <item>7359</item>
-        <item>8035</item>
-        <item>8712</item>
-        <item>9389</item>
+        <item>1962</item>
+        <item>2655</item>
+        <item>3349</item>
+        <item>4042</item>
+        <item>4735</item>
+        <item>5429</item>
+        <item>6122</item>
+        <item>6815</item>
+        <item>7509</item>
+        <item>8202</item>
+        <item>8895</item>
+        <item>9589</item>
     </string-array>
 
     <string name="standard_homeless_2015">143</string>
@@ -95,10 +95,10 @@
     <string name="excess_medical_2015">35</string>
     <string name="dependent_care_2015">0</string>
     <string name="minnimum_allotment_2015">16</string>
-    <string name="standard_utility_2015">498</string>
-    <string name="limited_utility_2015">330</string>
-    <string name="single_utility_2015">73</string>
+    <string name="standard_utility_2015">510</string>
+    <string name="limited_utility_2015">328</string>
+    <string name="single_utility_2015">72</string>
     <string name="telephone_2015">39</string>
-    <string name="shelter_limit_2015">490</string>
+    <string name="shelter_limit_2015">504</string>
 
 </resources>
