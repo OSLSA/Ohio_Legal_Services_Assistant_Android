@@ -125,4 +125,13 @@
         <item>7/1/14 to 1/1/15</item>
     </string-array>
 
+    <string-array name="resource_categories">
+        <item>All Categories</item>
+        <item>Courts</item>
+        <item>Domestic Violence</item>
+        <item>Law Enforcement</item>
+        <item>Legal Clinics</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>

@@ -9,10 +9,23 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class ResourceInformation {
 
-    public String name, category, address, city, state, zip, county, website;
+    public String name, category, address, city, state, zip, county, website, phone, notes;
 
     public ResourceInformation() {
         // Default constructor required for calls to DataSnapshot.getValue(ResourceInformation.class)
+    }
+
+    public ResourceInformation(String name) {
+        this.name = name;
+        this.category = "";
+        this.address = "";
+        this.city = "";
+        this.state = "";
+        this.zip = "";
+        this.county = "";
+        this.website = "";
+        this.phone = "";
+        this.notes = "";
     }
 
     public ResourceInformation(String name, String category, String address, String city, String state, String zip, String county, String website) {
@@ -24,6 +37,8 @@ public class ResourceInformation {
         this.zip = zip;
         this.county = county;
         this.website = website;
+        this.phone = phone;
+        this.notes = notes;
     }
 
 }

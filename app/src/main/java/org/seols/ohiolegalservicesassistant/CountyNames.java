@@ -5,14 +5,14 @@ package org.seols.ohiolegalservicesassistant;
  */
 public class CountyNames {
 
-    public String countyName;
+    public String name;
 
     public CountyNames() {
 
     }
 
-    public CountyNames(String countyName) {
-        this.countyName = countyName;
+    public CountyNames(String name) {
+        this.name = name;
     }
 
 }
