@@ -99,6 +99,16 @@
         <item>annually</item>
     </string-array>
 
+    <string-array name="categories">
+        <item>All</item>
+        <item>Courts</item>
+        <item>Domestic Violence</item>
+        <item>Law Enforcement</item>
+        <item>Legal Clinics</item>
+        <item>Other</item>
+        <item>Social Service Agencies</item>
+    </string-array>
+
     <string-array name="Rules">
         <item>Federal Rules of Evidence</item>
         <item>Federal Rules of Civil Procedure</item>

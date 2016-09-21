@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -19,6 +20,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -102,33 +104,52 @@ public class LocalResourcesFragment extends Fragment {
 
         pb.setVisibility(View.VISIBLE);
         Query query = mCountyRef.orderByChild("name");
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                ArrayList<String> allNames = new ArrayList<String>();
-                allNames.add("All Counties");
-                for (DataSnapshot child : dataSnapshot.getChildren()) {
-                    CountyNames cn = child.getValue(CountyNames.class);
-                    allNames.add(cn.name);
+            query.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                CountDownTimer timer = new CountDownTimer(5000,5000) {
+
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        pb.setVisibility(View.INVISIBLE);
+                        Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
+                        toast.show();
+                        return;
+                    }
+                }.start();
+
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    ArrayList<String> allNames = new ArrayList<String>();
+                    allNames.add("All Counties");
+                    for (DataSnapshot child : dataSnapshot.getChildren()) {
+                        CountyNames cn = child.getValue(CountyNames.class);
+                        allNames.add(cn.name);
+                    }
+                    String[] nameArray = new String[allNames.size()];
+                    allNames.toArray(nameArray);
+                    setCountySpinner(nameArray);
+                    pb.setVisibility(View.INVISIBLE);
+                    timer.cancel();
                 }
-                String[] nameArray = new String[allNames.size()];
-                allNames.toArray(nameArray);
-                setCountySpinner(nameArray);
-                pb.setVisibility(View.INVISIBLE);
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    pb.setVisibility(View.INVISIBLE);
+                    Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            });
     }
 
     private void getLocalResources(String county) {
 
         pb.setVisibility(View.VISIBLE);
         Query query;
-
         if (county.equals("All Counties")) {
             query = mResourceRef.orderByChild("county");
         } else {
@@ -139,7 +160,6 @@ public class LocalResourcesFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 ArrayList<ResourceInformation> information = new ArrayList<ResourceInformation>();
-                Log.d("DATABASE", "number of children: " + Double.toString(dataSnapshot.getChildrenCount()));
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
                     ResourceInformation ri = child.getValue(ResourceInformation.class);
                     information.add(ri);
