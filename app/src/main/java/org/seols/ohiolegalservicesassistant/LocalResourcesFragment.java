@@ -156,6 +156,22 @@ public class LocalResourcesFragment extends Fragment {
             query = mResourceRef.orderByChild("county").equalTo(county);
         }
         query.addListenerForSingleValueEvent(new ValueEventListener() {
+            CountDownTimer timer = new CountDownTimer(5000,5000) {
+
+                @Override
+                public void onTick(long millisUntilFinished) {
+
+                }
+
+                @Override
+                public void onFinish() {
+                    pb.setVisibility(View.INVISIBLE);
+                    Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
+                    toast.show();
+                    return;
+                }
+            }.start();
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -171,6 +187,7 @@ public class LocalResourcesFragment extends Fragment {
                     addToRecylcer(sortByCategory(information));
                 }
 
+                timer.cancel();
                 pb.setVisibility(View.INVISIBLE);
             }
 
