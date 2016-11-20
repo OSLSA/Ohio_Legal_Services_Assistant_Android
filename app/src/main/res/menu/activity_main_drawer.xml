@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_calculators" android:icon="@android:drawable/ic_menu_manage"
+        <item android:id="@+id/nav_calculators" android:icon="@drawable/ic_calculator_icon"
             android:title="@string/calculators" />
         <item android:id="@+id/nav_rules" android:icon="@android:drawable/ic_menu_gallery"
             android:title="@string/rules" />
