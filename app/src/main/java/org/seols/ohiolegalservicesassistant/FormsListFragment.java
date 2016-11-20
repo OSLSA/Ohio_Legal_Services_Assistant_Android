@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -180,6 +182,7 @@ public class FormsListFragment extends Fragment {
         @Override
         public void onClick(View v) {
 
+            logSearch("Form opened", v.getTag().toString());
             if (v.getTag().toString().equals(getResources().getString(R.string.medicaid_help_sheet))) {
                 CopyAssets("medicaid_help_sheet.pdf");
             } else if (v.getTag().toString().equals(getResources().getString(R.string.benefits_standards))) {
@@ -193,6 +196,13 @@ public class FormsListFragment extends Fragment {
 
         }
     };
+
+    private void logSearch(String value, String detail) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, detail);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
 
     private void copyFile(InputStream in, OutputStream out) throws IOException {
         byte[] buffer = new byte[1024];

@@ -13,6 +13,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 /**
  * Created by Joshua Goodwin on 2/26/16.
  * <p/>
@@ -42,6 +44,7 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         initializeHomelessCheck();
         initializeClearButton(rootView);
         initializeSubmitButton(rootView);
+        logSearch("Food Stamps Opened");
         // if (savedInstanceState != null) restoreState(savedInstanceState);
         return rootView;
     }
@@ -122,6 +125,12 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         });
     }
 
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
     private void resetAll(){
 
         cbAGAged.setChecked(false);
@@ -154,6 +163,9 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
             toast.show();
             return;
         }
+
+        // log Firebase analytics
+        logSearch("Food Stamps Calculated");
 
         // fill all other variables
         getVariables();

@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 public class APRFragment extends Fragment {
 
     private EditText etAmountBorrowed, etBaseRate, etCosts, etNumberOfPayments;
@@ -28,6 +30,7 @@ public class APRFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.apr_layout, container, false);
         initializeViews(rootView);
         initializeButtons();
+        logSearch("APR Opened");
         return rootView;
     }
 
@@ -75,10 +78,16 @@ public class APRFragment extends Fragment {
         });
     }
 
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
     // method to calculate APR and then display results
     private void calculateAPR() {
 
-        Log.d("APR", "calculateAPR: submit pressed");
+        logSearch("APR Calculated");
         // check for valid data in the input fields
         if (dataIsInvalid()) return;
 
@@ -102,10 +111,11 @@ public class APRFragment extends Fragment {
 
     }
 
-    // TODO add comment
     /**
-
-     **/
+     * Checks the data coming from the app to ensure it is valid and
+     * won't throw an error
+     * @return
+     */
     private boolean dataIsInvalid() {
 
         // check for missing data to see if number of payments is missing or 0

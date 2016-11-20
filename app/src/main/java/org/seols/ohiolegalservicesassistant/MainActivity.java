@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity
 
     public void recordAnalytics(Bundle bundle) {
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+        Log.d("Analytics Logged: ", bundle.toString());
     }
 
     private View.OnClickListener headerListener = new View.OnClickListener() {

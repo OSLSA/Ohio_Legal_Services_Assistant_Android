@@ -151,6 +151,8 @@ public class RulesSearchFragment extends Fragment {
     private void logSearch() {
         Bundle bundle = new Bundle();
         bundle.putString(FirebaseAnalytics.Param.SEARCH_TERM, searchTerm);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_CATEGORY, bookName);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Rule Search Used");
         ((MainActivity)getActivity()).recordAnalytics(bundle);
     }
 

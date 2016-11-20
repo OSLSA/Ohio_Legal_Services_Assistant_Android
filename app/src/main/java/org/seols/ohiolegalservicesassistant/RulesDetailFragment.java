@@ -13,6 +13,8 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import java.text.NumberFormat;
 import java.text.ParseException;
 
@@ -35,7 +37,14 @@ public class RulesDetailFragment extends Fragment {
         bookName = getArguments().getString("bookName");
         tl = (TableLayout) rootView.findViewById(R.id.rule_table);
         setSpinner(rootView);
+        logSearch(bookName + " used");
         return rootView;
+    }
+
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
     }
 
     private void setSpinner(View v) {

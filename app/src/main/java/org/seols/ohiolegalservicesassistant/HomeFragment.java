@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 
 /**
  * Created by joshuagoodwin on 10/2/15.
@@ -88,14 +90,21 @@ public class HomeFragment extends Fragment {
 
             FederalPovertyLevel calc = new FederalPovertyLevel(
                     Integer.parseInt(agSize.getText().toString()),
-                    "2015",
+                    "2016",
                     annualIncome,
                     getContext()
             );
+            logSearch("FPL Calculated from Home");
 
             showFPLResults(calc.getResults());
         }
     };
+
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
 
     private void showFPLResults(Double results) {
 
@@ -160,6 +169,8 @@ public class HomeFragment extends Fragment {
                 errorToast(text);
                 return;
             }
+
+            logSearch("Rule Searched from Home");
 
             // create bundle to push
             Bundle args = new Bundle();

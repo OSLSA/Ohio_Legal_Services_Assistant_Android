@@ -22,6 +22,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -58,6 +59,7 @@ public class LocalResourcesFragment extends Fragment {
         mCountyRef = mRootRef.child("counties");
         setCategorySpinners();
         getCounties();
+        logSearch("Local Resources Opened");
         return rootView;
     }
 
@@ -146,8 +148,22 @@ public class LocalResourcesFragment extends Fragment {
             });
     }
 
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
+    private void logCountySearched(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Local Resources County Used");
+        bundle.putString(FirebaseAnalytics.Param.ITEM_CATEGORY, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
     private void getLocalResources(String county) {
 
+        logCountySearched(county);
         pb.setVisibility(View.VISIBLE);
         Query query;
         if (county.equals("All Counties")) {
@@ -186,6 +202,7 @@ public class LocalResourcesFragment extends Fragment {
                 } else {
                     addToRecylcer(sortByCategory(information));
                 }
+
 
                 timer.cancel();
                 pb.setVisibility(View.INVISIBLE);

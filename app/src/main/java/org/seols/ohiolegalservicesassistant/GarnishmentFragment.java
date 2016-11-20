@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 /**
  * Created by joshuagoodwin on 2/21/16.
  */
@@ -28,6 +30,7 @@ public class GarnishmentFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.garnishment_layout, container, false);
         getViews(rootView);
         setSpinner();
+        logSearch("Garnishment Opened");
         return rootView;
     }
 
@@ -71,6 +74,12 @@ public class GarnishmentFragment extends Fragment {
         });
     }
 
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
     private void resetAll() {
         etNetIncome.setText("");
         etHours.setText("");
@@ -78,6 +87,7 @@ public class GarnishmentFragment extends Fragment {
 
     private void calculateGarnishability() {
         GarnishmentCalculator calculator = new GarnishmentCalculator(etNetIncome.getText().toString(), frequency.getSelectedItemPosition(), etHours.getText().toString(), getContext());
+        logSearch("Garnishment Calculated");
         displayResults(calculator.getGarnishability());
 
     }

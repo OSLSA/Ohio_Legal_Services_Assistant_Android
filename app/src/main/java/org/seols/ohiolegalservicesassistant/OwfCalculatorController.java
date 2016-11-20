@@ -20,6 +20,7 @@ package org.seols.ohiolegalservicesassistant;
         import android.widget.AdapterView.*;
         import android.widget.*;
 
+        import com.google.firebase.analytics.FirebaseAnalytics;
 
 
 public class OwfCalculatorController extends Fragment implements IncomeDialogFragment.OnUpdateIncomeListener {
@@ -52,6 +53,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
         submitButton(rootView);
         initializeVariables(rootView);
         resetAll();
+        logSearch("OWF Opened");
 
         // see if anything in SavedInstanceState Bundle from
         // prior restarts
@@ -188,6 +190,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
                 if (!countableIncomeStandardMet) return;
 
                 // if both tests passed, show dialog of results
+                logSearch("OWF Calculated");
                 displayResults();
             }
         });
@@ -346,6 +349,13 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
         monthlyIncome = (double)Math.round((monthlyIncome / 12.0) * 1000 / 1000);
         requestingET.setText("" + monthlyIncome);
     }
+
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
     @Override
     public void onResume() {
         super.onResume();

@@ -16,6 +16,8 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 /**
  * Created by joshuagoodwin on 10/1/15.
  */
@@ -44,6 +46,9 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
 
         // set up the submit button
         submitButton(rootView);
+
+        // log Firebase analytics that form was opened
+        logSearch("FPL Opened");
 
         //return view
         return rootView;
@@ -124,10 +129,19 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
         });
     }
 
+    private void logSearch(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        ((MainActivity)getActivity()).recordAnalytics(bundle);
+    }
+
     private void calculateFPL() {
 
         // check to see if AGSize is filled in
         if (AGSizeMissing()) return;
+
+        // Log firebase analytics that FPL calculated
+        logSearch("FPL Calculated");
 
         // calculate percentage of poverty
         double annualIncome = etGrossEarnedIncome.getText().toString().equals("") ? 0.0 :
