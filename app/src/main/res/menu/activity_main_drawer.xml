@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_calculators" android:icon="@drawable/ic_calculator_icon"
+        <item android:id="@+id/nav_calculators" android:icon="@drawable/ic_calculator"
             android:title="@string/calculators" />
-        <item android:id="@+id/nav_rules" android:icon="@android:drawable/ic_menu_gallery"
+        <item android:id="@+id/nav_rules" android:icon="@drawable/ic_rules"
             android:title="@string/rules" />
-        <item android:id="@+id/nav_resources" android:icon="@android:drawable/ic_menu_slideshow"
+        <item android:id="@+id/nav_resources" android:icon="@drawable/ic_resources"
             android:title="@string/resources" />
-        <item android:id="@+id/nav_forms" android:icon="@android:drawable/ic_menu_directions"
+        <item android:id="@+id/nav_forms" android:icon="@drawable/ic_forms"
             android:title="@string/forms" />
     </group>
 
