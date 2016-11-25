@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,11 +97,14 @@ public class RulesSearchFragment extends Fragment {
                 Double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
                 // if this is an int, should convert then to string otherwise string will end in .0
                 String ruleNumber = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
+                ruleNumber = ruleNumber.replaceAll("\\.", "_");
                 titles[i] = ruleNumber;
+                Log.d("RuleNumber: ", ruleNumber);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
         }
+        Log.d("Titiles", titles.toString());
         return titles;
     }
 
@@ -150,9 +154,7 @@ public class RulesSearchFragment extends Fragment {
 
     private void logSearch() {
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.SEARCH_TERM, searchTerm);
-        bundle.putString(FirebaseAnalytics.Param.ITEM_CATEGORY, bookName);
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Rule Search Used");
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "Rule Search Used: " +  searchTerm);
         ((MainActivity)getActivity()).recordAnalytics(bundle);
     }
 

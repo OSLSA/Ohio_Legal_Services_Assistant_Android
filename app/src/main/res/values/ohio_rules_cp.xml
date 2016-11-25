@@ -108,6 +108,103 @@
         <item>85 Title</item>
         <item>86 Effective date</item>
     </string-array>
+
+    <string-array name="searchList">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>4_1</item>
+        <item>4_2</item>
+        <item>4_3</item>
+        <item>4_4</item>
+        <item>4_5</item>
+        <item>4_6</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>19_1</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>23_1</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28 Persons before whom depositions may be taken</item>
+        <item>29 Stipulations regarding discovery procedure</item>
+        <item>30 Depositions upon oral examination</item>
+        <item>31 Depositions of witnesses upon written questions</item>
+        <item>32 Use of depositions in court proceedings</item>
+        <item>33 Interrogatories to parties</item>
+        <item>34 Producing documents, electronically stored information, and tangible things, or entering onto land, for inspection and other purposes</item>
+        <item>35 Physical and mental examination of person</item>
+        <item>36 Requests for admission</item>
+        <item>37 Failure to make discovery: sanctions</item>
+        <item>38 Jury trial of right</item>
+        <item>39 Trial by jury or by the court</item>
+        <item>40 Pre-recorded testimony</item>
+        <item>41 Dismissal of actions</item>
+        <item>42 Consolidation; separate trials</item>
+        <item>43 Taking Testimony</item>
+        <item>44 Proof of official record</item>
+        <item>44.1 Judicial notice of certain law; determination of foreign law</item>
+        <item>45 Subpoena</item>
+        <item>46 Exceptions unnecessary</item>
+        <item>47 Jurors</item>
+        <item>48 Juries: majority verdict; stipulation of number of jurors</item>
+        <item>49 Verdicts; interrogatories</item>
+        <item>50 Motion for a directed verdict and for judgment not-withstanding the verdict</item>
+        <item>51 Instructions to the jury; objection</item>
+        <item>52 Findings by the court</item>
+        <item>53 Magistrates</item>
+        <item>54 Judgments; costs</item>
+        <item>55 Default</item>
+        <item>56 Summary judgment</item>
+        <item>57 Declaratory judgments</item>
+        <item>58 Entry of judgment</item>
+        <item>59 New trials</item>
+        <item>60 Relief from judgment or order</item>
+        <item>61 Harmless error</item>
+        <item>62 Stay of proceedings to enforce a judgment</item>
+        <item>63 Disability of a judge</item>
+        <item>64 Seizure of person or property</item>
+        <item>65 Injunctions</item>
+        <item>65.1 Civil Protection Orders</item>
+        <item>66 Receivers</item>
+        <item>67 [Reserved]</item>
+        <item>68 Offer of judgment</item>
+        <item>69 Execution</item>
+        <item>70 Judgment for specific acts; vesting title</item>
+        <item>71 Process in behalf of and against persons not parties</item>
+        <item>72 [Reserved]</item>
+        <item>73 Probate division of the court of common pleas</item>
+        <item>74 [Reserved]</item>
+        <item>75 Divorce, annulment, and legal separation actions</item>
+        <item>76 [Reserved]</item>
+        <item>77 - 80. [Reserved]</item>
+        <item>81 References to Ohio Revised Code</item>
+        <item>82 Jurisdiction unaffected</item>
+        <item>83 Local rules of practice</item>
+        <item>84 Forms</item>
+        <item>85 Title</item>
+        <item>86 Effective date</item>
+    </string-array>
+
     <string-array name="ohio_rules_cp_1">
         <item>1&lt;b>RULE 1. Scope of Rules: Applicability; Construction; Exceptions&lt;/b></item>
         <item>1&lt;b>(A) Applicability.&lt;/b> These rules prescribe the procedure to be followed in all courts of this state in the exercise of civil jurisdiction at law or in equity, with the exceptions stated in division (C) of this rule.</item>

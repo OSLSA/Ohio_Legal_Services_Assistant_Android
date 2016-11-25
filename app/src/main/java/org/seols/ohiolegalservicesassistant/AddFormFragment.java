@@ -49,7 +49,8 @@ public class AddFormFragment extends Fragment {
         addButton = (Button) v.findViewById(R.id.add_form);
         // check to see if editing existing link or adding new link
         Bundle args = getArguments();
-        if (args != null) {
+        String title = args.getString("title");
+        if (title.equals("Add Form")) {
             // will not be null if editing form
             formName = args.getString("formName");
             etFormName.setText(formName);
