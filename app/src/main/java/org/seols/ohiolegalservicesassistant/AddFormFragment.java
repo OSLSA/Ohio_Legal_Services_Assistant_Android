@@ -50,7 +50,7 @@ public class AddFormFragment extends Fragment {
         // check to see if editing existing link or adding new link
         Bundle args = getArguments();
         String title = args.getString("title");
-        if (title.equals("Add Form")) {
+        if (!title.equals("Add Form")) {
             // will not be null if editing form
             formName = args.getString("formName");
             etFormName.setText(formName);

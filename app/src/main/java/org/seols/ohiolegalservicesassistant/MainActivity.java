@@ -1,6 +1,10 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 
@@ -155,6 +160,18 @@ public class MainActivity extends AppCompatActivity
             setFragment(new RulesAllTitlesFragment(), "RULES", "Rules", null);
         } else if (id == R.id.nav_settings) {
             setFragment(new SettingsFragment(), "SETTING", "Settings", null);
+        } else if (id == R.id.pika_mobile) {
+            String url = PreferenceManager.getDefaultSharedPreferences(this).getString("pikaURL", "");
+            if (url.equals("")) {
+                Toast toast = Toast.makeText(this, "You have to set the address for your mobile version of Pika in the settings", Toast.LENGTH_LONG);
+                toast.show();
+            } else {
+                Uri uri = Uri.parse(url);
+                Intent intent = new Intent();
+                intent.setData(uri);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent);
+            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -10,6 +10,8 @@
             android:title="@string/resources" />
         <item android:id="@+id/nav_forms" android:icon="@drawable/ic_forms"
             android:title="@string/forms" />
+        <item android:id="@+id/pika_mobile" android:icon="@android:drawable/ic_dialog_map"
+            android:title="Pika Mobile" />
     </group>
 
     <item>

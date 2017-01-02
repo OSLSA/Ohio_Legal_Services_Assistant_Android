@@ -12,8 +12,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -23,7 +26,9 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class SettingsFragment extends Fragment {
 
     SharedPreferences prefs;
+    Button saveButton;
     Switch pushSwitch;
+    EditText pikaURL;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle onSavedInstantState) {
         View rootView = inflater.inflate(R.layout.settings_layout, container, false);
@@ -37,11 +42,15 @@ public class SettingsFragment extends Fragment {
         prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         pushSwitch.setChecked(prefs.getBoolean("boolPushStatus", false));
         pushSwitch.setOnCheckedChangeListener(myCheckedChangeListener);
+        pikaURL = (EditText)v.findViewById(R.id.pika_mobile_address);
+        saveButton = (Button)v.findViewById(R.id.save_pika);
+        saveButton.setOnClickListener(pikaSaveListener);
 
         Switch swAttorney = (Switch) v.findViewById(R.id.switch_attorney);
         Switch swLegalAid = (Switch) v.findViewById(R.id.switch_legal_aid);
         Switch swServiceProvider = (Switch) v.findViewById(R.id.switch_service_provider);
 
+        pikaURL.setText(prefs.getString("pikaURL", ""));
         swAttorney.setChecked(prefs.getBoolean("pushAttorney", false));
         swLegalAid.setChecked(prefs.getBoolean("pushLegalAid", false));
         swServiceProvider.setChecked(prefs.getBoolean("pushServiceProvider", false));
@@ -89,6 +98,17 @@ public class SettingsFragment extends Fragment {
             FirebaseMessaging.getInstance().unsubscribeFromTopic(topic);
         }
     }
+
+    private View.OnClickListener pikaSaveListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("pikaURL", pikaURL.getText().toString());
+            editor.commit();
+            Toast toast = Toast.makeText(getActivity(), "Pika address saved", Toast.LENGTH_LONG);
+            toast.show();
+        }
+    };
 
     private CompoundButton.OnCheckedChangeListener myCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
         @Override

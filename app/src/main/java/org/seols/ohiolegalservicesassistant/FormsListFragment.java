@@ -32,6 +32,7 @@ public class FormsListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.rules_all_books_layout, container, false);
         tl = (TableLayout)rootView.findViewById(R.id.rules_titles);
+        addHotDocsForms(inflater);
         fillTable(inflater);
         return rootView;
     }
@@ -60,6 +61,30 @@ public class FormsListFragment extends Fragment {
             tl.addView(tr);
         }
     }
+
+    private void addHotDocsForms(LayoutInflater inflater) {
+        String[] titles = getResources().getStringArray(R.array.hotdoc_names);
+        for (int i = 0; i < titles.length; i++) {
+            View tr = inflater.inflate(R.layout.rules_row, null);
+            tr.setTag(i);
+            ((TextView)tr.findViewById(R.id.row_text)).setText(titles[i]);
+            tr.setOnClickListener(hotDocsClicker);
+            tl.addView(tr);
+        }
+    }
+
+    private View.OnClickListener hotDocsClicker = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int i = Integer.parseInt(v.getTag().toString());
+            String url = (getResources().getStringArray(R.array.hotdoc_urls))[i];
+            Uri uri = Uri.parse(url);
+            Intent intent = new Intent();
+            intent.setData(uri);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getContext().startActivity(intent);
+        }
+    };
 
     private void CopyAssets(String fileName) {
         AssetManager am = getActivity().getAssets();

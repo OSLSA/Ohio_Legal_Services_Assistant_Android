@@ -118,6 +118,8 @@ public class RulesDetailFragment extends Fragment {
 
             // display selected rule
             setRule(ruleNumber);
+
+            updateTitle(ruleNumber);
         }
 
         @Override
@@ -125,12 +127,18 @@ public class RulesDetailFragment extends Fragment {
 
         }
     };
+
+    private void updateTitle(String title) {
+        String finalTitle = title.replace('_', '.');
+        ((AppCompatActivity)getActivity()).getSupportActionBar()
+                .setTitle(finalTitle);
+    }
+
     @Override
     public void onResume() {
         super.onResume();
         // Set title
         String title = getArguments().getString("title");
-        ((AppCompatActivity)getActivity()).getSupportActionBar()
-                .setTitle(title);
+        updateTitle(title);
     }
 }
