@@ -115,9 +115,9 @@
         <item>2(As amended Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_4">
-        <item>1&lt;b>Rule 4. Summons&lt;/b></item>
+        <item>1&lt;b&gt;Rule 4. Summons&lt;/b&gt;</item>
         <item>1(a) CONTENTS; AMENDMENTS.</item>
-        <item>2(1) &lt;i>Contents.&lt;/i> A summons must:</item>
+        <item>2(1) &lt;i&gt;Contents.&lt;/i&gt; A summons must:</item>
         <item>3(A) name the court and the parties;</item>
         <item>3(B) be directed to the defendant;</item>
         <item>3(C) state the name and address of the plaintiff’s attorney or—if unrepresented—of the plaintiff;</item>
@@ -125,29 +125,29 @@
         <item>3(E) notify the defendant that a failure to appear and defend will result in a default judgment against the defendant for the relief demanded in the complaint;</item>
         <item>3(F) be signed by the clerk; and</item>
         <item>3(G) bear the court’s seal.</item>
-        <item>2(2) &lt;i>Amendments.&lt;/i> The court may permit a summons to be amended.</item>
+        <item>2(2) &lt;i&gt;Amendments.&lt;/i&gt; The court may permit a summons to be amended.</item>
         <item>1(b) ISSUANCE. On or after filing the complaint, the plaintiff may present a summons to the clerk for signature and seal. If the summons is properly completed, the clerk must sign, seal, and issue it to the plaintiff for service on the defendant. A summons—or a copy of a summons that is addressed to multiple defendants—must be issued for each defendant to be served.</item>
         <item>1(c) SERVICE.</item>
-        <item>2(1) &lt;i>In General.&lt;/i> A summons must be served with a copy of the complaint. The plaintiff is responsible for having the summons and complaint served within the time allowed by Rule 4(m) and must furnish the necessary copies to the person who makes service.</item>
-        <item>2(2) &lt;i>By Whom.&lt;/i> Any person who is at least 18 years old and not a party may serve a summons and complaint.</item>
-        <item>2(3) &lt;i>By a Marshal or Someone Specially Appointed.&lt;/i> At the plaintiff’s request, the court may order that service be made by a United States marshal or deputy marshal or by a person specially appointed by the court. The court must so order if the plaintiff is authorized to proceed in forma pauperis under 28 U.S.C. § 1915 or as a seaman under 28 U.S.C. § 1916.</item>
+        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; A summons must be served with a copy of the complaint. The plaintiff is responsible for having the summons and complaint served within the time allowed by Rule 4(m) and must furnish the necessary copies to the person who makes service.</item>
+        <item>2(2) &lt;i&gt;By Whom.&lt;/i&gt; Any person who is at least 18 years old and not a party may serve a summons and complaint.</item>
+        <item>2(3) &lt;i&gt;By a Marshal or Someone Specially Appointed.&lt;/i&gt; At the plaintiff’s request, the court may order that service be made by a United States marshal or deputy marshal or by a person specially appointed by the court. The court must so order if the plaintiff is authorized to proceed in forma pauperis under 28 U.S.C. § 1915 or as a seaman under 28 U.S.C. § 1916.</item>
         <item>1(d) WAIVING SERVICE.</item>
-        <item>2(1) &lt;i>Requesting a Waiver.&lt;/i> An individual, corporation, or association that is subject to service under Rule 4(e), (f), or (h) has a duty to avoid unnecessary expenses of serving the summons. The plaintiff may notify such a defendant that an action has been commenced and request that the defendant waive service of a summons. The notice and request must:</item>
+        <item>2(1) &lt;i&gt;Requesting a Waiver.&lt;/i&gt; An individual, corporation, or association that is subject to service under Rule 4(e), (f), or (h) has a duty to avoid unnecessary expenses of serving the summons. The plaintiff may notify such a defendant that an action has been commenced and request that the defendant waive service of a summons. The notice and request must: </item>
         <item>3(A) be in writing and be addressed:</item>
         <item>4(i) to the individual defendant; or</item>
         <item>4(ii) for a defendant subject to service under Rule 4(h), to an officer, a managing or general agent, or any other agent authorized by appointment or by law to receive service of process;</item>
         <item>3(B) name the court where the complaint was filed;</item>
-        <item>3(C) be accompanied by a copy of the complaint, 2 copies of a waiver form, and a prepaid means for returning the form;</item>
-        <item>3(D) inform the defendant, using text prescribed in Form 5, of the consequences of waiving and not waiving service;</item>
+        <item>3(C) be accompanied by a copy of the complaint, 2 copies of the waiver form appended to this Rule 4, and a prepaid means for returning the form; </item>
+        <item>3(D) inform the defendant, using the form appended to this Rule 4, of the consequences of waiving and not waiving service;</item>
         <item>3(E) state the date when the request is sent;</item>
         <item>3(F) give the defendant a reasonable time of at least 30 days after the request was sent—or at least 60 days if sent to the defendant outside any judicial district of the United States—to return the waiver; and</item>
         <item>3(G) be sent by first-class mail or other reliable means.</item>
-        <item>2(2) &lt;i>Failure to Waive.&lt;/i> If a defendant located within the United States fails, without good cause, to sign and return a waiver requested by a plaintiff located within the United States, the court must impose on the defendant:</item>
+        <item>2(2) &lt;i&gt;Failure to Waive.&lt;/i&gt; If a defendant located within the United States fails, without good cause, to sign and return a waiver requested by a plaintiff located within the United States, the court must impose on the defendant:</item>
         <item>3(A) the expenses later incurred in making service; and</item>
         <item>3(B) the reasonable expenses, including attorney’s fees, of any motion required to collect those service expenses.</item>
-        <item>2(3) &lt;i>Time to Answer After a Waiver.&lt;/i> A defendant who, before being served with process, timely returns a waiver need not serve an answer to the complaint until 60 days after the request was sent—or until 90 days after it was sent to the defendant outside any judicial district of the United States.</item>
-        <item>2(4) &lt;i>Results of Filing a Waiver.&lt;/i> When the plaintiff files a waiver, proof of service is not required and these rules apply as if a summons and complaint had been served at the time of filing the waiver.</item>
-        <item>2(5) &lt;i>Jurisdiction and Venue Not Waived.&lt;/i> Waiving service of a summons does not waive any objection to personal jurisdiction or to venue.</item>
+        <item>2(3) &lt;i&gt;Time to Answer After a Waiver.&lt;/i&gt; A defendant who, before being served with process, timely returns a waiver need not serve an answer to the complaint until 60 days after the request was sent—or until 90 days after it was sent to the defendant outside any judicial district of the United States.</item>
+        <item>2(4) &lt;i&gt;Results of Filing a Waiver.&lt;/i&gt; When the plaintiff files a waiver, proof of service is not required and these rules apply as if a summons and complaint had been served at the time of filing the waiver.</item>
+        <item>2(5) &lt;i&gt;Jurisdiction and Venue Not Waived.&lt;/i&gt; Waiving service of a summons does not waive any objection to personal jurisdiction or to venue.</item>
         <item>1(e) SERVING AN INDIVIDUAL WITHIN A JUDICIAL DISTRICT OF THE UNITED STATES. Unless federal law provides otherwise, an individual— other than a minor, an incompetent person, or a person whose waiver has been filed—may be served in a judicial district of the United States by:</item>
         <item>2(1) following state law for serving a summons in an action brought in courts of general jurisdiction in the state where the district court is located or where service is made; or</item>
         <item>2(2) doing any of the following:</item>
@@ -170,40 +170,40 @@
         <item>3(B) by delivering a copy of the summons and of the complaint to an officer, a managing or general agent, or any other agent authorized by appointment or by law to receive service of process and—if the agent is one authorized by statute and the statute so requires—by also mailing a copy of each to the defendant; or</item>
         <item>2(2) at a place not within any judicial district of the United States, in any manner prescribed by Rule 4(f) for serving an individual, except personal delivery under (f)(2)(C)(i).</item>
         <item>1(i) SERVING THE UNITED STATES AND ITS AGENCIES, CORPORATIONS, OFFICERS, OR EMPLOYEES.</item>
-        <item>2(1) &lt;i>United States.&lt;/i> To serve the United States, a party must:</item>
+        <item>2(1) &lt;i&gt;United States.&lt;/i&gt; To serve the United States, a party must:</item>
         <item>3(A)(i) deliver a copy of the summons and of the complaint to the United States attorney for the district where the action is brought—or to an assistant United States attorney or clerical employee whom the United States attorney designates in a writing filed with the court clerk—or</item>
         <item>3(ii) send a copy of each by registered or certified mail to the civil-process clerk at the United States attorney’s office;</item>
         <item>3(B) send a copy of each by registered or certified mail to the Attorney General of the United States at Washington, D.C.; and</item>
         <item>3(C) if the action challenges an order of a nonparty agency or officer of the United States, send a copy of each by registered or certified mail to the agency or officer.</item>
-        <item>2(2) &lt;i>Agency; Corporation; Officer or Employee Sued in an Official Capacity.&lt;/i> To serve a United States agency or corporation, or a United States officer or employee sued only in an official capacity, a party must serve the United States and also send a copy of the summons and of the complaint by registered or certified mail to the agency, corporation, officer, or employee.</item>
-        <item>2(3) &lt;i>Officer or Employee Sued Individually.&lt;/i> To serve a United States officer or employee sued in an individual capacity for an act or omission occurring in connection with duties performed on the United States’ behalf (whether or not the officer or employee is also sued in an official capacity), a party must serve the United States and also serve the officer or employee under Rule 4(e), (f), or (g).</item>
-        <item>2(4) &lt;i>Extending Time.&lt;/i> The court must allow a party a reasonable time to cure its failure to:</item>
+        <item>2(2) &lt;i&gt;Agency; Corporation; Officer or Employee Sued in an Official Capacity.&lt;/i&gt; To serve a United States agency or corporation, or a United States officer or employee sued only in an official capacity, a party must serve the United States and also send a copy of the summons and of the complaint by registered or certified mail to the agency, corporation, officer, or employee.</item>
+        <item>2(3) &lt;i&gt;Officer or Employee Sued Individually.&lt;/i&gt; To serve a United States officer or employee sued in an individual capacity for an act or omission occurring in connection with duties performed on the United States’ behalf (whether or not the officer or employee is also sued in an official capacity), a party must serve the United States and also serve the officer or employee under Rule 4(e), (f), or (g).</item>
+        <item>2(4) &lt;i&gt;Extending Time.&lt;/i&gt; The court must allow a party a reasonable time to cure its failure to:</item>
         <item>3(A) serve a person required to be served under Rule 4(i)(2), if the party has served either the United States attorney or the Attorney General of the United States; or</item>
         <item>3(B) serve the United States under Rule 4(i)(3), if the party has served the United States officer or employee.</item>
         <item>1(j) SERVING A FOREIGN, STATE, OR LOCAL GOVERNMENT.</item>
-        <item>2(1) &lt;i>Foreign State.&lt;/i>A foreign state or its political subdivision, agency, or instrumentality must be served in accordance with 28 U.S.C. § 1608.</item>
-        <item>2(2) &lt;i>State or Local Government.&lt;/i> A state, a municipal corporation, or any other state-created governmental organization that is subject to suit must be served by:</item>
+        <item>2(1) &lt;i&gt;Foreign State.&lt;/i&gt;A foreign state or its political subdivision, agency, or instrumentality must be served in accordance with 28 U.S.C. § 1608.</item>
+        <item>2(2) &lt;i&gt;State or Local Government.&lt;/i&gt; A state, a municipal corporation, or any other state-created governmental organization that is subject to suit must be served by:</item>
         <item>3(A) delivering a copy of the summons and of the complaint to its chief executive officer; or</item>
         <item>3(B) serving a copy of each in the manner prescribed by that state’s law for serving a summons or like process on such a defendant.</item>
         <item>1(k) TERRITORIAL LIMITS OF EFFECTIVE SERVICE.</item>
-        <item>2(1) &lt;i>In General.&lt;/i> Serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant:</item>
+        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; Serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant:</item>
         <item>3(A) who is subject to the jurisdiction of a court of general jurisdiction in the state where the district court is located;</item>
         <item>3(B) who is a party joined under Rule 14 or 19 and is served within a judicial district of the United States and not more than 100 miles from where the summons was issued; or</item>
         <item>3(C) when authorized by a federal statute.</item>
-        <item>2(2) &lt;i>Federal Claim Outside State-Court Jurisdiction.&lt;/i> For a claim that arises under federal law, serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant if:</item>
+        <item>2(2) &lt;i&gt;Federal Claim Outside State-Court Jurisdiction.&lt;/i&gt; For a claim that arises under federal law, serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant if:</item>
         <item>3(A) the defendant is not subject to jurisdiction in any state’s courts of general jurisdiction; and</item>
         <item>3(B) exercising jurisdiction is consistent with the United States Constitution and laws.</item>
         <item>1(l) PROVING SERVICE.</item>
-        <item>2(1) &lt;i>Affidavit Required.&lt;/i> Unless service is waived, proof of service must be made to the court. Except for service by a United States marshal or deputy marshal, proof must be by the server’s affidavit.</item>
-        <item>2(2) &lt;i>Service Outside the United States.&lt;/i> Service not within any judicial district of the United States must be proved as follows:</item>
+        <item>2(1) &lt;i&gt;Affidavit Required.&lt;/i&gt; Unless service is waived, proof of service must be made to the court. Except for service by a United States marshal or deputy marshal, proof must be by the server’s affidavit.</item>
+        <item>2(2) &lt;i&gt;Service Outside the United States.&lt;/i&gt; Service not within any judicial district of the United States must be proved as follows:</item>
         <item>3(A) if made under Rule 4(f)(1), as provided in the applicable treaty or convention; or</item>
         <item>3(B) if made under Rule 4(f)(2) or (f)(3), by a receipt signed by the addressee, or by other evidence satisfying the court that the summons and complaint were delivered to the addressee.</item>
-        <item>2(3) &lt;i>Validity of Service; Amending Proof.&lt;/i> Failure to prove service does not affect the validity of service. The court may permit proof of service to be amended.</item>
-        <item>1(m) TIME LIMIT FOR SERVICE. If a defendant is not served within 120 days after the complaint is filed, the court—on motion or on its own after notice to the plaintiff—must dismiss the action without prejudice against that defendant or order that service be made within a specified time. But if the plaintiff shows good cause for the failure, the court must extend the time for service for an appropriate period. This subdivision (m) does not apply to service in a foreign country under Rule 4(f) or 4(j)(1).</item>
+        <item>2(3) &lt;i&gt;Validity of Service; Amending Proof.&lt;/i&gt; Failure to prove service does not affect the validity of service. The court may permit proof of service to be amended.</item>
+        <item>1(m) TIME LIMIT FOR SERVICE. If a defendant is not served within 90 days after the complaint is filed, the court - on motion or on its own after notice to the plaintiff - must dismiss the action without prejudice against that defendant or order that service be made within a specified time.  But if the plaintiff shows good cause for the failure, the court must extend the time for service for an appropriate period.  This subdivision (m) does not apply to service in a foreign country under Rule 4(f), 4(h)(2), or 4(j)(1).</item>
         <item>1(n) ASSERTING JURISDICTION OVER PROPERTY OR ASSETS.</item>
-        <item>2(1) &lt;i>Federal Law.&lt;/i> The court may assert jurisdiction over property if authorized by a federal statute. Notice to claimants of the property must be given as provided in the statute or by serving a summons under this rule.</item>
-        <item>2(2) &lt;i>State Law.&lt;/i> On a showing that personal jurisdiction over a defendant cannot be obtained in the district where the action is brought by reasonable efforts to serve a summons under this rule, the court may assert jurisdiction over the defendant’s assets found in the district. Jurisdiction is acquired by seizing the assets under the circumstances and in the manner provided by state law in that district.</item>
-        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Apr. 29, 1980, eff. Aug. 1, 1980; Pub. L. 97–462, § 2, Jan. 12, 1983, 96 Stat. 2527, eff. Feb. 26, 1983; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>2(1) &lt;i&gt;Federal Law.&lt;/i&gt; The court may assert jurisdiction over property if authorized by a federal statute. Notice to claimants of the property must be given as provided in the statute or by serving a summons under this rule.</item>
+        <item>2(2) &lt;i&gt;State Law.&lt;/i&gt; On a showing that personal jurisdiction over a defendant cannot be obtained in the district where the action is brought by reasonable efforts to serve a summons under this rule, the court may assert jurisdiction over the defendant’s assets found in the district. Jurisdiction is acquired by seizing the assets under the circumstances and in the manner provided by state law in that district.</item>
+        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Apr. 29, 1980, eff. Aug. 1, 1980; Pub. L. 97–462, § 2, Jan. 12, 1983, 96 Stat. 2527, eff. Feb. 26, 1983; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015; Apr. 29, 2016, eff. Dec. 1, 2016)</item>
     </string-array>
     <string-array name="federal_civil_procedure_4_1">
         <item>1&lt;b>Rule 4.1. Serving Other Process&lt;/b></item>
@@ -290,40 +290,40 @@
         <item>2(As added Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_6">
-        <item>1&lt;b>Rule 6. Computing and Extending Time; Time for Motion Papers&lt;/b></item>
+        <item>1&lt;b&gt;Rule 6. Computing and Extending Time; Time for Motion Papers&lt;/b&gt;</item>
         <item>1(a) COMPUTING TIME. The following rules apply in computing any time period specified in these rules, in any local rule or court order, or in any statute that does not specify a method of computing time.</item>
-        <item>2(1) &lt;i>Period Stated in Days or a Longer Unit.&lt;/i> When the period is stated in days or a longer unit of time:</item>
+        <item>2(1) &lt;i&gt;Period Stated in Days or a Longer Unit.&lt;/i&gt; When the period is stated in days or a longer unit of time:</item>
         <item>3(A) exclude the day of the event that triggers the period;</item>
         <item>3(B) count every day, including intermediate Saturdays, Sundays, and legal holidays; and</item>
         <item>3(C) include the last day of the period, but if the last day is a Saturday, Sunday, or legal holiday, the period continues to run until the end of the next day that is not a Saturday, Sunday, or legal holiday.</item>
-        <item>2(2) &lt;i>Period Stated in Hours.&lt;/i> When the period is stated in hours:</item>
+        <item>2(2) &lt;i&gt;Period Stated in Hours.&lt;/i&gt; When the period is stated in hours:</item>
         <item>3(A) begin counting immediately on the occurrence of the event that triggers the period;</item>
         <item>3(B) count every hour, including hours during intermediate Saturdays, Sundays, and legal holidays; and</item>
         <item>3(C) if the period would end on a Saturday, Sunday, or legal holiday, the period continues to run until the same time on the next day that is not a Saturday, Sunday, or legal holiday.</item>
-        <item>2(3) &lt;i>Inaccessibility of the Clerk\'s Office.&lt;/i> Unless the court orders otherwise, if the clerk\'s office is inaccessible:</item>
+        <item>2(3) &lt;i&gt;Inaccessibility of the Clerk\s Office.&lt;/i&gt; Unless the court orders otherwise, if the clerk\s office is inaccessible:</item>
         <item>3(A) on the last day for filing under Rule 6(a)(1), then the time for filing is extended to the first accessible day that is not a Saturday, Sunday, or legal holiday; or</item>
         <item>3(B) during the last hour for filing under Rule 6(a)(2), then the time for filing is extended to the same time on the first accessible day that is not a Saturday, Sunday, or legal holiday.</item>
-        <item>2(4) &lt;i>“Last Day” Defined.&lt;/i> Unless a different time is set by a statute, local rule, or court order, the last day ends:</item>
-        <item>3(A) for electronic filing, at midnight in the court\'s time zone; and</item>
-        <item>3(B) for filing by other means, when the clerk\'s office is scheduled to close.</item>
-        <item>2(5) &lt;i>“Next Day” Defined.&lt;/i> The “next day” is determined by continuing to count forward when the period is measured after an event and backward when measured before an event.</item>
-        <item>2(6) &lt;i>.“Legal Holiday” Defined.&lt;/i> “Legal holiday” means:</item>
-        <item>3(A) the day set aside by statute for observing New Year\'s Day, Martin Luther King Jr.\'s Birthday, Washington\'s Birthday, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans’ Day, Thanksgiving Day, or Christmas Day;</item>
+        <item>2(4) &lt;i&gt;“Last Day” Defined.&lt;/i&gt; Unless a different time is set by a statute, local rule, or court order, the last day ends:</item>
+        <item>3(A) for electronic filing, at midnight in the court\s time zone; and</item>
+        <item>3(B) for filing by other means, when the clerk\s office is scheduled to close.</item>
+        <item>2(5) &lt;i&gt;“Next Day” Defined.&lt;/i&gt; The “next day” is determined by continuing to count forward when the period is measured after an event and backward when measured before an event.</item>
+        <item>2(6) &lt;i&gt;.“Legal Holiday” Defined.&lt;/i&gt; “Legal holiday” means:</item>
+        <item>3(A) the day set aside by statute for observing New Year\s Day, Martin Luther King Jr.\s Birthday, Washington\s Birthday, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans’ Day, Thanksgiving Day, or Christmas Day;</item>
         <item>3(B) any day declared a holiday by the President or Congress; and</item>
         <item>3(C) for periods that are measured after an event, any other day declared a holiday by the state where the district court is located.</item>
         <item>1(b) EXTENDING TIME.</item>
-        <item>2(1) &lt;i>In General.&lt;/i> When an act may or must be done within a specified time, the court may, for good cause, extend the time:</item>
+        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; When an act may or must be done within a specified time, the court may, for good cause, extend the time:</item>
         <item>3(A) with or without motion or notice if the court acts, or if a request is made, before the original time or its extension expires; or</item>
         <item>3(B) on motion made after the time has expired if the party failed to act because of excusable neglect.</item>
-        <item>2(2) &lt;i>Exceptions.&lt;/i> A court must not extend the time to act under Rules 50(b) and (d), 52(b), 59(b), (d), and (e), and 60(b).</item>
+        <item>2(2) &lt;i&gt;Exceptions.&lt;/i&gt; A court must not extend the time to act under Rules 50(b) and (d), 52(b), 59(b), (d), and (e), and 60(b).</item>
         <item>1(c) MOTIONS, NOTICES OF HEARING, AND AFFIDAVITS.</item>
-        <item>2(1) &lt;i>In General.&lt;/i> A written motion and notice of the hearing must be served at least 14 days before the time specified for the hearing, with the following exceptions:</item>
+        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; A written motion and notice of the hearing must be served at least 14 days before the time specified for the hearing, with the following exceptions:</item>
         <item>3(A) when the motion may be heard ex parte;</item>
         <item>3(B) when these rules set a different time; or</item>
         <item>3(C) when a court order—which a party may, for good cause, apply for ex parte—sets a different time.</item>
-        <item>2(2) &lt;i>Supporting Affidavit.&lt;/i> Any affidavit supporting a motion must be served with the motion. Except as Rule 59(c) provides otherwise, any opposing affidavit must be served at least 7 days before the hearing, unless the court permits service at another time.</item>
-        <item>1(d) ADDITIONAL TIME AFTER CERTAIN KINDS OF SERVICE. When a party may or must act within a specified time after service and service is made under Rule 5(b)(2)(C), (D), (E), or (F), 3 days are added after the period would otherwise expire under Rule 6(a).</item>
-        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Dec. 4, 1967, eff. July 1, 1968; Mar. 1, 1971, eff. July 1, 1971; Apr. 28, 1983, eff. Aug. 1, 1983; Apr. 29, 1985, eff. Aug. 1, 1985; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 26, 1999, eff. Dec. 1, 1999; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 25, 2005, eff. Dec. 1, 2005; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009.)</item>
+        <item>2(2) &lt;i&gt;Supporting Affidavit.&lt;/i&gt; Any affidavit supporting a motion must be served with the motion. Except as Rule 59(c) provides otherwise, any opposing affidavit must be served at least 7 days before the hearing, unless the court permits service at another time.</item>
+        <item>1(d) ADDITIONAL TIME AFTER CERTAIN KINDS OF SERVICE. When a party may or must act within a specified time after being served and service is made under Rule 5(b)(2)(C) (mail), (D) (leaving with the clerk), or (F) (other means consented to), 3 days are added after the period would otherwise expire under Rule 6(a).</item>
+        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Dec. 4, 1967, eff. July 1, 1968; Mar. 1, 1971, eff. July 1, 1971; Apr. 28, 1983, eff. Aug. 1, 1983; Apr. 29, 1985, eff. Aug. 1, 1985; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 26, 1999, eff. Dec. 1, 1999; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 25, 2005, eff. Dec. 1, 2005; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009; Apr. 29, 2016, Eff. Dec. 1, 2016.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_7">
         <item>1&lt;b>Rule 7. Pleadings Allowed; Form of Motions and Other Papers&lt;/b></item>
@@ -1945,9 +1945,9 @@
         <item>2(As amended Dec. 28, 1939, eff. Apr. 3, 1941; Dec. 27, 1946, eff. Mar. 19, 1948; Dec. 29, 1948, eff. Oct. 20, 1949; Apr. 30, 1951, eff. Aug. 1, 1951; Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Dec. 4, 1967, eff. July 1, 1968; Mar. 1, 1971, eff. July 1, 1971; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 29, 2002, eff. Dec. 1, 2002; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_82">
-        <item>1&lt;b>Rule 82. Jurisdiction and Venue Unaffected&lt;/b></item>
-        <item>1These rules do not extend or limit the jurisdiction of the district courts or the venue of actions in those courts. An admiralty or maritime claim under Rule 9(h) is not a civil action for purposes of 28 U.S.C. \u00A7\u00A71391–1392.</item>
-        <item>2(As amended Dec. 29, 1948, eff. Oct. 20, 1949; Feb. 28, 1966, eff. July 1, 1966; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>1&lt;b&gt;Rule 82. Jurisdiction and Venue Unaffected&lt;/b&gt;</item>
+        <item>1These rules do not extend or limit the jurisdiction of the district courts or the venue of actions in those courts. An admiralty or maritime claim under Rule 9(h) is governed by 28 U.S.C s. 1390.</item>
+        <item>2(As amended Dec. 29, 1948, eff. Oct. 20, 1949; Feb. 28, 1966, eff. July 1, 1966; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 30, 2007, eff. Dec. 1, 2007.; Apr. 29, 2016, eff. Dec. 1, 2016)</item>
     </string-array>
     <string-array name="federal_civil_procedure_83">
         <item>1&lt;b>Rule 83. Rules by District Courts; Judge\'s Directives&lt;/b></item>

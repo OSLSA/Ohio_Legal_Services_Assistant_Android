@@ -274,8 +274,11 @@ public class LocalResourcesFragment extends Fragment {
             holder.tvCsz.setTag(fullAddress);
             holder.tvPhone.setText(ri.get(position).phone);
             holder.tvWebsite.setText(ri.get(position).website);
+            holder.tvWebsite.setTag(ri.get(position).website);
+            holder.tvWebsite.setOnClickListener(myWebListener);
             holder.tvNotes.setText(ri.get(position).notes);
             holder.tvAddress.setOnClickListener(myAdressListener);
+            holder.tvCsz.setOnClickListener(myAdressListener);
 
         }
 
@@ -295,7 +298,6 @@ public class LocalResourcesFragment extends Fragment {
             tvCsz = (TextView)itemView.findViewById(R.id.resource_csz);
             tvPhone = (TextView)itemView.findViewById(R.id.resource_phone);
             tvWebsite = (TextView)itemView.findViewById(R.id.resource_website);
-            Linkify.addLinks(tvWebsite, Linkify.ALL);
             tvNotes = (TextView)itemView.findViewById(R.id.resource_notes);
         }
 
@@ -313,6 +315,18 @@ public class LocalResourcesFragment extends Fragment {
             if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
                 startActivity(intent);
             }
+        }
+    };
+
+    private View.OnClickListener myWebListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            String url = view.getTag().toString();
+            Uri uri = Uri.parse(url);
+            Intent intent = new Intent();
+            intent.setData(uri);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getActivity().startActivity(intent);
         }
     };
 
