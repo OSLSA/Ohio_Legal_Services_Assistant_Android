@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="lastUpdate">January 10,2017</string>
     <string-array name="fed_evidence_toc">
         <item>101 Scope; Definitions</item>
         <item>102 Purpose</item>
@@ -9,9 +9,9 @@
         <item>105 Limiting Evidence that is Not Admissible</item>
         <item>106 Remainder/Related Writings</item>
         <item>201 Judicial Notice of Adjudicative Facts</item>
-		<item>301 Presumptions in Civil Cases Generally</item>
+        <item>301 Presumptions in Civil Cases Generally</item>
         <item>302 Applying State Law to Presumptions in Civil Cases</item>
-		<item>401 Test for Relevant Evidence</item>
+        <item>401 Test for Relevant Evidence</item>
         <item>402 General Admissibility of Relevant Evidence</item>
         <item>403 Excluding Relevant Evidence for Prejudice</item>
         <item>404 Character Evidence; Crimes or Other Acts</item>
@@ -28,7 +28,7 @@
         <item>415 Similar Acts in Civil Cases Involving Sexual Assault or Child Molestation</item>
         <item>501 Privilege in General</item>
         <item>502 Attorney-Client Privilege and Work Product; Limitations on Waiver</item>
-		<item>601 Competency to Testify in General</item>
+        <item>601 Competency to Testify in General</item>
         <item>602 Need for Personal Knowledge</item>
         <item>603 Oath or Affirmation to Testify Truthfully</item>
         <item>604 Interpreter</item>
@@ -43,23 +43,23 @@
         <item>613 Witness\'s Prior Statement</item>
         <item>614 Court\'s Calling or Examining a Witness</item>
         <item>615 Excluding Witnesses</item>
-		<item>701 Opinion Testimony by Lay Witnesses</item>
+        <item>701 Opinion Testimony by Lay Witnesses</item>
         <item>702 Testimony by Expert Witnesses</item>
         <item>703 Bases of an Expert\'s Opinion Testimony</item>
         <item>704 Opinion on an Ultimate Issue</item>
         <item>705 Disclosing the Facts or Data Underlying an Expert\'s Opinion</item>
         <item>706 Court-Appointed Expert Witnesses</item>
-		<item>801 Definitions That Apply to This Article; Exclusions from Hearsay</item>
+        <item>801 Definitions That Apply to This Article; Exclusions from Hearsay</item>
         <item>802 The Rule Against Hearsay</item>
         <item>803 Exceptions to the Rule Against Hearsay</item>
         <item>804 Hearsay Exceptions; Declarant Unavailable</item>
         <item>805 Hearsay Within Hearsay</item>
         <item>806 Attacking and Supporting the Declarant\'s Credibility</item>
         <item>807 Residual Exception</item>
-	    <item>901 Authenticating or Identifying Evidence</item>
+        <item>901 Authenticating or Identifying Evidence</item>
         <item>902 Evidence That Is Self-Authenticating</item>
         <item>903 Subscribing Witness\'s Testimony</item>
-		<item>1001 Definitions That Apply to This Article</item>
+        <item>1001 Definitions That Apply to This Article</item>
         <item>1002 Requirement of the Original</item>
         <item>1003 Admissibility of Duplicates</item>
         <item>1004 Admissibility of Other Evidence of Content</item>
@@ -67,7 +67,7 @@
         <item>1006 Summaries to Prove Content</item>
         <item>1007 Testimony or Statement of a Party to Prove Content</item>
         <item>1008 Functions of the Court and Jury</item>
-		<item>1101 Applicability of the Rules</item>
+        <item>1101 Applicability of the Rules</item>
         <item>1102 Amendments</item>
         <item>1103 Title</item>
     </string-array>

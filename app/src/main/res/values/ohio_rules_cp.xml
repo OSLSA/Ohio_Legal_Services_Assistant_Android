@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="lastUpdate">January 10, 2017</string>
     <string-array name="ohio_rules_cp">
         <item>I. SCOPE OF RULES-ONE FORM OF ACTION</item>
         <item>II. COMMENCEMENT OF ACTION AND VENUE; SERVICE OF PROCESS; SERVICE AND FILING OF PLEADINGS AND OTHER PAPERS SUBSEQUENT TO THE ORIGINAL COMPLAINT; TIME</item>
@@ -36,7 +37,7 @@
         <item>14 Third-party practice</item>
         <item>15 Amended and supplemental pleadings</item>
         <item>16 Pretrial procedure</item>
-		<item>17 Parties plaintiff and defendant; capacity</item>
+        <item>17 Parties plaintiff and defendant; capacity</item>
         <item>18 Joinder of claims and remedies</item>
         <item>19 Joinder of persons needed for just adjudication</item>
         <item>19.1 Compulsory joinder</item>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+    <string name="lastUpdate">January 10, 2017</string>
     <string-array name="federal_civil_procedure_toc">
         <item>1 Scope and Purpose</item>
         <item>2 One Form of Action</item>
@@ -98,11 +98,11 @@
         <item>85 Title</item>
         <item>86 Effective Dates</item>
     </string-array>
-    
+
     <string-array name="federal_civil_procedure_1">
         <item>1&lt;b>Rule 1. Scope and Purpose&lt;/b></item>
-        <item>1These rules govern the procedure in all civil actions and proceedings in the United States district courts, except as stated in Rule 81. They should be construed and administered to secure the just, speedy, and inexpensive determination of every action and proceeding.</item>
-        <item>2(As amended Dec. 29, 1948, eff. Oct. 20, 1949; Feb. 28, 1966, eff. July 1, 1966; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>1These rules govern the procedure in all civil actions and proceedings in the United States district courts, except as stated in Rule 81. They should be construed, administered, and employed by the court and the parties to secure the just, speedy, and inexpensive determination of every action and proceeding</item>
+        <item>2(As amended Dec. 29, 1948, eff. Oct. 20, 1949; Feb. 28, 1966, eff. July 1, 1966; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, Eff Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_2">
         <item>1&lt;b>Rule 2. One Form of Action&lt;/b></item>
@@ -115,9 +115,9 @@
         <item>2(As amended Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_4">
-        <item>1&lt;b&gt;Rule 4. Summons&lt;/b&gt;</item>
+        <item>1&lt;b>Rule 4. Summons&lt;/b></item>
         <item>1(a) CONTENTS; AMENDMENTS.</item>
-        <item>2(1) &lt;i&gt;Contents.&lt;/i&gt; A summons must:</item>
+        <item>2(1) &lt;i>Contents.&lt;/i> A summons must:</item>
         <item>3(A) name the court and the parties;</item>
         <item>3(B) be directed to the defendant;</item>
         <item>3(C) state the name and address of the plaintiff’s attorney or—if unrepresented—of the plaintiff;</item>
@@ -125,14 +125,14 @@
         <item>3(E) notify the defendant that a failure to appear and defend will result in a default judgment against the defendant for the relief demanded in the complaint;</item>
         <item>3(F) be signed by the clerk; and</item>
         <item>3(G) bear the court’s seal.</item>
-        <item>2(2) &lt;i&gt;Amendments.&lt;/i&gt; The court may permit a summons to be amended.</item>
+        <item>2(2) &lt;i>Amendments.&lt;/i> The court may permit a summons to be amended.</item>
         <item>1(b) ISSUANCE. On or after filing the complaint, the plaintiff may present a summons to the clerk for signature and seal. If the summons is properly completed, the clerk must sign, seal, and issue it to the plaintiff for service on the defendant. A summons—or a copy of a summons that is addressed to multiple defendants—must be issued for each defendant to be served.</item>
         <item>1(c) SERVICE.</item>
-        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; A summons must be served with a copy of the complaint. The plaintiff is responsible for having the summons and complaint served within the time allowed by Rule 4(m) and must furnish the necessary copies to the person who makes service.</item>
-        <item>2(2) &lt;i&gt;By Whom.&lt;/i&gt; Any person who is at least 18 years old and not a party may serve a summons and complaint.</item>
-        <item>2(3) &lt;i&gt;By a Marshal or Someone Specially Appointed.&lt;/i&gt; At the plaintiff’s request, the court may order that service be made by a United States marshal or deputy marshal or by a person specially appointed by the court. The court must so order if the plaintiff is authorized to proceed in forma pauperis under 28 U.S.C. § 1915 or as a seaman under 28 U.S.C. § 1916.</item>
+        <item>2(1) &lt;i>In General.&lt;/i> A summons must be served with a copy of the complaint. The plaintiff is responsible for having the summons and complaint served within the time allowed by Rule 4(m) and must furnish the necessary copies to the person who makes service.</item>
+        <item>2(2) &lt;i>By Whom.&lt;/i> Any person who is at least 18 years old and not a party may serve a summons and complaint.</item>
+        <item>2(3) &lt;i>By a Marshal or Someone Specially Appointed.&lt;/i> At the plaintiff’s request, the court may order that service be made by a United States marshal or deputy marshal or by a person specially appointed by the court. The court must so order if the plaintiff is authorized to proceed in forma pauperis under 28 U.S.C. § 1915 or as a seaman under 28 U.S.C. § 1916.</item>
         <item>1(d) WAIVING SERVICE.</item>
-        <item>2(1) &lt;i&gt;Requesting a Waiver.&lt;/i&gt; An individual, corporation, or association that is subject to service under Rule 4(e), (f), or (h) has a duty to avoid unnecessary expenses of serving the summons. The plaintiff may notify such a defendant that an action has been commenced and request that the defendant waive service of a summons. The notice and request must: </item>
+        <item>2(1) &lt;i>Requesting a Waiver.&lt;/i> An individual, corporation, or association that is subject to service under Rule 4(e), (f), or (h) has a duty to avoid unnecessary expenses of serving the summons. The plaintiff may notify such a defendant that an action has been commenced and request that the defendant waive service of a summons. The notice and request must: </item>
         <item>3(A) be in writing and be addressed:</item>
         <item>4(i) to the individual defendant; or</item>
         <item>4(ii) for a defendant subject to service under Rule 4(h), to an officer, a managing or general agent, or any other agent authorized by appointment or by law to receive service of process;</item>
@@ -142,12 +142,12 @@
         <item>3(E) state the date when the request is sent;</item>
         <item>3(F) give the defendant a reasonable time of at least 30 days after the request was sent—or at least 60 days if sent to the defendant outside any judicial district of the United States—to return the waiver; and</item>
         <item>3(G) be sent by first-class mail or other reliable means.</item>
-        <item>2(2) &lt;i&gt;Failure to Waive.&lt;/i&gt; If a defendant located within the United States fails, without good cause, to sign and return a waiver requested by a plaintiff located within the United States, the court must impose on the defendant:</item>
+        <item>2(2) &lt;i>Failure to Waive.&lt;/i> If a defendant located within the United States fails, without good cause, to sign and return a waiver requested by a plaintiff located within the United States, the court must impose on the defendant:</item>
         <item>3(A) the expenses later incurred in making service; and</item>
         <item>3(B) the reasonable expenses, including attorney’s fees, of any motion required to collect those service expenses.</item>
-        <item>2(3) &lt;i&gt;Time to Answer After a Waiver.&lt;/i&gt; A defendant who, before being served with process, timely returns a waiver need not serve an answer to the complaint until 60 days after the request was sent—or until 90 days after it was sent to the defendant outside any judicial district of the United States.</item>
-        <item>2(4) &lt;i&gt;Results of Filing a Waiver.&lt;/i&gt; When the plaintiff files a waiver, proof of service is not required and these rules apply as if a summons and complaint had been served at the time of filing the waiver.</item>
-        <item>2(5) &lt;i&gt;Jurisdiction and Venue Not Waived.&lt;/i&gt; Waiving service of a summons does not waive any objection to personal jurisdiction or to venue.</item>
+        <item>2(3) &lt;i>Time to Answer After a Waiver.&lt;/i> A defendant who, before being served with process, timely returns a waiver need not serve an answer to the complaint until 60 days after the request was sent—or until 90 days after it was sent to the defendant outside any judicial district of the United States.</item>
+        <item>2(4) &lt;i>Results of Filing a Waiver.&lt;/i> When the plaintiff files a waiver, proof of service is not required and these rules apply as if a summons and complaint had been served at the time of filing the waiver.</item>
+        <item>2(5) &lt;i>Jurisdiction and Venue Not Waived.&lt;/i> Waiving service of a summons does not waive any objection to personal jurisdiction or to venue.</item>
         <item>1(e) SERVING AN INDIVIDUAL WITHIN A JUDICIAL DISTRICT OF THE UNITED STATES. Unless federal law provides otherwise, an individual— other than a minor, an incompetent person, or a person whose waiver has been filed—may be served in a judicial district of the United States by:</item>
         <item>2(1) following state law for serving a summons in an action brought in courts of general jurisdiction in the state where the district court is located or where service is made; or</item>
         <item>2(2) doing any of the following:</item>
@@ -170,39 +170,39 @@
         <item>3(B) by delivering a copy of the summons and of the complaint to an officer, a managing or general agent, or any other agent authorized by appointment or by law to receive service of process and—if the agent is one authorized by statute and the statute so requires—by also mailing a copy of each to the defendant; or</item>
         <item>2(2) at a place not within any judicial district of the United States, in any manner prescribed by Rule 4(f) for serving an individual, except personal delivery under (f)(2)(C)(i).</item>
         <item>1(i) SERVING THE UNITED STATES AND ITS AGENCIES, CORPORATIONS, OFFICERS, OR EMPLOYEES.</item>
-        <item>2(1) &lt;i&gt;United States.&lt;/i&gt; To serve the United States, a party must:</item>
+        <item>2(1) &lt;i>United States.&lt;/i> To serve the United States, a party must:</item>
         <item>3(A)(i) deliver a copy of the summons and of the complaint to the United States attorney for the district where the action is brought—or to an assistant United States attorney or clerical employee whom the United States attorney designates in a writing filed with the court clerk—or</item>
         <item>3(ii) send a copy of each by registered or certified mail to the civil-process clerk at the United States attorney’s office;</item>
         <item>3(B) send a copy of each by registered or certified mail to the Attorney General of the United States at Washington, D.C.; and</item>
         <item>3(C) if the action challenges an order of a nonparty agency or officer of the United States, send a copy of each by registered or certified mail to the agency or officer.</item>
-        <item>2(2) &lt;i&gt;Agency; Corporation; Officer or Employee Sued in an Official Capacity.&lt;/i&gt; To serve a United States agency or corporation, or a United States officer or employee sued only in an official capacity, a party must serve the United States and also send a copy of the summons and of the complaint by registered or certified mail to the agency, corporation, officer, or employee.</item>
-        <item>2(3) &lt;i&gt;Officer or Employee Sued Individually.&lt;/i&gt; To serve a United States officer or employee sued in an individual capacity for an act or omission occurring in connection with duties performed on the United States’ behalf (whether or not the officer or employee is also sued in an official capacity), a party must serve the United States and also serve the officer or employee under Rule 4(e), (f), or (g).</item>
-        <item>2(4) &lt;i&gt;Extending Time.&lt;/i&gt; The court must allow a party a reasonable time to cure its failure to:</item>
+        <item>2(2) &lt;i>Agency; Corporation; Officer or Employee Sued in an Official Capacity.&lt;/i> To serve a United States agency or corporation, or a United States officer or employee sued only in an official capacity, a party must serve the United States and also send a copy of the summons and of the complaint by registered or certified mail to the agency, corporation, officer, or employee.</item>
+        <item>2(3) &lt;i>Officer or Employee Sued Individually.&lt;/i> To serve a United States officer or employee sued in an individual capacity for an act or omission occurring in connection with duties performed on the United States’ behalf (whether or not the officer or employee is also sued in an official capacity), a party must serve the United States and also serve the officer or employee under Rule 4(e), (f), or (g).</item>
+        <item>2(4) &lt;i>Extending Time.&lt;/i> The court must allow a party a reasonable time to cure its failure to:</item>
         <item>3(A) serve a person required to be served under Rule 4(i)(2), if the party has served either the United States attorney or the Attorney General of the United States; or</item>
         <item>3(B) serve the United States under Rule 4(i)(3), if the party has served the United States officer or employee.</item>
         <item>1(j) SERVING A FOREIGN, STATE, OR LOCAL GOVERNMENT.</item>
-        <item>2(1) &lt;i&gt;Foreign State.&lt;/i&gt;A foreign state or its political subdivision, agency, or instrumentality must be served in accordance with 28 U.S.C. § 1608.</item>
-        <item>2(2) &lt;i&gt;State or Local Government.&lt;/i&gt; A state, a municipal corporation, or any other state-created governmental organization that is subject to suit must be served by:</item>
+        <item>2(1) &lt;i>Foreign State.&lt;/i>A foreign state or its political subdivision, agency, or instrumentality must be served in accordance with 28 U.S.C. § 1608.</item>
+        <item>2(2) &lt;i>State or Local Government.&lt;/i> A state, a municipal corporation, or any other state-created governmental organization that is subject to suit must be served by:</item>
         <item>3(A) delivering a copy of the summons and of the complaint to its chief executive officer; or</item>
         <item>3(B) serving a copy of each in the manner prescribed by that state’s law for serving a summons or like process on such a defendant.</item>
         <item>1(k) TERRITORIAL LIMITS OF EFFECTIVE SERVICE.</item>
-        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; Serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant:</item>
+        <item>2(1) &lt;i>In General.&lt;/i> Serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant:</item>
         <item>3(A) who is subject to the jurisdiction of a court of general jurisdiction in the state where the district court is located;</item>
         <item>3(B) who is a party joined under Rule 14 or 19 and is served within a judicial district of the United States and not more than 100 miles from where the summons was issued; or</item>
         <item>3(C) when authorized by a federal statute.</item>
-        <item>2(2) &lt;i&gt;Federal Claim Outside State-Court Jurisdiction.&lt;/i&gt; For a claim that arises under federal law, serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant if:</item>
+        <item>2(2) &lt;i>Federal Claim Outside State-Court Jurisdiction.&lt;/i> For a claim that arises under federal law, serving a summons or filing a waiver of service establishes personal jurisdiction over a defendant if:</item>
         <item>3(A) the defendant is not subject to jurisdiction in any state’s courts of general jurisdiction; and</item>
         <item>3(B) exercising jurisdiction is consistent with the United States Constitution and laws.</item>
         <item>1(l) PROVING SERVICE.</item>
-        <item>2(1) &lt;i&gt;Affidavit Required.&lt;/i&gt; Unless service is waived, proof of service must be made to the court. Except for service by a United States marshal or deputy marshal, proof must be by the server’s affidavit.</item>
-        <item>2(2) &lt;i&gt;Service Outside the United States.&lt;/i&gt; Service not within any judicial district of the United States must be proved as follows:</item>
+        <item>2(1) &lt;i>Affidavit Required.&lt;/i> Unless service is waived, proof of service must be made to the court. Except for service by a United States marshal or deputy marshal, proof must be by the server’s affidavit.</item>
+        <item>2(2) &lt;i>Service Outside the United States.&lt;/i> Service not within any judicial district of the United States must be proved as follows:</item>
         <item>3(A) if made under Rule 4(f)(1), as provided in the applicable treaty or convention; or</item>
         <item>3(B) if made under Rule 4(f)(2) or (f)(3), by a receipt signed by the addressee, or by other evidence satisfying the court that the summons and complaint were delivered to the addressee.</item>
-        <item>2(3) &lt;i&gt;Validity of Service; Amending Proof.&lt;/i&gt; Failure to prove service does not affect the validity of service. The court may permit proof of service to be amended.</item>
+        <item>2(3) &lt;i>Validity of Service; Amending Proof.&lt;/i> Failure to prove service does not affect the validity of service. The court may permit proof of service to be amended.</item>
         <item>1(m) TIME LIMIT FOR SERVICE. If a defendant is not served within 90 days after the complaint is filed, the court - on motion or on its own after notice to the plaintiff - must dismiss the action without prejudice against that defendant or order that service be made within a specified time.  But if the plaintiff shows good cause for the failure, the court must extend the time for service for an appropriate period.  This subdivision (m) does not apply to service in a foreign country under Rule 4(f), 4(h)(2), or 4(j)(1).</item>
         <item>1(n) ASSERTING JURISDICTION OVER PROPERTY OR ASSETS.</item>
-        <item>2(1) &lt;i&gt;Federal Law.&lt;/i&gt; The court may assert jurisdiction over property if authorized by a federal statute. Notice to claimants of the property must be given as provided in the statute or by serving a summons under this rule.</item>
-        <item>2(2) &lt;i&gt;State Law.&lt;/i&gt; On a showing that personal jurisdiction over a defendant cannot be obtained in the district where the action is brought by reasonable efforts to serve a summons under this rule, the court may assert jurisdiction over the defendant’s assets found in the district. Jurisdiction is acquired by seizing the assets under the circumstances and in the manner provided by state law in that district.</item>
+        <item>2(1) &lt;i>Federal Law.&lt;/i> The court may assert jurisdiction over property if authorized by a federal statute. Notice to claimants of the property must be given as provided in the statute or by serving a summons under this rule.</item>
+        <item>2(2) &lt;i>State Law.&lt;/i> On a showing that personal jurisdiction over a defendant cannot be obtained in the district where the action is brought by reasonable efforts to serve a summons under this rule, the court may assert jurisdiction over the defendant’s assets found in the district. Jurisdiction is acquired by seizing the assets under the circumstances and in the manner provided by state law in that district.</item>
         <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Apr. 29, 1980, eff. Aug. 1, 1980; Pub. L. 97–462, § 2, Jan. 12, 1983, 96 Stat. 2527, eff. Feb. 26, 1983; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015; Apr. 29, 2016, eff. Dec. 1, 2016)</item>
     </string-array>
     <string-array name="federal_civil_procedure_4_1">
@@ -290,38 +290,38 @@
         <item>2(As added Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_6">
-        <item>1&lt;b&gt;Rule 6. Computing and Extending Time; Time for Motion Papers&lt;/b&gt;</item>
+        <item>1&lt;b>Rule 6. Computing and Extending Time; Time for Motion Papers&lt;/b></item>
         <item>1(a) COMPUTING TIME. The following rules apply in computing any time period specified in these rules, in any local rule or court order, or in any statute that does not specify a method of computing time.</item>
-        <item>2(1) &lt;i&gt;Period Stated in Days or a Longer Unit.&lt;/i&gt; When the period is stated in days or a longer unit of time:</item>
+        <item>2(1) &lt;i>Period Stated in Days or a Longer Unit.&lt;/i> When the period is stated in days or a longer unit of time:</item>
         <item>3(A) exclude the day of the event that triggers the period;</item>
         <item>3(B) count every day, including intermediate Saturdays, Sundays, and legal holidays; and</item>
         <item>3(C) include the last day of the period, but if the last day is a Saturday, Sunday, or legal holiday, the period continues to run until the end of the next day that is not a Saturday, Sunday, or legal holiday.</item>
-        <item>2(2) &lt;i&gt;Period Stated in Hours.&lt;/i&gt; When the period is stated in hours:</item>
+        <item>2(2) &lt;i>Period Stated in Hours.&lt;/i> When the period is stated in hours:</item>
         <item>3(A) begin counting immediately on the occurrence of the event that triggers the period;</item>
         <item>3(B) count every hour, including hours during intermediate Saturdays, Sundays, and legal holidays; and</item>
         <item>3(C) if the period would end on a Saturday, Sunday, or legal holiday, the period continues to run until the same time on the next day that is not a Saturday, Sunday, or legal holiday.</item>
-        <item>2(3) &lt;i&gt;Inaccessibility of the Clerk\s Office.&lt;/i&gt; Unless the court orders otherwise, if the clerk\s office is inaccessible:</item>
+        <item>2(3) &lt;i>Inaccessibility of the Clerk\s Office.&lt;/i> Unless the court orders otherwise, if the clerk\s office is inaccessible:</item>
         <item>3(A) on the last day for filing under Rule 6(a)(1), then the time for filing is extended to the first accessible day that is not a Saturday, Sunday, or legal holiday; or</item>
         <item>3(B) during the last hour for filing under Rule 6(a)(2), then the time for filing is extended to the same time on the first accessible day that is not a Saturday, Sunday, or legal holiday.</item>
-        <item>2(4) &lt;i&gt;“Last Day” Defined.&lt;/i&gt; Unless a different time is set by a statute, local rule, or court order, the last day ends:</item>
+        <item>2(4) &lt;i>“Last Day” Defined.&lt;/i> Unless a different time is set by a statute, local rule, or court order, the last day ends:</item>
         <item>3(A) for electronic filing, at midnight in the court\s time zone; and</item>
         <item>3(B) for filing by other means, when the clerk\s office is scheduled to close.</item>
-        <item>2(5) &lt;i&gt;“Next Day” Defined.&lt;/i&gt; The “next day” is determined by continuing to count forward when the period is measured after an event and backward when measured before an event.</item>
-        <item>2(6) &lt;i&gt;.“Legal Holiday” Defined.&lt;/i&gt; “Legal holiday” means:</item>
+        <item>2(5) &lt;i>“Next Day” Defined.&lt;/i> The “next day” is determined by continuing to count forward when the period is measured after an event and backward when measured before an event.</item>
+        <item>2(6) &lt;i>.“Legal Holiday” Defined.&lt;/i> “Legal holiday” means:</item>
         <item>3(A) the day set aside by statute for observing New Year\s Day, Martin Luther King Jr.\s Birthday, Washington\s Birthday, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans’ Day, Thanksgiving Day, or Christmas Day;</item>
         <item>3(B) any day declared a holiday by the President or Congress; and</item>
         <item>3(C) for periods that are measured after an event, any other day declared a holiday by the state where the district court is located.</item>
         <item>1(b) EXTENDING TIME.</item>
-        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; When an act may or must be done within a specified time, the court may, for good cause, extend the time:</item>
+        <item>2(1) &lt;i>In General.&lt;/i> When an act may or must be done within a specified time, the court may, for good cause, extend the time:</item>
         <item>3(A) with or without motion or notice if the court acts, or if a request is made, before the original time or its extension expires; or</item>
         <item>3(B) on motion made after the time has expired if the party failed to act because of excusable neglect.</item>
-        <item>2(2) &lt;i&gt;Exceptions.&lt;/i&gt; A court must not extend the time to act under Rules 50(b) and (d), 52(b), 59(b), (d), and (e), and 60(b).</item>
+        <item>2(2) &lt;i>Exceptions.&lt;/i> A court must not extend the time to act under Rules 50(b) and (d), 52(b), 59(b), (d), and (e), and 60(b).</item>
         <item>1(c) MOTIONS, NOTICES OF HEARING, AND AFFIDAVITS.</item>
-        <item>2(1) &lt;i&gt;In General.&lt;/i&gt; A written motion and notice of the hearing must be served at least 14 days before the time specified for the hearing, with the following exceptions:</item>
+        <item>2(1) &lt;i>In General.&lt;/i> A written motion and notice of the hearing must be served at least 14 days before the time specified for the hearing, with the following exceptions:</item>
         <item>3(A) when the motion may be heard ex parte;</item>
         <item>3(B) when these rules set a different time; or</item>
         <item>3(C) when a court order—which a party may, for good cause, apply for ex parte—sets a different time.</item>
-        <item>2(2) &lt;i&gt;Supporting Affidavit.&lt;/i&gt; Any affidavit supporting a motion must be served with the motion. Except as Rule 59(c) provides otherwise, any opposing affidavit must be served at least 7 days before the hearing, unless the court permits service at another time.</item>
+        <item>2(2) &lt;i>Supporting Affidavit.&lt;/i> Any affidavit supporting a motion must be served with the motion. Except as Rule 59(c) provides otherwise, any opposing affidavit must be served at least 7 days before the hearing, unless the court permits service at another time.</item>
         <item>1(d) ADDITIONAL TIME AFTER CERTAIN KINDS OF SERVICE. When a party may or must act within a specified time after being served and service is made under Rule 5(b)(2)(C) (mail), (D) (leaving with the clerk), or (F) (other means consented to), 3 days are added after the period would otherwise expire under Rule 6(a).</item>
         <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Dec. 4, 1967, eff. July 1, 1968; Mar. 1, 1971, eff. July 1, 1971; Apr. 28, 1983, eff. Aug. 1, 1983; Apr. 29, 1985, eff. Aug. 1, 1985; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 26, 1999, eff. Dec. 1, 1999; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 25, 2005, eff. Dec. 1, 2005; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009; Apr. 29, 2016, Eff. Dec. 1, 2016.)</item>
     </string-array>
@@ -558,18 +558,19 @@
         <item>2(5) facilitating settlement.</item>
         <item>1(b) SCHEDULING.</item>
         <item>2(1) &lt;i>Scheduling Order.&lt;/i> Except in categories of actions exempted by local rule, the district judge—or a magistrate judge when authorized by local rule—must issue a scheduling order:</item>
-        <item>3(A) after receiving the parties’ report under Rule 26(f); or</item>
-        <item>3(B) after consulting with the parties’ attorneys and any unrepresented parties at a scheduling conference or by telephone, mail, or other means.</item>
-        <item>2(2) &lt;i>Time to Issue.&lt;/i> The judge must issue the scheduling order as soon as practicable, but in any event within the earlier of 120 days after any defendant has been served with the complaint or 90 days after any defendant has appeared.</item>
+        <item>3(A) after receiving the parties\' report under Rule 26(f); or</item>
+        <item>3(B) after consulting with the parties\' attorneys and any unrepresented parties at a scheduling conference.</item>
+        <item>2(2) &lt;i>Time to Issue.&lt;/i> The judge must issue the scheduling order as soon as practicable, but unless the judge finds good cause for delay, the judge must issue it within the earlier of 90 days after any defendant has been served with the complaint or 60 days after any defendant has appeared.</item>
         <item>2(3) &lt;i>Contents of the Order.&lt;/i></item>
         <item>3(A) &lt;i>Required Contents.&lt;/i> The scheduling order must limit the time to join other parties, amend the pleadings, complete discovery, and file motions.</item>
         <item>3(B) &lt;i>Permitted Contents.&lt;/i> The scheduling order may:</item>
         <item>4(i) modify the timing of disclosures under Rules 26(a) and 26(e)(1);</item>
         <item>4(ii) modify the extent of discovery;</item>
-        <item>4(iii) provide for disclosure or discovery of electronically stored information;</item>
-        <item>4(iv) include any agreements the parties reach for asserting claims of privilege or of protection as trial-preparation material after information is produced;</item>
-        <item>4(v) set dates for pretrial conferences and for trial; and</item>
-        <item>4(vi) include other appropriate matters.</item>
+        <item>4(iii) provide for disclosure, discovery, or preservation of electronically stored information;</item>
+        <item>4(iv) include any agreements the parties reach for asserting claims of privilege or of protection as trial-preparation material after information is produced, including agreements reached under Federal Rule of Evidence 502;</item>
+        <item>4(v) include any agreements the parties reach for asserting claims of privilege or of protection as trial preparation material after information is produced, including agreements reached under Federal Rule of Evidence 502;</item>
+        <item>4(vi) set dates for pretrial conferences and for trial; and</item>
+        <item>4(vii) include other appropriate matters.</item>
         <item>2(4) &lt;i>Modifying a Schedule.&lt;/i> A schedule may be modified only for good cause and with the judge\'s consent.</item>
         <item>1(c) ATTENDANCE AND MATTERS FOR CONSIDERATION AT A PRETRIAL CONFERENCE.</item>
         <item>2(1) &lt;i>Attendance.&lt;/i> A represented party must authorize at least one of its attorneys to make stipulations and admissions about all matters that can reasonably be anticipated for discussion at a pretrial conference. If appropriate, the court may require that a party or its representative be present or reasonably available by other means to consider possible settlement.</item>
@@ -598,7 +599,7 @@
         <item>3(B) is substantially unprepared to participate—or does not participate in good faith—in the conference; or</item>
         <item>3(C) fails to obey a scheduling or other pretrial order.</item>
         <item>2(2) Imposing Fees and Costs. Instead of or in addition to any other sanction, the court must order the party, its attorney, or both to pay the reasonable expenses—including attorney\'s fees—incurred because of any noncompliance with this rule, unless the noncompliance was substantially justified or other circumstances make an award of expenses unjust.</item>
-        <item>2(As amended Apr. 28, 1983, eff. Aug. 1, 1983; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>2(As amended Apr. 28, 1983, eff. Aug. 1, 1983; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_17">
         <item>1&lt;b>Rule 17. Plaintiff and Defendant; Capacity; Public Officers&lt;/b></item>
@@ -854,14 +855,14 @@
         <item>3(B) &lt;i>Time for Pretrial Disclosures; Objections.&lt;/i> Unless the court orders otherwise, these disclosures must be made at least 30 days before trial. Within 14 days after they are made, unless the court sets a different time, a party may serve and promptly file a list of the following objections: any objections to the use under Rule 32(a) of a deposition designated by another party under Rule 26(a)(3)(A)(ii); and any objection, together with the grounds for it, that may be made to the admissibility of materials identified under Rule 26(a)(3)(A)(iii). An objection not so made—except for one under Federal Rule of Evidence 402 or 403—is waived unless excused by the court for good cause.</item>
         <item>2(4) &lt;i>Form of Disclosures.&lt;/i> Unless the court orders otherwise, all disclosures under Rule 26(a) must be in writing, signed, and served.</item>
         <item>1(b) DISCOVERY SCOPE AND LIMITS.</item>
-        <item>2(1) &lt;i>Scope in General.&lt;/i> Unless otherwise limited by court order, the scope of discovery is as follows: Parties may obtain discovery regarding any nonprivileged matter that is relevant to any party\'s claim or defense—including the existence, description, nature, custody, condition, and location of any documents or other tangible things and the identity and location of persons who know of any discoverable matter. For good cause, the court may order discovery of any matter relevant to the subject matter involved in the action. Relevant information need not be admissible at the trial if the discovery appears reasonably calculated to lead to the discovery of admissible evidence. All discovery is subject to the limitations imposed by Rule 26(b)(2)(C).</item>
+        <item>2(1) &lt;i>Scope in General.&lt;/i> Unless otherwise limited by court order, the scope of discovery is as follows: Parties may obtain discovery regarding any nonprivileged matter that is relevant to any party\'s claim or defense and proportional to the needs of the case, considering the importance of the issues at stake in the action, the amount in controversy, the parties’ relative access to relevant information, the parties’ resources, the importance of the discovery in resolving the issues, and whether the burden or expense of the proposed discovery outweighs its likely benefit. Information within this scope of discovery need not be admissible in evidence to be discoverable.</item>
         <item>2(2) &lt;i>Limitations on Frequency and Extent.&lt;/i></item>
         <item>3(A) &lt;i>When Permitted.&lt;/i> By order, the court may alter the limits in these rules on the number of depositions and interrogatories or on the length of depositions under Rule 30. By order or local rule, the court may also limit the number of requests under Rule 36.</item>
         <item>3(B) &lt;i>Specific Limitations on Electronically Stored Information.&lt;/i> A party need not provide discovery of electronically stored information from sources that the party identifies as not reasonably accessible because of undue burden or cost. On motion to compel discovery or for a protective order, the party from whom discovery is sought must show that the information is not reasonably accessible because of undue burden or cost. If that showing is made, the court may nonetheless order discovery from such sources if the requesting party shows good cause, considering the limitations of Rule 26(b)(2)(C). The court may specify conditions for the discovery.</item>
         <item>3(C) &lt;i>When Required.&lt;/i> On motion or on its own, the court must limit the frequency or extent of discovery otherwise allowed by these rules or by local rule if it determines that:</item>
         <item>4(i) the discovery sought is unreasonably cumulative or duplicative, or can be obtained from some other source that is more convenient, less burdensome, or less expensive;</item>
         <item>4(ii) the party seeking discovery has had ample opportunity to obtain the information by discovery in the action; or</item>
-        <item>4(iii) the burden or expense of the proposed discovery outweighs its likely benefit, considering the needs of the case, the amount in controversy, the parties’ resources, the importance of the issues at stake in the action, and the importance of the discovery in resolving the issues.</item>
+        <item>4(iii) the proposed discovery is outside the scope permitted by Rule 26(b)(1).</item>
         <item>2(3) &lt;i>Trial Preparation: Materials.&lt;/i></item>
         <item>3(A) &lt;i>Documents and Tangible Things.&lt;/i> Ordinarily, a party may not discover documents and tangible things that are prepared in anticipation of litigation or for trial by or for another party or its representative (including the other party\'s attorney, consultant, surety, indemnitor, insurer, or agent). But, subject to Rule 26(b)(4), those materials may be discovered if:</item>
         <item>4(i) they are otherwise discoverable under Rule 26(b)(1); and</item>
@@ -891,7 +892,7 @@
         <item>1(c) PROTECTIVE ORDERS.</item>
         <item>2(1) &lt;i>In General.&lt;/i> A party or any person from whom discovery is sought may move for a protective order in the court where the action is pending—or as an alternative on matters relating to a deposition, in the court for the district where the deposition will be taken. The motion must include a certification that the movant has in good faith conferred or attempted to confer with other affected parties in an effort to resolve the dispute without court action. The court may, for good cause, issue an order to protect a party or person from annoyance, embarrassment, oppression, or undue burden or expense, including one or more of the following:</item>
         <item>3(A) forbidding the disclosure or discovery;</item>
-        <item>3(B) specifying terms, including time and place, for the disclosure or discovery;</item>
+        <item>3(B) specifying terms, including time and place or the allocation of expenses, for the disclosure or discovery;</item>
         <item>3(C) prescribing a discovery method other than the one selected by the party seeking discovery;</item>
         <item>3(D) forbidding inquiry into certain matters, or limiting the scope of disclosure or discovery to certain matters;</item>
         <item>3(E) designating the persons who may be present while the discovery is conducted;</item>
@@ -902,7 +903,12 @@
         <item>3(3) &lt;i>Awarding Expenses.&lt;/i> Rule 37(a)(5) applies to the award of expenses.</item>
         <item>1(d) TIMING AND SEQUENCE OF DISCOVERY.</item>
         <item>2(1) &lt;i>Timing.&lt;/i> A party may not seek discovery from any source before the parties have conferred as required by Rule 26(f), except in a proceeding exempted from initial disclosure under Rule 26(a)(1)(B), or when authorized by these rules, by stipulation, or by court order.</item>
-        <item>2(2) &lt;i>Sequence.&lt;/i> Unless, on motion, the court orders otherwise for the parties’ and witnesses’ convenience and in the interests of justice:</item>
+        <item>2(2) &lt;i>Early Rule 34 Requests.&lt;/i></item>
+        <item>3(A) &lt;i>Time&lt;/i> to Deliver. More than 21 days after the summons and complaint are served on a party, a request under Rule 34 may be delivered:</item>
+        <item>4(i) to that party by any other party, and</item>
+        <item>4(ii) by that party to any plaintiff or to any other party that has been served.</item>
+        <item>3(B) &lt;i>When Considered Served.&lt;/i> The request is considered to have been served at the first Rule 26(f) conference.</item>
+        <item>2(3) &lt;i>Sequence.&lt;/i> Unlessthe parties stipulate or the court orders otherwise for the parties\' and witnesses\' convenience and in the interests of justice:</item>
         <item>3(A) methods of discovery may be used in any sequence; and</item>
         <item>3(B) discovery by one party does not require any other party to delay its discovery.</item>
         <item>1(e) SUPPLEMENTING DISCLOSURES AND RESPONSES.</item>
@@ -913,11 +919,11 @@
         <item>1(f) CONFERENCE OF THE PARTIES; PLANNING FOR DISCOVERY.</item>
         <item>2(1) &lt;i>Conference Timing.&lt;/i> Except in a proceeding exempted from initial disclosure under Rule 26(a)(1)(B) or when the court orders otherwise, the parties must confer as soon as practicable—and in any event at least 21 days before a scheduling conference is to be held or a scheduling order is due under Rule 16(b).</item>
         <item>2(2) &lt;i>Conference Content; Parties’ Responsibilities.&lt;/i> In conferring, the parties must consider the nature and basis of their claims and defenses and the possibilities for promptly settling or resolving the case; make or arrange for the disclosures required by Rule 26(a)(1); discuss any issues about preserving discoverable information; and develop a proposed discovery plan. The attorneys of record and all unrepresented parties that have appeared in the case are jointly responsible for arranging the conference, for attempting in good faith to agree on the proposed discovery plan, and for submitting to the court within 14 days after the conference a written report outlining the plan. The court may order the parties or attorneys to attend the conference in person.</item>
-        <item>2(3) &lt;i>Discovery Plan.&lt;/i> A discovery plan must state the parties’ views and proposals on:</item>
+        <item>2(3) &lt;i>Discovery Plan.&lt;/i> A discovery plan must state the parties\' views and proposals on</item>
         <item>3(A) what changes should be made in the timing, form, or requirement for disclosures under Rule 26(a), including a statement of when initial disclosures were made or will be made;</item>
         <item>3(B) the subjects on which discovery may be needed, when discovery should be completed, and whether discovery should be conducted in phases or be limited to or focused on particular issues;</item>
-        <item>3(C) any issues about disclosure or discovery of electronically stored information, including the form or forms in which it should be produced;</item>
-        <item>3(D) any issues about claims of privilege or of protection as trial-preparation materials, including—if the parties agree on a procedure to assert these claims after production—whether to ask the court to include their agreement in an order;</item>
+        <item>3(C) any issues about disclosure, discovery, or preservation of electronically stored information, including the form or forms in which it should be produced;</item>
+        <item>3(D) any issues about claims of privilege or of protection as trial-preparation materials, including—if the parties agree on a procedure to assert these claims after production—whether to ask the court to include their agreement in an order under Federal Rule of Evidence 502;</item>
         <item>3(E) what changes should be made in the limitations on discovery imposed under these rules or by local rule, and what other limitations should be imposed; and</item>
         <item>3(F) any other orders that the court should issue under Rule 26(c) or under Rule 16(b) and (c).</item>
         <item>2(4) &lt;i>Expedited Schedule.&lt;/i> If necessary to comply with its expedited schedule for Rule 16(b) conferences, a court may by local rule:</item>
@@ -932,7 +938,7 @@
         <item>4(iii) neither unreasonable nor unduly burdensome or expensive, considering the needs of the case, prior discovery in the case, the amount in controversy, and the importance of the issues at stake in the action.</item>
         <item>2(2) &lt;i>Failure to Sign.&lt;/i> Other parties have no duty to act on an unsigned disclosure, request, response, or objection until it is signed, and the court must strike it unless a signature is promptly supplied after the omission is called to the attorney\'s or party\'s attention.</item>
         <item>2(3) &lt;i>Sanction for Improper Certification.&lt;/i> If a certification violates this rule without substantial justification, the court, on motion or on its own, must impose an appropriate sanction on the signer, the party on whose behalf the signer was acting, or both. The sanction may include an order to pay the reasonable expenses, including attorney\'s fees, caused by the violation.</item>
-        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Apr. 28, 1983, eff. Aug. 1, 1983; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 28, 2010, eff. Dec. 1, 2010.)</item>
+        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Apr. 28, 1983, eff. Aug. 1, 1983; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 28, 2010, eff. Dec. 1, 2010; Apr. 29, 2015, eff. Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_27">
         <item>1&lt;b>Rule 27. Depositions to Perpetuate Testimony&lt;/b></item>
@@ -987,7 +993,7 @@
         <item>1&lt;b>Rule 30. Depositions by Oral Examination&lt;/b></item>
         <item>1(a) WHEN A DEPOSITION MAY BE TAKEN.</item>
         <item>2(1) &lt;i>Without Leave.&lt;/i> A party may, by oral questions, depose any person, including a party, without leave of court except as provided in Rule 30(a)(2). The deponent\'s attendance may be compelled by subpoena under Rule 45.</item>
-        <item>2(2) &lt;i>With Leave.&lt;/i> A party must obtain leave of court, and the court must grant leave to the extent consistent with Rule 26(b)(2):</item>
+        <item>2(2) &lt;i>With Leave.&lt;/i> A party must obtain leave of court, and the court must grant leave to the extent consistent with Rule 26(b)(1) and (2):</item>
         <item>3(A) if the parties have not stipulated to the deposition and:</item>
         <item>4(i) the deposition would result in more than 10 depositions being taken under this rule or Rule 31 by the plaintiffs, or by the defendants, or by the third-party defendants;</item>
         <item>4(ii) the deponent has already been deposed in the case; or</item>
@@ -1015,7 +1021,7 @@
         <item>2(2) &lt;i>Objections.&lt;/i> An objection at the time of the examination—whether to evidence, to a party\'s conduct, to the officer\'s qualifications, to the manner of taking the deposition, or to any other aspect of the deposition—must be noted on the record, but the examination still proceeds; the testimony is taken subject to any objection. An objection must be stated concisely in a nonargumentative and nonsuggestive manner. A person may instruct a deponent not to answer only when necessary to preserve a privilege, to enforce a limitation ordered by the court, or to present a motion under Rule 30(d)(3).</item>
         <item>2(3) &lt;i>Participating Through Written Questions.&lt;/i> Instead of participating in the oral examination, a party may serve written questions in a sealed envelope on the party noticing the deposition, who must deliver them to the officer. The officer must ask the deponent those questions and record the answers verbatim.</item>
         <item>1(d) DURATION; SANCTION; MOTION TO TERMINATE OR LIMIT.</item>
-        <item>2(1) &lt;i>Duration.&lt;/i> Unless otherwise stipulated or ordered by the court, a deposition is limited to 1 day of 7 hours. The court must allow additional time consistent with Rule 26(b)(2) if needed to fairly examine the deponent or if the deponent, another person, or any other circumstance impedes or delays the examination.</item>
+        <item>2(1) &lt;i>Duration.&lt;/i> Unless otherwise stipulated or ordered by the court, a deposition is limited to 1 day of 7 hours. The court must allow additional time consistent with Rule 26(b)(1) and (2) if needed to fairly examine the deponent or if the deponent, another person, or any other circumstance impedes or delays the examination.</item>
         <item>2(2) &lt;i>Sanction.&lt;/i> The court may impose an appropriate sanction—including the reasonable expenses and attorney\'s fees incurred by any party—on a person who impedes, delays, or frustrates the fair examination of the deponent.</item>
         <item>2(3) &lt;i>Motion to Terminate or Limit.&lt;/i></item>
         <item>3(A) &lt;i>Grounds.&lt;/i> At any time during a deposition, the deponent or a party may move to terminate or limit it on the ground that it is being conducted in bad faith or in a manner that unreasonably annoys, embarrasses, or oppresses the deponent or party. The motion may be filed in the court where the action is pending or the deposition is being taken. If the objecting deponent or party so demands, the deposition must be suspended for the time necessary to obtain an order.</item>
@@ -1038,13 +1044,13 @@
         <item>1(g) FAILURE TO ATTEND A DEPOSITION OR SERVE A SUBPOENA; EXPENSES. A party who, expecting a deposition to be taken, attends in person or by an attorney may recover reasonable expenses for attending, including attorney\'s fees, if the noticing party failed to:</item>
         <item>2(1) attend and proceed with the deposition; or</item>
         <item>2(2) serve a subpoena on a nonparty deponent, who consequently did not attend.</item>
-        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Mar. 30, 1970, eff. July 1, 1970; Mar. 1, 1971, eff. July 1, 1971; Nov. 20, 1972, eff. July 1, 1975; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Mar. 30, 1970, eff. July 1, 1970; Mar. 1, 1971, eff. July 1, 1971; Nov. 20, 1972, eff. July 1, 1975; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_31">
         <item>1&lt;b>Rule 31. Depositions by Written Questions&lt;/b></item>
         <item>1(a) WHEN A DEPOSITION MAY BE TAKEN.</item>
         <item>2(1) &lt;i>Without Leave.&lt;/i> A party may, by written questions, depose any person, including a party, without leave of court except as provided in Rule 31(a)(2). The deponent\'s attendance may be compelled by subpoena under Rule 45.</item>
-        <item>2(2) &lt;i>With Leave.&lt;/i> A party must obtain leave of court, and the court must grant leave to the extent consistent with Rule 26(b)(2):</item>
+        <item>2(2) &lt;i>With Leave.&lt;/i> A party must obtain leave of court, and the court must grant leave to the extent consistent with Rule 26(b)(1) and (2):</item>
         <item>3(A) if the parties have not stipulated to the deposition and:</item>
         <item>4(i) the deposition would result in more than 10 depositions being taken under this rule or Rule 30 by the plaintiffs, or by the defendants, or by the third-party defendants;</item>
         <item>4(ii) the deponent has already been deposed in the case; or</item>
@@ -1060,7 +1066,7 @@
         <item>1(c) NOTICE OF COMPLETION OR FILING.</item>
         <item>2(1) &lt;i>Completion.&lt;/i> The party who noticed the deposition must notify all other parties when it is completed.</item>
         <item>2(2) &lt;i>Filing.&lt;/i> A party who files the deposition must promptly notify all other parties of the filing.</item>
-        <item>2(As amended Mar. 30, 1970, eff. July 1, 1970; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>2(As amended Mar. 30, 1970, eff. July 1, 1970; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_32">
         <item>1&lt;b>Rule 32. Using Depositions in Court Proceedings&lt;/b></item>
@@ -1102,7 +1108,7 @@
     <string-array name="federal_civil_procedure_33">
         <item>1&lt;b>Rule 33. Interrogatories to Parties&lt;/b></item>
         <item>1(a) IN GENERAL.</item>
-        <item>2(1) &lt;i>Number.&lt;/i> Unless otherwise stipulated or ordered by the court, a party may serve on any other party no more than 25 written interrogatories, including all discrete subparts. Leave to serve additional interrogatories may be granted to the extent consistent with Rule 26(b)(2).</item>
+        <item>2(1) &lt;i>Number.&lt;/i> Unless otherwise stipulated or ordered by the court, a party may serve on any other party no more than 25 written interrogatories, including all discrete subparts. Leave to serve additional interrogatories may be granted to the extent consistent with Rule 26(b)(1) and (2).</item>
         <item>2(2) &lt;i>Scope.&lt;/i> An interrogatory may relate to any matter that may be inquired into under Rule 26(b). An interrogatory is not objectionable merely because it asks for an opinion or contention that relates to fact or the application of law to fact, but the court may order that the interrogatory need not be answered until designated discovery is complete, or until a pretrial conference or some other time.</item>
         <item>1(b) ANSWERS AND OBJECTIONS.</item>
         <item>2(1) &lt;i>Responding Party.&lt;/i> The interrogatories must be answered:</item>
@@ -1116,7 +1122,7 @@
         <item>1(d) OPTION TO PRODUCE BUSINESS RECORDS. If the answer to an interrogatory may be determined by examining, auditing, compiling, abstracting, or summarizing a party\'s business records (including electronically stored information), and if the burden of deriving or ascertaining the answer will be substantially the same for either party, the responding party may answer by:</item>
         <item>2(1) specifying the records that must be reviewed, in sufficient detail to enable the interrogating party to locate and identify them as readily as the responding party could; and</item>
         <item>2(2) giving the interrogating party a reasonable opportunity to examine and audit the records and to make copies, compilations, abstracts, or summaries.</item>
-        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, Eff. Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_34">
         <item>1&lt;b>Rule 34. Producing Documents, Electronically Stored Information, and Tangible Things, or Entering onto Land, for Inspection and Other Purposes&lt;/b></item>
@@ -1131,16 +1137,16 @@
         <item>3(B) must specify a reasonable time, place, and manner for the inspection and for performing the related acts; and</item>
         <item>3(C) may specify the form or forms in which electronically stored information is to be produced.</item>
         <item>2(2) &lt;i>Responses and Objections.&lt;/i></item>
-        <item>3(A) &lt;i>Time to Respond.&lt;/i> The party to whom the request is directed must respond in writing within 30 days after being served. A shorter or longer time may be stipulated to under Rule 29 or be ordered by the court.</item>
-        <item>3(B) &lt;i>Responding to Each Item.&lt;/i> For each item or category, the response must either state that inspection and related activities will be permitted as requested or state an objection to the request, including the reasons.</item>
-        <item>3(C) &lt;i>Objections.&lt;/i> An objection to part of a request must specify the part and permit inspection of the rest.</item>
+        <item>3(A) &lt;i>Time to Respond.&lt;/i> The party to whom the request is directed must respond in writing within 30 days after being served or — if the request was delivered under Rule 26(d)(2) — within 30 days after the parties\' first Rule 26(f) conference. A shorter or longer time may be stipulated to under Rule 29 or be ordered by the court.</item>
+        <item>3(B) &lt;i>Responding to Each Item.&lt;/i> For each item or category, the response must either state that inspection and related activities will be permitted as requested or state with specificity the grounds for objecting to the request, including the reasons. The responding party may state that it will produce copies of documents or of electronically stored information instead of permitting inspection. The production must then be completed no later than the time for inspection specified in the request or another reasonable time specified in the response.</item>
+        <item>3(C) &lt;i>Objections.&lt;/i> An objection must state whether any responsive materials are being withheld on the basis of that objection. An objection to part of a request must specify the part and permit inspection of the rest.</item>
         <item>3(D) &lt;i>Responding to a Request for Production of Electronically Stored Information.&lt;/i> The response may state an objection to a requested form for producing electronically stored information. If the responding party objects to a requested form—or if no form was specified in the request—the party must state the form or forms it intends to use.</item>
         <item>3(E) &lt;i>Producing the Documents or Electronically Stored Information.&lt;/i> Unless otherwise stipulated or ordered by the court, these procedures apply to producing documents or electronically stored information:</item>
         <item>4(i) A party must produce documents as they are kept in the usual course of business or must organize and label them to correspond to the categories in the request;</item>
         <item>4(ii) If a request does not specify a form for producing electronically stored information, a party must produce it in a form or forms in which it is ordinarily maintained or in a reasonably usable form or forms; and</item>
         <item>4(iii) A party need not produce the same electronically stored information in more than one form.</item>
         <item>1(c) NONPARTIES. As provided in Rule 45, a nonparty may be compelled to produce documents and tangible things or to permit an inspection.</item>
-        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 1991, eff. Dec. 1, 1991; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 1991, eff. Dec. 1, 1991; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_35">
         <item>1&lt;b>Rule 35. Physical and Mental Examinations&lt;/b></item>
@@ -1183,7 +1189,7 @@
         <item>4(i) a deponent fails to answer a question asked under Rule 30 or 31;</item>
         <item>4(ii) a corporation or other entity fails to make a designation under Rule 30(b)(6) or 31(a)(4);</item>
         <item>4(iii) a party fails to answer an interrogatory submitted under Rule 33; or</item>
-        <item>4(iv) a party fails to respond that inspection will be permitted—or fails to permit inspection—as requested under Rule 34.</item>
+        <item>4(iv) a party fails to produce documents or fails to respond that inspection will be permitted—or fails to permit inspection—as requested under Rule 34.</item>
         <item>3(C) &lt;i>Related to a Deposition.&lt;/i> When taking an oral deposition, the party asking a question may complete or adjourn the examination before moving for an order.</item>
         <item>2(4) &lt;i>Evasive or Incomplete Disclosure, Answer, or Response.&lt;/i> For purposes of this subdivision (a), an evasive or incomplete disclosure, answer, or response must be treated as a failure to disclose, answer, or respond.</item>
         <item>2(5) &lt;i>Payment of Expenses; Protective Orders.&lt;/i></item>
@@ -1224,9 +1230,14 @@
         <item>3(B) &lt;i>Certification.&lt;/i> A motion for sanctions for failing to answer or respond must include a certification that the movant has in good faith conferred or attempted to confer with the party failing to act in an effort to obtain the answer or response without court action.</item>
         <item>2(2) &lt;i>Unacceptable Excuse for Failing to Act.&lt;/i> A failure described in Rule 37(d)(1)(A) is not excused on the ground that the discovery sought was objectionable, unless the party failing to act has a pending motion for a protective order under Rule 26(c).</item>
         <item>2(3) &lt;i>Types of Sanctions.&lt;/i> Sanctions may include any of the orders listed in Rule 37(b)(2)(A)(i)—(vi). Instead of or in addition to these sanctions, the court must require the party failing to act, the attorney advising that party, or both to pay the reasonable expenses, including attorney\'s fees, caused by the failure, unless the failure was substantially justified or other circumstances make an award of expenses unjust.</item>
-        <item>1(e) FAILURE TO PROVIDE ELECTRONICALLY STORED INFORMATION. Absent exceptional circumstances, a court may not impose sanctions under these rules on a party for failing to provide electronically stored information lost as a result of the routine, good-faith operation of an electronic information system.</item>
+        <item>1(e) FAILURE TO PROVIDE ELECTRONICALLY STORED INFORMATION. If electronically stored information that should have been preserved in the anticipation or conduct of litigation is lost because a party failed to take reasonable steps to preserve it, and it cannot be restored or replaced through additional discovery, the court:</item>
+        <item>2(1) upon finding prejudice to another party from loss of the information, may order measures no greater than necessary to cure the prejudice; or</item>
+        <item>2(2) only upon finding that the party acted with the intent to deprive another party of the information’s use in the litigation may:</item>
+        <item>3(A) presume that the lost information was unfavorable to the party;</item>
+        <item>3(B) instruct the jury that it may or must presume the information was unfavorable to the party; or</item>
+        <item>3(C) dismiss the action or enter a default judgment.</item>
         <item>1(f) FAILURE TO PARTICIPATE IN FRAMING A DISCOVERY PLAN. If a party or its attorney fails to participate in good faith in developing and submitting a proposed discovery plan as required by Rule 26(f), the court may, after giving an opportunity to be heard, require that party or attorney to pay to any other party the reasonable expenses, including attorney\'s fees, caused by the failure.</item>
-        <item>2(As amended Dec. 29, 1948, eff. Oct. 20, 1949; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Pub. L. 96—481, Â§205, Oct. 21, 1980, 94 Stat. 2330; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 16, 2013, eff. Dec. 1, 2013.)</item>
+        <item>2(As amended Dec. 29, 1948, eff. Oct. 20, 1949; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Pub. L. 96—481, Â§205, Oct. 21, 1980, 94 Stat. 2330; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 16, 2013, eff. Dec. 1, 2013; Apr. 29, 2015, eff. Dec. 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_38">
         <item>1&lt;b>Rule 38. Right to a Jury Trial; Demand&lt;/b></item>
@@ -1547,9 +1558,9 @@
         <item>3(B) determine the amount of damages;</item>
         <item>3(C) establish the truth of any allegation by evidence; or</item>
         <item>3(D) investigate any other matter.</item>
-        <item>1(c) SETTING ASIDE A DEFAULT OR A DEFAULT JUDGMENT. The court may set aside an entry of default for good cause, and it may set aside a default judgment under Rule 60(b).</item>
+        <item>1(c) SETTING ASIDE A DEFAULT OR A DEFAULT JUDGMENT. The court may set aside an entry of default for good cause, and it may set aside a final default judgment under Rule 60(b)</item>
         <item>1(d) JUDGMENT AGAINST THE UNITED STATES. A default judgment may be entered against the United States, its officers, or its agencies only if the claimant establishes a claim or right to relief by evidence that satisfies the court.</item>
-        <item>2(As amended Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009.)</item>
+        <item>2(As amended Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009; Apr. 29, 2015, eff. Dec 1, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_56">
         <item>1&lt;b>Rule 56. Summary Judgment&lt;/b></item>
@@ -1945,7 +1956,7 @@
         <item>2(As amended Dec. 28, 1939, eff. Apr. 3, 1941; Dec. 27, 1946, eff. Mar. 19, 1948; Dec. 29, 1948, eff. Oct. 20, 1949; Apr. 30, 1951, eff. Aug. 1, 1951; Jan. 21, 1963, eff. July 1, 1963; Feb. 28, 1966, eff. July 1, 1966; Dec. 4, 1967, eff. July 1, 1968; Mar. 1, 1971, eff. July 1, 1971; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 29, 2002, eff. Dec. 1, 2002; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_82">
-        <item>1&lt;b&gt;Rule 82. Jurisdiction and Venue Unaffected&lt;/b&gt;</item>
+        <item>1&lt;b>Rule 82. Jurisdiction and Venue Unaffected&lt;/b></item>
         <item>1These rules do not extend or limit the jurisdiction of the district courts or the venue of actions in those courts. An admiralty or maritime claim under Rule 9(h) is governed by 28 U.S.C s. 1390.</item>
         <item>2(As amended Dec. 29, 1948, eff. Oct. 20, 1949; Feb. 28, 1966, eff. July 1, 1966; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 30, 2007, eff. Dec. 1, 2007.; Apr. 29, 2016, eff. Dec. 1, 2016)</item>
     </string-array>
@@ -1959,8 +1970,10 @@
     </string-array>
     <string-array name="federal_civil_procedure_84">
         <item>1&lt;b>Rule 84. Forms&lt;/b></item>
-        <item>1The forms in the Appendix suffice under these rules and illustrate the simplicity and brevity that these rules contemplate.</item>
-        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+		<item>1[Abrogated (Apr. __, 2015, eff. Dec. 1, 2015).]
+
+</item>
+        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_85">
         <item>1&lt;b>Rule 85. Title&lt;/b></item>

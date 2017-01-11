@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string name="lastUpdate">January 10, 2017</string>
 	<string-array name="ohio_prof_resp_toc">
 		<item>1.0 Terminology</item>
 		<item>1.1 Competence</item>
@@ -63,8 +63,8 @@
 		<item>1(b) “Confirmed in writing,” when used in reference to the informed consent of a person, denotes informed consent that is given in writing by the person or a writing that a lawyer promptly transmits to the person confirming an oral informed consent. See division (f) for the definition of “informed consent.” If it is not feasible to obtain or transmit the writing at the time the person gives informed consent, then the lawyer must obtain or transmit it within a reasonable time thereafter.</item>
 		<item>1(c) “Firm” or “law firm” denotes a lawyer or lawyers in a law partnership, professional corporation, sole proprietorship, or other association authorized to practice law; or lawyers employed in a private or public legal aid or public defender organization, a legal services organization, or the legal department of a corporation or other organization.</item>
 		<item>1(d) “Fraud” or “fraudulent” denotes conduct that has an intent to deceive and is either of the following:</item>
-			<item>2(1) an actual or implied misrepresentation of a material fact that is made either with knowledge of its falsity or with such utter disregard and recklessness about its falsity that knowledge may be inferred;</item>
-			<item>2(2) a knowing concealment of a material fact where there is a duty to disclose the material fact.</item>
+		<item>2(1) an actual or implied misrepresentation of a material fact that is made either with knowledge of its falsity or with such utter disregard and recklessness about its falsity that knowledge may be inferred;</item>
+		<item>2(2) a knowing concealment of a material fact where there is a duty to disclose the material fact.</item>
 		<item>1(e) “Illegal” denotes criminal conduct or a violation of an applicable statute or administrative regulation.</item>
 		<item>1(f) “Informed consent” denotes the agreement by a person to a proposed course of conduct after the lawyer has communicated adequate information and explanation about the material risks of and reasonably available alternatives to the proposed course of conduct.</item>
 		<item>1(g) “Knowingly,” “known,” or “knows” denotes actual knowledge of the fact in question. A person’s knowledge may be inferred from circumstances.</item>
@@ -86,10 +86,11 @@
 
 	<string-array name="ohio_prof_resp_1_2">
 		<item>1<b>RULE 1.2: SCOPE OF REPRESENTATION AND ALLOCATION OF AUTHORITY BETWEEN CLIENT AND LAWYER</b></item>
-		<item>1(a) Subject to divisions (c), (d), and (e) of this rule, a lawyer shall abide by a client’s decisions concerning the objectives of representation and, as required by Rule 1.4, shall consult with the client as to the means by which they are to be pursued. A lawyer may take action on behalf of the client as is impliedly authorized to carry out the representation. A lawyer does not violate this rule by acceding to requests of opposing counsel that do not prejudice the rights of the client, being punctual in fulfilling all professional commitments, avoiding offensive tactics, and treating with courtesy and consideration all persons involved in the legal process. A lawyer shall abide by a client’s decision whether to settle a matter. In a criminal case, the lawyer shall abide by the client’s decision as to a plea to be entered, whether to waive a jury trial, and whether the client will testify.</item>
+		<item>1(a) Subject to divisions (c), (d), and (e) of this rule, a lawyer shall abide by a client\’s decisions concerning the objectives of representation and, as required by Rule 1.4, shall consult with the client as to the means by which they are to be pursued. A lawyer may take action on behalf of the client as is impliedly authorized to carry out the representation. A lawyer does not violate this rule by acceding to requests of opposing counsel that do not prejudice the rights of the client, being punctual in fulfilling all professional commitments, avoiding offensive tactics, and treating with courtesy and consideration all persons involved in the legal process. A lawyer shall abide by a client’s decision whether to settle a matter. In a criminal case, the lawyer shall abide by the client\’s decision as to a plea to be entered, whether to waive a jury trial, and whether the client will testify.</item>
 		<item>1(b) [RESERVED]</item>
 		<item>1(c) A lawyer may limit the scope of a new or existing representation if the limitation is reasonable under the circumstances and communicated to the client, preferably in <i>writing</i>.</item>
-		<item>1(d) A lawyer shall not counsel a client to engage, or assist a client, in conduct that the lawyer <i>knows</i> is <i>illegal</i> or <i>fraudulent</i>. A lawyer may discuss the legal consequences of any proposed course of conduct with a client and may counsel or assist a client in making a good faith effort to determine the validity, scope, meaning, or application of the law.</item>
+		<item>1(d)(1) A lawyer shall not counsel a client to engage, or assist a client, in conduct that the lawyer <i>knows</i> is <i>illegal</i> or <i>fraudulent</i>. A lawyer may discuss the legal consequences of any proposed course of conduct with a client and may counsel or assist a client in making a good faith effort to determine the validity, scope, meaning, or application of the law.</item>
+		<item>1(2) A lawyer may counsel or assist a client regarding conduct expressly permitted under Sub. H.B. 523 of the 131st General Assembly authorizing the use of marijuana for medical purposes and any state statutes, rules, orders, or other provisions implementing the act. In these circumstances, the lawyer shall advise the client regarding related federal law. </item>
 		<item>1(e) Unless otherwise required by law, a lawyer shall not present, participate in presenting, or threaten to present criminal charges or professional misconduct allegations solely to obtain an advantage in a civil matter.</item>
 	</string-array>
 
@@ -510,7 +511,7 @@
 		<item>1(a) In representing a client, a lawyer shall not use means that have no substantial purpose other than to embarrass, harass, delay, or burden a third person, or use methods of obtaining evidence that violate the legal rights of such a person.</item>
 		<item>1(b) A lawyer who receives a document or electronically stored information relating to the representation of the lawyer’s client and <i>knows</i> or <i>reasonably should know</i> that the document or electronically stored information was inadvertently sent shall promptly notify the sender.</item>
 	</string-array>
-		
+
 	<string-array name="ohio_prof_resp_5_1">
 		<item>1<b>RULE 5.1: RESPONSIBILITIES OF PARTNERS, MANAGERS, AND SUPERVISORY LAWYERS</b></item>
 		<item>1(a) [RESERVED]</item>
