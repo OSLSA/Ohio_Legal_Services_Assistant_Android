@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lastUpdate">January 10,2017</string>
+    <string name="lastUpdateFRE">January 10,2017</string>
     <string-array name="fed_evidence_toc">
         <item>101 Scope; Definitions</item>
         <item>102 Purpose</item>

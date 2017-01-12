@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<string name="lastUpdate">January 10, 2017</string>
+	<string name="lastUpdateOhioJuv">January 10, 2017</string>
 	<string-array name="ohio_juvenile_toc">
 		<item>1 Scope of rules: applicability; construction; exceptions</item>
 		<item>2 Definitions</item>

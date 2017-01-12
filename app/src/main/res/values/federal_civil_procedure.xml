@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lastUpdate">January 10, 2017</string>
+    <string name="lastUpdateFRCP">January 10, 2017</string>
     <string-array name="federal_civil_procedure_toc">
         <item>1 Scope and Purpose</item>
         <item>2 One Form of Action</item>

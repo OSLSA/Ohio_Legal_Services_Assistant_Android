@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="lastUpdate">January 10, 2017</string>
+	<string name="lastUpdateOhioApp">January 10, 2017</string>
 	<string-array name="ohio_appellate_rules_toc">
 		<item>1 Scope of rules</item>
 		<item>2 Law and fact appeals abolished</item>

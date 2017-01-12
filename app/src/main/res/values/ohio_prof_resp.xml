@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="lastUpdate">January 10, 2017</string>
+	<string name="lastUpdateProfCond">January 10, 2017</string>
 	<string-array name="ohio_prof_resp_toc">
 		<item>1.0 Terminology</item>
 		<item>1.1 Competence</item>
