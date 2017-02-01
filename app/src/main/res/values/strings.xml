@@ -143,6 +143,7 @@
         <item>Law Enforcement</item>
         <item>Legal Clinics</item>
         <item>Other</item>
+        <item>Social Service Agencies</item>
     </string-array>
 
     <string-array name="hotdoc_names">

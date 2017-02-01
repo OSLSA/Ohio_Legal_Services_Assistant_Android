@@ -127,7 +127,7 @@ public class LocalResourcesFragment extends Fragment {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     ArrayList<String> allNames = new ArrayList<String>();
-                    allNames.add("All Counties");
+                    //allNames.add("All Counties");
                     for (DataSnapshot child : dataSnapshot.getChildren()) {
                         CountyNames cn = child.getValue(CountyNames.class);
                         allNames.add(cn.name);
