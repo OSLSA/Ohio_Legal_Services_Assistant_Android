@@ -1,9 +1,15 @@
 <resources>
 
     <string-array name="fpl_version">
+        <item>2017</item>
         <item>2016</item>
         <item>2015</item>
         <item>2014</item>
+    </string-array>
+
+    <string-array name="fpl2017">
+        <item>12060</item>
+        <item>4180</item>
     </string-array>
 
     <string-array name="fpl2016">
