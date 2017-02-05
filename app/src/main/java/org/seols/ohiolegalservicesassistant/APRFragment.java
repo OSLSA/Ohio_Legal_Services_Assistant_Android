@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.os.Bundle;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -34,6 +35,15 @@ public class APRFragment extends Fragment {
         return rootView;
     }
 
+    public void showWarning(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setMessage(getActivity().getString(R.string.apr_warning))
+                .setPositiveButton("OK", null)
+                .setTitle("Warning");
+        // Create the AlertDialog object and return it
+        builder.create().show();
+    }
+
     // Link all views on layout to variables in this file
     private void initializeViews(View rootView) {
 
@@ -43,6 +53,13 @@ public class APRFragment extends Fragment {
         etNumberOfPayments = (EditText) rootView.findViewById(R.id.numberOfPayments);
         btnSubmit = (Button) rootView.findViewById(R.id.submit);
         btnClear = (Button) rootView.findViewById(R.id.clear);
+        TextView warning = (TextView) rootView.findViewById(R.id.tvWarning);
+        warning.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showWarning(v);
+            }
+        });
     }
 
     @Override
