@@ -133,7 +133,9 @@
     </string-array>
 
     <string-array name="owf_versions">
-        <item>Current (1/1/16)</item>
+        <item>Current (1/1/17)</item>
+        <item>7/1/16 to 1/1/17</item>
+        <item>1/1/16 to 7/1/16</item>
         <item>1/1/15 to 1/1/16</item>
         <item>7/1/14 to 1/1/15</item>
     </string-array>

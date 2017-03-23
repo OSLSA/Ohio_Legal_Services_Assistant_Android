@@ -112,9 +112,15 @@ public class RulesDetailFragment extends Fragment {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            // if this is an int, should convert then to string otherwise string will end in .0
-            String ruleNumber = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
-            ruleNumber =ruleNumber.replace('.', '_');
+            // if this is an int, should convert then to string otherwise string will end in .0 except for prof cond rules
+            String ruleNumber;
+            if (!bookName.equals("ohio_prof_resp")) {
+                ruleNumber = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
+            } else {
+                ruleNumber = Double.toString(test);
+            }
+
+            ruleNumber = ruleNumber.replace('.', '_');
 
             // display selected rule
             setRule(ruleNumber);
