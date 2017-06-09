@@ -46,6 +46,7 @@ public class HomeFragment extends Fragment {
         getViews(rootView);
         setRulesSpinner();
         checkPushStatus();
+
         return rootView;
     }
 
@@ -199,6 +200,7 @@ public class HomeFragment extends Fragment {
             boolean pushStatus = prefs.getBoolean("boolPushStatus", false);
             SettingsFragment sa = new SettingsFragment();
             sa.enablePush(pushStatus, getContext());
+            surveyPopup();
         }
     }
 
@@ -263,6 +265,47 @@ public class HomeFragment extends Fragment {
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.dismiss();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void surveyPopup() {
+        if (prefs.getBoolean("showSurvey", true)) {
+            // this is the first run, ask user
+            showSurveyPopup();
+        }
+    }
+
+    /**
+     * Method that displays invitation to take survey
+     */
+    private void showSurveyPopup() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setMessage("Please help improve our app by taking a short online survey!")
+                .setTitle("Survey")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                        editSharedPref("showSurvey", false);
+                        String url = "https://goo.gl/forms/wvKGR7yzVNHkPE3q2";
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+                    }
+                })
+                .setNeutralButton("Later", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        editSharedPref("showSurvey", true);
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton("Never", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        editSharedPref("showSurvey", false);
                     }
                 });
         AlertDialog dialog = builder.create();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="lastUpdateProfCond">January 10, 2017</string>
+	<string name="lastUpdateProfCond">June 5, 2017</string>
 	<string-array name="ohio_prof_resp_toc">
 		<item>1.0 Terminology</item>
 		<item>1.1 Competence</item>
@@ -284,7 +284,7 @@
 		<item>1<b>RULE 1.13: ORGANIZATION AS CLIENT</b></item>
 		<item>1(a) A lawyer employed or retained by an organization represents the organization acting through its constituents. A lawyer employed or retained by an organization owes allegiance to the organization and not to any constituent or other person connected with the organization. The constituents of an organization include its owners and its duly authorized officers, directors, trustees, and employees.</item>
 		<item>1(b) If a lawyer for an organization <i>knows</i> or <i>reasonably should know</i> that its constituent’s action, intended action, or refusal to act (1) violates a legal obligation to the organization, or (2) is a violation of law that reasonably might be imputed to the organization and that is likely to result in <i>substantial</i> injury to the organization, then the lawyer shall proceed as is necessary in the best interest of the organization. When it is necessary to enable the organization to address the matter in a timely and appropriate manner, the lawyer shall refer the matter to higher authority, including, if warranted by the circumstances, the highest authority that can act on behalf of the organization under applicable law.</item>
-		<item>1(c) The discretion or duty of a lawyer for an organization to reveal information relating to the representation outside the organization is governed by Rule 1.6(b) and (c).</item>
+		<item>1(c) The discretion or duty of a lawyer for an organization to reveal information relating to the representation outside the organization is governed by Rule 1.6(b) and (d).</item>
 		<item>1(d) In dealing with an organization’s directors, officers, employees, members, shareholders, or other constituents, a lawyer shall explain the identity of the client when the lawyer <i>knows</i> or <i>reasonably should know</i> that the organization’s interests are adverse to those of the constituents with whom the lawyer is dealing.</item>
 		<item>1(e) A lawyer representing an organization may also represent any of its directors, officers, employees, members, shareholders, or other constituents, subject to the provisions of Rule 1.7. If the organization’s <i>written</i> consent to the dual representation is required by Rule 1.7, the consent shall be given by an appropriate official of the organization, other than the individual who is to be represented, or by the shareholders.</item>
 	</string-array>
