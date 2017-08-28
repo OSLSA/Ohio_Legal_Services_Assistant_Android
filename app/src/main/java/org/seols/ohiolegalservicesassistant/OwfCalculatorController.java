@@ -31,6 +31,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     private Spinner versionSpinner;
 
     private static final int[][] OWF_PAYMENT_STANDARD = {
+            {283,387,474,584,684,761,851,943,1037,1130,1222,1316}, // July 2017
             {283,387,474,584,684,761,851,943,1037,1130,1222,1316}, // January 2017
             {282,386,473,582,682,759,848,940,1034,1127,1218,1312}, // July 2016
             {282,386,473,582,682,759,848,940,1034,1127,1218,1312}, // January 2016
@@ -39,6 +40,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     };
 
     private static final int[][] INITIAL_ELIGIBILITY_STANDARD = {
+            {503, 677, 851 ,1025, 1200 ,1374, 1548 ,1722, 1896, 2070 ,2245, 2419}, // July 2017
             {495,668,840,1013,1185,1358, 1531, 1704, 1878, 2051, 2224, 2398}, // January 2017
             {495,668,840,1013,1185,1358, 1531, 1704, 1878, 2051, 2224, 2398}, // Julyy 2017
             { 491, 664, 838, 1011, 1184, 1358, 1531, 1704, 1878, 2051, 2224, 2398}, // January 2016
