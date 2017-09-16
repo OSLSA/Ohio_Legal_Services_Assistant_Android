@@ -166,11 +166,9 @@ public class MainActivity extends AppCompatActivity
                 Toast toast = Toast.makeText(this, "You have to set the address for your mobile version of Pika in the settings", Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                Uri uri = Uri.parse(url);
-                Intent intent = new Intent();
-                intent.setData(uri);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                this.startActivity(intent);
+
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+
             }
         }
 

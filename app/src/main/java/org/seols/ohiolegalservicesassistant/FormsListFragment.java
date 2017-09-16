@@ -78,11 +78,7 @@ public class FormsListFragment extends Fragment {
         public void onClick(View v) {
             int i = Integer.parseInt(v.getTag().toString());
             String url = (getResources().getStringArray(R.array.hotdoc_urls))[i];
-            Uri uri = Uri.parse(url);
-            Intent intent = new Intent();
-            intent.setData(uri);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getContext().startActivity(intent);
+            getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
         }
     };
 

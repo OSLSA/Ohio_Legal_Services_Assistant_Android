@@ -14,6 +14,24 @@
                 card_view:cardCornerRadius="4dp"
                 style="@style/cards">
 
+                <TextView android:text="@string/version"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/version_spinner"
+                    android:padding="10dp"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                card_view:cardCornerRadius="4dp"
+                style="@style/cards">
+
             <TextView android:text="@string/household_information_heading"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"

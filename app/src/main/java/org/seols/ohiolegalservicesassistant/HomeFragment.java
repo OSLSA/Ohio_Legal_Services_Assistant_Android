@@ -338,11 +338,7 @@ public class HomeFragment extends Fragment {
                     url = "http://www.seols.org";
                     break;
             }
-            Uri uri = Uri.parse(url);
-            Intent intent = new Intent();
-            intent.setData(uri);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getContext().startActivity(intent);
+            getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
         }
     };
 }

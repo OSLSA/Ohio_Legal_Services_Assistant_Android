@@ -71,6 +71,7 @@
     <string name="garbageTrash">Garbage or trash</string>
     <string name="phone">Telephone</string>
     <string name="tvAGaged">Are there any AG members over 60, blind, or disabled?</string>
+    <string name="version">VERSION</string>
 
     <!-- garnishiment calculator -->
     <string name="income">Net Income</string>

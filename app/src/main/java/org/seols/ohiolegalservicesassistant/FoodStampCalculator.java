@@ -44,7 +44,7 @@ public class FoodStampCalculator {
 	private void setConstants(String version) {
 		// arrays
 		String packageName = "org.seols.ohiolegalservicesassistant";
-		FA_ALLOTMENT = context.getResources().getStringArray(context.getResources().getIdentifier("fa_allotment_2015", "array", MainActivity.PACKAGE_NAME));
+		FA_ALLOTMENT = context.getResources().getStringArray(context.getResources().getIdentifier("fa_allotment_" + version, "array", MainActivity.PACKAGE_NAME));
 		STANDARD_DEDUCTION = context.getResources().getStringArray(context.getResources().getIdentifier("standard_deduction_" + version, "array", packageName));
 		NET_STANDARD = context.getResources().getStringArray(context.getResources().getIdentifier("net_standard_" + version, "array", packageName));
 		GROSS_INCOME_LIMIT = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_limit_" + version, "array", packageName));

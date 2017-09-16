@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -32,7 +34,7 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
 
     private EditText etAGsize, etChildSupport, etDependentCare, etEarnedIncome, etMedicalExpenses, etPropertyInsurance, etPropertyTaxes, etRent, etUnearnedIncome, requestingET;
 
-    private String version;
+    private Spinner versionSpinner;
 
     private int AGSize, childSupport, dependentCare, finalEarnedIncome, finalNetIncome, finalUnearnedIncome, grossIncomeAmount, medicalExpenses, propertyInsurance, propertyTaxes, rent, totalGrossIncome, utilityAllowance;
 
@@ -62,6 +64,8 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         // initialize spinners
         cbAGSSI = (CheckBox) rootView.findViewById(R.id.agSSISwitch);
         cbAGAged = (CheckBox) rootView.findViewById(R.id.agAgedSwitch);
+        versionSpinner = (Spinner) rootView.findViewById(R.id.version_spinner);
+        setSpinner();
 
         // initialize EditTexts
         etAGsize = (EditText) rootView.findViewById(R.id.etAGSize);
@@ -76,6 +80,20 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         etUnearnedIncome = (EditText) rootView.findViewById(R.id.etUnearnedIncome);
         addListeners(etUnearnedIncome, getResources().getString(R.string.tvUnearnedIncome));
 
+    }
+
+    private void setSpinner() {
+        // Create array adapter  using string-array
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.food_stamp_versions_display, android.R.layout.simple_spinner_dropdown_item);
+
+        // set layout for when dropdown shown
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // apply adapter to spinner
+        versionSpinner.setAdapter(adapter);
+
+        // set default to monthly
+        versionSpinner.setSelection(0);
     }
 
     private void addListeners(EditText et, String title) {
@@ -232,8 +250,7 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         bundle.putInt("rent", rent);
         bundle.putInt("propertyInsurance", propertyInsurance);
         bundle.putInt("propertyTaxes", propertyTaxes);
-        // TODO have ability to change version
-        bundle.putString("version", "2015");
+        bundle.putString("version", getVersion());
         return bundle;
 
     }
@@ -343,6 +360,14 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         dialog.setTargetFragment(this, 0);
         dialog.setArguments(args);
         dialog.show(fm, "IncomeDialog");
+    }
+
+    private String getVersion() {
+        int versionNumber = versionSpinner.getSelectedItemPosition();
+        String fullVersion = getResources().getStringArray(R.array.food_stamp_versions_display)[versionNumber];
+        String version = fullVersion.substring(0, 7);
+        String finalVersion = version.replace("-", "_");
+        return finalVersion;
     }
 
     @Override
