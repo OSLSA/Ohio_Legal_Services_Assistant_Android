@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<string name="lastUpdateOhioJuv">January 10, 2017</string>
+	<string name="lastUpdateOhioJuv">September 23, 2017</string>
 	<string-array name="ohio_juvenile_toc">
 		<item>1 Scope of rules: applicability; construction; exceptions</item>
 		<item>2 Definitions</item>
@@ -384,9 +384,10 @@
 	<string-array name="ohio_juvenile_20">
 		<item>1&lt;b>RULE 20. Service and Filing of Papers When Required Subsequent to Filing of Complaint.&lt;/b></item>
 		<item>1&lt;b>(A) Service: when required.&lt;/b> Written notices, requests for discovery, designation of record on appeal and written motions, other than those which are heard ex parte, and similar papers shall be served upon each of the parties.</item>
-		<item>1&lt;b>(B) Service: how made.&lt;/b> Whenever under these rules or by an order of the court service is required or permitted to be made upon a party represented by an attorney, the service shall be made upon the attorney unless service is ordered by the court upon the party. Service upon the attorney or upon the party shall be made in the manner provided in Civ. R. 5(B).</item>
-		<item>1&lt;b>(C) Filing.&lt;/b> All papers required to be served upon a party shall be filed simultaneously with or immediately after service. Papers filed with the court shall not be considered until proof of service is endorsed thereon or separately filed. The proof of service shall state the date and the manner of service and shall be signed and filed in the manner provided in Civil Rule 5(D).</item>
-		<item>2[Effective: July 1, 1972; amended effective July 1, 1994.]</item>
+		<item>1&lt;b>(B) Service: how made; proof of service.&lt;/b> Whenever under these rules or by an order of the court service is required or permitted to be made upon a party represented by an attorney, the service shall be made upon the attorney unless service is ordered by the court upon the party. Service upon the attorney or upon the party, and proof of service, shall be made in the manner provided in Civ. R. 5(B). Papers filed with the court shall not be considered until proof of service is endorsed thereon or separately filed.</item>
+		<item>1&lt;b>(C) Filing.&lt;/b> All papers required to be served shall be filed with the court within three days after service. Discovery requests and responses shall not be filed until they are used in the proceeding or the court orders filing.</item>
+		<item>1&lt;b>(D) Filing with the court defined.&lt;/b> Filing with the court shall be as defined by Civ.R. 5(E).</item>
+		<item>2[Effective: July 1, 1972; amended effective July 1, 1994; effective July 1, 2016.]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_21">
 		<item>1&lt;b>RULE 21. Preliminary Conferences&lt;/b></item>
@@ -764,6 +765,7 @@
 		<item>1&lt;b>(V) Effective date of amendments.&lt;/b> The amendments to Juvenile Rules 16 and 47 filed by the Supreme Court with the General Assembly on January 15, 2013 and revised and refiled on April 29, 2013 shall take effect on July 1, 2013. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
 		<item>1&lt;b>(W) Effective date of amendments.&lt;/b> The amendments to Juvenile Rules 40 and 47 filed by the Supreme Court with the General Assembly on January 15, 2014 and refiled on April 30, 2014 shall take effect on July 1, 2014. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
 		<item>1&lt;b>(X) Effective date of amendments.&lt;/b> The amendments to Juvenile Rules 41 and 47 filed by the Supreme Court with the General Assembly on January 15, 2015 and refiled on April 30, 2015 shall take effect on July 1, 2015. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
+		<item>1&lt;b>(Y) Effective date of amendments.&lt;/b> The amendments to Juvenile Rules 20 and 47 filed by the Supreme Court with the General Assembly on January 13, 2016 and refiled on April 29, 2016 shall take effect on July 1, 2016. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
 	</string-array>
 	<string-array name="ohio_juvenile_48">
 		<item>1&lt;b>RULE 48. Title&lt;/b></item>
