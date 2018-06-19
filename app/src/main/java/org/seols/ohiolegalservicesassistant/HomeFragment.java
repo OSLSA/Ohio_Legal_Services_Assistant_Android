@@ -91,7 +91,7 @@ public class HomeFragment extends Fragment {
 
             FederalPovertyLevel calc = new FederalPovertyLevel(
                     Integer.parseInt(agSize.getText().toString()),
-                    "2017",
+                    getResources().getStringArray(R.array.fpl_version)[0],
                     annualIncome,
                     getContext()
             );

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lastUpdateOhioEvid">September 23, 2017</string>
+    <string name="lastUpdateOhioEvid">June 19, 2018</string>
     <string-array name="ohio_rules_evidence">
         <item>I. General Provisions</item>
         <item>II. Judicial Notice</item>
@@ -465,10 +465,10 @@
     </string-array>
     <string-array name="ohio_rules_evidence_807">
         <item>1&lt;b>RULE 807. Hearsay Exceptions; Child Statements in Abuse Cases&lt;/b></item>
-        <item>1(A) An out-of-court statement made by a child who is under twelve years of age at the time of trial or hearing describing any sexual act performed by, with, or on the child or describing any act of physical violence directed against the child is not excluded as hearsay under Evid.R. 802 if all of the following apply:</item>
-        <item>2(1) The court finds that the totality of the circumstances surrounding the making of the statement provides particularized guarantees of trustworthiness that make the statement at least as reliable as statements admitted pursuant to Evid.R. 803 and 804. The circumstances must establish that the child was particularly likely to be telling the truth when the statement was made and that the test of cross-examination would add little to the reliability of the statement. In making its determination of the reliability of the statement, the court shall consider all of the circumstances surrounding the making of the statement, including but not limited to spontaneity, the internal consistency of the statement, the mental state of the child, the child\'s motive or lack of motive to fabricate, the child\'s use of terminology unexpected of a child of similar age, the means by which the statement was elicited, and the lapse of time between the act and the statement. In making this determination, the court shall not consider whether there is independent proof of the sexual act or act of physical violence.</item>
+        <item>1(A) An out-of-court statement made by a child who is under twelve years of age at the time of trial or hearing describing any sexual activity performed, or attempted to be performed, by, with, or on the child or describing any act or attempted act of physical harm directed against the child’s person is not excluded as hearsay under Evid.R. 802 if all of the following apply:</item>
+        <item>2(1) The court finds that the totality of the circumstances surrounding the making of the statement provides particularized guarantees of trustworthiness that make the statement at least as reliable as statements admitted pursuant to Evid.R. 803 and 804. The circumstances must establish that the child was particularly likely to be telling the truth when the statement was made and that the test of cross-examination would add little to the reliability of the statement. In making its determination of the reliability of the statement, the court shall consider all of the circumstances surrounding the making of the statement, including but not limited to spontaneity, the internal consistency of the statement, the mental state of the child, the child\'s motive or lack of motive to fabricate, the child\'s use of terminology unexpected of a child of similar age, the means by which the statement was elicited, and the lapse of time between the act and the statement. In making this determination, the court shall not consider whether there is independent proof of the sexual activity or attempted sexual activity, or of the act or attempted act of physical harm directed against the child’s person;</item>
         <item>2(2) The child\'s testimony is not reasonably obtainable by the proponent of the statement.</item>
-        <item>2(3) There is independent proof of the sexual act or act of physical violence.</item>
+        <item>2(3) There is independent proof of the sexual activity or attempted sexual activity, or of the act or attempted act of physical harm directed against the child’s person</item>
         <item>2(4) At least ten days before the trial or hearing, a proponent of the statement has notified all other parties in writing of the content of the statement, the time and place at which the statement was made, the identity of the witness who is to testify about the statement, and the circumstances surrounding the statement that are claimed to indicate its trustworthiness.</item>
         <item>1(B) The child\'s testimony is "not reasonably obtainable by the proponent of the statement" under division (A)(2) of this rule only if one or more of the following apply:</item>
         <item>2(1) The child refuses to testify concerning the subject matter of the statement or claims a lack of memory of the subject matter of the statement after a person trusted by the child, in the presence of the court, urges the child to both describe the acts described by the statement and to testify.</item>
@@ -480,7 +480,7 @@
         <item>3(b) the illness or infirmity would not improve sufficiently to permit the child to testify if the trial or hearing were delayed for a reasonable time.</item>
         <item>2The proponent of the statement has not established that the child\'s testimony or attendance is not reasonably obtainable if the child\'s refusal, claim of lack of memory, inability, or absence is due to the procurement or wrongdoing of the proponent of the statement for the purpose of preventing the child from attending or testifying.</item>
         <item>1(C) The court shall make the findings required by this rule on the basis of a hearing conducted outside the presence of the jury and shall make findings of fact, on the record, as to the bases for its ruling.</item>
-        <item>2[Effective: July 1, 1991.]</item>
+        <item>2[Effective: July 1, 1991; July 1, 2018.]</item>
     </string-array>
     <string-array name="ohio_rules_evidence_901">
         <item>1&lt;b>RULE 901. Requirement of Authentication or Identification&lt;/b></item>
