@@ -1,10 +1,112 @@
 <resources>
 
     <string-array name="food_stamp_versions_display">
-        <item>10-2017 (current)</item>
+        <item>10-2018 (current)</item>
+        <item>10-2017 to 10-2018</item>
         <item>10-2016 to 10-2017</item>
         <item>10-2015 to 10-2016</item>
     </string-array>
+
+    <string-array name="fa_allotment_10_2018">
+        <item>192</item>
+        <item>353</item>
+        <item>505</item>
+        <item>642</item>
+        <item>762</item>
+        <item>914</item>
+        <item>1011</item>
+        <item>1155</item>
+        <item>1299</item>
+        <item>1443</item>
+        <item>1587</item>
+        <item>1731</item>
+    </string-array>
+
+    <string-array name="standard_deduction_10_2018">
+        <item>164</item>
+        <item>164</item>
+        <item>164</item>
+        <item>174</item>
+        <item>204</item>
+        <item>234</item>
+        <item>234</item>
+        <item>234</item>
+        <item>234</item>
+        <item>234</item>
+        <item>234</item>
+        <item>234</item>
+    </string-array>
+
+    <string-array name="net_standard_10_2018">
+        <item>1012</item>
+        <item>1372</item>
+        <item>1732</item>
+        <item>2092</item>
+        <item>2452</item>
+        <item>2812</item>
+        <item>3172</item>
+        <item>3532</item>
+        <item>3892</item>
+        <item>4252</item>
+        <item>4612</item>
+        <item>4972</item>
+    </string-array>
+
+    <string-array name="gross_income_limit_10_2018">
+        <item>1316</item>
+        <item>1784</item>
+        <item>2252</item>
+        <item>2720</item>
+        <item>3188</item>
+        <item>3656</item>
+        <item>4124</item>
+        <item>4592</item>
+        <item>5060</item>
+        <item>5528</item>
+        <item>5996</item>
+        <item>6464</item>
+    </string-array>
+
+    <string-array name="gross_income_165_10_2018">
+        <item>1670</item>
+        <item>2264</item>
+        <item>2858</item>
+        <item>3452</item>
+        <item>4046</item>
+        <item>4640</item>
+        <item>5234</item>
+        <item>5828</item>
+        <item>6422</item>
+        <item>7016</item>
+        <item>7610</item>
+        <item>8204</item>
+    </string-array>
+
+    <string-array name="gross_income_200_10_2018">
+        <item>2024</item>
+        <item>2744</item>
+        <item>3464</item>
+        <item>4184</item>
+        <item>4904</item>
+        <item>5624</item>
+        <item>6344</item>
+        <item>7064</item>
+        <item>7784</item>
+        <item>8504</item>
+        <item>9224</item>
+        <item>9944</item>
+    </string-array>
+
+    <string name="standard_homeless_10_2018">143</string>
+    <string name="excess_income_deduction_10_2018">20</string>
+    <string name="excess_medical_10_2018">35</string>
+    <string name="dependent_care_10_2018">0</string>
+    <string name="minnimum_allotment_10_2018">15</string>
+    <string name="standard_utility_10_2018">544</string>
+    <string name="limited_utility_10_2018">351</string>
+    <string name="single_utility_10_2018">78</string>
+    <string name="telephone_10_2018">39</string>
+    <string name="shelter_limit_10_2018">552</string>
 
     <string-array name="fa_allotment_10_2017">
         <item>192</item>

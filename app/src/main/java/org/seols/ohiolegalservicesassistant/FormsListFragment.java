@@ -2,10 +2,13 @@ package org.seols.ohiolegalservicesassistant;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +21,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
@@ -27,6 +31,7 @@ import java.util.List;
  */
 public class FormsListFragment extends Fragment {
 
+    private static final String AUTHORITY = "org.seols.ohiolegalservicesassistant";
     private TableLayout tl;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,7 +52,7 @@ public class FormsListFragment extends Fragment {
         List<String> forms = formsDao.formNamesList();
         forms.add(getResources().getString(R.string.medicaid_help_sheet));
         forms.add(getResources().getString(R.string.benefits_standards));
-        forms.add(getResources().getString(R.string.add_forms));
+        //forms.add(getResources().getString(R.string.add_forms));
         return forms.toArray(new String[0]);
     }
 
@@ -83,25 +88,47 @@ public class FormsListFragment extends Fragment {
     };
 
     private void CopyAssets(String fileName) {
-        AssetManager am = getActivity().getAssets();
-        InputStream in = null;
-        OutputStream out = null;
+
+
+//        AssetManager am = getActivity().getAssets();
+//        InputStream in = null;
+//        OutputStream out = null;
+
+//        try {
+//            in = am.open(fileName);
+//            out = getActivity().openFileOutput(file.getName(), Context.MODE_WORLD_READABLE);
+//            copyFile(in, out);
+//            in.close();
+//            in = null;
+//            out.close();
+//            out = null;
+//        } catch (Exception e) {
+//            Log.e("tag", e.getMessage());
+//        }
+
+
         File file = new File(getActivity().getFilesDir(), fileName);
-        try {
-            in = am.open(fileName);
-            out = getActivity().openFileOutput(file.getName(), Context.MODE_WORLD_READABLE);
-            copyFile(in, out);
-            in.close();
-            in = null;
-            out.close();
-            out = null;
-        } catch (Exception e) {
-            Log.e("tag", e.getMessage());
+        Log.d("FormName: ", String.valueOf(file));
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, file);
+        intent.setDataAndType(uri, "application/pdf");
+        grantAllUriPermissions(getContext(), intent, uri);
+        PackageManager pm = getActivity().getPackageManager();
+
+        if (intent.resolveActivity(pm) != null) {
+            startActivity(intent);
         }
 
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.parse("file://" + getActivity().getFilesDir() + "/" + fileName), "application/pdf");
-        startActivity(intent);
+    }
+
+    private void grantAllUriPermissions(Context context, Intent intent, Uri uri) {
+        List<ResolveInfo> resInfoList = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        for (ResolveInfo resolveInfo : resInfoList) {
+            String packageName = resolveInfo.activityInfo.packageName;
+            context.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        }
     }
 
     private void openUserForm(String name) {
@@ -241,6 +268,18 @@ public class FormsListFragment extends Fragment {
                 .setTitle(title);
     }
 
+    static private void copy(InputStream in, File dst) throws IOException {
+        FileOutputStream out=new FileOutputStream(dst);
+        byte[] buf=new byte[1024];
+        int len;
+
+        while ((len=in.read(buf)) > 0) {
+            out.write(buf, 0, len);
+        }
+
+        in.close();
+        out.close();
+    }
 
 
 }
