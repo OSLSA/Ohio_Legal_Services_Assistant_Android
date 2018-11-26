@@ -54,6 +54,7 @@ public class LocalResourcesFragment extends Fragment {
         this.inflater = inflater;
         View rootView = inflater.inflate(R.layout.local_resources_layout, container, false);
         getViews(rootView);
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         mRootRef = FirebaseDatabase.getInstance().getReference();
         mResourceRef = mRootRef.child("entities");
         mCountyRef = mRootRef.child("counties");
@@ -323,10 +324,8 @@ public class LocalResourcesFragment extends Fragment {
         public void onClick(View view) {
             String url = view.getTag().toString();
             Uri uri = Uri.parse(url);
-            Intent intent = new Intent();
-            intent.setData(uri);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            getActivity().startActivity(intent);
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+
         }
     };
 

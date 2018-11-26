@@ -1,12 +1,16 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +21,16 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.internal.Storage;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,12 +46,17 @@ public class FormsListFragment extends Fragment {
 
     private static final String AUTHORITY = "org.seols.ohiolegalservicesassistant";
     private TableLayout tl;
+    SharedPreferences prefs;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.rules_all_books_layout, container, false);
-        tl = (TableLayout)rootView.findViewById(R.id.rules_titles);
+        View rootView = inflater.inflate(R.layout.forms_layout, container, false);
+        tl = (TableLayout)rootView.findViewById(R.id.forms);
         addHotDocsForms(inflater);
         fillTable(inflater);
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        //checkForUpdates();
         return rootView;
     }
 
@@ -87,39 +105,53 @@ public class FormsListFragment extends Fragment {
         }
     };
 
-    private void CopyAssets(String fileName) {
+    private void CopyAssets(final String fileName, String titleName) throws IOException {
+
+        /* TODO
+        1. store copies of pdfs on firebase
+        2. create firebase database entry with date of most recent update for medicaid and help sheet
+        3. create persistent data entry for those dates
+        4. on form open, check to see if the internal date matches the external date
+        5. if they do match, open form saved already on internal storage
+        6. if they don't match, download latest copy from firebase and store locally, toast saying forms have been updated
+        7. open newly downloaded form
+         */
+
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+        StorageReference fileRef = storageRef.child(fileName);
+        final File localFile = File.createTempFile(titleName, "pdf");
 
 
-//        AssetManager am = getActivity().getAssets();
-//        InputStream in = null;
-//        OutputStream out = null;
+        fileRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                // Local temp file has been create
+                //File file = new File(getActivity().getFilesDir(), fileName);
+                Log.d("FormName Downloaded: ", String.valueOf(fileName));
 
-//        try {
-//            in = am.open(fileName);
-//            out = getActivity().openFileOutput(file.getName(), Context.MODE_WORLD_READABLE);
-//            copyFile(in, out);
-//            in.close();
-//            in = null;
-//            out.close();
-//            out = null;
-//        } catch (Exception e) {
-//            Log.e("tag", e.getMessage());
-//        }
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, localFile);
+                intent.setDataAndType(uri, "*/*");  // was application/pdf
+                grantAllUriPermissions(getContext(), intent, uri);
+                PackageManager pm = getActivity().getPackageManager();
+
+                if (intent.resolveActivity(pm) != null) {
+                    startActivity(intent);
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle any errors
+                Log.d("ERROR: ", "error");
+            }
+        });
 
 
-        File file = new File(getActivity().getFilesDir(), fileName);
-        Log.d("FormName: ", String.valueOf(file));
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-        Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, file);
-        intent.setDataAndType(uri, "application/pdf");
-        grantAllUriPermissions(getContext(), intent, uri);
-        PackageManager pm = getActivity().getPackageManager();
-
-        if (intent.resolveActivity(pm) != null) {
-            startActivity(intent);
-        }
 
     }
 
@@ -230,11 +262,21 @@ public class FormsListFragment extends Fragment {
         @Override
         public void onClick(View v) {
 
+            Log.d("COPYASSETS", "top");
             logSearch("Form opened", v.getTag().toString());
             if (v.getTag().toString().equals(getResources().getString(R.string.medicaid_help_sheet))) {
-                CopyAssets("medicaid_help_sheet.pdf");
+                try {
+                    Log.d("COPYASSETS", "medicaid");
+                    CopyAssets("medicaid_help_sheet.pdf", "Medicaid Help Sheet");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             } else if (v.getTag().toString().equals(getResources().getString(R.string.benefits_standards))) {
-                CopyAssets("standards_help_sheet.pdf");
+                try {
+                    CopyAssets("standards_help_sheet.pdf", "Standards Help Sheet");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             } else if (v.getTag().toString().equals(getResources().getString(R.string.add_forms))) {
                 ((MainActivity)getActivity()).setFragment(new EditFormsList(), "EDIT", "Add/Edit Forms", null);
             } else {
