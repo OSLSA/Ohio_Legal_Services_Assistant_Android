@@ -1,6 +1,16 @@
 package org.seols.ohiolegalservicesassistant;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.util.Log;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 /**
  * Created by joshuagoodwin on 10/1/15.
@@ -12,6 +22,7 @@ public class FederalPovertyLevel {
     String year;
     String[] constants;
     Context context;
+    ArrayList<Long> fplInfo;
 
 
     /**
@@ -20,16 +31,57 @@ public class FederalPovertyLevel {
      */
     public double getResults() {
 
-        constants = context.getResources().getStringArray(context.getResources().getIdentifier("fpl" + year, "array", "org.seols.ohiolegalservicesassistant"));
-        int povertyStart = Integer.parseInt(constants[0]);
-        int povertyIncrement = Integer.parseInt(constants[1]);
+        setData();
+        Long povertyStart = fplInfo.get(0);
+        Long povertyIncrement = fplInfo.get(1);
+        double fpl = ((size - 1) * povertyIncrement) + povertyStart;
+        results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+        return results;
+
+        //constants = context.getResources().getStringArray(context.getResources().getIdentifier("fpl" + year, "array", "org.seols.ohiolegalservicesassistant"));
+
+//
+//        int povertyStart = fplInfo.getPovertyInformation().get(0);
+//        int povertyIncrement = fplInfo.getPovertyInformation().get(1);
+//
+//        double fpl = ((size - 1) * povertyIncrement) + povertyStart;
+//
+//        results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+
+    }
+
+    private void setData() {
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        String version = "fpl" + year;
+        DatabaseReference mRootRef;
+        mRootRef = FirebaseDatabase.getInstance().getReference().child("povertyLevel").child(version);
+        mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                fplInfo = (ArrayList<Long>) dataSnapshot.getValue();
+                Long povertyStart = fplInfo.get(0);
+                Long povertyIncrement = fplInfo.get(1);
+                double fpl = ((size - 1) * povertyIncrement) + povertyStart;
+                results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private Double calculateIt() {
+        Long povertyStart = fplInfo.get(0);
+        Long povertyIncrement = fplInfo.get(1);
 
         double fpl = ((size - 1) * povertyIncrement) + povertyStart;
 
-        results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+        Double solution = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
 
-        return results;
-
+        return solution;
     }
 
     /**

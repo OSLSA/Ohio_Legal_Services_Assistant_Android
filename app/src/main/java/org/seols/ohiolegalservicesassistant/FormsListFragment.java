@@ -7,19 +7,24 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.AssetManager;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.internal.Storage;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -37,7 +42,10 @@ import java.io.IOException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.List;
+
 
 /**
  * Created by joshuagoodwin on 3/2/16.
@@ -47,11 +55,15 @@ public class FormsListFragment extends Fragment {
     private static final String AUTHORITY = "org.seols.ohiolegalservicesassistant";
     private TableLayout tl;
     SharedPreferences prefs;
+    Button testing;
+    File localFile;
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.forms_layout, container, false);
         tl = (TableLayout)rootView.findViewById(R.id.forms);
+        testing = (Button)rootView.findViewById(R.id.test);
+        testing.setOnClickListener(testingClicker);
         addHotDocsForms(inflater);
         fillTable(inflater);
         FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -59,6 +71,23 @@ public class FormsListFragment extends Fragment {
         //checkForUpdates();
         return rootView;
     }
+
+    View.OnClickListener testingClicker = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, localFile);
+            intent.setDataAndType(uri, "*/*");  // was application/pdf
+            grantAllUriPermissions(getContext(), intent, uri);
+            PackageManager pm = getActivity().getPackageManager();
+
+            if (intent.resolveActivity(pm) != null) {
+                startActivity(intent);
+            }
+        }
+    };
 
     private void createFormsList() {
         //TODO creates a list of the forms needed for the table layout
@@ -105,6 +134,8 @@ public class FormsListFragment extends Fragment {
         }
     };
 
+
+
     private void CopyAssets(final String fileName, String titleName) throws IOException {
 
         /* TODO
@@ -117,38 +148,57 @@ public class FormsListFragment extends Fragment {
         7. open newly downloaded form
          */
 
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReference();
-        StorageReference fileRef = storageRef.child(fileName);
-        final File localFile = File.createTempFile(titleName, "pdf");
+        if (((MainActivity)getActivity()).isInternetAvailable()) {
 
+            Log.d("Internet", "Available");
+            FirebaseStorage storage = FirebaseStorage.getInstance();
+            StorageReference storageRef = storage.getReference();
+            StorageReference fileRef = storageRef.child(fileName);
 
-        fileRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                // Local temp file has been create
-                //File file = new File(getActivity().getFilesDir(), fileName);
-                Log.d("FormName Downloaded: ", String.valueOf(fileName));
+            localFile = File.createTempFile(titleName, "pdf");
 
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            fileRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    // Local temp file has been create
+                    //File file = new File(getActivity().getFilesDir(), fileName);
+                    Log.d("FormName Downloaded: ", String.valueOf(fileName));
 
-                Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, localFile);
-                intent.setDataAndType(uri, "*/*");  // was application/pdf
-                grantAllUriPermissions(getContext(), intent, uri);
-                PackageManager pm = getActivity().getPackageManager();
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-                if (intent.resolveActivity(pm) != null) {
-                    startActivity(intent);
+                    Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, localFile);
+                    intent.setDataAndType(uri, "*/*");  // was application/pdf
+                    grantAllUriPermissions(getContext(), intent, uri);
+                    PackageManager pm = getActivity().getPackageManager();
+
+                    if (intent.resolveActivity(pm) != null) {
+                        startActivity(intent);
+                    }
                 }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    Log.d("NO INTERNET: ", "error");
+                }
+            });
+
+        } else {
+            Log.d("Internet", "Unavailable");
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            File storedFile =
+            Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, storedFile);
+            intent.setDataAndType(uri, "*/*");  // was application/pdf
+            grantAllUriPermissions(getContext(), intent, uri);
+            PackageManager pm = getActivity().getPackageManager();
+
+            if (intent.resolveActivity(pm) != null) {
+                startActivity(intent);
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                // Handle any errors
-                Log.d("ERROR: ", "error");
-            }
-        });
+        }
 
 
 
