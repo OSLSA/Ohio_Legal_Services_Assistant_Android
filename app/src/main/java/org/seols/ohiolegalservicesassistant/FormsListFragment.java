@@ -62,8 +62,8 @@ public class FormsListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.forms_layout, container, false);
         tl = (TableLayout)rootView.findViewById(R.id.forms);
-        testing = (Button)rootView.findViewById(R.id.test);
-        testing.setOnClickListener(testingClicker);
+//        testing = (Button)rootView.findViewById(R.id.test);
+//        testing.setOnClickListener(testingClicker);
         addHotDocsForms(inflater);
         fillTable(inflater);
         FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -72,22 +72,22 @@ public class FormsListFragment extends Fragment {
         return rootView;
     }
 
-    View.OnClickListener testingClicker = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-            Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, localFile);
-            intent.setDataAndType(uri, "*/*");  // was application/pdf
-            grantAllUriPermissions(getContext(), intent, uri);
-            PackageManager pm = getActivity().getPackageManager();
-
-            if (intent.resolveActivity(pm) != null) {
-                startActivity(intent);
-            }
-        }
-    };
+//    View.OnClickListener testingClicker = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            Intent intent = new Intent(Intent.ACTION_VIEW);
+//            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//
+//            Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, localFile);
+//            intent.setDataAndType(uri, "*/*");  // was application/pdf
+//            grantAllUriPermissions(getContext(), intent, uri);
+//            PackageManager pm = getActivity().getPackageManager();
+//
+//            if (intent.resolveActivity(pm) != null) {
+//                startActivity(intent);
+//            }
+//        }
+//    };
 
     private void createFormsList() {
         //TODO creates a list of the forms needed for the table layout
@@ -136,7 +136,9 @@ public class FormsListFragment extends Fragment {
 
 
 
-    private void CopyAssets(final String fileName, String titleName) throws IOException {
+    private void CopyAssets(final String fileName, String titleName, String prefName) throws IOException {
+
+        final String finalPrefName = prefName;
 
         /* TODO
         1. store copies of pdfs on firebase
@@ -155,7 +157,7 @@ public class FormsListFragment extends Fragment {
             StorageReference storageRef = storage.getReference();
             StorageReference fileRef = storageRef.child(fileName);
 
-            localFile = File.createTempFile(titleName, "pdf");
+            localFile = File.createTempFile(titleName, "pdf", getContext().getFilesDir());
 
             fileRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                 @Override
@@ -163,6 +165,10 @@ public class FormsListFragment extends Fragment {
                     // Local temp file has been create
                     //File file = new File(getActivity().getFilesDir(), fileName);
                     Log.d("FormName Downloaded: ", String.valueOf(fileName));
+
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString(finalPrefName, localFile.getName());
+                    editor.commit();
 
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -185,25 +191,34 @@ public class FormsListFragment extends Fragment {
             });
 
         } else {
-            Log.d("Internet", "Unavailable");
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            if (prefs.getString(finalPrefName, "none").equals("none")) {
+                Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
+                toast.show();
+            } else {
+                Toast toast = Toast.makeText(getActivity(), "Offline" + finalPrefName, Toast.LENGTH_LONG);
+                toast.show();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-            File storedFile =
-            Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, storedFile);
-            intent.setDataAndType(uri, "*/*");  // was application/pdf
-            grantAllUriPermissions(getContext(), intent, uri);
-            PackageManager pm = getActivity().getPackageManager();
+                File savedFile = new File(getContext().getFilesDir(), prefs.getString(finalPrefName, ""));
 
-            if (intent.resolveActivity(pm) != null) {
-                startActivity(intent);
+                Uri uri = FileProvider.getUriForFile(getContext(), AUTHORITY, savedFile);
+
+                intent.setDataAndType(uri, "*/*");  // was application/pdf
+                grantAllUriPermissions(getContext(), intent, uri);
+                PackageManager pm = getActivity().getPackageManager();
+
+                if (intent.resolveActivity(pm) != null) {
+                    startActivity(intent);
+                }
+            }
+
             }
         }
 
 
 
 
-    }
 
     private void grantAllUriPermissions(Context context, Intent intent, Uri uri) {
         List<ResolveInfo> resInfoList = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
@@ -317,13 +332,13 @@ public class FormsListFragment extends Fragment {
             if (v.getTag().toString().equals(getResources().getString(R.string.medicaid_help_sheet))) {
                 try {
                     Log.d("COPYASSETS", "medicaid");
-                    CopyAssets("medicaid_help_sheet.pdf", "Medicaid Help Sheet");
+                    CopyAssets("medicaid_help_sheet.pdf", "Medicaid Help Sheet", "medicaid");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             } else if (v.getTag().toString().equals(getResources().getString(R.string.benefits_standards))) {
                 try {
-                    CopyAssets("standards_help_sheet.pdf", "Standards Help Sheet");
+                    CopyAssets("standards_help_sheet.pdf", "Standards Help Sheet", "standards");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

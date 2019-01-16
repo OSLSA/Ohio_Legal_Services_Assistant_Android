@@ -1,8 +1,12 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.app.Activity;
 import android.content.Context;
+import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,6 +22,7 @@ import java.util.ArrayList;
 public class FederalPovertyLevel {
 
     double annualIncome, results;
+    boolean finished;
     int size;
     String year;
     String[] constants;
@@ -31,12 +36,42 @@ public class FederalPovertyLevel {
      */
     public double getResults() {
 
-        setData();
-        Long povertyStart = fplInfo.get(0);
-        Long povertyIncrement = fplInfo.get(1);
-        double fpl = ((size - 1) * povertyIncrement) + povertyStart;
-        results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+        finished = false;
+        String version = "fpl" + year;
+        DatabaseReference mRootRef;
+        mRootRef = FirebaseDatabase.getInstance().getReference().child("povertyLevel").child(version);
+        mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                fplInfo = (ArrayList<Long>) dataSnapshot.getValue();
+                Log.d("FPL INFO", fplInfo.toString());
+                Long povertyStart = fplInfo.get(0);
+                Long povertyIncrement = fplInfo.get(1);
+                double fpl = ((size - 1) * povertyIncrement) + povertyStart;
+                results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+                finished = true;
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+        });
+
         return results;
+
+
+
+//        setData();
+//        Long povertyStart = fplInfo.get(0);
+//        Long povertyIncrement = fplInfo.get(1);
+//        double fpl = ((size - 1) * povertyIncrement) + povertyStart;
+//        results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+//        return results;
 
         //constants = context.getResources().getStringArray(context.getResources().getIdentifier("fpl" + year, "array", "org.seols.ohiolegalservicesassistant"));
 

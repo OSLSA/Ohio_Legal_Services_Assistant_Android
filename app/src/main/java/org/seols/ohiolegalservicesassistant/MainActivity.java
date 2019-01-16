@@ -24,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SearchDialogFragment.OnUpdateSearchListener {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         setLogoClick(navigationView);
         navigationView.setNavigationItemSelectedListener(this);
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setFragment(new HomeFragment(), "home", getResources().getString(R.string.app_name), null);
 

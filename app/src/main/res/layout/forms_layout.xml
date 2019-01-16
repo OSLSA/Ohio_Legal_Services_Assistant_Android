@@ -8,12 +8,6 @@
         android:layout_height="wrap_content"
         android:text="NOTE: Adobe might not properly open these files. Consider choosing a different app."/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/test"
-        android:text="TESTING"/>
-
     <ScrollView
         android:layout_height="match_parent"
         android:layout_width="match_parent">

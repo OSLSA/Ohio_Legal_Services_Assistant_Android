@@ -54,7 +54,7 @@ public class LocalResourcesFragment extends Fragment {
         this.inflater = inflater;
         View rootView = inflater.inflate(R.layout.local_resources_layout, container, false);
         getViews(rootView);
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         mRootRef = FirebaseDatabase.getInstance().getReference();
         mResourceRef = mRootRef.child("entities");
         mCountyRef = mRootRef.child("counties");

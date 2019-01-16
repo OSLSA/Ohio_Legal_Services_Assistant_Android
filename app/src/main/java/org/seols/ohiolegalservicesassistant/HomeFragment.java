@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 
 /**
@@ -32,9 +40,13 @@ public class HomeFragment extends Fragment {
 
     private Button viewRules;
 
+    private DatabaseReference mRootRef, mPovertyLevelRef,mFPLVersionRef;
+
     private EditText income, agSize, rule_number;
 
     SharedPreferences prefs;
+
+    private String version;
 
     private Spinner rulesSpinner;
 
@@ -46,8 +58,28 @@ public class HomeFragment extends Fragment {
         getViews(rootView);
         setRulesSpinner();
         checkPushStatus();
-
+        mRootRef = FirebaseDatabase.getInstance().getReference();
+        mPovertyLevelRef = mRootRef.child("povertyLevel");
+        mFPLVersionRef = mPovertyLevelRef.child("fplVersion");
+        getCurrentYear();
         return rootView;
+    }
+
+    private void getCurrentYear() {
+        mFPLVersionRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                ArrayList<Long> versions = new ArrayList<Long>();
+                versions = (ArrayList<Long>) dataSnapshot.getValue();
+                version = versions.get(0).toString();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     private void getViews(View rootView) {
@@ -86,18 +118,32 @@ public class HomeFragment extends Fragment {
             if (AGSizeMissing()) return;
 
             // calculate percentage of poverty
-            double annualIncome = income.getText().toString().equals("") ? 0.0 :
+            final double annualIncome = income.getText().toString().equals("") ? 0.0 :
                     Double.parseDouble(income.getText().toString());
 
-            FederalPovertyLevel calc = new FederalPovertyLevel(
-                    Integer.parseInt(agSize.getText().toString()),
-                    getResources().getStringArray(R.array.fpl_version)[0],
-                    annualIncome,
-                    getContext()
-            );
+            DatabaseReference mYearRef = mPovertyLevelRef.child("fpl" +
+                    version);
+            mYearRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    ArrayList<Long> fplInfo = (ArrayList<Long>) dataSnapshot.getValue();
+                    Long povertyStart = fplInfo.get(0);
+                    Long povertyIncrement = fplInfo.get(1);
+                    double fpl = ((Integer.parseInt(agSize.getText().toString()) - 1) * povertyIncrement) + povertyStart;
+                    double results = Math.floor(((annualIncome / fpl) * 100) * 100) / 100;
+                    showFPLResults(results);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+
+            });
+
             logSearch("FPL Calculated from Home");
 
-            showFPLResults(calc.getResults());
         }
     };
 
