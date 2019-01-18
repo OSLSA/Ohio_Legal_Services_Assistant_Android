@@ -1,5 +1,6 @@
 package org.seols.ohiolegalservicesassistant;
 
+        import android.support.annotation.NonNull;
         import android.support.v4.app.Fragment;
         import android.app.AlertDialog;
         import android.os.Bundle;
@@ -21,6 +22,14 @@ package org.seols.ohiolegalservicesassistant;
         import android.widget.*;
 
         import com.google.firebase.analytics.FirebaseAnalytics;
+        import com.google.firebase.database.DataSnapshot;
+        import com.google.firebase.database.DatabaseError;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+        import com.google.firebase.database.ValueEventListener;
+
+        import java.util.ArrayList;
+        import java.util.List;
 
 
 public class OwfCalculatorController extends Fragment implements IncomeDialogFragment.OnUpdateIncomeListener {
@@ -29,6 +38,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     private EditText etAGSize, etDeemedIncome, etDependentCare, etGrossEarnedIncome, etUnearnedIncome, requestingET;
     private int mAGSize, countableIncome, version;
     private Spinner versionSpinner;
+    private DatabaseReference mRootRef, mOWFRef, mVersionRef;
 
     private static final int[][] OWF_PAYMENT_STANDARD = {
             {289,395,483,596,698,776,898,926,1058,1153,1246,1342}, // January 2018
@@ -56,6 +66,8 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         View rootView = inflater.inflate(R.layout.owf_layout, container, false);
         savedInstanceState = instanceState;
+        mRootRef = FirebaseDatabase.getInstance().getReference();
+        mOWFRef = mRootRef.child("OWF");
         populateVersionSpinner(rootView);
         resetButton(rootView);
         submitButton(rootView);
@@ -142,18 +154,40 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
     private void populateVersionSpinner(View v) {
 
+        final View rv = v;
         versionSpinner = (Spinner) v.findViewById(R.id.owf_version_spinner);
-        // Create array adapter  using string-array
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.owf_versions, android.R.layout.simple_spinner_dropdown_item);
 
-        // set layout for when dropdown shown
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mVersionRef = mOWFRef.child("Versions");
+        mVersionRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-        // apply adapter to spinner
-        versionSpinner.setAdapter(adapter);
+                ArrayList<String> keys = new ArrayList<String>();
+                ArrayList<String> vers = new ArrayList<String>();
+                //vers = (ArrayList<String>) dataSnapshot.getValue();
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    CountyNames cn = child.getValue(CountyNames.class);
+                    vers.add(cn.name);
+                }
 
-        // set default to monthly
-        versionSpinner.setSelection(0);
+                // Create array adapter  using string-array
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, vers);
+
+                // set layout for when dropdown shown
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                // apply adapter to spinner
+                versionSpinner.setAdapter(adapter);
+
+                // set default to monthly
+                versionSpinner.setSelection(0);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         // set listener to change visibility of hours per week as needed
         versionSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {

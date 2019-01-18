@@ -40,6 +40,8 @@ public class HomeFragment extends Fragment {
 
     private Button viewRules;
 
+    private Button calculateFPL;
+
     private DatabaseReference mRootRef, mPovertyLevelRef,mFPLVersionRef;
 
     private EditText income, agSize, rule_number;
@@ -61,7 +63,6 @@ public class HomeFragment extends Fragment {
         mRootRef = FirebaseDatabase.getInstance().getReference();
         mPovertyLevelRef = mRootRef.child("povertyLevel");
         mFPLVersionRef = mPovertyLevelRef.child("fplVersion");
-        getCurrentYear();
         return rootView;
     }
 
@@ -72,6 +73,7 @@ public class HomeFragment extends Fragment {
                 ArrayList<Long> versions = new ArrayList<Long>();
                 versions = (ArrayList<Long>) dataSnapshot.getValue();
                 version = versions.get(0).toString();
+                calculateFPL.setEnabled(true);
             }
 
             @Override
@@ -86,8 +88,9 @@ public class HomeFragment extends Fragment {
         income = (EditText) rootView.findViewById(R.id.annual_income);
         agSize = (EditText) rootView.findViewById(R.id.ag_size);
         rule_number = (EditText) rootView.findViewById(R.id.rule_number);
-        Button calculateFPL = (Button) rootView.findViewById(R.id.calculateFPL);
+        calculateFPL = (Button) rootView.findViewById(R.id.calculateFPL);
         calculateFPL.setOnClickListener(calculateFPLListener);
+        calculateFPL.setEnabled(false);
         Button ruleSelected = (Button) rootView.findViewById(R.id.view_rules);
         ruleSelected.setOnClickListener(ruleSelectedListener);
         viewRules = (Button) rootView.findViewById(R.id.view_rules);
@@ -365,6 +368,7 @@ public class HomeFragment extends Fragment {
         String title = getArguments().getString("title", "Default");
         ((AppCompatActivity)getActivity()).getSupportActionBar()
                 .setTitle(title);
+        getCurrentYear();
 
 
     }
