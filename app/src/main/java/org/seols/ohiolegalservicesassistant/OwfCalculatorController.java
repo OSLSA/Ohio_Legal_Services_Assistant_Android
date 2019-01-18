@@ -6,6 +6,7 @@ package org.seols.ohiolegalservicesassistant;
         import android.os.Bundle;
         import android.support.v4.app.FragmentManager;
         import android.support.v7.app.AppCompatActivity;
+        import android.util.Log;
         import android.view.Gravity;
         import android.widget.EditText;
         import android.widget.Spinner;
@@ -37,34 +38,20 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     private double mDeemedIncome, mDependentCare, mGrossEarnedIncomeFinal, mUnearnedIncome;
     private EditText etAGSize, etDeemedIncome, etDependentCare, etGrossEarnedIncome, etUnearnedIncome, requestingET;
     private int mAGSize, countableIncome, version;
+    private ArrayList<String> versionKeys;
+    private ArrayList<ArrayList> bigList;
     private Spinner versionSpinner;
     private DatabaseReference mRootRef, mOWFRef, mVersionRef;
 
-    private static final int[][] OWF_PAYMENT_STANDARD = {
-            {289,395,483,596,698,776,898,926,1058,1153,1246,1342}, // January 2018
-            {283,387,474,584,684,761,851,943,1037,1130,1222,1316}, // July 2017
-            {283,387,474,584,684,761,851,943,1037,1130,1222,1316}, // January 2017
-            {282,386,473,582,682,759,848,940,1034,1127,1218,1312}, // July 2016
-            {282,386,473,582,682,759,848,940,1034,1127,1218,1312}, // January 2016
-            {282,386,473,582,682,759,848,940,1034,1127,1218,1312}, // January 2015
-            {277,380,465,572,671,746,834,924,1017,1108,1198,1290} // July 2014
-    };
-
-    private static final int[][] INITIAL_ELIGIBILITY_STANDARD = {
-            {503, 677, 851 ,1025, 1200 ,1374, 1548 ,1722, 1896, 2070 ,2245, 2419}, // January 2018
-            {503, 677, 851 ,1025, 1200 ,1374, 1548 ,1722, 1896, 2070 ,2245, 2419}, // July 2017
-            {495,668,840,1013,1185,1358, 1531, 1704, 1878, 2051, 2224, 2398}, // January 2017
-            {495,668,840,1013,1185,1358, 1531, 1704, 1878, 2051, 2224, 2398}, // Julyy 2017
-            { 491, 664, 838, 1011, 1184, 1358, 1531, 1704, 1878, 2051, 2224, 2398}, // January 2016
-            {487,656,825,994,1163,1333,1502,1671,1840,2009,2178,2348}, // January 2015
-            {487,656,825,994,1163,1333,1502,1671,1840,2009,2178,2348} // July 2014
-    };
+    private ArrayList<ArrayList> OWF_PAYMENT_STANDARD, INITIAL_ELIGIBILITY_STANDARD;
 
     private Bundle savedInstanceState;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle instanceState) {
 
         View rootView = inflater.inflate(R.layout.owf_layout, container, false);
+        OWF_PAYMENT_STANDARD = new ArrayList<ArrayList>();
+        INITIAL_ELIGIBILITY_STANDARD = new ArrayList<ArrayList>();
         savedInstanceState = instanceState;
         mRootRef = FirebaseDatabase.getInstance().getReference();
         mOWFRef = mRootRef.child("OWF");
@@ -80,6 +67,52 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         return rootView;
 
+    }
+
+    private void getData() {
+
+        final int size = versionKeys.size();
+        for (String k: versionKeys ) {
+            ArrayList<ArrayList> bigList = new ArrayList<>();
+            DatabaseReference mPaymentStd = mOWFRef.child("PaymentStd" + k);
+            DatabaseReference mInitEligStd = mOWFRef.child("InitialEligStd" + k);
+            mPaymentStd.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    ArrayList<Long> incomingList = new ArrayList<>();
+                    for (DataSnapshot child : dataSnapshot.getChildren()) {
+                        incomingList.add((Long)child.getValue());
+                    }
+                    addToBigList(incomingList);
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                }
+            });
+            mInitEligStd.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    ArrayList<Long> incomingList = new ArrayList<>();
+                    for (DataSnapshot child : dataSnapshot.getChildren()) {
+                        incomingList.add((Long)child.getValue());
+                    }
+                    addToEligList(incomingList);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+    }
+
+    private void addToBigList(ArrayList<Long> l) {
+        OWF_PAYMENT_STANDARD.add(l);
+    }
+
+    private void addToEligList(ArrayList<Long> l) {
+        INITIAL_ELIGIBILITY_STANDARD.add(l);
     }
 
     public OwfCalculatorController(){
@@ -154,7 +187,6 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
     private void populateVersionSpinner(View v) {
 
-        final View rv = v;
         versionSpinner = (Spinner) v.findViewById(R.id.owf_version_spinner);
 
         mVersionRef = mOWFRef.child("Versions");
@@ -164,10 +196,9 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
                 ArrayList<String> keys = new ArrayList<String>();
                 ArrayList<String> vers = new ArrayList<String>();
-                //vers = (ArrayList<String>) dataSnapshot.getValue();
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
-                    CountyNames cn = child.getValue(CountyNames.class);
-                    vers.add(cn.name);
+                    vers.add(0, (String)child.getValue());
+                    keys.add(0, (String)child.getKey());
                 }
 
                 // Create array adapter  using string-array
@@ -181,6 +212,10 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
                 // set default to monthly
                 versionSpinner.setSelection(0);
+
+                setVersionKeys(keys);
+
+                getData();
             }
 
             @Override
@@ -202,6 +237,12 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         });
 
+    }
+
+    private void setVersionKeys(ArrayList<String> v) {
+        versionKeys = new ArrayList<String>();
+        versionKeys = v;
+        Log.d("keys", versionKeys.toString());
     }
 
     private void submitButton(View rootView) {
@@ -304,10 +345,10 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
         int grossIncomeTotal = (int)Math.floor(mGrossEarnedIncomeFinal - mDependentCare + mDeemedIncome + mUnearnedIncome);
 
         // see if initial eligibility test in OAC 5101:1-23-20(H)(1) is met
-        if (grossIncomeTotal > INITIAL_ELIGIBILITY_STANDARD[version][mAGSize]) {
+        if (grossIncomeTotal > (int)(long)INITIAL_ELIGIBILITY_STANDARD.get(version).get(mAGSize)) {
             // if the income is too high, show alert dialog with explanation
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage("Initial Eligibility Test Failed. The total gross income of $" + grossIncomeTotal + " exceeds the initial eligibility standard of $" + INITIAL_ELIGIBILITY_STANDARD[version][mAGSize] + " by $" + (grossIncomeTotal - INITIAL_ELIGIBILITY_STANDARD[version][mAGSize]))
+            builder.setMessage("Initial Eligibility Test Failed. The total gross income of $" + grossIncomeTotal + " exceeds the initial eligibility standard of $" + (int)(long)INITIAL_ELIGIBILITY_STANDARD.get(version).get(mAGSize) + " by $" + (grossIncomeTotal - (int)(long)INITIAL_ELIGIBILITY_STANDARD.get(version).get(mAGSize)))
                     .setPositiveButton("OK", null)
                     .setTitle("Ineligible");
             // Create the AlertDialog object and return it
@@ -329,16 +370,18 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         // calculate countable income from OAC 5101:1-23-20(H)(2)(a)-(b)
 
+        int payStd = (int)(long)OWF_PAYMENT_STANDARD.get(version).get(mAGSize);
+
         // make sure earnedincome isn't negative
         int adjustedEarnedIncome = Math.max((int)Math.floor((mGrossEarnedIncomeFinal - 250) / 2), 0);
         countableIncome = (int)Math.floor(adjustedEarnedIncome - mDependentCare + mUnearnedIncome + mDeemedIncome);
 
         // compare countable income against payment standard
-        if (countableIncome >= OWF_PAYMENT_STANDARD[version][mAGSize]) {
+        if (countableIncome >= payStd) {
             // if the countable income is too high, show alert dialog with explanation
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setMessage("Countable Income Test Failed. The total countable income of $" + countableIncome + " exceeds the OWF payment standard of $" +
-                    OWF_PAYMENT_STANDARD[version][mAGSize] + " by $" + (countableIncome - OWF_PAYMENT_STANDARD[version][mAGSize]))
+                    payStd + " by $" + (countableIncome - payStd))
                     .setPositiveButton("OK", null)
                     .setTitle("Ineligible");
             // Create the AlertDialog object and return it
@@ -356,7 +399,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         // display dialog showing how much OWF person can get
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage("Eligible for OWF in the amount of $" + (OWF_PAYMENT_STANDARD[version][mAGSize] - countableIncome) + " per month")
+        builder.setMessage("Eligible for OWF in the amount of $" + ((int)(long)OWF_PAYMENT_STANDARD.get(version).get(mAGSize) - countableIncome) + " per month")
                 .setPositiveButton("OK", null)
                 .setTitle("Eligible");
         // Create the AlertDialog object and return it
