@@ -32,37 +32,53 @@ public class FoodStampCalculator {
 	public FoodStampCalculator(Bundle bundle, Context context) {
 		this.bundle = bundle;
 		this.context = context;
-		String version = this.bundle.getString("version");
-		setConstants(version);
+		//String version = this.bundle.getString("version");
+		//setConstants(version);
+		setConstants(bundle);
 		setVariables(bundle);
 	}
 	
 	/**
 	 * Method that pulls all of the relevant arrays and sets the constants for calculators based on the version of the calculator selected.
-	 * @param version Version of the calculator to use as pulled from the version spinner
+	 * @param bundle bundle with Firebase JFS data calculator to use as pulled from the version spinner
 	 **/
-	private void setConstants(String version) {
-		// arrays
-		String packageName = "org.seols.ohiolegalservicesassistant";
-		FA_ALLOTMENT = context.getResources().getStringArray(context.getResources().getIdentifier("fa_allotment_" + version, "array", MainActivity.PACKAGE_NAME));
-		STANDARD_DEDUCTION = context.getResources().getStringArray(context.getResources().getIdentifier("standard_deduction_" + version, "array", packageName));
-		NET_STANDARD = context.getResources().getStringArray(context.getResources().getIdentifier("net_standard_" + version, "array", packageName));
-		GROSS_INCOME_LIMIT = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_limit_" + version, "array", packageName));
-		GROSS_INCOME_165 = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_165_" + version, "array", packageName));
-		GROSS_INCOME_200 = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_200_" + version, "array", packageName));
+	private void setConstants(Bundle bundle) {
+
+		FA_ALLOTMENT = bundle.getStringArray("allotment");
+//		FA_ALLOTMENT = context.getResources().getStringArray(context.getResources().getIdentifier("fa_allotment_" + version, "array", MainActivity.PACKAGE_NAME));
+		STANDARD_DEDUCTION = bundle.getStringArray("standardDeduction");
+//		STANDARD_DEDUCTION = context.getResources().getStringArray(context.getResources().getIdentifier("standard_deduction_" + version, "array", packageName));
+		NET_STANDARD = bundle.getStringArray("netStandard");
+//		NET_STANDARD = context.getResources().getStringArray(context.getResources().getIdentifier("net_standard_" + version, "array", packageName));
+		GROSS_INCOME_LIMIT = bundle.getStringArray("grossIncomeLimit");
+//		GROSS_INCOME_LIMIT = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_limit_" + version, "array", packageName));
+		GROSS_INCOME_165 = bundle.getStringArray("gross165");
+//		GROSS_INCOME_165 = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_165_" + version, "array", packageName));
+		GROSS_INCOME_200 = bundle.getStringArray("gross200");
+//		GROSS_INCOME_200 = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_200_" + version, "array", packageName));
 		
 		// strings
-		STANDARD_SHELTER_HOMELESS = context.getResources().getString(context.getResources().getIdentifier("standard_homeless_" + version, "string", packageName));
-		EXCESS_INCOME_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("excess_income_deduction_" + version, "string", packageName
-        ));
-		EXCESS_MEDICAL_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("excess_medical_" + version, "string", packageName));
-		DEPENDENT_CARE_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("dependent_care_" + version, "string", packageName));
-		MINNIMUM_MONTHLY_ALLOTMENT = context.getResources().getString(context.getResources().getIdentifier("minnimum_allotment_" + version, "string", packageName));
-		STANDARD_UTILITY_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("standard_utility_" + version, "string", packageName));
-		LIMITED_UTILITY_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("limited_utility_" + version, "string", packageName));
-		SINGLE_UTILITY_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("single_utility_" + version, "string", packageName));
-		STANDARD_TELEPHONE_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("telephone_" + version, "string", packageName));
-		LIMIT_ON_SHELTER_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("shelter_limit_" + version, "string", packageName));
+		STANDARD_SHELTER_HOMELESS = bundle.getString("standardHomeless");
+//		STANDARD_SHELTER_HOMELESS = context.getResources().getString(context.getResources().getIdentifier("standard_homeless_" + version, "string", packageName));
+		EXCESS_INCOME_DEDUCTION = bundle.getString("excessIncome");
+//		EXCESS_INCOME_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("excess_income_deduction_" + version, "string", packageName
+//        ));
+		EXCESS_MEDICAL_DEDUCTION = bundle.getString("excessMedical");
+//		EXCESS_MEDICAL_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("excess_medical_" + version, "string", packageName));
+		DEPENDENT_CARE_DEDUCTION = bundle.getString("dependent");
+//		DEPENDENT_CARE_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("dependent_care_" + version, "string", packageName));
+		MINNIMUM_MONTHLY_ALLOTMENT = bundle.getString("minnimumAllotment");
+//		MINNIMUM_MONTHLY_ALLOTMENT = context.getResources().getString(context.getResources().getIdentifier("minnimum_allotment_" + version, "string", packageName));
+		STANDARD_UTILITY_ALLOWANCE = bundle.getString("standardUtility");
+//		STANDARD_UTILITY_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("standard_utility_" + version, "string", packageName));
+		LIMITED_UTILITY_ALLOWANCE = bundle.getString("limitedUtility");
+//		LIMITED_UTILITY_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("limited_utility_" + version, "string", packageName));
+		SINGLE_UTILITY_ALLOWANCE = bundle.getString("singleUtility");
+//		SINGLE_UTILITY_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("single_utility_" + version, "string", packageName));
+		STANDARD_TELEPHONE_ALLOWANCE = bundle.getString("standardTelephone");
+//		STANDARD_TELEPHONE_ALLOWANCE = context.getResources().getString(context.getResources().getIdentifier("telephone_" + version, "string", packageName));
+		LIMIT_ON_SHELTER_DEDUCTION = bundle.getString("shelterDeduction");
+//		LIMIT_ON_SHELTER_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("shelter_limit_" + version, "string", packageName));
 	}
 
 	private void setVariables(Bundle bundle) {

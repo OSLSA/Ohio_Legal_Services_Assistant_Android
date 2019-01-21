@@ -2,9 +2,12 @@ package org.seols.ohiolegalservicesassistant;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +16,17 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 /**
  * Created by Joshua Goodwin on 2/26/16.
@@ -28,6 +39,14 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
 
     private boolean isAged, isDisabled;
 
+    private Button submit;
+
+    private ArrayList<String> versionKeys;
+
+    private ArrayList<ArrayList<String>> allotment, grossincome, gross165, gross200, netstandard, standarddeduction;
+
+    private ArrayList<String> homeless, standardutility, telephone, singleutility, excessmedical, minnimumallot, shelterlimit, excessincome, dependentcare, limitedUtility;
+
     private CheckBox cbElectricGasOil, cbGarbageTrash, cbHeatingCooling, cbHomeless, cbPhone, cbWaterSewer, cbAGSSI, cbAGAged;
 
     private double earnedIncome, earnedHoursPerWeek, unearnedHoursPerWeek, unearnedIncome;
@@ -36,12 +55,17 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
 
     private Spinner versionSpinner;
 
+    private DatabaseReference mRootRef, mFSRef, mVersionRef;
+
     private int AGSize, childSupport, dependentCare, finalEarnedIncome, finalNetIncome, finalUnearnedIncome, grossIncomeAmount, medicalExpenses, propertyInsurance, propertyTaxes, rent, totalGrossIncome, utilityAllowance;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View rootView = inflater.inflate(R.layout.food_stamp_layout, container, false);
+        mRootRef = FirebaseDatabase.getInstance().getReference();
+        mFSRef = mRootRef.child("FoodStamps");
+        initializeVariables();
         initializeViews(rootView);
         initializeHomelessCheck();
         initializeClearButton(rootView);
@@ -49,6 +73,25 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         logSearch("Food Stamps Opened");
         // if (savedInstanceState != null) restoreState(savedInstanceState);
         return rootView;
+    }
+
+    private void initializeVariables() {
+        allotment = new ArrayList<ArrayList<String>>();
+        grossincome = new ArrayList<ArrayList<String>>();
+        gross165 = new ArrayList<ArrayList<String>>();
+        gross200 = new ArrayList<ArrayList<String>>();
+        netstandard = new ArrayList<ArrayList<String>>();
+        standarddeduction = new ArrayList<ArrayList<String>>();
+        dependentcare = new ArrayList<String>();
+        homeless = new ArrayList<String>();
+        standardutility = new ArrayList<String>();
+        telephone = new ArrayList<String>();
+        limitedUtility = new ArrayList<>();
+        singleutility = new ArrayList<String>();
+        excessmedical = new ArrayList<String>();
+        minnimumallot = new ArrayList<String>();
+        shelterlimit = new ArrayList<String>();
+        excessincome = new ArrayList<String>();
     }
 
     private void initializeViews(View rootView){
@@ -83,17 +126,66 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
     }
 
     private void setSpinner() {
-        // Create array adapter  using string-array
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.food_stamp_versions_display, android.R.layout.simple_spinner_dropdown_item);
 
-        // set layout for when dropdown shown
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mVersionRef = mFSRef.child("Versions");
+        final CountDownTimer timer = new CountDownTimer(5000,5000) {
 
-        // apply adapter to spinner
-        versionSpinner.setAdapter(adapter);
+            @Override
+            public void onTick(long millisUntilFinished) {
 
-        // set default to monthly
-        versionSpinner.setSelection(0);
+            }
+
+            @Override
+            public void onFinish() {
+                //pb.setVisibility(View.INVISIBLE);
+                Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
+                toast.show();
+                return;
+            }
+        }.start();
+        mVersionRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                ArrayList<String> keys = new ArrayList<String>();
+                ArrayList<String> vers = new ArrayList<String>();
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    vers.add(0, (String)child.getValue());
+                    keys.add(0, (String)child.getKey());
+                }
+
+                // Create array adapter  using string-array
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity().getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, vers);
+
+                // set layout for when dropdown shown
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                // apply adapter to spinner
+                versionSpinner.setAdapter(adapter);
+
+                // set default to monthly
+                versionSpinner.setSelection(0);
+                timer.cancel();
+                submit.setEnabled(true);
+
+                setVersionKeys(keys);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+    }
+
+    private void setVersionKeys(ArrayList<String> v) {
+        versionKeys = new ArrayList<String>();
+        versionKeys = v;
+        getData();
+        Log.d("keys", versionKeys.toString());
     }
 
     private void addListeners(EditText et, String title) {
@@ -117,6 +209,121 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         });
     }
 
+    private void getData() {
+
+        String[] dataToGet = {"Allotment", "GrossIncome", "GrossIncome165", "GrossIncome200", "NetStandard", "StandardDeduction"};
+        final String[] smallData = {"DependentCare", "ExcessIncomeDeduction", "ShelterLimit", "ExcessMedical", "LimitedUtility", "MinnimumAllotment", "SingleUtility", "StandardHomeless", "StandardUtility", "Telephone"};
+
+        for (final String name : dataToGet) {
+
+            for (String k : versionKeys) {
+                DatabaseReference mAllotment = mFSRef.child(name + k);
+                mAllotment.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        ArrayList<String> incomingList = new ArrayList<>();
+                        for (DataSnapshot child : dataSnapshot.getChildren()) {
+                            String s = String.valueOf(child.getValue());
+                            incomingList.add(s);
+                        }
+                        addToBigList(incomingList, name);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                    }
+                });
+            }
+        }
+        for (final String name: smallData) {
+
+
+            for (String k : versionKeys) {
+                DatabaseReference ref = mFSRef.child(name + k);
+                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        smallDataAdd(name, String.valueOf(dataSnapshot.getValue()));
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        }
+
+    }
+
+    private void smallDataAdd(String name, String info) {
+        switch (name) {
+            case "DependentCare":
+                dependentcare.add(info);
+                break;
+            case "ShelterLimit":
+                shelterlimit.add(info);
+                break;
+            case "ExcessIncomeDeduction":
+                excessincome.add(info);
+                break;
+            case "ExcessMedical":
+                excessmedical.add(info);
+                break;
+            case "LimitedUtility":
+                limitedUtility.add(info);
+                break;
+            case "MinnimumAllotment":
+                minnimumallot.add(info);
+                break;
+            case "SingleUtility":
+                singleutility.add(info);
+                break;
+            case "StandardUtility":
+                standardutility.add(info);
+                break;
+            case "Telephone":
+                telephone.add(info);
+                break;
+            case "StandardHomeless":
+                homeless.add(info);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void addToBigList(ArrayList<String> l, String name) {
+
+        switch (name) {
+            case "Allotment":
+                allotment.add(l);
+                break;
+            case "GrossIncome":
+                grossincome.add(l);
+                break;
+            case "GrossIncome165":
+                gross165.add(l);
+                break;
+            case "GrossIncome200":
+                gross200.add(l);
+                break;
+            case "NetStandard":
+                netstandard.add(l);
+                break;
+            case "StandardDeduction":
+                standarddeduction.add(l);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void setData(Bundle bundle) {
+
+    }
+
     private void initializeClearButton(View rootView){
 
         Button button = (Button) rootView.findViewById(R.id.clear);
@@ -132,8 +339,9 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
 
     private void initializeSubmitButton(View rootView) {
 
-        Button button = (Button) rootView.findViewById(R.id.submit);
-        button.setOnClickListener(new View.OnClickListener() {
+        submit = (Button) rootView.findViewById(R.id.submit);
+        submit.setEnabled(false);
+        submit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -235,6 +443,7 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
      **/
     private Bundle createVariableBundle() {
 
+        int pos = versionSpinner.getSelectedItemPosition();
         Bundle bundle = new Bundle();
         bundle.putInt("AGSize", AGSize);
         bundle.putDouble("earnedIncome", earnedIncome);
@@ -250,7 +459,23 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         bundle.putInt("rent", rent);
         bundle.putInt("propertyInsurance", propertyInsurance);
         bundle.putInt("propertyTaxes", propertyTaxes);
-        bundle.putString("version", getVersion());
+        //bundle.putString("version", getVersion());
+        bundle.putStringArray("allotment", allotment.get(pos).toArray(new String[0]));
+        bundle.putStringArray("standardDeduction", standarddeduction.get(pos).toArray(new String[0]));
+        bundle.putStringArray("netStandard", netstandard.get(pos).toArray(new String[0]));
+        bundle.putStringArray("grossIncomeLimit", grossincome.get(pos).toArray(new String[0]));
+        bundle.putStringArray("gross165", gross165.get(pos).toArray(new String[0]));
+        bundle.putStringArray("gross200", gross200.get(pos).toArray(new String[0]));
+        bundle.putString("standardHomeless", homeless.get(pos));
+        bundle.putString("excessIncome", excessincome.get(pos));
+        bundle.putString("excessMedical", excessmedical.get(pos));
+        bundle.putString("dependent", dependentcare.get(pos));
+        bundle.putString("minnimumAllotment", minnimumallot.get(pos));
+        bundle.putString("standardUtility", standardutility.get(pos));
+        bundle.putString("limitedUtility", limitedUtility.get(pos));
+        bundle.putString("singleUtility", singleutility.get(pos));
+        bundle.putString("standardTelephone", telephone.get(pos));
+        bundle.putString("shelterDeduction", shelterlimit.get(pos));
         return bundle;
 
     }

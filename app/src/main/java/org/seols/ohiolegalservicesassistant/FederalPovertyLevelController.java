@@ -36,6 +36,8 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
 
     private Bundle savedInstanceState;
 
+    private Button button;
+
     private DatabaseReference mRootRef, mPovertyLevelRef, mVersionRef, mYearRef;
 
     private EditText etAGSize, etGrossEarnedIncome;
@@ -52,6 +54,9 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
 
         // get FB references
         mRootRef = FirebaseDatabase.getInstance().getReference();
+        // set up the submit button
+        submitButton(rootView);
+
         mPovertyLevelRef = mRootRef.child("povertyLevel");
         mPovertyLevelRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -75,8 +80,7 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
         // set up the clear button
         clearButton(rootView);
 
-        // set up the submit button
-        submitButton(rootView);
+
 
         // log Firebase analytics that form was opened
         logSearch("FPL Opened");
@@ -124,6 +128,7 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
 
                 // set spinner default to current year
                 versionSpinner.setSelection(0);
+                button.setEnabled(true);
                 timer.cancel();
             }
 
@@ -187,7 +192,8 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
     }
 
     private void submitButton(View rootView) {
-        Button button = (Button) rootView.findViewById(R.id.submit);
+        button = (Button) rootView.findViewById(R.id.submit);
+        button.setEnabled(false);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 getResults();

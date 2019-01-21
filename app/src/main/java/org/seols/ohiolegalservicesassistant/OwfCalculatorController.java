@@ -1,5 +1,6 @@
 package org.seols.ohiolegalservicesassistant;
 
+        import android.os.CountDownTimer;
         import android.support.annotation.NonNull;
         import android.support.v4.app.Fragment;
         import android.app.AlertDialog;
@@ -42,6 +43,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     private ArrayList<ArrayList> bigList;
     private Spinner versionSpinner;
     private DatabaseReference mRootRef, mOWFRef, mVersionRef;
+    private Button submitButton;
 
     private ArrayList<ArrayList> OWF_PAYMENT_STANDARD, INITIAL_ELIGIBILITY_STANDARD;
 
@@ -53,11 +55,11 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
         OWF_PAYMENT_STANDARD = new ArrayList<ArrayList>();
         INITIAL_ELIGIBILITY_STANDARD = new ArrayList<ArrayList>();
         savedInstanceState = instanceState;
+        submitButton(rootView);
         mRootRef = FirebaseDatabase.getInstance().getReference();
         mOWFRef = mRootRef.child("OWF");
         populateVersionSpinner(rootView);
         resetButton(rootView);
-        submitButton(rootView);
         initializeVariables(rootView);
         resetAll();
         logSearch("OWF Opened");
@@ -73,7 +75,6 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         final int size = versionKeys.size();
         for (String k: versionKeys ) {
-            ArrayList<ArrayList> bigList = new ArrayList<>();
             DatabaseReference mPaymentStd = mOWFRef.child("PaymentStd" + k);
             DatabaseReference mInitEligStd = mOWFRef.child("InitialEligStd" + k);
             mPaymentStd.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -190,6 +191,22 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
         versionSpinner = (Spinner) v.findViewById(R.id.owf_version_spinner);
 
         mVersionRef = mOWFRef.child("Versions");
+
+        final CountDownTimer timer = new CountDownTimer(5000,5000) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            @Override
+            public void onFinish() {
+                //pb.setVisibility(View.INVISIBLE);
+                Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
+                toast.show();
+                return;
+            }
+        }.start();
         mVersionRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -212,6 +229,8 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
                 // set default to monthly
                 versionSpinner.setSelection(0);
+                submitButton.setEnabled(true);
+                timer.cancel();
 
                 setVersionKeys(keys);
 
@@ -221,6 +240,8 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
+                toast.show();
             }
         });
 
@@ -246,8 +267,9 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     }
 
     private void submitButton(View rootView) {
-        Button button = (Button) rootView.findViewById(R.id.submit);
-        button.setOnClickListener(new View.OnClickListener() {
+        submitButton = (Button) rootView.findViewById(R.id.submit);
+        submitButton.setEnabled(false);
+        submitButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
 
