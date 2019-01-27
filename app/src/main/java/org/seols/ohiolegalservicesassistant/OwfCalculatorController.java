@@ -421,7 +421,13 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         // display dialog showing how much OWF person can get
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage("Eligible for OWF in the amount of $" + ((int)(long)OWF_PAYMENT_STANDARD.get(version).get(mAGSize) - countableIncome) + " per month")
+        int allotment;
+        if (countableIncome >= 0) {
+            allotment = ((int)(long)OWF_PAYMENT_STANDARD.get(version).get(mAGSize) - countableIncome);
+        } else {
+            allotment = (int)(long)OWF_PAYMENT_STANDARD.get(version).get(mAGSize);
+        }
+        builder.setMessage("Eligible for OWF in the amount of $" + allotment + " per month")
                 .setPositiveButton("OK", null)
                 .setTitle("Eligible");
         // Create the AlertDialog object and return it
