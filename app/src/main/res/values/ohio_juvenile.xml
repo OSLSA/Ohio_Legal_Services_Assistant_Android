@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<string name="lastUpdateOhioJuv">September 23, 2017</string>
+	<string name="lastUpdateOhioJuv">November 14, 2020</string>
 	<string-array name="ohio_juvenile_toc">
 		<item>1 Scope of rules: applicability; construction; exceptions</item>
 		<item>2 Definitions</item>
@@ -28,7 +28,7 @@
 		<item>23 Continuance</item>
 		<item>24 Discovery</item>
 		<item>25 Depositions</item>
-		<item>26 [Reserved]</item>
+		<item>26 Rights of alleged victim of crime</item>
 		<item>27 Hearings: general</item>
 		<item>28 [Reserved]</item>
 		<item>29 Adjudicatory hearing</item>
@@ -128,25 +128,23 @@
 	</string-array>
 	<string-array name="ohio_juvenile_4">
 		<item>1&lt;b>RULE 4. Assistance of Counsel; Guardian Ad Litem&lt;/b></item>
-		<item>1&lt;b>(A) Assistance of counsel.&lt;/b> Every party shall have the right to be represented by counsel and every child, parent, custodian, or other person in loco parentis the right to appointed counsel if indigent. These rights shall arise when a person becomes a party to a juvenile court proceeding. When the complaint alleges that a child is an abused child, the court must appoint an attorney to represent the interests of the child. This rule shall not be construed to provide for a right to appointed counsel in cases in which that right is not otherwise provided for by constitution or statute.</item>
+		<item>1&lt;b>(A) Assistance of counsel.&lt;/b> Every party shall have the right to be represented by counsel and every child, parent, custodian, or other person in loco parentis the right to appointed counsel if indigent. These rights shall arise when a person becomes a party to a juvenile court proceeding. This rule shall not be construed to provide for a right to appointed counsel in cases in which that right is not otherwise provided for by constitution or statute.</item>
 		<item>1&lt;b>(B) Guardian ad litem;&lt;/b> when appointed. The court shall appoint a guardian ad litem to protect the interests of a child or incompetent adult in a juvenile court proceeding when:</item>
 		<item>2(1) The child has no parents, guardian, or legal custodian;</item>
 		<item>2(2) The interests of the child and the interests of the parent may conflict;</item>
 		<item>2(3) The parent is under eighteen years of age or appears to be mentally incompetent;</item>
-		<item>2(4) The court believes that the parent of the child is not capable of representing the best interest of the child.</item>
-		<item>2(5) Any proceeding involves allegations of abuse or neglect, voluntary surrender of permanent custody, or termination of parental rights as soon as possible after the commencement of such proceeding.</item>
-		<item>2(6) There is an agreement for the voluntary surrender of temporary custody that is made in accordance with section 5103.15 of the Revised Code, and thereafter there is a request for extension of the voluntary agreement.</item>
-		<item>2(7) The proceeding is a removal action.</item>
-		<item>2(8) Appointment is otherwise necessary to meet the requirements of a fair hearing.</item>
-		<item>1&lt;b>(C) Guardian ad litem as counsel.&lt;/b></item>
-		<item>2(1) When the guardian ad litem is an attorney admitted to practice in this state, the guardian may also serve as counsel to the ward providing no conflict between the roles exist.</item>
-		<item>2(2) If a person is serving as guardian ad litem and as attorney for a ward and either that person or the court finds a conflict between the responsibilities of the role of attorney and that of guardian ad litem, the court shall appoint another person as guardian ad litem for the ward.</item>
-		<item>2(3) If a court appoints a person who is not an attorney admitted to practice in this state to be a guardian ad litem, the court may appoint an attorney admitted to practice in this state to serve as attorney for the guardian ad litem.</item>
+		<item>2(4) The court believes that the parent of the child is not capable of representing the best interest of the child;</item>
+		<item>2(5) Any proceeding involves allegations of abuse, neglect, or dependency, voluntary surrender of permanent custody, or termination of parental rights as soon as possible after the commencement of such proceeding;</item>
+		<item>2(6) There is an agreement for the voluntary surrender of temporary custody that is made in accordance with section 5103.15 of the Revised Code, and thereafter there is a request for extension of the voluntary agreement;</item>
+		<item>2(7) The proceeding is a removal action;</item>
+		<item>2(8) Appointment is otherwise necessary to meet the requirements of a fair hearing;</item>
+		<item>2(9) If a court appoints a person who is not an attorney admitted to the practice of law in this state to be a guardian ad litem, the court may appoint an attorney admitted to the practice of law in this state to serve as attorney for the guardian ad litem, child, or ward.</item>
+		<item>1&lt;b>(C) If a person is serving as Guardian ad litem for a child or ward, and the court finds a conflict exists between the role of the Guardian ad litem and the interest or wishes of the child of the ward, the court shall appoint counsel for the child or ward.</item>
 		<item>1&lt;b>(D) Appearance of attorneys.&lt;/b> An attorney shall enter appearance by filing a written notice with the court or by appearing personally at a court hearing and informing the court of said representation.</item>
 		<item>1&lt;b>(E) Notice to guardian ad litem.&lt;/b> The guardian ad litem shall be given notice of all proceedings in the same manner as notice is given to other parties to the action.</item>
 		<item>1&lt;b>(F) Withdrawal of counsel or guardian ad litem.&lt;/b> An attorney or guardian ad litem may withdraw only with the consent of the court upon good cause shown.</item>
 		<item>1&lt;b>(G) Costs.&lt;/b> The court may fix compensation for the services of appointed counsel and guardians ad litem, tax the same as part of the costs and assess them against the child, the child\'s parents, custodian, or other person in loco parentis of such child.</item>
-		<item>2[Effective: July 1, 1972; amended effective July 1, 1976; July 1, 1994; July 1, 1995; July 1, 1998.]</item>
+		<item>2[Effective: July 1, 1972; amended effective July 1, 1976; July 1, 1994; July 1, 1995; July 1, 1998; July 1, 2020.]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_5">
 		<item>1&lt;b>RULE 5. Use of juvenile’s initials.&lt;/b></item>
@@ -418,7 +416,8 @@
 		<item>1Such appeal shall not be allowed unless the notice of appeal and the certification by the prosecuting attorney are filed with the clerk of the juvenile court within seven days after the date of the entry of the judgment or order granting the motion. Any appeal which may be taken under this rule shall be diligently prosecuted.</item>
 		<item>1A child in detention or shelter care may be released pending this appeal when the state files the notice of appeal and certification.</item>
 		<item>1This appeal shall take precedence over all other appeals.</item>
-		<item>2[Effective: July 1, 1972; amended effective July 1, 1977; amended effeceive July 1, 1994; July 1, 2001; July 1, 2012.]</item>
+		<item>1&lt;b>(G) Motions by alleged victim.&lt;/b> To the extent required by Article I, Section 10a of the Ohio Constitution or by the Revised Code, the trial court shall allow an alleged victim of a crime to file pretrial motions in accordance with the time parameters in subsection (E).</item>
+		<item>2[Effective: July 1, 1972; amended effective July 1, 1977; amended effeceive July 1, 1994; July 1, 2001; July 1, 2012; July 1, 2019.]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_23">
 		<item>1&lt;b>RULE 23. Continuance&lt;/b></item>
@@ -436,7 +435,8 @@
 		<item>2(6) Except in delinquency and unruly child proceedings, other evidence favorable to the requesting party and relevant to the subject matter involved in the pending action. In delinquency and unruly child proceedings, the prosecuting attorney shall disclose to respondent\'s counsel all evidence, known or that may become known to the prosecuting attorney, favorable to the respondent and material either to guilt or punishment.</item>
 		<item>1&lt;b>(B) Order granting discovery: limitations; sanctions.&lt;/b> If a request for discovery is refused, application may be made to the court for a written order granting the discovery. Motions for discovery shall certify that a request for discovery has been made and refused. An order granting discovery may make such discovery reciprocal for all parties to the proceeding, including the party requesting discovery. Notwithstanding the provisions of subdivision (A), the court may deny, in whole or part, or otherwise limit or set conditions on the discovery authorized by such subdivision, upon its own motion, or upon a showing by a party upon whom a request for discovery is made that granting discovery may jeopardize the safety of a party, witness, or confidential informant, result in the production of perjured testimony or evidence, endanger the existence of physical evidence, violate a privileged communication, or impede the criminal prosecution of a minor as an adult or of an adult charged with an offense arising from the same transaction or occurrence.</item>
 		<item>1&lt;b>(C) Failure to comply.&lt;/b> If at any time during the course of the proceedings it is brought to the attention of the court that a person has failed to comply with an order issued pursuant to this rule, the court may grant a continuance, prohibit the person from introducing in evidence the material not disclosed, or enter such other order as it deems just under the circumstances.</item>
-		<item>2[Effective: July 1, 1972; amended effective July 1, 1994.]</item>
+		<item>1&lt;b>(D) Rights of alleged victims.&lt;/b> To the extent required by Article I, Section 10a of the Ohio Constitution or by the Revised Code, the trial court shall allow an alleged victim of a crime, who has so requested, to be heard regarding objections to pretrial disclosure. </item>
+		<item>2[Effective: July 1, 1972; amended effective July 1, 1994; July 1, 2019.]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_25">
 		<item>1&lt;b>RULE 25. Depositions&lt;/b></item>
@@ -447,7 +447,10 @@
 		<item>2[Effective: July 1, 1972; July 1, 2009.]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_26">
-		<item>1&lt;b>RULE 26. [RESERVED]&lt;/b></item>
+		<item>1&lt;b>RULE 26. Rights of alleged victim of crime&lt;/b></item>
+		<item>1To the extent required by Article I, Section 10a of the Ohio Constitution or by the Revised Code, the trial court shall ensure that the alleged victim of a crime, upon request, be given notice of all public proceedings involving the alleged criminal offense against the victim and the opportunity to be present at all such proceedings. In this regard, the trial court may direct 			the prosecuting attorney to provide such notice to the alleged victim.</item>
+		<item>1To the extent required by Article I, Section 10a of the Ohio Constitution or by the Revised Code, the trial court shall, upon request, provide the alleged victim of a crime the opportunity to be heard in any public proceeding in which a right of the alleged victim is implicated, including but not limited to public proceedings involving release, plea, sentencing, or disposition. </item>
+		<item>1[Effective: July 1, 2019]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_27">
 		<item>1&lt;b>RULE 27. Hearings: General&lt;/b></item>
@@ -507,7 +510,8 @@
 		<item>3(d) Dismiss the complaint if dismissal is in the best interest of the child and the community.</item>
 		<item>2(3) Upon request make written findings of fact and conclusions of law pursuant to Civ. R. 52.</item>
 		<item>2(4) Ascertain whether the child should remain or be placed in shelter care until the dispositional hearing in an abuse, neglect, or dependency proceeding. In making a shelter care determination, the court shall make written finding of facts with respect to reasonable efforts in accordance with the provisions in Juv. R. 27(B)(1) and to relative placement in accordance with Juv. R. 7(F)(3).</item>
-		<item>2[Effective: July 1, 1972; amended effective July 1, 1976; July 1, 1994; July 1, 1998; July 1, 2001; July 1, 2004.]</item>
+		<item>2(5) To the extent required by Article I, Section 10a of the Ohio Constitution or by the Revised Code, before disposition, allow an alleged victim of a crime to be heard. </item>
+		<item>2[Effective: July 1, 1972; amended effective July 1, 1976; July 1, 1994; July 1, 1998; July 1, 2001; July 1, 2004; July 1, 2019.]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_30">
 		<item>1&lt;b>RULE 30. Relinquishment of Jurisdiction for Purposes of Criminal Prosecution&lt;/b></item>
@@ -549,6 +553,7 @@
 		<item>2(1) The judge or magistrate who presided at the adjudicatory hearing shall, if possible, preside;</item>
 		<item>2(2) Except as provided in division (I) of this rule, the court may admit evidence that is material and relevant, including, but not limited to, hearsay, opinion, and documentary evidence;</item>
 		<item>2(3) Medical examiners and each investigator who prepared a social history shall not be cross-examined, except upon consent of all parties, for good cause shown, or as the court in its discretion may direct. Any party may offer evidence supplementing, explaining, or disputing any information contained in the social history or other reports that may be used by the court in determining disposition.</item>
+		<item>2(4) To the extent required by Article I, Section 10a of the Ohio Constitution or by the Revised Code, before disposition, the trial court shall allow an alleged victim of a crime to be heard.</item>
 		<item>1&lt;b>(C) Judgment.&lt;/b> After the conclusion of the hearing, the court shall enter an appropriate judgment within seven days. A copy of the judgment shall be given to any party requesting a copy. In all cases where a child is placed on probation, the child shall receive a written statement of the conditions of probation. If the judgment is conditional, the order shall state the conditions. If the child is not returned to the child\'s home, the court shall determine the school district that shall bear the cost of the child\'s education and may fix an amount of support to be paid by the responsible parent or from public funds.</item>
 		<item>1&lt;b>(D) Dispositional Orders.&lt;/b> If a child is adjudicated an abused, neglected, or dependent child, the court may make any of the following orders of disposition:</item>
 		<item>2(1) Place the child in protective supervision;</item>
@@ -568,7 +573,7 @@
 		<item>1&lt;b>(H) Restraining orders.&lt;/b> In any proceeding where a child is made a ward of the court, the court may grant a restraining order controlling the conduct of any party if the court finds that the order is necessary to control any conduct or relationship that may be detrimental or harmful to the child and tend to defeat the execution of a dispositional order.</item>
 		<item>1&lt;b>(I) Bifurcation; Rules of Evidence.&lt;/b> Hearings to determine whether temporary orders regarding custody should be modified to orders for permanent custody shall be considered dispositional hearings and need not be bifurcated. The Rules of Evidence shall apply in hearings on motions for permanent custody.</item>
 		<item>1&lt;b>(J) Advisement of rights after hearing.&lt;/b> At the conclusion of the hearing, the court shall advise the child of the child\'s right to record expungement and, where any part of the proceeding was contested, advise the parties of their right to appeal.</item>
-		<item>2[Effective: July 1, 1972; amended effective July 1, 1994; July 1, 1996; July 1, 2002; July 1, 2018.]</item>
+		<item>2[Effective: July 1, 1972; amended effective July 1, 1994; July 1, 1996; July 1, 2002; July 1, 2018; July 1, 2019.]</item>
 	</string-array>
 	<string-array name="ohio_juvenile_35">
 		<item>1&lt;b>RULE 35. Proceedings After Judgment&lt;/b></item>
@@ -697,26 +702,46 @@
 	</string-array>
 	<string-array name="ohio_juvenile_42">
 		<item>1&lt;b>RULE 42. Consent to Marry&lt;/b></item>
-		<item>1&lt;b>(A) Application where parental consent not required.&lt;/b> When a minor desires to contract matrimony and has no parent, guardian, or custodian whose consent to the marriage is required by law, the minor shall file an application under oath in the county where the female resides requesting that the judge of the juvenile court give consent and approbation in the probate court for such marriage.</item>
-		<item>1&lt;b>(B) Contents of application.&lt;/b> The application required by division (A) of this rule shall contain all of the following:</item>
-		<item>2(1) The name and address of the person for whom consent is sought;</item>
-		<item>2(2) The age of the person for whom consent is sought;</item>
-		<item>2(3) The reason why consent of a parent is not required;</item>
-		<item>2(4) The name and address, if known, of the parent, where the minor alleges that parental consent is unnecessary because the parent has neglected or abandoned the child for at least one year immediately preceding the application.</item>
-		<item>1&lt;b>(C) Application where female pregnant or delivered of child born out of wedlock.&lt;/b> Where a female is pregnant or delivered of a child born out of wedlock and the parents of such child seek to marry even though one or both of them is under the minimum age prescribed by law for persons who may contract marriage, such persons shall file an application under oath in the county where the female resides requesting that the judge of the juvenile court give consent in the probate court to such marriage.</item>
-		<item>1&lt;b>(D) Contents of application.&lt;/b> The application required by subdivision (C) shall contain:</item>
-		<item>2(1) The name and address of the person or persons for whom consent is sought;</item>
-		<item>2(2) The age of such person;</item>
-		<item>2(3) An indication of whether the female is pregnant or has already been delivered;</item>
-		<item>2(4) An indication of whether or not any applicant under eighteen years of age is already a ward of the court; and</item>
-		<item>2(5) Any other facts which may assist the court in determining whether to consent to such marriage.</item>
-		<item>1If pregnancy is asserted, a certificate from a physician verifying pregnancy shall be attached to the application. If an illegitimate child has been delivered, the birth certificate of such child shall be attached.</item>
-		<item>1The consent to the granting of the application by each parent whose consent to the marriage is required by law shall be indorsed on the application.</item>
-		<item>1&lt;b>(E) Investigation.&lt;/b> Upon receipt of an application under subdivision (C), the court shall set a date and time for hearing thereon at its earliest convenience and shall direct that an inquiry be made as to the circumstances surrounding the applicants.</item>
-		<item>1&lt;b>(F) Notice.&lt;/b> If neglect or abandonment is alleged in an application under subdivision (A) and the address of the parent is known, the court shall cause notice of the date and time of hearing to be served upon such parent.</item>
-		<item>1&lt;b>(G) Judgment.&lt;/b> If the court finds that the allegations stated in the application are true, and that the granting of the application is in the best interest of the applicants, the court shall grant the consent and shall make the applicant referred to in subdivision (C) a ward of the court.</item>
-		<item>1&lt;b>(H) Certified copy.&lt;/b> A certified copy of the judgment entry shall be transmitted to the probate court.</item>
-		<item>2[Effective: July 1, 1972; amended effective July 1, 1980; July 1, 1994.]</item>
+		<item>1&lt;b>(A) Application for Juvenile Court consent.&lt;/b></item>
+		<item>2(1) When two persons, both age seventeen, seek to be joined in marriage, both persons shall file an application under oath requesting that the juvenile court give consent and approbation in the probate court for such marriage.</item>
+		<item>2(2) When a person age seventeen desires to be joined in marriage to an adult who is no more than four years older, the minor shall file an application under oath in the county where the minor resides requesting that the juvenile court consent and approbation in the probate court for such marriage.</item>
+		<item>1&lt;b>(B) Application where both persons are age seventeen.&lt;/b> The application required by division (A)(1) of this rule shall contain all of the following:</item>
+		<item>2(1) The name, address, and date of birth of the person seeking consent;</item>
+		<item>2(2) An affirmation that the person seeking consent is age seventeen;</item>
+		<item>2(3) The name and date of birth of the other person to be joined in marriage;</item>
+		<item>2(4) An affirmation that the other person to be joined in marriage is also seventeen.</item>
+		<item>2(5) An affirmation that the application is being filed in the juvenile court of the county where the he/she resides, and that a similar application has not been filed in a juvenile court of another county within the state;</item>
+		<item>2(6) An affirmation that the applicant is one of the following:</item>
+		<item>3(a) A member of the armed services;</item>
+		<item>3(b) Employed and self-subsisting;</item>
+		<item>3(c) Independent from the care and control of his or her parent, guardian, or custodian.</item>
+		<item>2(7) An affirmation that the applicant who is to marry is free from force or coercion;</item>
+		<item>2(8) The name and address of a parent, legal guardian, or legal custodian of the person seeking consent with whom the juvenile court shall consult, and;</item>
+		<item>2(9) The Court should find by clear and convincing evidence that the intended marriage and the emancipation is in the best interest of the applicant.</item>
+		<item>1&lt;b>(C) Contents of application where only one person is age seventeen.&lt;/b> The application required by division (A)(2) of this rule shall contain all of the following:</item>
+		<item>2(1) The name, address, and date of birth of the person seeking consent;</item>
+		<item>2(2) An affirmation that the person seeking consent is age seventeen;</item>
+		<item>2(3) The name and date of birth of the other person to be joined in marriage;</item>
+		<item>2(4) An affirmation that the other person to be joined in marriage is no more than four years older than the person seeking consent;</item>
+		<item>2(5) An affirmation that the application is being filed in the juvenile court of the county where he or she resides, and that a similar application has not been filed in a juvenile court of another county within the state;</item>
+		<item>2(6) An affirmation that the applicant is one of the following:</item>
+		<item>3(a) A member of the armed services;</item>
+		<item>3(b) Employed and self-subsisting;</item>
+		<item>3(c) Independent from the care and control of his or her parent, guardian, or custodian.</item>
+		<item>2(7) An affirmation that the applicant who is to marry is free from force or coercion;</item>
+		<item>2(8) The name and address of a parent, legal guardian, or legal custodian of the person seeking consent with whom the juvenile court shall consult, and;</item>
+		<item>2(9) The Court should find by clear and convincing evidence that the intended marriage and the emancipation is in the best interest of the applicant.</item>
+		<item>1&lt;b>(D)&lt;/b> The Court shall appoint an attorney as guardian ad litem for each party to the intended marriage who is seventeen years of age.</item>
+		<item>1&lt;b>(E) Consultation.&lt;/b> The court shall consult with the parent, legal guardian or legal custodian of each person age seventeen seeking consent, as well as the guardian ad litem appointed for each person age seventeen seeking consent. The purpose of this consultation is to determine if the intended marriage is in the best interests of each person age seventeen and whether each person age seventeen has the capacity of a person of the age of eighteen years or more as described in R.C. 3109.01. </item>
+		<item>1&lt;b>(F) Notice.&lt;/b> The court shall cause notice of the date and time of consultation to be given to the applicant, guardian ad litem, and parent, legal guardian, or legal custodian of each person age seventeen seeking consent. All proceedings shall be recorded.</item>
+		<item>1&lt;b>(G) Judgment.&lt;/b> The court shall grant the consent to marry if the court finds:</item>
+		<item>2(1) The information stated in the application is true;</item>
+		<item>2(2) The party to the intended marriage, who is seventeen, decision to marry is free from force or coercion;</item>
+		<item>2(3) Granting of the application is in the best interest of each person age seventeen seeking to be joined in marriage, and;</item>
+		<item>2(4) Each person age seventeen has the capacity of a person of the age eighteen years or older, as described in R.C. 3109.01.</item>
+		<item>1&lt;b>(H) Certified copy.&lt;/b> A certified copy of the judgment entry shall be transmitted by the juvenile court to the probate court in the county where the application for a marriage license was filed or will be filed.</item>
+		<item>1&lt;b>(I) Denial of application.&lt;/b> Upon denial of the application, the Clerk is instructed to provide the applicant with the Notice of Appeal form and advise him or her of the right to an appeal.</item>
+		<item>1[Effective: July 1, 1972; amended effective July 1, 1980; July 1, 1994; July 1, 2020.] </item>
 	</string-array>
 	<string-array name="ohio_juvenile_43">
 		<item>1&lt;b>RULE 43. Reference to Ohio Revised Code&lt;/b></item>
@@ -766,6 +791,9 @@
 		<item>1&lt;b>(W) Effective date of amendments.&lt;/b> The amendments to Juvenile Rules 40 and 47 filed by the Supreme Court with the General Assembly on January 15, 2014 and refiled on April 30, 2014 shall take effect on July 1, 2014. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
 		<item>1&lt;b>(X) Effective date of amendments.&lt;/b> The amendments to Juvenile Rules 41 and 47 filed by the Supreme Court with the General Assembly on January 15, 2015 and refiled on April 30, 2015 shall take effect on July 1, 2015. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
 		<item>1&lt;b>(Y) Effective date of amendments.&lt;/b> The amendments to Juvenile Rules 20 and 47 filed by the Supreme Court with the General Assembly on January 13, 2016 and refiled on April 29, 2016 shall take effect on July 1, 2016. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
+		<item>1&lt;b>(Z) Effective date of amendments.&lt;/b> The amendments to Juvenile Rule 34 filed by the Supreme Court with the General Assembly on January 9, 2018 and refiled on April 24, 2018 shall take effect on July 1, 2018. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
+		<item>1&lt;b>(AA) Effective date of amendments.&lt;/b> The amendments to Juvenile Rule 22, 24, 26, 29, and 34 filed by the Supreme Court with the General Assembly on January 9, 2019 and refiled on April 24, 2019 shall take effect on July 1, 2019. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
+		<item>1&lt;b>(BB) Effective date of amendments.&lt;/b> The amendments to Juvenile Rule 4 and 42 filed by the Supreme Court with the General Assembly on January 15, 2020 and refiled on March 12, 2020 and April 22, 2020 shall take effect on July 1, 2020. They govern all proceedings in actions brought after they take effect and also all further proceedings in actions then pending, except to the extent that their application in a particular action pending when the amendments take effect would not be feasible or would work injustice, in which event the former procedure applies.</item>
 	</string-array>
 	<string-array name="ohio_juvenile_48">
 		<item>1&lt;b>RULE 48. Title&lt;/b></item>

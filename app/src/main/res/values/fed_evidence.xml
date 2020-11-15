@@ -14,7 +14,7 @@
         <item>401 Test for Relevant Evidence</item>
         <item>402 General Admissibility of Relevant Evidence</item>
         <item>403 Excluding Relevant Evidence for Prejudice</item>
-        <item>404 Character Evidence; Crimes or Other Acts</item>
+        <item>404 Character Evidence; Other Crimes, Wrongs, or Acts</item>
         <item>405 Methods of Proving Character</item>
         <item>406 Habit; Routine Practice</item>
         <item>407 Subsequent Remedial Measures</item>
@@ -158,7 +158,7 @@
         <item>1The court may exclude relevant evidence if its probative value is substantially outweighed by a danger of one or more of the following: unfair prejudice, confusing the issues, misleading the jury, undue delay, wasting time, or needlessly presenting cumulative evidence.</item>
     </string-array>
     <string-array name="fed_evidence_404">
-        <item>1&lt;b>RULE 404. CHARACTER EVIDENCE; CRIMES OR OTHER ACTS&lt;/b></item>
+        <item>1&lt;b>RULE 404. CHARACTER EVIDENCE; OTHER CRIMES, WRONGS, OR ACTS&lt;/b></item>
         <item>1&lt;b>(a) Character Evidence.&lt;/b></item>
         <item>2&lt;b>(1) Prohibited Uses.&lt;/b> Evidence of a person\'s character or character trait is not admissible to prove that on a particular occasion the person acted in accordance with the character or trait.</item>
         <item>2&lt;b>(2) Exceptions for a Defendant or Victim in a Criminal Case.&lt;/b> The following exceptions apply in a criminal case:</item>
@@ -168,11 +168,13 @@
         <item>4&lt;b>(ii)&lt;/b> offer evidence of the defendant\'s same trait; and</item>
         <item>3&lt;b>(C)&lt;/b> in a homicide case, the prosecutor may offer evidence of the alleged victim\'s trait of peacefulness to rebut evidence that the victim was the first aggressor.</item>
         <item>2&lt;b>(3) Exceptions for a Witness.&lt;/b> Evidence of a witness\'s character may be admitted under Rules 607, 608, and 609.</item>
-        <item>1&lt;b>(b) Crimes, Wrongs, or Other Acts.&lt;/b></item>
-        <item>2&lt;b>(1) Prohibited Uses.&lt;/b> Evidence of a crime, wrong, or other act is not admissible to prove a person\'s character in order to show that on a particular occasion the person acted in accordance with the character.</item>
-        <item>2&lt;b>(2) Permitted Uses; Notice in a Criminal Case.&lt;/b> This evidence may be admissible for another purpose, such as proving motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, or lack of accident. On request by a defendant in a criminal case, the prosecutor must:</item>
-        <item>3&lt;b>(A)&lt;/b> provide reasonable notice of the general nature of any such evidence that the prosecutor intends to offer at trial; and</item>
-        <item>3&lt;b>(B)&lt;/b> do so before trial — or during trial if the court, for good cause, excuses lack of pretrial notice.</item>
+        <item>1&lt;b>(b) Other Crimes, Wrongs, or Acts.&lt;/b></item>
+        <item>2&lt;b>(1) Prohibited Uses.&lt;/b> Evidence of any other crime, wrong, or other act is not admissible to prove a person\'s character in order to show that on a particular occasion the person acted in accordance with the character.</item>
+        <item>2&lt;b>(2) Permitted Uses.&lt;/b> This evidence may be admissible for another purpose, such as proving motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, or lack of accident. </item>
+        <item>2&lt;b>Notice in a Criminal Case.&lt;/b> In a criminal case, the prosecutor must:</item>
+        <item>3&lt;b>(A)&lt;/b> provide reasonable notice of any such evidence that the prosecutor intends to offer at trial so that the defendant has a fair opportunity to meet it;</item>
+        <item>3&lt;b>(B)&lt;/b> articulate in the notice the permitted purpose for which the prosecutor intends to offer the evidence and the reasoning that supports the purpose; and</item>
+        <item>3&lt;b>(C)&lt;/b> do so in writing before trial — or in any form during trial if the court, for good cause, excuses lack of pretrial notice.</item>
     </string-array>
     <string-array name="fed_evidence_405">
         <item>1&lt;b>RULE 405. METHODS OF PROVING CHARACTER&lt;/b></item>
@@ -576,12 +578,10 @@
     </string-array>
     <string-array name="fed_evidence_807">
         <item>1&lt;b>RULE 807. RESIDUAL EXCEPTION&lt;/b></item>
-        <item>1&lt;b>(a)&lt;/b> In General. Under the following circumstances, a hearsay statement is not excluded by the rule against hearsay even if the statement is not specifically covered by a hearsay exception in Rule 803 or 804:</item>
-        <item>2&lt;b>(1)&lt;/b> the statement has equivalent circumstantial guarantees of trustworthiness;</item>
-        <item>2&lt;b>(2)&lt;/b> it is offered as evidence of a material fact;</item>
-        <item>2&lt;b>(3)&lt;/b> it is more probative on the point for which it is offered than any other evidence that the proponent can obtain through reasonable efforts; and</item>
-        <item>2&lt;b>(4)&lt;/b> admitting it will best serve the purposes of these rules and the interests of justice.</item>
-        <item>1&lt;b>(b) Notice.&lt;/b> The statement is admissible only if, before the trial or hearing, the proponent gives an adverse party reasonable notice of the intent to offer the statement and its particulars, including the declarant\'s name and address, so that the party has a fair opportunity to meet it.</item>
+        <item>1&lt;b>(a)&lt;/b> In General. Under the following conditions, a hearsay statement is not excluded by the rule against hearsay even if the statement is not admissible under a hearsay exception in Rule 803 or 804:</item>
+        <item>2&lt;b>(1)&lt;/b> the statement is supported by sufficient guarantees of trustworthiness - after considering the totality of circumstances under which it was made and evidence, if any, corroborating the statement; and</item>
+        <item>2&lt;b>(2)&lt;/b> it is more probative on the point for which it is offered than any other evidence that the proponent can obtain through reasonable efforts; and</item>
+        <item>1&lt;b>(b) Notice.&lt;/b>The statement is admissible only if the proponent gives an adverse party reasonable notice of the intent to offer the statement—including its substance and the declarant\'s name— so that the party has a fair opportunity to meet it. The notice must be provided in writing before the trial or hearing—or in any form during the trial or hearing if the court, for good cause, excuses a lack of earlier notice.</item>
     </string-array>
     <string-array name="fed_evidence_901">
         <item>1&lt;b>RULE 901. AUTHENTICATING OR IDENTIFYING EVIDENCE&lt;/b></item>

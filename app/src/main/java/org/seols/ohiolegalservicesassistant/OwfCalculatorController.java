@@ -1,25 +1,22 @@
 package org.seols.ohiolegalservicesassistant;
 
         import android.os.CountDownTimer;
-        import android.support.annotation.NonNull;
-        import android.support.v4.app.Fragment;
+        import androidx.annotation.NonNull;
+        import androidx.fragment.app.Fragment;
         import android.app.AlertDialog;
         import android.os.Bundle;
-        import android.support.v4.app.FragmentManager;
-        import android.support.v7.app.AppCompatActivity;
+        import androidx.fragment.app.FragmentManager;
+        import androidx.appcompat.app.AppCompatActivity;
         import android.util.Log;
         import android.view.Gravity;
         import android.widget.EditText;
         import android.widget.Spinner;
-        import android.widget.TextView;
         import android.widget.ArrayAdapter;
         import android.widget.AdapterView;
         import android.widget.Toast;
         import android.view.ViewGroup;
         import android.view.LayoutInflater;
         import android.view.View;
-        import android.support.v4.widget.DrawerLayout;
-        import android.widget.ListView;
         import android.widget.AdapterView.*;
         import android.widget.*;
 
@@ -31,7 +28,6 @@ package org.seols.ohiolegalservicesassistant;
         import com.google.firebase.database.ValueEventListener;
 
         import java.util.ArrayList;
-        import java.util.List;
 
 
 public class OwfCalculatorController extends Fragment implements IncomeDialogFragment.OnUpdateIncomeListener {

@@ -1,10 +1,9 @@
 package org.seols.ohiolegalservicesassistant;
 
-        import android.support.v4.app.DialogFragment;
-        import android.app.Activity;
+        import androidx.fragment.app.DialogFragment;
+
         import android.app.*;
         import android.os.*;
-        import android.util.Log;
         import android.view.*;
         import android.content.*;
         import android.widget.AdapterView;

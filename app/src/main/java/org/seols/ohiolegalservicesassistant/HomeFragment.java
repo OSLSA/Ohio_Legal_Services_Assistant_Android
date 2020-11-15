@@ -1,21 +1,23 @@
 package org.seols.ohiolegalservicesassistant;
 
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -28,7 +30,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 
 /**
@@ -38,13 +45,15 @@ public class HomeFragment extends Fragment {
 
     private Bundle savedInstanceState;
 
-    private Button viewRules;
+    final Calendar myCalendar = Calendar.getInstance();
 
+    private Button viewRules;
+    private Button calculateDate;
     private Button calculateFPL;
 
     private DatabaseReference mRootRef, mPovertyLevelRef,mFPLVersionRef;
 
-    private EditText income, agSize, rule_number;
+    private EditText income, agSize, rule_number, etStartDate, etNumberOfDays;
 
     SharedPreferences prefs;
 
@@ -81,16 +90,51 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
     }
+
+    DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+        @Override
+        public void onDateSet(DatePicker view, int year, int monthOfYear,
+                              int dayOfMonth) {
+            // TODO Auto-generated method stub
+            myCalendar.set(Calendar.YEAR, year);
+            myCalendar.set(Calendar.MONTH, monthOfYear);
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            updateLabel();
+        }
+
+    };
 
     private void getViews(View rootView) {
         income = (EditText) rootView.findViewById(R.id.annual_income);
         agSize = (EditText) rootView.findViewById(R.id.ag_size);
+        etStartDate = (EditText) rootView.findViewById(R.id.startingDate);
+        etStartDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog( getContext(), date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+        etNumberOfDays = (EditText) rootView.findViewById(R.id.numberOfDays);
         rule_number = (EditText) rootView.findViewById(R.id.rule_number);
         calculateFPL = (Button) rootView.findViewById(R.id.calculateFPL);
         calculateFPL.setOnClickListener(calculateFPLListener);
         calculateFPL.setEnabled(false);
+        calculateDate = (Button) rootView.findViewById(R.id.calculateDate);
+        calculateDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    getResults();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         Button ruleSelected = (Button) rootView.findViewById(R.id.view_rules);
         ruleSelected.setOnClickListener(ruleSelectedListener);
         viewRules = (Button) rootView.findViewById(R.id.view_rules);
@@ -99,6 +143,13 @@ public class HomeFragment extends Fragment {
         ImageView oslsaLogo = (ImageView) rootView.findViewById(R.id.oslsa_logo);
         lscLogo.setOnClickListener(logoClickListener);
         oslsaLogo.setOnClickListener(logoClickListener);
+    }
+
+    private void updateLabel() {
+        String myFormat = "MM/dd/yyyy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        etStartDate.setText(sdf.format(myCalendar.getTime()));
     }
 
     private void setRulesSpinner() {
@@ -249,7 +300,6 @@ public class HomeFragment extends Fragment {
             boolean pushStatus = prefs.getBoolean("boolPushStatus", false);
             SettingsFragment sa = new SettingsFragment();
             sa.enablePush(pushStatus, getContext());
-            surveyPopup();
         }
     }
 
@@ -320,45 +370,50 @@ public class HomeFragment extends Fragment {
         dialog.show();
     }
 
-    private void surveyPopup() {
-        if (prefs.getBoolean("showSurvey", true)) {
-            // this is the first run, ask user
-            showSurveyPopup();
+    private void getResults() throws ParseException {
+        // check that everything is properly entered
+        String start = etStartDate.getText().toString();
+
+        // check for start date
+        if (start.equals("")) {
+            Toast toast = Toast.makeText(getActivity(), "You must enter a starting date!", Toast.LENGTH_LONG);
+            toast.show();
+            return;
         }
+
+        //check for days in the future
+        String numberDays = etNumberOfDays.getText().toString();
+        if (numberDays.equals("")) {
+            Toast toast = Toast.makeText(getActivity(), "You must put in a number of days larger than 0!", Toast.LENGTH_LONG);
+            toast.show();
+            return;
+        } else if (Integer.parseInt(numberDays) <= 0) {
+            Toast toast = Toast.makeText(getActivity(), "You must put in a number of days larger than 0!", Toast.LENGTH_LONG);
+            toast.show();
+            return;
+        }
+
+/*        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        LocalDate startDate = LocalDate.parse(start, formatter);
+        DateCalculator dateCalc = new DateCalculator(Integer.parseInt(numberDays), false, startDate, getContext());
+        showResults(dateCalc.getNewDate());*/
+
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        Date startDate = formatter.parse(start);
+        DateCalculator dateCalc = new DateCalculator(Integer.parseInt(numberDays), false, startDate, getContext());
+        showResults(dateCalc.getNewDate());
+
     }
 
-    /**
-     * Method that displays invitation to take survey
-     */
-    private void showSurveyPopup() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMessage("Please help improve our app by taking a short online survey!")
-                .setTitle("Survey")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.dismiss();
-                        editSharedPref("showSurvey", false);
-                        String url = "https://goo.gl/forms/wvKGR7yzVNHkPE3q2";
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(url));
-                        startActivity(i);
-                    }
-                })
-                .setNeutralButton("Later", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        editSharedPref("showSurvey", true);
-                        dialog.dismiss();
-                    }
-                })
-                .setNegativeButton("Never", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        editSharedPref("showSurvey", false);
-                    }
-                });
-        AlertDialog dialog = builder.create();
-        dialog.show();
+    private void showResults(String results) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        // This should be coming from the string xml file with variables in it
+        builder.setMessage(results)
+                .setPositiveButton("OK", null)
+                .setTitle("Date Calculator");
+        builder.create().show();
+
     }
 
     @Override

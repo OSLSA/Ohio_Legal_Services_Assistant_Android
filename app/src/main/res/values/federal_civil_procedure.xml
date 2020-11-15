@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="lastUpdateFRCP">January 10, 2017</string>
+    <string name="lastUpdateFRCP">January 1, 2021</string>
     <string-array name="federal_civil_procedure_toc">
         <item>1 Scope and Purpose</item>
         <item>2 One Form of Action</item>
@@ -74,7 +74,7 @@
         <item>63 Judge\'s Inability to Proceed</item>
         <item>64 Seizing a Person or Property</item>
         <item>65 Injunctions and Restraining Orders</item>
-        <item>65.1 Proceedings Against a Surety</item>
+        <item>65.1 Proceedings Against a Security Provider</item>
         <item>66 Receivers</item>
         <item>67 Deposit into Court</item>
         <item>68 Offer of Judgment</item>
@@ -231,7 +231,7 @@
         <item>4(ii) if the person has no office or the office is closed, at the person\'s dwelling or usual place of abode with someone of suitable age and discretion who resides there;</item>
         <item>3(C) mailing it to the person\'s last known address—in which event service is complete upon mailing;</item>
         <item>3(D) leaving it with the court clerk if the person has no known address;</item>
-        <item>3(E) sending it to a registered user by filing it with the court\'s electronic-filing system or sending it by other electronic means if the person consented to in writing—in either of which events service is complete upon filing or sending, but is not effective if the filer or sender learns that it did not reach the person to be served; or</item>
+        <item>3(E) sending it to a registered user by filing it with the court\'s electronic-filing system or sending it by other electronic means that the person consented to in writing—in either of which events service is complete upon filing or sending, but is not effective if the filer or sender learns that it did not reach the person to be served; or</item>
         <item>3(F) delivering it by any other means that the person consented to in writing—in which event service is complete when the person making service delivers it to the agency designated to make delivery.</item>
         <item>2(3) &lt;i>Using Court Facilities.&lt;/i> [Abrogated (Apr. __,
             2018, eff. Dec. 1, 2018.)] </item>
@@ -258,7 +258,7 @@
         <item>3(C) &lt;i>Signing.&lt;/i> A filing made through a person\'s electronic-filing account and authorized by that person, together with that person\'s name on a signature block, constitutes the person\'s signature.</item>
         <item>3(D) &lt;i>Same as a Written Paper.&lt;/i> A paper filed electronically is a written paper for purposes of these rules.</item>
         <item>2(4) &lt;i>Acceptance by the Clerk.&lt;/i> The clerk must not refuse to file a paper solely because it is not in the form prescribed by these rules or by a local rule or practice.</item>
-        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 1991, eff. Dec. 1, 1991; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 23, 1996, eff. Dec. 1, 1996; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007.)</item>
+        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Mar. 30, 1970, eff. July 1, 1970; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 1991, eff. Dec. 1, 1991; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 23, 1996, eff. Dec. 1, 1996; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 26, 2018, eff. Dec. 1, 2018.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_5_1">
         <item>1&lt;b>Rule 5.1. Constitutional Challenge to a Statute—Notice, Certification, and Intervention&lt;/b></item>
@@ -724,7 +724,7 @@
         <item>3(C) &lt;i>Altering or Amending the Order.&lt;/i> An order that grants or denies class certification may be altered or amended before final judgment.</item>
         <item>2(2) &lt;i>Notice.&lt;/i></item>
         <item>3(A) &lt;i>For (b)(1) or (b)(2) Classes.&lt;/i> For any class certified under Rule 23(b)(1) or (b)(2), the court may direct appropriate notice to the class.</item>
-        <item>3(B) &lt;i>For (b)(3) Classes.&lt;/i> For any class certified under Rule 23(b)(3)—or upon ordering notice under Rule 23(e)(1) to a class proposed to be certified for purposes of settlement under Rule 23(b)(3)—the court must direct to class members the best notice that is practicable under the circumstances, including individual notice to all members who can be identified through reasonable effort. The notice may be by one or more of the following: United States mail, electronic means, or other appropriate means. The notice must clearly and concisely state in plain, easily understood language:</item>
+        <item>3(B) &lt;i>For (b)(3) Classes.&lt;/i>  For any class certified under Rule 23(b)(3)—or upon ordering notice under Rule 23(e)(1) to a class proposed to be certified for purposes of settlement under Rule 23(b)(3)—the court must direct to class members the best notice that is practicable under the circumstances, including individual notice to all members who can be identified through reasonable effort. The notice may be by one or more of the following: United States mail, electronic means, or other appropriate means. The notice must clearly and concisely state in plain, easily understood language</item>
         <item>4(i) the nature of the action;</item>
         <item>4(ii) the definition of the class certified;</item>
         <item>4(iii) the class claims, issues, or defenses;</item>
@@ -748,13 +748,13 @@
         <item>3(D) require that the pleadings be amended to eliminate allegations about representation of absent persons and that the action proceed accordingly; or</item>
         <item>3(E) deal with similar procedural matters.</item>
         <item>2(2) &lt;i>Combining and Amending Orders.&lt;/i> An order under Rule 23(d)(1) may be altered or amended from time to time and may be combined with an order under Rule 16.</item>
-        <item>1(e) SETTLEMENT, VOLUNTARY DISMISSAL, OR COMPROMISE. The claims, issues, or defenses of a certified class—or a class proposed to be certified for purposes of settlement—may be settled, voluntarily dismissed, or compromised only with the court\'s approval. The following procedures apply to a proposed settlement, voluntary dismissal, or compromise: </item>
+        <item>1(e) SETTLEMENT, VOLUNTARY DISMISSAL, OR COMPROMISE. The claims, issues, or defenses of a certified class—or a class proposed to be certified for purposes of settlement—may be settled, voluntarily dismissed, or compromised only with the court\'s approval. The following procedures apply to a proposed settlement, voluntary dismissal, or compromise:</item>
         <item>2&lt;i>(1) Notice to the Class.&lt;/i></item>
-        <item>3(A) &lt;i>Information That Parties Must Provide to the Court.&lt;/i> The parties must provide the court with information sufficient to enable it to determine whether to give notice of the proposal to the class.</item>
-        <item>3(B) &lt;i>Grounds for a Decision to Give Notice.&lt;/i> The court must direct notice in a reasonable manner to all class members who would be bound by the proposal if giving notice is justified by the parties\' showing that the court will likely be able to:</item>
+        <item>3&lt;i>(A) Information That Parties Must Provide to the Court.&lt;/i> The parties must provide the court with information sufficient to enable it to determine whether to give notice of the proposal to the class.</item>
+        <item>3&lt;i>(B) Grounds for a Decision to Give Notice.&lt;/i> The court must direct notice in a reasonable manner to all class members who would be bound by the proposal if giving notice is justified by the parties\' showing that the court will likely be able to:</item>
         <item>4(i) approve the proposal under Rule 23(e)(2); and</item>
         <item>4(ii) certify the class for purposes of judgment on the proposal.</item>
-        <item>2(2) &lt;i>Approval of the Proposal.&lt;/i> If the proposal would bind class members, the court may approve it only after a hearing and only on finding that it is fair, reasonable, and adequate after considering whether:</item>
+        <item>2&lt;i>(2) Approval of the Proposal.&lt;/i> If the proposal would bind class members, the court may approve it only after a hearing and only on finding that it is fair, reasonable, and adequate after considering whether:</item>
         <item>3(A) the class representatives and class counsel have adequately represented the class;</item>
         <item>3(B) the proposal was negotiated at arm\'s length;</item>
         <item>3(C) the relief provided for the class is adequate, taking into account:</item>
@@ -763,16 +763,15 @@
         <item>4(iii) the terms of any proposed award of attorney\'s fees, including timing of payment; and</item>
         <item>4(iv) any agreement required to be identified under Rule 23(e)(3); and</item>
         <item>3(D) the proposal treats class members equitably relative to each other.</item>
-        <item>2(3) &lt;i>Identifying Agreements.&lt;/i> The parties seeking approval must file a statement identifying any agreement made in connection with the proposal.</item>
-        <item>2(4) &lt;i>New Opportunity to Be Excluded.&lt;/i> If the class action was previously certified under Rule 23(b)(3), the court may refuse to approve a
-            settlement unless it affords a new opportunity to request exclusion to individual class members who had an earlier opportunity to request exclusion but did not do so.</item>
-        <item>2(5) &lt;i>Class-Member Objections.&lt;/i></item>
-        <item>3(A) &lt;i>In General.&lt;/i> Any class member may object to the proposal if it requires court approval under this subdivision (e). The objection must state whether it applies only to the objector, to a specific subset of the class, or to the entire class, and also state with specificity the grounds for the objection.</item>
-        <item>3(B) &lt;i>Court Approval Required for Payment in Connection with an Objection.&lt;/i> Unless approved by the court after a hearing, no payment or other consideration may be provided in connection with:</item>
+        <item>2&lt;i>(3) Identifying Agreements.&lt;/i> The parties seeking approval must file a statement identifying any agreement made in connection with the proposal.</item>
+        <item>2&lt;i>(4) New Opportunity to Be Excluded.&lt;/i> If the class action was previously certified under Rule 23(b)(3), the court may refuse to approve a settlement unless it affords a new opportunity to request exclusion to individual class members who had an earlier opportunity to request exclusion but did not do so.</item>
+        <item>2&lt;i>(5) Class-Member Objections.&lt;/i></item>
+        <item>3&lt;i>(A) In General.&lt;/i> Any class member may object to the proposal if it requires court approval under this subdivision(e). The objection must state whether it applies only to the objector, to a specific subset of the class, or to the entire class, and also state with specificity the grounds for the objection.</item>
+        <item>3&lt;i>(B) Court Approval Required for Payment in Connection with an Objection.&lt;/i> Unless approved by the court after a hearing, no payment or other consideration may be provided in connection with:</item>
         <item>4(i) forgoing or withdrawing an objection, or</item>
         <item>4(ii) forgoing, dismissing, or abandoning an appeal from a judgment approving the proposal.</item>
-        <item>3(C) &lt;i>Procedure for Approval After an Appeal.&lt;/i> If approval under Rule 23(e)(5)(B) has not been obtained before an appeal is docketed in the court of appeals, the procedure of Rule 62.1 applies while the appeal remains pending.</item>
-        <item>1(f) &lt;i>Appeals.&lt;/i> A court of appeals may permit an appeal from an order granting or denying class-action certification under this rule, but not from an order under Rule 23(e)(1). A party must file a petition for permission to appeal with the circuit clerk within 14 days after the order is entered, or within 45 days after the order is entered if any party is the United States, a United States agency, or a United States officer or employee sued for an act or omission occurring in connection with duties performed on the United States\' behalf. An appeal does not stay proceedings in the district court unless the district judge or the court of appeals so orders. </item>
+        <item>3&lt;i>(C) Procedure for Approval After an Appeal.&lt;/i> If approval under Rule 23(e)(5)(B) has not been obtained before an appeal is docketed in the court of appeals, the procedure of Rule 62.1 applies while the appeal remains pending.</item>
+        <item>1(f) APPEALS. A court of appeals may permit an appeal from an order granting or denying class-action certification under this rule, but not from an order under Rule 23(e)(1). A party must file a petition for permission to appeal with the circuit clerk within 14 days after the order is entered, or within 45 days after the order is entered if any party is the United States, a United States agency, or a United States officer or employee sued for an act or omission occurring in connection with duties performed on the United States\' behalf. An appeal does not stay proceedings in the district court unless the district judge or the court of appeals so orders.</item>
         <item>1(g) CLASS COUNSEL.</item>
         <item>2(1) &lt;i>Appointing Class Counsel.&lt;/i> Unless a statute provides otherwise, a court that certifies a class must appoint class counsel. In appointing class counsel, the court:</item>
         <item>3(A) must consider:</item>
@@ -792,8 +791,7 @@
         <item>2(2) A class member, or a party from whom payment is sought, may object to the motion.</item>
         <item>2(3) The court may hold a hearing and must find the facts and state its legal conclusions under Rule 52(a).</item>
         <item>2(4) The court may refer issues related to the amount of the award to a special master or a magistrate judge, as provided in Rule 54(d)(2)(D).</item>
-        <item>2(As amended Feb. 28, 1966, eff. July 1, 1966; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 24, 1998, eff. Dec. 1, 1998; Mar. 27, 2003, eff. Dec. 1, 2003; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009.)</item>
-
+        <item>2(As amended Feb. 28, 1966, eff. July 1, 1966; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 24, 1998, eff. Dec. 1, 1998; Mar. 27, 2003, eff. Dec. 1, 2003; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009; Apr. 26, 2018, eff. Dec. 1, 2018.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_23_1">
         <item>1&lt;b>Rule 23.1. Derivative Actions&lt;/b></item>
@@ -1045,7 +1043,7 @@
         <item>4(v) the identity of all persons present.</item>
         <item>3(B) &lt;i>Conducting the Deposition; Avoiding Distortion.&lt;/i> If the deposition is recorded nonstenographically, the officer must repeat the items in Rule 30(b)(5)(A)(i)–(iii) at the beginning of each unit of the recording medium. The deponent\'s and attorneys’ appearance or demeanor must not be distorted through recording techniques.</item>
         <item>3(C) &lt;i>After the Deposition.&lt;/i> At the end of a deposition, the officer must state on the record that the deposition is complete and must set out any stipulations made by the attorneys about custody of the transcript or recording and of the exhibits, or about any other pertinent matters.</item>
-        <item>2(6) &lt;i>Notice or Subpoena Directed to an Organization.&lt;/i> In its notice or subpoena, a party may name as the deponent a public or private corporation, a partnership, an association, a governmental agency, or other entity and must describe with reasonable particularity the matters for examination. The named organization must then designate one or more officers, directors, or managing agents, or designate other persons who consent to testify on its behalf; and it may set out the matters on which each person designated will testify. A subpoena must advise a nonparty organization of its duty to make this designation. The persons designated must testify about information known or reasonably available to the organization. This paragraph (6) does not preclude a deposition by any other procedure allowed by these rules.</item>
+        <item>2(6) &lt;i>Notice or Subpoena Directed to an Organization.&lt;/i> In its notice or subpoena, a party may name as the deponent a public or private corporation, a partnership, an association, a governmental agency, or other entity and must describe with reasonable particularity the matters for examination. The named organization must designate one or more officers, directors, or managing agents, or designate other persons who consent to testify on its behalf; and it may set out the matters on which each person designated will testify. Before or promptly after the notice or subpoena is served, the serving party and the organization must confer in good faith about the matters for examination. A subpoena must advise a nonparty organization of its duty to confer with the serving party and to designate each person who will testify. The persons designated must testify about information known or reasonably available to the organization. This paragraph (6) does not preclude a deposition by any other procedure allowed by these rules.</item>
         <item>1(c) EXAMINATION AND CROSS-EXAMINATION; RECORD OF THE EXAMINATION; OBJECTIONS; WRITTEN QUESTIONS.</item>
         <item>2(1) &lt;i>Examination and Cross-Examination.&lt;/i> The examination and cross-examination of a deponent proceed as they would at trial under the Federal Rules of Evidence, except Rules 103 and 615. After putting the deponent under oath or affirmation, the officer must record the testimony by the method designated under Rule 30(b)(3)(A). The testimony must be recorded by the officer personally or by a person acting in the presence and under the direction of the officer.</item>
         <item>2(2) &lt;i>Objections.&lt;/i> An objection at the time of the examination—whether to evidence, to a party\'s conduct, to the officer\'s qualifications, to the manner of taking the deposition, or to any other aspect of the deposition—must be noted on the record, but the examination still proceeds; the testimony is taken subject to any objection. An objection must be stated concisely in a nonargumentative and nonsuggestive manner. A person may instruct a deponent not to answer only when necessary to preserve a privilege, to enforce a limitation ordered by the court, or to present a motion under Rule 30(d)(3).</item>
@@ -1074,7 +1072,7 @@
         <item>1(g) FAILURE TO ATTEND A DEPOSITION OR SERVE A SUBPOENA; EXPENSES. A party who, expecting a deposition to be taken, attends in person or by an attorney may recover reasonable expenses for attending, including attorney\'s fees, if the noticing party failed to:</item>
         <item>2(1) attend and proceed with the deposition; or</item>
         <item>2(2) serve a subpoena on a nonparty deponent, who consequently did not attend.</item>
-        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Mar. 30, 1970, eff. July 1, 1970; Mar. 1, 1971, eff. July 1, 1971; Nov. 20, 1972, eff. July 1, 1975; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015.)</item>
+        <item>2(As amended Jan. 21, 1963, eff. July 1, 1963; Mar. 30, 1970, eff. July 1, 1970; Mar. 1, 1971, eff. July 1, 1971; Nov. 20, 1972, eff. July 1, 1975; Apr. 29, 1980, eff. Aug. 1, 1980; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 22, 1993, eff. Dec. 1, 1993; Apr. 17, 2000, eff. Dec. 1, 2000; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 29, 2015, eff. Dec. 1, 2015; Apr. 27, 2020, eff. Dec. 1, 2020.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_31">
         <item>1&lt;b>Rule 31. Depositions by Written Questions&lt;/b></item>
@@ -1690,22 +1688,21 @@
     </string-array>
     <string-array name="federal_civil_procedure_62">
         <item>1&lt;b>Rule 62. Stay of Proceedings to Enforce a Judgment&lt;/b></item>
-        <item>1(a) &lt;b>Automatic Stay.&lt;/b> Except as provided in Rule 62(c) and (d), execution on a judgment and proceedings to enforce it are stayed for 30 days after its entry, unless the court orders otherwise.</item>
-        <item>1(b) &lt;b>Stay by Bond or Other Security.&lt;/b> At any time after judgment is entered, a party may obtain a stay by providing a bond or other security. The stay takes effect when the court approves the bond or other security and remains in effect for the time specified in the bond or other security. </item>
-        <item>1(c) &lt;b>Stay of an Injunction, Receivership, or Patent Accounting Order.&lt;/b> Unless the court orders otherwise, the following are not stayed after being entered, even if an appeal is taken:</item>
+        <item>1(a) AUTOMATIC STAY. Except as provided in Rule 62(c) and (d), execution on a judgment and proceedings to enforce it are stayed for 30 days after its entry, unless the court orders otherwise.</item>
+        <item>1(b) STAY BY BOND OR OTHER SECURITY. At any time after judgment is entered, a party may obtain a stay by providing a bond or other security. The stay takes effect when the court approves the bond or other security and remains in effect for the time specified in the bond or other security.</item>
+        <item>1(c) STAY OF AN INJUNCTION, RECEIVERSHIP, OR PATENT ACCOUNTING ORDER. Unless the court orders otherwise, the following are not stayed after being entered, even if an appeal is taken:</item>
         <item>2(1) an interlocutory or final judgment in an action for an injunction or receivership; or</item>
         <item>2(2) a judgment or order that directs an accounting in an action for patent infringement.</item>
-        <item>1(d) &lt;b>Injunction Pending an Appeal.&lt;/b> While an appeal is pending from an interlocutory order or final judgment that grants, continues, modifies, refuses, dissolves, or refuses to dissolve or modify an injunction, the court may suspend, modify, restore, or grant an injunction on terms for bond or other terms that secure the opposing party\'s rights. If the judgment appealed from is rendered by a statutory three-judge district court, the order must be made either:</item>
+        <item>1(d) INJUNCTION PENDING AN APPEAL. While an appeal is pending from an interlocutory order or final judgment that grants, continues, modifies, refuses, dissolves, or refuses to dissolve or modify an injunction, the court may suspend, modify, restore, or grant an injunction on terms for bond or other terms that secure the opposing party\'s rights. If the judgment appealed from is rendered by a statutory three-judge district court, the order must be made either:</item>
         <item>2(1) by that court sitting in open session; or</item>
-        <item>2(2) by the assent of all its judges, as evidenced by their signatures</item>
+        <item>2(2) by the assent of all its judges, as evidenced by their signatures.</item>
         <item>1(e) STAY WITHOUT BOND ON AN APPEAL BY THE UNITED STATES, ITS OFFICERS, OR ITS AGENCIES. The court must not require a bond, obligation, or other security from the appellant when granting a stay on an appeal by the United States, its officers, or its agencies or on an appeal directed by a department of the federal government.</item>
         <item>1(f) STAY IN FAVOR OF A JUDGMENT DEBTOR UNDER STATE LAW. If a judgment is a lien on the judgment debtor\'s property under the law of the state where the court is located, the judgment debtor is entitled to the same stay of execution the state court would give.</item>
         <item>1(g) APPELLATE COURT\'S POWER NOT LIMITED. This rule does not limit the power of the appellate court or one of its judges or justices:</item>
         <item>2(1) to stay proceedings—or suspend, modify, restore, or grant an injunction—while an appeal is pending; or</item>
         <item>2(2) to issue an order to preserve the status quo or the effectiveness of the judgment to be entered.</item>
         <item>1(h) STAY WITH MULTIPLE CLAIMS OR PARTIES. A court may stay the enforcement of a final judgment entered under Rule 54(b) until it enters a later judgment or judgments, and may prescribe terms necessary to secure the benefit of the stayed judgment for the party in whose favor it was entered.</item>
-        <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Dec. 29, 1948, eff. Oct. 20, 1949; Apr. 17, 1961, eff. July 19, 1961; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009.)</item>
-
+        <item>1(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Dec. 29, 1948, eff. Oct. 20, 1949; Apr. 17, 1961, eff. July 19, 1961; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009; Apr. 26, 2018, eff. Dec. 1, 2018.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_62_1">
         <item>1&lt;b>Rule 62.1. Indicative Ruling on a Motion for Relief That is Barred by a Pending Appeal&lt;/b></item>
@@ -1764,10 +1761,9 @@
         <item>2(As amended Dec. 27, 1946, eff. Mar. 19, 1948; Dec. 29, 1948, eff. Oct. 20, 1949; Feb. 28, 1966, eff. July 1, 1966; Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 23, 2001, eff. Dec. 1, 2001; Apr. 30, 2007, eff. Dec. 1, 2007; Mar. 26, 2009, eff. Dec. 1, 2009.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_65_1">
-        <item>1&lt;b>Rule 65.1. Proceedings Against a Surety&lt;/b></item>
-        <item>1Whenever these rules (including the Supplemental Rules for Admiralty or Maritime Claims and Asset Forfeiture Actions) require or allow a party to give security, and security is given with one or more security providers, each provider submits to the court\'s jurisdiction and irrevocably appoints the court clerk as its agent for receiving service of any papers that affect its liability on the security. The security provider\'s liability may be enforced on motion without an independent action. The motion and any notice that the court orders may be served on the court clerk, who must promptly send a copy of each to every security provider whose address is known. </item>
-        <item>2(As added Feb. 28, 1966, eff. July 1, 1966; amended Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 26, 2018, eff. Dec. 1, 2018.)</item>
-
+        <item>1&lt;b>Rule 65.1. Proceedings Against a Security Provider&lt;/b></item>
+        <item>1Whenever these rules (including the Supplemental Rules for Admiralty or Maritime Claims and Asset Forfeiture Actions) require or allow a party to give security, and security is given with one or more security providers, each provider submits to the court\'s jurisdiction and irrevocably appoints the court clerk as its agent for receiving service of any papers that affect its liability on the security. The security provider\'s liability may be enforced on motion without an independent action. The motion and any notice that the court orders may be served on the court clerk, who must promptly send a copy of each to every security provider whose address is known.</item>
+        <item>1(As added Feb. 28, 1966, eff. July 1, 1966; amended Mar. 2, 1987, eff. Aug. 1, 1987; Apr. 12, 2006, eff. Dec. 1, 2006; Apr. 30, 2007, eff. Dec. 1, 2007; Apr. 26, 2018, eff. Dec. 1, 2018.)</item>
     </string-array>
     <string-array name="federal_civil_procedure_66">
         <item>1&lt;b>Rule 66. Receivers&lt;/b></item>

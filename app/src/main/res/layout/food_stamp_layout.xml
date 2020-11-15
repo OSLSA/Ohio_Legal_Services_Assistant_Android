@@ -10,7 +10,7 @@
 
         <LinearLayout android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 card_view:cardCornerRadius="4dp"
                 style="@style/cards">
 
@@ -26,9 +26,9 @@
                     android:id="@+id/version_spinner"
                     android:padding="10dp"/>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 card_view:cardCornerRadius="4dp"
                 style="@style/cards">
 
@@ -72,9 +72,9 @@
                         android:id="@+id/agSSISwitch" />
 
             </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 card_view:cardCornerRadius="4dp"
                 style="@style/cards">
             <TextView
@@ -113,9 +113,9 @@
                 </LinearLayout>
 
             </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 card_view:cardCornerRadius="4dp"
                 style="@style/cards">
             <TextView
@@ -186,9 +186,9 @@
                         android:inputType="numberDecimal"/>
                 </LinearLayout>
             </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 card_view:cardCornerRadius="4dp"
                 style="@style/cards">
 
@@ -241,7 +241,7 @@
                         android:layout_width="match_parent" />
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>
 

@@ -4,12 +4,12 @@ package org.seols.ohiolegalservicesassistant;
  * Created by joshuagoodwin on 10/2/15.
  */
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.view.View;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.os.Bundle;

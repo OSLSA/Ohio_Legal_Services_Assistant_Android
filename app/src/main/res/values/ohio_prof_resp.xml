@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="lastUpdateProfCond">June 5, 2017</string>
+	<string name="lastUpdateProfCond">November 14, 2020</string>
 	<string-array name="ohio_prof_resp_toc">
 		<item>1.0 Terminology</item>
 		<item>1.1 Competence</item>
@@ -318,8 +318,8 @@
 		<item>1(f) Upon dissolution of any <i>law firm</i>, the former <i>partners</i>, managing <i>partners</i>, or supervisory lawyers shall promptly account for all client funds and shall make appropriate arrangements for one of them to maintain all records generated under division (a) of this rule.</item>
 		<item>1(g) A lawyer, <i>law firm</i>, or estate of a deceased lawyer who sells a law practice shall account for and transfer all funds held pursuant to this rule to the lawyer or <i>law firm</i> purchasing the law practice at the time client files are transferred.</item>
 		<item>1(h) A lawyer, a lawyer in the lawyer’s <i>firm</i>, or a <i>firm</i> that owns an interest in a business that provides a law-related service shall:</item>
-		<item>2(1) maintain funds of clients or third persons that cannot earn any net income for the clients or third persons in an interest-bearing trust account that is established in an eligible depository institution as required by sections 3953.231, 4705.09, and 4705.10 of the Revised Code or any rules adopted by the Ohio Legal Assistance Foundation pursuant to section 120.52 of the Revised Code.</item>
-		<item>2(2) notify the Ohio Legal Assistance Foundation, in a manner required by rules adopted by the Ohio Legal Assistance Foundation pursuant to section 120.52 of the Revised Code, of the existence of an interest-bearing trust account;</item>
+		<item>2(1) maintain funds of clients or third persons that cannot earn any net income for the clients or third persons in an interest-bearing trust account that is established in an eligible depository institution as required by sections 3953.231, 4705.09, and 4705.10 of the Revised Code or any rules adopted by the Ohio Access to Justice Foundation pursuant to section 120.52 of the Revised Code.</item>
+		<item>2(2) notify the Ohio Access to Justice Foundation, in a manner required by rules adopted by the Ohio Access to Justice Foundation pursuant to section 120.52 of the Revised Code, of the existence of an interest-bearing trust account;</item>
 		<item>2(3) comply with the reporting requirement contained in Gov. Bar R. VI, Section 1(F).</item>
 	</string-array>
 
@@ -670,7 +670,7 @@
 
 	<string-array name="ohio_prof_resp_7_5">
 		<item>1<b>RULE 7.5: FIRM NAMES AND LETTERHEADS</b></item>
-		<item>1(a) A lawyer shall not use a <i>firm</i> name, letterhead or other professional designation that violates Rule 7.1. A lawyer in private practice shall not practice under a trade name, a name that is misleading as to the identity of the lawyer or lawyers practicing under the name, or a <i>firm</i> name containing names other than those of one or more of the lawyers in the <i>firm</i>, except that the name of a professional corporation or association, legal clinic, limited liability company, or limited liability partnership shall contain symbols indicating the nature of the organization as required by Gov. Bar R. III. If otherwise lawful, a <i>firm</i> may use as, or continue to include in, its name the name or names of one or more deceased or retired members of the <i>firm</i> or of a predecessor <i>firm</i> in a continuing line of succession.</item>
+		<item>1(a) A lawyer shall not use a <i>firm</i> name, letterhead or other professional designation that violates Rule 7.1. A lawyer in private practice shall not practice under a name that is misleading as to the identity of the lawyer or lawyers practicing under the name, or a <i>firm</i> name containing surnames other than those of one or more of the lawyers in the <i>firm</i>, except that the name of a professional corporation or association, legal clinic, limited liability company, or limited liability partnership shall contain symbols indicating the nature of the organization as required by Gov. Bar R. III. If otherwise lawful, a <i>firm</i> may use as, or continue to include in, its name surnames of one or more deceased or retired members of the <i>firm</i> or of a predecessor <i>firm</i> in a continuing line of succession.</item>
 		<item>1(b) A <i>law firm</i> with offices in more than one jurisdiction that lists attorneys associated with the <i>firm</i> shall indicate the jurisdictional limitations on those not licensed to practice in Ohio.</item>
 		<item>1(c) The name of a lawyer holding a public office shall not be used in the name of a <i>law firm</i>, or in communications on its behalf, during any <i>substantial</i> period in which the lawyer is not actively and regularly practicing with the <i>firm</i>.</item>
 		<item>1(d) Lawyers may state or imply that they practice in a partnership or other organization only when that is the fact.</item>

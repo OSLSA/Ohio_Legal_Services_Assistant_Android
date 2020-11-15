@@ -1,9 +1,9 @@
 package org.seols.ohiolegalservicesassistant;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +37,8 @@ public class CalculatorsFragment extends Fragment {
         apr.setOnClickListener(myListener);
         Button garn = (Button) rootView.findViewById(R.id.garnishment_button);
         garn.setOnClickListener(myListener);
+        Button date = (Button) rootView.findViewById(R.id.date_button);
+        date.setOnClickListener(myListener);
     }
 
     private View.OnClickListener myListener = new View.OnClickListener() {
@@ -63,6 +65,9 @@ public class CalculatorsFragment extends Fragment {
                     logAnalystics("Garnishment Calculator");
                     ((MainActivity)getActivity()).setFragment(new GarnishmentFragment(), "garnishment", "Garnishability", null);
                     break;
+                case R.id.date_button:
+                    logAnalystics("Date Calculator");
+                    ((MainActivity)getActivity()).setFragment(new DateCalculatorController(), "date calculator", "Date Calculator", null);
                 default:
                     break;
             }
