@@ -28,17 +28,4 @@ public class ResourceInformation {
         this.notes = "";
     }
 
-    public ResourceInformation(String name, String category, String address, String city, String state, String zip, String county, String website) {
-        this.name = name;
-        this.category = category;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.county = county;
-        this.website = website;
-        this.phone = phone;
-        this.notes = notes;
-    }
-
 }

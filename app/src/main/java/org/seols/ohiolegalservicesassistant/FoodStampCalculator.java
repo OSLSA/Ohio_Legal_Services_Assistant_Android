@@ -1,7 +1,6 @@
 package org.seols.ohiolegalservicesassistant;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -11,13 +10,22 @@ public class FoodStampCalculator {
 	
 	private Bundle bundle;
 
-    private Context context;
-	
 	private double totalGrossIncome;
 	
-	private String[] FA_ALLOTMENT, STANDARD_DEDUCTION, NET_STANDARD, GROSS_INCOME_LIMIT, GROSS_INCOME_165, GROSS_INCOME_200;
+	private String[] FA_ALLOTMENT;
+	private String[] STANDARD_DEDUCTION;
+	private String[] NET_STANDARD;
+	private String[] GROSS_INCOME_LIMIT;
+	private String[] GROSS_INCOME_200;
 	
-	private String STANDARD_SHELTER_HOMELESS, EXCESS_INCOME_DEDUCTION, EXCESS_MEDICAL_DEDUCTION, DEPENDENT_CARE_DEDUCTION, MINNIMUM_MONTHLY_ALLOTMENT, STANDARD_UTILITY_ALLOWANCE, LIMITED_UTILITY_ALLOWANCE, SINGLE_UTILITY_ALLOWANCE, STANDARD_TELEPHONE_ALLOWANCE, LIMIT_ON_SHELTER_DEDUCTION;
+	private String STANDARD_SHELTER_HOMELESS;
+	private String EXCESS_MEDICAL_DEDUCTION;
+	private String MINNIMUM_MONTHLY_ALLOTMENT;
+	private String STANDARD_UTILITY_ALLOWANCE;
+	private String LIMITED_UTILITY_ALLOWANCE;
+	private String SINGLE_UTILITY_ALLOWANCE;
+	private String STANDARD_TELEPHONE_ALLOWANCE;
+	private String LIMIT_ON_SHELTER_DEDUCTION;
 	
 	private int AGSize, earnedIncome, unearnedIncome, medicalExpenses,finalNetIncome, dependentCare, childSupport, utilityAllowance, rent, propertyInsurance, propertyTaxes;
 	
@@ -31,7 +39,6 @@ public class FoodStampCalculator {
 	 **/
 	public FoodStampCalculator(Bundle bundle, Context context) {
 		this.bundle = bundle;
-		this.context = context;
 		//String version = this.bundle.getString("version");
 		//setConstants(version);
 		setConstants(bundle);
@@ -52,7 +59,7 @@ public class FoodStampCalculator {
 //		NET_STANDARD = context.getResources().getStringArray(context.getResources().getIdentifier("net_standard_" + version, "array", packageName));
 		GROSS_INCOME_LIMIT = bundle.getStringArray("grossIncomeLimit");
 //		GROSS_INCOME_LIMIT = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_limit_" + version, "array", packageName));
-		GROSS_INCOME_165 = bundle.getStringArray("gross165");
+		String[] GROSS_INCOME_165 = bundle.getStringArray("gross165");
 //		GROSS_INCOME_165 = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_165_" + version, "array", packageName));
 		GROSS_INCOME_200 = bundle.getStringArray("gross200");
 //		GROSS_INCOME_200 = context.getResources().getStringArray(context.getResources().getIdentifier("gross_income_200_" + version, "array", packageName));
@@ -60,12 +67,12 @@ public class FoodStampCalculator {
 		// strings
 		STANDARD_SHELTER_HOMELESS = bundle.getString("standardHomeless");
 //		STANDARD_SHELTER_HOMELESS = context.getResources().getString(context.getResources().getIdentifier("standard_homeless_" + version, "string", packageName));
-		EXCESS_INCOME_DEDUCTION = bundle.getString("excessIncome");
+		String EXCESS_INCOME_DEDUCTION = bundle.getString("excessIncome");
 //		EXCESS_INCOME_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("excess_income_deduction_" + version, "string", packageName
 //        ));
 		EXCESS_MEDICAL_DEDUCTION = bundle.getString("excessMedical");
 //		EXCESS_MEDICAL_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("excess_medical_" + version, "string", packageName));
-		DEPENDENT_CARE_DEDUCTION = bundle.getString("dependent");
+		String DEPENDENT_CARE_DEDUCTION = bundle.getString("dependent");
 //		DEPENDENT_CARE_DEDUCTION = context.getResources().getString(context.getResources().getIdentifier("dependent_care_" + version, "string", packageName));
 		MINNIMUM_MONTHLY_ALLOTMENT = bundle.getString("minnimumAllotment");
 //		MINNIMUM_MONTHLY_ALLOTMENT = context.getResources().getString(context.getResources().getIdentifier("minnimum_allotment_" + version, "string", packageName));

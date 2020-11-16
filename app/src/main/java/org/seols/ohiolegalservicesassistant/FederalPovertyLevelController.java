@@ -36,7 +36,8 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
 
     private Button button;
 
-    private DatabaseReference mRootRef, mPovertyLevelRef, mVersionRef, mYearRef;
+    private DatabaseReference mPovertyLevelRef;
+    private DatabaseReference mVersionRef;
 
     private EditText etAGSize, etGrossEarnedIncome;
 
@@ -51,7 +52,7 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
         View rootView = inflater.inflate(R.layout.fpl_layout, container, false);
 
         // get FB references
-        mRootRef = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
         // set up the submit button
         submitButton(rootView);
 
@@ -81,7 +82,7 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
 
 
         // log Firebase analytics that form was opened
-        logSearch("FPL Opened");
+        logSearch();
 
         //return view
         return rootView;
@@ -105,14 +106,13 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
                     //pb.setVisibility(View.INVISIBLE);
                     Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
                     toast.show();
-                    return;
                 }
             }.start();
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                ArrayList<String> versions = new ArrayList<String>();
-                versions = (ArrayList<String>) dataSnapshot.getValue();
+
+                ArrayList<String> versions = (ArrayList<String>) dataSnapshot.getValue();
                 versionSpinner = (Spinner) rv.findViewById(R.id.version_spinner);
 
                 // create array adapter
@@ -199,18 +199,22 @@ public class FederalPovertyLevelController extends Fragment implements IncomeDia
         });
     }
 
-    private void logSearch(String value) {
+    private void logSearch() {
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, value);
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "FPL Opened");
         ((MainActivity)getActivity()).recordAnalytics(bundle);
     }
 
     private void getResults() {
+
+        if (AGSizeMissing()) {
+            return;
+        }
         annualIncome = etGrossEarnedIncome.getText().toString().equals("") ? 0.0 :
                 Double.parseDouble(etGrossEarnedIncome.getText().toString());
         String version = "fpl" + versionSpinner.getSelectedItem().toString();
 
-        mYearRef = mPovertyLevelRef.child(version);
+        DatabaseReference mYearRef = mPovertyLevelRef.child(version);
         mYearRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override

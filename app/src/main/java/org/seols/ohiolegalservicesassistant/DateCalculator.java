@@ -1,13 +1,6 @@
 package org.seols.ohiolegalservicesassistant;
 
-import android.content.Context;
-
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -16,15 +9,11 @@ public class DateCalculator {
     int numberOfDays;
     boolean excludeWeekends;
     Date startDate;
-    Context context;
 
-    public DateCalculator (int numberOfDays, boolean excludeWeekends, Date startDate, Context context) {
-
+    public DateCalculator (int numberOfDays, boolean excludeWeekends, Date startDate) {
         this.excludeWeekends = excludeWeekends;
         this.numberOfDays = numberOfDays;
         this.startDate = startDate;
-        this.context = context;
-
     }
 
     public String getNewDate() {
@@ -65,7 +54,7 @@ public class DateCalculator {
             result = c.getTime();
             if (!(result.getDay() == 0 || result.getDay() == 6)) {
                 ++daysAdded;
-            };
+            }
 
             //if (!(result.getDayOfWeek() == DayOfWeek.SATURDAY || result.getDayOfWeek() == DayOfWeek.SUNDAY)) {
             //    ++daysAdded;

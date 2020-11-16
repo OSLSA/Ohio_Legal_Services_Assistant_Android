@@ -2,7 +2,7 @@ package org.seols.ohiolegalservicesassistant;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
+
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -24,7 +24,6 @@ import java.util.Locale;
 public class DateCalculatorController extends Fragment {
 
     private Bundle savedInstanceState;
-    private Button button;
     private EditText etNumberOfDays, etStartDate;
     final Calendar myCalendar = Calendar.getInstance();
     private CheckBox check;
@@ -62,7 +61,7 @@ public class DateCalculatorController extends Fragment {
     }
 
     private void submitButton(View rootView) {
-        button = (Button) rootView.findViewById(R.id.submit);
+        Button button = (Button) rootView.findViewById(R.id.submit);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
@@ -142,7 +141,7 @@ public class DateCalculatorController extends Fragment {
 
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         Date startDate = formatter.parse(start);
-        DateCalculator dateCalc = new DateCalculator(Integer.parseInt(numberDays), check.isChecked(), startDate, getContext());
+        DateCalculator dateCalc = new DateCalculator(Integer.parseInt(numberDays), check.isChecked(), startDate);
         showResults(dateCalc.getNewDate());
 
     }

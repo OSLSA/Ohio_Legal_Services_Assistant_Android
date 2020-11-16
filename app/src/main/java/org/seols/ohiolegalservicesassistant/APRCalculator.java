@@ -1,6 +1,5 @@
 package org.seols.ohiolegalservicesassistant;
 
-import android.renderscript.Double2;
 import android.util.Log;
 
 /**
@@ -8,20 +7,19 @@ import android.util.Log;
  */
 public class APRCalculator {
 
-    private double APR, principalBorrowed, amountBorrowed, costs, monthlyRate, monthlyPayment;
+    private double APR, principalBorrowed, amountBorrowed, monthlyRate, monthlyPayment;
     private int numberOfPayments;
 
     /**
      * APR Class initializer.
-     * @param principalBorrowed
-     * @param baseRate
-     * @param costs
-     * @param numberOfPayments
+     * @param principalBorrowed - amount borrowed
+     * @param baseRate - contract rate
+     * @param costs - other costs
+     * @param numberOfPayments - total number of payments to be made
      */
     public APRCalculator (double principalBorrowed, double baseRate, double costs, int numberOfPayments) {
         setBaseRate(baseRate);
         this.principalBorrowed = principalBorrowed;
-        this.costs = costs;
         this.numberOfPayments = numberOfPayments;
         this.amountBorrowed = this.principalBorrowed + costs;
         monthlyPayment = setMonthlyPayment();

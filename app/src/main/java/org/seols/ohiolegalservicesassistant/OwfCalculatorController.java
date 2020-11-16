@@ -9,11 +9,6 @@ package org.seols.ohiolegalservicesassistant;
         import androidx.appcompat.app.AppCompatActivity;
         import android.util.Log;
         import android.view.Gravity;
-        import android.widget.EditText;
-        import android.widget.Spinner;
-        import android.widget.ArrayAdapter;
-        import android.widget.AdapterView;
-        import android.widget.Toast;
         import android.view.ViewGroup;
         import android.view.LayoutInflater;
         import android.view.View;
@@ -38,7 +33,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     private ArrayList<String> versionKeys;
     private ArrayList<ArrayList> bigList;
     private Spinner versionSpinner;
-    private DatabaseReference mRootRef, mOWFRef, mVersionRef;
+    private DatabaseReference mOWFRef;
     private Button submitButton;
 
     private ArrayList<ArrayList> OWF_PAYMENT_STANDARD, INITIAL_ELIGIBILITY_STANDARD;
@@ -52,7 +47,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
         INITIAL_ELIGIBILITY_STANDARD = new ArrayList<ArrayList>();
         savedInstanceState = instanceState;
         submitButton(rootView);
-        mRootRef = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
         mOWFRef = mRootRef.child("OWF");
         populateVersionSpinner(rootView);
         resetButton(rootView);
@@ -186,7 +181,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
 
         versionSpinner = (Spinner) v.findViewById(R.id.owf_version_spinner);
 
-        mVersionRef = mOWFRef.child("Versions");
+        DatabaseReference mVersionRef = mOWFRef.child("Versions");
 
         final CountDownTimer timer = new CountDownTimer(5000,5000) {
 
@@ -200,7 +195,6 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
                 //pb.setVisibility(View.INVISIBLE);
                 Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
                 toast.show();
-                return;
             }
         }.start();
         mVersionRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -454,7 +448,7 @@ public class OwfCalculatorController extends Fragment implements IncomeDialogFra
     }
 
     public void onIncomeSubmit(String annualIncome) {
-        Double monthlyIncome = Double.parseDouble(annualIncome);
+        double monthlyIncome = Double.parseDouble(annualIncome);
         monthlyIncome = (double)Math.round((monthlyIncome / 12.0) * 1000 / 1000);
         requestingET.setText("" + monthlyIncome);
     }

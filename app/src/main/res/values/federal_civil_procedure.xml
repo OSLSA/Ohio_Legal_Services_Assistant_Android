@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="lastUpdateFRCP">January 1, 2021</string>
     <string-array name="federal_civil_procedure_toc">
         <item>1 Scope and Purpose</item>
@@ -310,7 +310,7 @@
         <item>2(2) &lt;i>Period Stated in Hours.&lt;/i> When the period is stated in hours:</item>
         <item>3(A) begin counting immediately on the occurrence of the event that triggers the period;</item>
         <item>3(B) count every hour, including hours during intermediate Saturdays, Sundays, and legal holidays; and</item>
-        <item>3(C) if the period would end on a Saturday, Sunday, or legal holiday, the period continues to run until the same time on the next day that is not a Saturday, Sunday, or legal holiday.</item>
+        <item tools:ignore="TypographyOther">3(C) if the period would end on a Saturday, Sunday, or legal holiday, the period continues to run until the same time on the next day that is not a Saturday, Sunday, or legal holiday.</item>
         <item>2(3) &lt;i>Inaccessibility of the Clerk\s Office.&lt;/i> Unless the court orders otherwise, if the clerk\s office is inaccessible:</item>
         <item>3(A) on the last day for filing under Rule 6(a)(1), then the time for filing is extended to the first accessible day that is not a Saturday, Sunday, or legal holiday; or</item>
         <item>3(B) during the last hour for filing under Rule 6(a)(2), then the time for filing is extended to the same time on the first accessible day that is not a Saturday, Sunday, or legal holiday.</item>

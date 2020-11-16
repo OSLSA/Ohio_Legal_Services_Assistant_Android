@@ -15,7 +15,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1">
 
         <androidx.cardview.widget.CardView
@@ -39,7 +39,8 @@
                     <EditText
                         style="@style/thirty"
                         android:id="@+id/amountBorrowed"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -54,7 +55,8 @@
                     <EditText
                         style="@style/thirty"
                         android:id="@+id/numberOfPayments"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        />
                 </LinearLayout>
 
                 <LinearLayout

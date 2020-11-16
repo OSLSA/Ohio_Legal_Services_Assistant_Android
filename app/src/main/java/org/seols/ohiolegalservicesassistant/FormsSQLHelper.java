@@ -1,7 +1,7 @@
 package org.seols.ohiolegalservicesassistant;
 
-/**
- * Created by joshuagoodwin on 3/5/16.
+/*
+  Created by joshuagoodwin on 3/5/16.
  */
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

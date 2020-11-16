@@ -1,7 +1,8 @@
 package org.seols.ohiolegalservicesassistant;
 
-/**
- * Created by joshuagoodwin on 10/2/15.
+/*
+  @author joshua goodwin
+ * @since 10/2/15.
  */
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +36,7 @@ public class APRFragment extends Fragment {
         return rootView;
     }
 
-    public void showWarning(View view) {
+    public void showWarning() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(getActivity().getString(R.string.apr_warning))
                 .setPositiveButton("OK", null)
@@ -57,7 +58,7 @@ public class APRFragment extends Fragment {
         warning.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                showWarning(v);
+                showWarning();
             }
         });
     }
@@ -131,7 +132,7 @@ public class APRFragment extends Fragment {
     /**
      * Checks the data coming from the app to ensure it is valid and
      * won't throw an error
-     * @return
+     * @return - whether data is valid
      */
     private boolean dataIsInvalid() {
 

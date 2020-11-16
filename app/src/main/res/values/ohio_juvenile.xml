@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
 	<string name="lastUpdateOhioJuv">November 14, 2020</string>
 	<string-array name="ohio_juvenile_toc">
@@ -69,7 +69,7 @@
 		<item>1As used in these rules:</item>
 		<item>1(A) "Abused child" has the same meaning as in section 2151.031 of the Revised Code.</item>
 		<item>1(B) "Adjudicatory hearing" means a hearing to determine whether a child is a juvenile traffic offender, delinquent, unruly, abused, neglected, or dependent or otherwise within the jurisdiction of the court.</item>
-		<item>1(C) "Agreement for temporary custody" means a voluntary agreement that is authorized by section 5103.15 of the Revised Code and transfers the temporary custody of a child to a public children services agency or a private child placing agency.</item>
+		<item tools:ignore="TypographyOther">1(C) "Agreement for temporary custody" means a voluntary agreement that is authorized by section 5103.15 of the Revised Code and transfers the temporary custody of a child to a public children services agency or a private child placing agency.</item>
 		<item>1(D) "Child" has the same meaning as in sections 2151.011 and 2152.02 of the Revised Code.</item>
 		<item>1(E) “Chronic truant” has the same meaning as in section 2151.011 of the Revised Code.</item>
 		<item>1(F) "Complaint" means the legal document that sets forth the allegations that form the basis for juvenile court jurisdiction.</item>

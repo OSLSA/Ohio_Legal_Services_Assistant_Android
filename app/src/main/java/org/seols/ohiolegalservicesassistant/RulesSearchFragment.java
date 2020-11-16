@@ -94,9 +94,9 @@ public class RulesSearchFragment extends Fragment {
         String[] titles = getResources().getStringArray(getResources().getIdentifier(bookName + "_toc", "array", "org.seols.ohiolegalservicesassistant"));
         for (int i = 0; i < titles.length; i++) {
             try {
-                Double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
+                double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
                 // if this is an int, should convert then to string otherwise string will end in .0
-                String ruleNumber = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
+                String ruleNumber = (test % 1 == 0) ? Integer.toString((int) test) : Double.toString(test);
                 ruleNumber = ruleNumber.replaceAll("\\.", "_");
                 titles[i] = ruleNumber;
                 Log.d("RuleNumber: ", ruleNumber);
@@ -104,7 +104,6 @@ public class RulesSearchFragment extends Fragment {
                 e.printStackTrace();
             }
         }
-        Log.d("Titiles", titles.toString());
         return titles;
     }
 

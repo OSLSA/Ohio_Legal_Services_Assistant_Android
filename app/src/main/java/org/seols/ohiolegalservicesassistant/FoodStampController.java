@@ -34,8 +34,6 @@ import java.util.ArrayList;
  */
 public class FoodStampController extends Fragment implements IncomeDialogFragment.OnUpdateIncomeListener{
 
-    // TODO these should all come from the String .xml file and in the mod
-
     private boolean isAged, isDisabled;
 
     private Button submit;
@@ -48,7 +46,7 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
 
     private CheckBox cbElectricGasOil, cbGarbageTrash, cbHeatingCooling, cbHomeless, cbPhone, cbWaterSewer, cbAGSSI, cbAGAged;
 
-    private double earnedIncome, earnedHoursPerWeek, unearnedHoursPerWeek, unearnedIncome;
+    private double earnedIncome, unearnedIncome;
 
     private EditText etAGsize, etChildSupport, etDependentCare, etEarnedIncome, etMedicalExpenses, etPropertyInsurance, etPropertyTaxes, etRent, etUnearnedIncome, requestingET;
 
@@ -56,7 +54,7 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
 
     private DatabaseReference mRootRef, mFSRef, mVersionRef;
 
-    private int AGSize, childSupport, dependentCare, finalEarnedIncome, finalNetIncome, finalUnearnedIncome, grossIncomeAmount, medicalExpenses, propertyInsurance, propertyTaxes, rent, totalGrossIncome, utilityAllowance;
+    private int AGSize, childSupport, dependentCare, medicalExpenses, propertyInsurance, propertyTaxes, rent;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -139,7 +137,6 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
                 //pb.setVisibility(View.INVISIBLE);
                 Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
                 toast.show();
-                return;
             }
         }.start();
         mVersionRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -317,10 +314,6 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
             default:
                 break;
         }
-    }
-
-    private void setData(Bundle bundle) {
-
     }
 
     private void initializeClearButton(View rootView){
@@ -586,17 +579,9 @@ public class FoodStampController extends Fragment implements IncomeDialogFragmen
         dialog.show(fm, "IncomeDialog");
     }
 
-    private String getVersion() {
-        int versionNumber = versionSpinner.getSelectedItemPosition();
-        String fullVersion = getResources().getStringArray(R.array.food_stamp_versions_display)[versionNumber];
-        String version = fullVersion.substring(0, 7);
-        String finalVersion = version.replace("-", "_");
-        return finalVersion;
-    }
-
     @Override
     public void onIncomeSubmit(String annualIncome) {
-        Double monthlyIncome = Double.parseDouble(annualIncome);
+        double monthlyIncome = Double.parseDouble(annualIncome);
         monthlyIncome = (double)Math.round((monthlyIncome / 12.0) * 1000 / 1000);
         requestingET.setText("" + monthlyIncome);
     }

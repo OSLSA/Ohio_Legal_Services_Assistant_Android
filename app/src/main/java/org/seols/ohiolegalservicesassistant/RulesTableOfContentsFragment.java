@@ -35,9 +35,9 @@ public class RulesTableOfContentsFragment extends Fragment {
             for (int i = 0; i < titles.length; i++){
                 View tr = inflater.inflate(R.layout.rules_row, null);
                 try {
-                    Double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
+                    double test = NumberFormat.getInstance().parse(titles[i]).doubleValue();
                     // if this is an int, should convert then to string otherwise string will end in .0
-                    String ruleNumber = (test % 1 == 0) ? Integer.toString(test.intValue()) : Double.toString(test);
+                    String ruleNumber = (test % 1 == 0) ? Integer.toString((int) test) : Double.toString(test);
                     ruleNumber =ruleNumber.replace('.', '_');
                     Book tag = new Book(ruleNumber, i);
                     tr.setTag(tag);

@@ -47,11 +47,9 @@ public class HomeFragment extends Fragment {
 
     final Calendar myCalendar = Calendar.getInstance();
 
-    private Button viewRules;
-    private Button calculateDate;
     private Button calculateFPL;
 
-    private DatabaseReference mRootRef, mPovertyLevelRef,mFPLVersionRef;
+    private DatabaseReference mPovertyLevelRef,mFPLVersionRef;
 
     private EditText income, agSize, rule_number, etStartDate, etNumberOfDays;
 
@@ -69,7 +67,7 @@ public class HomeFragment extends Fragment {
         getViews(rootView);
         setRulesSpinner();
         checkPushStatus();
-        mRootRef = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
         mPovertyLevelRef = mRootRef.child("povertyLevel");
         mFPLVersionRef = mPovertyLevelRef.child("fplVersion");
         return rootView;
@@ -79,8 +77,8 @@ public class HomeFragment extends Fragment {
         mFPLVersionRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ArrayList<Long> versions = new ArrayList<Long>();
-                versions = (ArrayList<Long>) dataSnapshot.getValue();
+
+                ArrayList<Long> versions = (ArrayList<Long>) dataSnapshot.getValue();
                 version = versions.get(0).toString();
                 calculateFPL.setEnabled(true);
             }
@@ -123,7 +121,7 @@ public class HomeFragment extends Fragment {
         calculateFPL = (Button) rootView.findViewById(R.id.calculateFPL);
         calculateFPL.setOnClickListener(calculateFPLListener);
         calculateFPL.setEnabled(false);
-        calculateDate = (Button) rootView.findViewById(R.id.calculateDate);
+        Button calculateDate = (Button) rootView.findViewById(R.id.calculateDate);
         calculateDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,7 +135,7 @@ public class HomeFragment extends Fragment {
 
         Button ruleSelected = (Button) rootView.findViewById(R.id.view_rules);
         ruleSelected.setOnClickListener(ruleSelectedListener);
-        viewRules = (Button) rootView.findViewById(R.id.view_rules);
+
         rulesSpinner = (Spinner) rootView.findViewById(R.id.rules_spinner);
         ImageView lscLogo = (ImageView) rootView.findViewById(R.id.lsc_logo);
         ImageView oslsaLogo = (ImageView) rootView.findViewById(R.id.oslsa_logo);
@@ -279,7 +277,7 @@ public class HomeFragment extends Fragment {
             args.putString("bookName", bookName);
             args.putInt("rulePosition", rulePosition);
 
-            // change framents
+            // change fragments
             Fragment newFragment = new RulesDetailFragment();
             ((MainActivity)getActivity()).setFragment(newFragment, rule, "Rule " + rule, args);
 
@@ -340,7 +338,7 @@ public class HomeFragment extends Fragment {
                 sa.enablePush(false, getContext());
                 editSharedPref("boolPushStatus", false);
                 dialog.dismiss();
-                canChangeChoiceDialog("enable");
+                canChangeChoiceDialog();
             }
         });
         builder.setTitle("Push Notifications");
@@ -354,12 +352,10 @@ public class HomeFragment extends Fragment {
      * Method that shows an alertDialog reminding the user that they can either enable
      * or disable push notifications in the future through the settings options.
      *
-     * @param decision either "enable" or "disable", the opposite of the user's current
-     *                 push notification preference
      */
-    private void canChangeChoiceDialog(String decision) {
+    private void canChangeChoiceDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMessage("You can change your mind and " + decision + " push notifications at any time through the settings menu.")
+        builder.setMessage("You can change your mind and enable push notifications at any time through the settings menu.")
                 .setTitle("Changing Notification Settings")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -393,14 +389,9 @@ public class HomeFragment extends Fragment {
             return;
         }
 
-/*        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        LocalDate startDate = LocalDate.parse(start, formatter);
-        DateCalculator dateCalc = new DateCalculator(Integer.parseInt(numberDays), false, startDate, getContext());
-        showResults(dateCalc.getNewDate());*/
-
         SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         Date startDate = formatter.parse(start);
-        DateCalculator dateCalc = new DateCalculator(Integer.parseInt(numberDays), false, startDate, getContext());
+        DateCalculator dateCalc = new DateCalculator(Integer.parseInt(numberDays), false, startDate);
         showResults(dateCalc.getNewDate());
 
     }
@@ -435,9 +426,6 @@ public class HomeFragment extends Fragment {
             switch (v.getId()) {
                 case R.id.lsc_logo:
                     url = "http://www.lsc.gov/grants-grantee-resources/our-grant-programs/tig";
-                    break;
-                case R.id.oslsa_logo:
-                    url = "http://www.seols.org";
                     break;
                 default:
                     url = "http://www.seols.org";

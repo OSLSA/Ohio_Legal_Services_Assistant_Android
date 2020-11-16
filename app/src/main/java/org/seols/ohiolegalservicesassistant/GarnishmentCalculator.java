@@ -1,7 +1,6 @@
 package org.seols.ohiolegalservicesassistant;
 
 import android.content.Context;
-import android.content.res.Resources;
 
 /**
  * Created by joshuagoodwin on 2/21/16.

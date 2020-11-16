@@ -19,18 +19,16 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SearchDialogFragment.OnUpdateSearchListener {
 
     public static String PACKAGE_NAME;
     private MenuItem search;
-    private String bookName, bookTitle, searchTerm;
+    private String bookName;
     private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
@@ -57,7 +55,6 @@ public class MainActivity extends AppCompatActivity
 
     private void setLogoClick(NavigationView navigationView) {
         View header = navigationView.getHeaderView(0);
-        ImageView logo = (ImageView) header.findViewById(R.id.nav_logo);
         header.setOnClickListener(headerListener);
     }
 
@@ -102,9 +99,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.search) {
-            bookTitle = getBookTitle();
+            String bookTitle = getBookTitle();
             showSearchDialog(bookTitle);
-        };
+        }
         //noinspection SimplifiableIfStatement
         /*if (id == R.id.action_settings) {
             return true;
@@ -134,15 +131,14 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onSearchSubmit(String dialogSearch) {
-        searchTerm = dialogSearch;
         // handle cancel pushed on dialog
-        if (searchTerm.equals("-1")) return;
+        if (dialogSearch.equals("-1")) return;
         // search rule book for term
         Bundle args = new Bundle();
         // TODO these all have to be dynamic, in for just debugging at the moment
         args.putString("bookName", bookName);
-        args.putString("searchTerm", searchTerm);
-        setFragment(new RulesSearchFragment(), "SEARCH", "Search: " + searchTerm, args);
+        args.putString("searchTerm", dialogSearch);
+        setFragment(new RulesSearchFragment(), "SEARCH", "Search: " + dialogSearch, args);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

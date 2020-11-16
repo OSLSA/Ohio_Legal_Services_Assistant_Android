@@ -1,6 +1,5 @@
 package org.seols.ohiolegalservicesassistant;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -48,7 +47,6 @@ public class LocalResourcesFragment extends Fragment {
         this.inflater = inflater;
         View rootView = inflater.inflate(R.layout.local_resources_layout, container, false);
         getViews(rootView);
-        //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         mRootRef = FirebaseDatabase.getInstance().getReference();
         mResourceRef = mRootRef.child("entities");
         mCountyRef = mRootRef.child("counties");
@@ -115,7 +113,6 @@ public class LocalResourcesFragment extends Fragment {
                         pb.setVisibility(View.INVISIBLE);
                         Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
                         toast.show();
-                        return;
                     }
                 }.start();
 
@@ -179,7 +176,6 @@ public class LocalResourcesFragment extends Fragment {
                     pb.setVisibility(View.INVISIBLE);
                     Toast toast = Toast.makeText(getActivity(), "Sorry, we can't connect to the database. Try again later", Toast.LENGTH_LONG);
                     toast.show();
-                    return;
                 }
             }.start();
 
@@ -231,7 +227,7 @@ public class LocalResourcesFragment extends Fragment {
 
     private void addToRecylcer(ArrayList<ResourceInformation> ri) {
 
-        myRecyclerAdapter adapter = new myRecyclerAdapter(getContext(), inflater, ri);
+        myRecyclerAdapter adapter = new myRecyclerAdapter(inflater, ri);
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
     }
@@ -239,12 +235,10 @@ public class LocalResourcesFragment extends Fragment {
 
     public class myRecyclerAdapter extends RecyclerView.Adapter<myRecyclerViewHolder> {
 
-        Context context;
         LayoutInflater inflater;
         ArrayList<ResourceInformation> ri;
 
-        public myRecyclerAdapter(Context context, LayoutInflater inflater, ArrayList<ResourceInformation> ri) {
-            this.context = context;
+        public myRecyclerAdapter(LayoutInflater inflater, ArrayList<ResourceInformation> ri) {
             this.inflater = inflater;
             this.ri = ri;
         }
@@ -317,9 +311,9 @@ public class LocalResourcesFragment extends Fragment {
         @Override
         public void onClick(View view) {
             String url = view.getTag().toString();
-            Uri uri = Uri.parse(url);
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-
+            if (!url.equals("")) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+            }
         }
     };
 
